@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Controle de aditamento</title>    
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/docs.min.css" rel="stylesheet">
+    <link href="css/bradseg_icons.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+    
+    <!-- Datepicker -->
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+    <!-- Icons fontawesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="bs-docs-nav navbar navbar-static-top" id="top">
+      <div class="container-fluid ">
+        <div class="navbar-header">
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">  
+                  <div id="sidebarCollapse" onclick="changeMenu(this)">
+                      <div class="bar1-1"></div>
+                      <div class="bar2-2"></div>
+                      <div class="bar3-3"></div>
+                  </div>
+                </div>
+            </div>
+        </nav>
+        </div>
+        <nav class="collapse navbar-collapse js-navbar-collapse" id="bs-navbar">
+          <div class="nav navbar-nav navbar-right">
+            <div class="pull-left">
+              <p>Roberto Carvalho</p>
+            </div>
+            <div class="pull-right">
+              <p><a href="#"><i class="icon-nav-sair"></i><span>Sair</span></a></p>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <h3>Controle de Aditamento</h3>
+        </nav>
+      </div>
+  </header>
+    <div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar"> 
+      <ul class="list-unstyled components">              
+          <li>
+              <a href="#homeSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Administrativo</a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                  <li><a href="#">item 1</a></li>
+                  <li><a href="#">item 2</a></li>
+                  <li><a href="#">item 3</a></li>
+              </ul>
+          </li>
+          <li class="active">
+            <a href="#" class="menu-principal">Painel</a>
+          </li>
+      </ul>
+    </nav>
+    <section class="container-fluid etapas">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">  
+                    <div id="sidebarCollapse" onclick="changeMenu(this)">
+                        <div class="bar1-1"></div>
+                        <div class="bar2-2"></div>
+                        <div class="bar3-3"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Nav tabs -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Painel</a></li>            
+            <li class="breadcrumb-item active" aria-current="page">Incluir nova ficha</li>          
+            </ol>
+        </nav>
+        <div class="title-page row">
+          <div class="col-sm-12">
+            <h2>Incluir nova ficha</h2>
+            <div class="btn-voltar"><a href="#" title="Voltar"><span class="icon-seta-esquerda-c"></span>Voltar</a></div>
+          </div>
+        </div>
+      <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#informacoes" aria-controls="informacoes" role="tab" data-toggle="tab">
+            <span>1</span>
+            <p>Informações Gerais (Negociações)</p>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#aditivos" aria-controls="aditivos" role="tab" data-toggle="tab">
+            <span>2</span>
+            <p>Aditivos</p>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#negociacao" aria-controls="negociacao" role="tab" data-toggle="tab">
+            <span>3</span>
+            <p>Detalhes da Negociação</p>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#solicitacoes" aria-controls="solicitacoes" role="tab" data-toggle="tab">
+            <span>4</span>
+            <p>Solicitações (Negociações)</p>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#anexo" aria-controls="anexo" role="tab" data-toggle="tab">
+            <span>5</span>
+            <p>Anexo REDE+</p>
+          </a>
+        </li>
+      </ul>
+      <!-- INFORMAÇÕES GERAIS -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="informacoes">
+          <div class="design-process-content">
+            <form role="form">
+              <div class="box-white">
+                <h3>Informações Gerais (Negociações)</h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group radio">
+                      <span>Empresa</span>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="empresa" id="medservice" value="medservice"> Medservice
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="empresa" id="bradesco" value="bradesco" checked=""> Bradesco Saude
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group radio">
+                      <span>Tipo de priorização</span>
+                      <label class="radio-inline">
+                        <input type="radio" name="priorizacao" id="normal" value="medservice" checked=""> Normal
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="priorizacao" id="rede" value="bradesco"> Rede+
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="priorizacao" id="prioridade" value="bradesco"> Prioridade
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Grandes grupos</label>
+                      <select class="form-control">
+                        <option>Selecione</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Prestador</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label>Cod. Prestador</label>
+                      <select class="form-control">
+                        <option>Selecione</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label>UF. Prestador</label>
+                      <select class="form-control">
+                        <option>Selecione</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Cidade</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Faturamento anual</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group mb-0">
+                      <label for="dtp_input1">Data apresentação proposta</label>
+                      <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
+                        <label for="dtp_input1" class="icon-dt-apresentacao"><span class="input-group-addon span-date icon-doc-calendario" aria-hidden="true"></span></label>
+                        <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder="  /    /  ">                      
+                      </div>
+                      <input type="hidden" id="dtp_input1" value="" /><br/>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Sucursal</label>
+                      <select class="form-control">
+                        <option>Selecione</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Alçada</label>
+                      <select class="form-control">
+                        <option>Selecione</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group radio">
+                      <span>Terceirizado de outro prestador?</span>
+                      <label class="radio-inline">
+                        <input type="radio" name="outro-prestador" id="sim" value="sim" checked=""> Sim
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="outro-prestador" id="nao" value="nao"> Nao
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Se sim, qual prestador?</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group radio">
+                      <span>Negociação exclusiva?</span>
+                      <label class="radio-inline">
+                        <input type="radio" name="neg-exclusiva-sim" id="sim" value="sim" checked=""> Sim
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="neg-exclusiva-nao" id="nao" value="nao"> Nao
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="desc-neg-exclusiva">Bradesco Saúde (Rede)</label>
+                      <textarea class="form-control" id="desc-neg-exclusiva" rows="6"></textarea>
+                    </div>
+                  </div>  
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Anexo ver componente</label>
+                        <label for="fupload" class="control-label label-bordered">Selecionar arquivos</label>
+                        <input type="file" id="fupload" name="anexo" class="fupload form-control" />
+                        <label for="fupload" class="icon-anexo"><span class="input-group-addon span-anexo icon-nav-anexar" aria-hidden="true"></span></label>
+                      <ul>
+                        <li><p><span class="icon-nav-anexar"></span>anexo 1.pdf</p></li>
+                        <li><p><span class="icon-nav-anexar"></span>anexo 2.pdf</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons-tab">
+                <button type="button" name="button" class="btn btn-primary pull-right next" role="tab" data-toggle="tab" aria-controls="negociacao" onclick="">Próximo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- ADITIVOS -->
+        <div role="tabpanel" class="tab-pane" id="aditivos">
+          <div class="design-process-content">
+            <form>
+              <div class="box-white">
+                <h3>Aditivos</h3>
+                <div class="row box-add">                  
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6">
+                      <button type="button" name="button" class="icon-nav-adicionar"></button>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Tipo</label>
+                      <select class="form-control">
+                        <option>Selecione</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group radio">
+                      <span>&nbsp;</span>
+                      <label class="radio-inline">
+                        <input type="radio" name="tipos-aditivos" id="reajuste" value="reajuste" checked=""> Reajsute
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="tipos-aditivos" id="novo" value="novo"> Novo
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Código Prestador</label>
+                      <select class="form-control">
+                        <option>Selecione</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="desc-solicitacao">Descrição da solicitação</label>
+                      <textarea class="form-control" id="desc-solicitacao" rows="6"></textarea>
+                    </div>
+                  </div>  
+                </div>
+                <div class="row box-item">
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6">
+                      <button type="button" name="button" class="icon-alerta-erro2"></button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <label>Tipo</label>
+                      <span>Lorem ipsum</span>
+                    </div>
+                    <div class="col-sm-4">
+                      <label>&nbsp;</label>
+                      <span>Lorem ipsum</span>
+                    </div>
+                    <div class="col-sm-4">
+                      <label>Prestador</label>
+                      <span>Lorem ipsum</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <label>Descrição da solicitação</label>
+                      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a elit non ipsum maximus laoreet. Suspendisse auctor purus ac ultrices molestie. Nunc non egestas nunc. Vestibulum gravida eros mi, semper mattis nibh aliquam quis. Sed velit enim, euismod rutrum euismod vel, ullamcorper nec nisi. Sed pharetra, nisi iaculis aliquet rhoncus, sapien nibh mollis purus, non porttitor dui turpis eget ligula. Proin odio tortor, eleifend vitae dui commodo, lobortis commodo orci. Ut tortor nisl, sodales non blandit vitae, porta et tortor. Vestibulum eu viverra libero. Donec varius a dui sed semper. Suspendisse vel urna ut ex posuere fermentum a in orci. Donec sollicitudin ligula ex, ut viverra libero tempus vel. Nulla at velit vel urna porta dapibus at vitae quam. Nulla placerat tincidunt nisl, nec venenatis ex ultricies sit amet. Sed eget tempor velit.</span>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+              <div class="buttons-tab">
+                <button type="button" name="button" class="btn btn-second pull-left prev">Anterior</button>
+                <button type="button" name="button" class="btn btn-primary pull-right next">Próximo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- DETALHES DA NEGOCIAÇÃO -->
+        <div role="tabpanel" class="tab-pane" id="negociacao">
+          <div class="design-process-content">
+            <form>
+              <div class="box-white">
+                <h3>Detalhes da negociação</h3>
+                <div class="row">
+                  <div class="row">
+                    <div class="col-sm-12 title-dn">
+                      <p>Negociação de materiais e medicamentos</p>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="medicamentos">Medicamentos</label>
+                        <textarea class="form-control" id="medicamentos" rows="6"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="med-uso-restrito">Medicamentos de uso restrito</label>
+                        <textarea class="form-control" id="med-uso-restrito" rows="6"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="mat-de-consumo">Materiais de consumo</label>
+                        <textarea class="form-control" id="mat-de-consumo" rows="6"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="tab-opme">Tabela de OPME negociada</label>
+                        <textarea class="form-control" id="tab-opme" rows="6"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="taxa-opme">Taxa de comercialização para OPME</label>
+                        <textarea class="form-control" id="taxa-opme" rows="6"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 title-dn">
+                      <p>Negociação de materiais e medicamentos (clínicas especializadas)</p>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="med-2">Medicamentos</label>
+                        <textarea class="form-control" id="med-2" rows="6"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="mat-consumo-2">Materiais de consumo</label>
+                        <textarea class="form-control" id="mat-consumo-2" rows="6"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons-tab">
+                <button type="button" name="button" class="btn btn-second pull-left prev">Anterior</button>
+                <button type="button" name="button" class="btn btn-primary pull-right next">Próximo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- SOLICITAÇÕES (NEGOCIAÇÕES) -->
+        <div role="tabpanel" class="tab-pane" id="solicitacoes">
+          <div class="design-process-content">
+            <form>
+              <div class="box-white">
+                <div class="row">
+                  <h3>Solicitações (Negociações)</h3>
+                  <div class="row"></div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="justifique-solicitacao">Caso necessário justifique a solicitação</label>
+                      <textarea class="form-control" id="justifique-solicitacao" rows="6"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                      <h4>Observações</h4><br>
+                      <p><strong>1 - Regime de Atendimento</strong><br> No caso de negociação hospitalar deverá ser informado se a negociação é exclusiva para um determinado Regime de Atendimento. Como por exemplo negociação de agravo no SADT: informar se a negociação é válida somente para paciente internado ou valerá também para o Pronto Socorro;</p>
+                      <p><strong>2 - Procedimento Padronizado (Exceto REDE+)</strong><br> Em negociação de Procedimento Padronizado informar o código TUSS e a composição do PP;</p>
+                      <p><strong>3 - Diárias e Taxas</strong><br> A tabela de  D&T deverá ser enviada com a codificação e nomenclatura TUSS;</p>
+                      <p><strong>4 - Rol Não</strong><br> Não pode ser emitido acordo com procedimentos Rol Não para Mediservice. Para a Bradesco os procedimentos Rol não terão cobertura somente para os procedimentos divulgados no site;</p>
+                      <p><strong>5 - Percentual de Reajuste</strong><br> O percentual negociado deve ser informado para cada acordo negociado. Exemplo: D&T: 4% | Procedimentos Padronizados: 5% etc.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons-tab">
+                <button type="button" name="button" class="btn btn-second pull-left prev">Anterior</button>
+                <button type="button" name="button" class="btn btn-primary pull-right next">Próximo</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- ANEXO REDE+ -->
+        <div role="tabpanel" class="tab-pane" id="anexo">
+          <div class="design-process-content">
+            <form>
+              <div class="box-white">
+                <h3>Anexo REDE+</h3>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label>Rede</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label>Valor 1</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label>Planos (Medservice)</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label>Valor 2</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label>Rede (Bradesco Saude)</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="box-add">
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6">
+                      <button type="button" name="button" class="icon-nav-adicionar"></button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <label>Procedimentos</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="col-sm-4">
+                      <label>Valor 1</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="col-sm-4">
+                      <label>Valor 2</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="box-item">
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6">
+                      <button type="button" name="button" class="icon-alerta-erro2"></button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <label>Procedimento</label>
+                      <span>Lorem ipsum</span>
+                    </div>
+                    <div class="col-sm-4">
+                      <label>Valor 1</label>
+                      <span>Lorem ipsum</span>
+                    </div>
+                    <div class="col-sm-4">
+                      <label>Valor 2</label>
+                      <span>Lorem ipsum</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons-tab">
+                <button type="button" name="button" class="btn btn-second pull-left prev">Anterior</button>
+                <button type="button" name="button" class="btn btn-primary pull-right">Salvar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/tab-responsive.min.js"></script>-->
+      
+    <!-- Scripts NAVTABS -->
+    <script type="text/javascript">
+      // script for tab steps
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+          var href = $(e.target).attr('href');
+          var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+          $('.process-model li').removeClass();
+
+          $curr.addClass("active");
+          $curr.prevAll().addClass("visited");
+        });
+      // end  script for tab steps
+    </script>
+    <script type="text/javascript">
+      (function($) {
+        'use strict';
+        $(document).on('show.bs.tab', '.nav-tabs-responsive [data-toggle="tab"]', function(e) {
+          var $target = $(e.target);
+          var $tabs = $target.closest('.nav-tabs-responsive');
+          var $current = $target.closest('li');
+          var $parent = $current.closest('li.dropdown');
+          $current = $parent.length > 0 ? $parent : $current;
+          var $next = $current.next();
+          var $prev = $current.prev();
+          var updateDropdownMenu = function($el, position){
+            $el
+              .find('.dropdown-menu')
+              .removeClass('pull-xs-left pull-xs-center pull-xs-right')
+              .addClass( 'pull-xs-' + position );
+          };
+
+          $tabs.find('>li').removeClass('next prev');
+          $prev.addClass('prev');
+          $next.addClass('next');
+
+          updateDropdownMenu( $prev, 'left' );
+          updateDropdownMenu( $current, 'center' );
+          updateDropdownMenu( $next, 'right' );
+        });
+
+        })(jQuery);
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          /*disable non active tabs
+          $('.nav li').not('.active').addClass('disabled');
+          $('.nav li').not('.active').find('a').removeAttr("data-toggle");*/
+
+          $('button.next').click(function(){
+              /*enable next tab*/
+              $('.nav li.active').next('li').removeClass('disabled');
+              $('.nav li.active').next('li').find('a').attr("data-toggle","tab").trigger("click");
+          });
+
+          $('button.prev').click(function() {
+              $('.nav li.active').prev('li').find('a').trigger("click");
+          });
+      });
+    </script>
+    <!-- FIM Scripts NAVTABS -->
+
+    <!-- Script Tooltip-->
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <!-- Script Datepicker-->
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/locales/bootstrap-datetimepicker.pt-BR.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+	    $('.form_date').datetimepicker({
+        language:  'pt-BR',
+        autoclose: 1,
+        minView: 2,
+        format: "dd/mm/yyyy"
+        });
+    </script>
+    <script>
+      // Máscara formato data no campo date 99/99/9999
+      function mascaraData(campo, e){
+        var kC = (document.all) ? event.keyCode : e.keyCode;
+        var data = campo.value;
+	      if( kC!=8 && kC!=46 ){
+		      if( data.length==2 ){
+			      campo.value = data += '/';
+          }else if( data.length==5){
+			    campo.value = data += '/';
+        }else
+      campo.value = data;
+      }
+    }
+    </script>
+        <script type="text/javascript">
+          $(document).ready(function () {
+              $('#sidebarCollapse').on('click', function () {
+                  $('#sidebar').toggleClass('active');
+              });
+          });
+      </script>
+    
+      <script type="text/javascript">
+          function changeMenu(x) {
+            x.classList.toggle("change-2");
+          }
+      </script>
+    </div> <!-- Fim wrapper -->
+  </body>
+</html>

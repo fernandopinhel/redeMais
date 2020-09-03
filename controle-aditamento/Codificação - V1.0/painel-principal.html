@@ -1,0 +1,953 @@
+  <!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, in itial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Controle de aditamento</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/docs.min.css" rel="stylesheet">
+    <link href="css/bradseg_icons.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+
+    <!-- Icons fontawesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    .tooltip.top {
+      padding: 3px 0 !important;
+      margin-top: 10px !important;
+      left: 44px !important;
+    }
+  </style>
+  </head>
+  <body>
+    <header class="bs-docs-nav navbar navbar-static-top" id="top">
+        <div class="container-fluid ">
+            <div class="navbar-header">
+            <button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar" data-toggle="collapse" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="home.html" class="navbar-brand">Controle de aditamento</a>
+            </div>
+            <nav class="collapse navbar-collapse js-navbar-collapse" id="bs-navbar">
+            <ul class="nav navbar-nav">
+                <li class="dropdown dropdown-large">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adminstrativo <b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-large row">
+                        <li class="col-sm-6">
+                        <ul>
+                            <!-- <li class="dropdown-header">Título coluna 1</li> -->
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                        </ul>
+                        </li>
+                        <li class="col-sm-6">
+                        <ul>
+                            <!-- <li class="dropdown-header">Título coluna 1</li> -->
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                            <li><a href="#">Example</a></li>
+                        </ul>
+                        </li>
+                    </ul>  
+                </li>            
+                <li class="active"><a href="#">Painel</a></li>
+                </li>
+            </ul> 
+            <div class="nav navbar-nav navbar-right">
+                <div class="pull-left">
+                <p>Roberto Carvalho</p>
+                </div>
+                <div class="pull-right">
+                <p><a href="#"><i class="icon-nav-sair"></i><span>Sair</span></a></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container-fluid painel-principal">
+      <div class="row">
+        <div class="col-sm-10 col-xs-6"><h2>Painel</h2></div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label>Surcursal</label>
+            <select class="form-control">
+              <option>Selecione</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="panel-group painel-status-total" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" class="change collapsed" data-parent="#accordion" href="#status-total" onclick="toggleFunction(this)">
+                  <div class="box-title-heading">
+                  <div class="bar-geral">
+                      <div class="bar1"></div>
+                      <div class="bar2"></div>
+                  </div>
+                  <div class="title-status-total" id="topo">STATUS (TOTAL)</div>
+                  </div>
+              </a>
+              </h4>
+            </div>
+            <div id="status-total" class="panel-collapse change collapsed collapse">
+              <div class="panel-body">
+                  <div class="row">
+                      <div class="col-status">
+                          <div class="box-status-total" data-id='1'>
+                              <a href="#aguardando-distribuicao">
+                                  <div class="contador-status-total"><span>50</span></div>
+                                  <div class="contador-status-txt"><p>Aguardando Distribuição</p></div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="col-status">
+                          <div class="box-status-total" data-id='2'>
+                              <a href="#aguardando-conferencia">
+                                  <div class="contador-status-total"><span>85</span></div>
+                                  <div class="contador-status-txt"><p>Aguardando Conferência</p></div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="col-status">
+                          <div class="box-status-total" data-id='3'>
+                              <a href="#resposta-sucursal-distribuicao">
+                                  <div class="contador-status-total"><span>50</span></div>
+                                  <div class="contador-status-txt"><p>Resposta Sucursal (Distribuição)</p></div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="col-status">
+                          <div class="box-status-total" data-id='4'>
+                              <a href="#em-emissao">
+                                  <div class="contador-status-total"><span>30</span></div>
+                                  <div class="contador-status-txt"><p>Em Emissão</p></div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="col-status">
+                          <div class="box-status-total" data-id='5'>
+                              <a href="#resposta-sucursal-emissao">
+                                  <div class="contador-status-total"><span>40</span></div>
+                                  <div class="contador-status-txt"><p>Resposta Sucursal (Emissão)</p></div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="col-status">
+                          <div class="box-status-total" data-id='6'>
+                              <a href="#aguardando-assinatura-prestador">
+                                  <div class="contador-status-total"><span>90</span></div>
+                                  <div class="contador-status-txt"><p>Aguardando assinatura prestador</p></div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="col-status">
+                          <div class="box-status-total" data-id='7'>
+                              <a href="#ag-envio-implatacao">
+                                  <div class="contador-status-total"><span>5</span></div>
+                                  <div class="contador-status-txt"><p>Ag. envio p/implantação</p></div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="col-status">
+                          <div class="box-status-total" data-id='8'>
+                              <a href="#em-processo-implatacao">
+                                  <div class="contador-status-total"><span>5</span></div>
+                                  <div class="contador-status-txt"><p>Em Processo de  Implatação</p></div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="col-status">
+                          <div class="box-status-total" data-id='9'>
+                              <a href="#aguardando-fisico">
+                                  <div class="contador-status-total"><span>5</span></div>
+                                  <div class="contador-status-txt"><p>Aguardando físico</p></div>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="row">
+                          <div class="col-status">
+                              <div class="box-status-total" data-id='10'>
+                                  <a href="#aprovacao-comite-executivo">
+                                      <div class="contador-status-total"><span>10</span></div>
+                                      <div class="contador-status-txt"><p>Aprovação comitê executivo</p></div>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="col-status">
+                              <div class="box-status-total" data-id='11'>
+                                  <a href="#solicitacao-enviadas-matriz">
+                                      <div class="contador-status-total"><span>70</span></div>
+                                      <div class="contador-status-txt"><p>Solicitações enviadas p/ matriz</p></div>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="col-status">
+                              <div class="box-status-total" data-id='12'>
+                                  <a href="#devolucao-solicitante-distribuicao">
+                                      <div class="contador-status-total"><span>60</span></div>
+                                      <div class="contador-status-txt"><p>Devolução p/ solicitante - distribuição</p></div>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="col-status">
+                              <div class="box-status-total" data-id='13'>
+                                  <a href="#devolucao-solicitante-emissao">
+                                      <div class="contador-status-total"><span>25</span></div>
+                                      <div class="contador-status-txt"><p>Devolução p/ solicitante - emissão</p></div>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="col-status">
+                              <div class="box-status-total" data-id='14'>
+                                  <a href="#devolucao-solicitante-retorno">
+                                      <div class="contador-status-total"><span>15</span></div>
+                                      <div class="contador-status-txt"><p>Devolução p/ solicitante - retorno</p></div>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="col-status">
+                              <div class="box-status-total" data-id='15'>
+                                  <a href="#enviado-assinatura-prestador">
+                                      <div class="contador-status-total"><span>5</span></div>
+                                      <div class="contador-status-txt"><p>Enviado p/ assinatura do prestador</p></div>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Aguardando distribuicao</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="Dentro do prazo" data-placement="top">
+                  <td><div><span class="circle green"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="Fora do prazo" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr>
+                  <td class="td-space"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Aguardando conferência</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="Dentro do prazo" data-placement="top">
+                  <td><div><span class="circle green"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="Fora do prazo" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr>
+                  <td class="td-space"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Resposta sucursal (distribuição)</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="Dentro do prazo" data-placement="top">
+                  <td><div><span class="circle green"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="Fora do prazo" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr>
+                  <td class="td-space"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="clear space"></div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Em emissão</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="Dentro do prazo" data-placement="top">
+                  <td><div><span class="circle green"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="Fora do prazo" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr>
+                  <td class="td-space"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Resposta sucursal (emissão)</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="Dentro do prazo" data-placement="top">
+                  <td><div><span class="circle green"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="Fora do prazo" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr>
+                  <td class="td-space"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Aguardando assinatura prestador</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="De 11 à 20 dias" data-placement="top">
+                  <td><div><span class="circle yellow"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="De 21 à 30 dias" data-placement="top">
+                  <td><div><span class="circle orange"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="A partir de 31 dias" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="clear space"></div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Ag. envio para implantação</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="Dentro do prazo" data-placement="top">
+                  <td><div><span class="circle green"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="Fora do prazo" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr>
+                  <td class="td-space"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Em processo de implantação</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="Pendente" data-placement="top">
+                  <td><div><span class="circle green"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="Implantado" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr>
+                  <td class="td-space"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Aguardando físico</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="De 60 à 120 dias" data-placement="top">
+                  <td><div><span class="circle yellow"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="De 121 à 180 dias" data-placement="top">
+                  <td><div><span class="circle orange"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="A partir de 181 dias" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="clear space"></div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Aprovação comitê executivo</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="Ag. montagem de processo dentro do prazo" data-placement="top">
+                  <td><div><span class="circle green"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="Ag. montagem de processo fora do prazo" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr>
+                  <td class="td-space"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Solicitações enviadas para matriz</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="Pendente" data-placement="top">
+                  <td><div><span class="circle green"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="Implantado" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr>
+                  <td class="td-space"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <table class="titulo-sla">
+                <tr>
+                  <td>Devolução para solicitante (Distribuição)</td>
+                </tr>  
+            </table>
+            <table class="painel-table" cellpadding="5px">              
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Rede +</td>
+                  <td>Prioridade</td>
+                  <td>Normal</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="tooltip" data-original-title="De 60 à 120 dias" data-placement="top">
+                  <td><div><span class="circle yellow"></span><!--Dentro do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="De 121 à 180 dias" data-placement="top">
+                  <td><div><span class="circle orange"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+                <tr data-toggle="tooltip" data-original-title="A partir de 181 dias" data-placement="top">
+                  <td><div><span class="circle red"></span><!--Fora do prazo--></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                  <td><div><a href="detalhes.html">1</a></div></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                  <td><div><a href="detalhes.html">2</a></div></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <button onclick="scrollToY(0, 10000, 'easeInOutSine');" id="myBtn" title="Ir ao topo">Topo</button>
+
+
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+
+      <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+      </script>
+
+      <!-- JavaScript (Opcional) -->
+      <!-- Script Toogle Status Total -->
+      <script>
+          function toggleFunction(x) {
+              x.classList.toggle("change");
+          }
+      </script>
+
+      <!-- Script Header fixo box servicos -->
+      <script>
+        $(function(){
+        var jElement = $('.header-fixo');
+        $(window).scroll(function(){
+            if ( $(this).scrollTop() > 300 ){
+                jElement.css({
+                    'position':'fixed',
+                    'top':'0'
+                });
+            }else{
+                jElement.css({
+                    'position':'relative',
+                    'top':'auto'
+                });
+            }
+        });
+      });
+  </script>
+
+  <!-- Script Ancoras box servicos -->
+  <script>
+    $('.col-status a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href'),
+        targetOffset = $(id).offset().top;
+    $('html, body').animate({
+      scrollTop: targetOffset - 100
+    }, 500);
+  });
+  </script>
+
+  <!-- Script marcação no box ao clicar 
+  <script>
+    $(function(){
+      $('.box-status-total').click(function(){
+        $('.box-status-total').removeClass('border-box');
+        $('.box-servicos').removeClass('border-box');
+        $(this).addClass('border-box');
+        var id = $(this).data('id');
+        var content = $('.box-servicos').filter(function() {
+          return $(this).data("id") == id
+        });
+        content.addClass('border-box');
+      });
+    });
+  </script>-->
+
+<!-- Script voltar ao topo -->
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
+function scrollToY(scrollTargetY, speed, easing) {
+    // scrollTargetY: the target scrollY property of the window
+    // speed: time in pixels per second
+    // easing: easing equation to use
+
+    var scrollY = window.scrollY || document.documentElement.scrollTop,
+        scrollTargetY = scrollTargetY || 0,
+        speed = speed || 1000,
+        easing = easing || 'easeOutSine',
+        currentTime = 0;
+
+    // min time .1, max time .8 seconds
+    var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
+
+    // easing equations from https://github.com/danro/easing-js/blob/master/easing.js
+    var easingEquations = {
+            easeOutSine: function (pos) {
+                return Math.sin(pos * (Math.PI / 2));
+            },
+            easeInOutSine: function (pos) {
+                return (-0.5 * (Math.cos(Math.PI * pos) - 1));
+            },
+            easeInOutQuint: function (pos) {
+                if ((pos /= 0.5) < 1) {
+                    return 0.5 * Math.pow(pos, 5);
+                }
+                return 0.5 * (Math.pow((pos - 2), 5) + 2);
+            }
+        };
+
+    // add animation loop
+    function tick() {
+        currentTime += 1 / 60;
+
+        var p = currentTime / time;
+        var t = easingEquations[easing](p);
+
+        if (p < 1) {
+            requestAnimFrame(tick);
+
+            window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
+        } else {
+            window.scrollTo(0, scrollTargetY);
+        }
+    }
+
+    // call it once to get started
+    tick();
+}
+
+function scrollFunction() {
+    if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 250) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+</script>
+
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+  </body>
+</html>
