@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Simulador Rede +</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#painelSubmenu" onclick="window.location.href='painel.html'" id="painel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#periodoBaseSubmenu" onclick="window.location.href='pacotes-simulaveis.html'" id="periodo-base-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Pacotes Simuláveis</span>
+                        </a>                        
+                    </li>
+                    <li>
+                        <a href="#colunasSubmenu" id="coluna-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                            <span class="item-menu">Coluna</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse show list-unstyled list-style-2 list-subs" id="colunasSubmenu">
+                            <li>
+                                <a href="niveis-coluna.html">Níveis Coluna</a>
+                            </li>
+                            <li class="active">
+                                <a href="itens-coluna.html">Itens Coluna</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#simulacoesSubmenu" id="simulacoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Simulações</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="simulacoesSubmenu">
+                            <li>
+                                <a href="simular-valor-pacote-rede-mais.html">Simular Valor Pacote Rede Mais</a>
+                            </li>
+                            <li>
+                                <a href="consultar-simulacoes-salvas.html">Consultar Simulações Salvas</a>
+                            </li>
+                            <li>
+                                <a href="efetivar-simulacoes-salvas.html">Efetivar Simulações Salvas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#aderenciaEsperadaSubmenu" onclick="window.location.href='aderencia-esperada.html'" id="aderencia-esperada" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Aderência Esperada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#comparativoDePropostasSubmenu" onclick="window.location.href='comparativo-de-propostas.html'" id="comparativo-de-propostas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Comparativo de Propostas</span>
+                        </a>
+                    </li>
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+            <!-- conteudo pagina -->
+            <div class="content" id="">
+                <nav class="navbar navbar-expand-lg menu-topo">
+                    <div class="container-fluid p-0">
+                        <div class="float-left  d-flex">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="marca-bradesco d-flex">
+                            <span class="logo-bradesco my-auto">
+                                <img src="img/icon-logo-bradesco.png" alt="">
+                            </span>
+                            <div class="title-sistema d-flex my-auto">
+                                <h1 class="my-auto">Simulador Rede <span>+</span></h1>
+                            </div>
+                        </div>
+                        <div class="user float-right d-flex">
+                            <div class="btn-group my-auto">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">João Carvalho</p>                                    
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="itens-coluna.html">Itens Coluna</a></li>                                                
+                                        <li class="breadcrumb-item">Cadastrar Itens Coluna</li>                                  
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
+                                <div class="col-lg-12">
+                                    <div class="title-page">
+                                        <h1>Cadastrar Itens Coluna</h1>
+                                    </div>
+                                </div>          
+                                <div class="col-lg-12"><hr></div>
+                            </div> 
+                            <div class="row mt-5">
+                                <div class="col-lg-8">                                    
+                                    <div class="form">
+                                        <input type="text" name="item-coluna" autocomplete="off">
+                                        <label for="item-coluna" class="label-name">
+                                            <span class="content-name">Item Coluna</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input type="text" name="senhas" autocomplete="off">
+                                        <label for="senhas" class="label-name">
+                                            <span class="content-name">%Senhas</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input type="text" name="cm" autocomplete="off">
+                                        <label for="cm" class="label-name">
+                                            <span class="content-name">%CM</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="col-lg-6 mt-5">                                    
+                                    <p class="p-select">Item Pacote</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected>Selecione</option>
+                                        <option value="2">ARTRODESE</option>
+                                        <option value="3">Item Pacote 2</option>                                        
+                                        <option value="4">Item Pacote 3</option>                                        
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 mt-5">                                    
+                                    <p class="p-select">Nível Coluna</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected>Selecione</option>
+                                        <option value="2">LOMBAR 1 NÍVEL</option>
+                                        <option value="3">Nível Coluna 2</option>                                        
+                                        <option value="4">Nível Coluna 3</option>                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row btns-opcoes mt-5">
+                                <div class="col-lg-12">
+                                    <button type="button"  value="voltar" onclick="window.location.href='itens-coluna.html'" name="button" class="btn btn-voltar mr-3 float-left">Voltar</button>
+                                    <button type="reset"  value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
+                                    <button type="button" name="button" data-toggle="modal" data-target="#modalCadastrar" class="btn btn-salvar float-right">Cadastrar</button>                                               
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+         <!-- Modal -->
+            <!-- Modal Cadastrar -->
+            <div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="modalCadastrarTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title modal-cadastrar-title" id="modalCadastrarTitle">Cadastro Realizado com Sucesso!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="img/check-circle.gif" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim Modal Cadastrar -->
+        <!-- Fim Modal -->
+        
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+    </body>
+</html>

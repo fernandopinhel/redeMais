@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Simulador Rede +</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#painelSubmenu" onclick="window.location.href='painel.html'" id="painel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#periodoBaseSubmenu" onclick="window.location.href='pacotes-simulaveis.html'" id="periodo-base-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Pacotes Simuláveis</span>
+                        </a>                        
+                    </li>
+                    <li>
+                        <a href="#colunasSubmenu" id="coluna-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                            <span class="item-menu">Coluna</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse show list-unstyled list-style-2 list-subs" id="colunasSubmenu">
+                            <li>
+                                <a href="niveis-coluna.html">Níveis Coluna</a>
+                            </li>
+                            <li class="active">
+                                <a href="itens-coluna.html">Itens Coluna</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#simulacoesSubmenu" id="simulacoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Simulações</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="simulacoesSubmenu">
+                            <li>
+                                <a href="simular-valor-pacote-rede-mais.html">Simular Valor Pacote Rede Mais</a>
+                            </li>
+                            <li>
+                                <a href="consultar-simulacoes-salvas.html">Consultar Simulações Salvas</a>
+                            </li>
+                            <li>
+                                <a href="efetivar-simulacoes-salvas.html">Efetivar Simulações Salvas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#aderenciaEsperadaSubmenu" onclick="window.location.href='aderencia-esperada.html'" id="aderencia-esperada" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Aderência Esperada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#comparativoDePropostasSubmenu" onclick="window.location.href='comparativo-de-propostas.html'" id="comparativo-de-propostas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Comparativo de Propostas</span>
+                        </a>
+                    </li>
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+            <!-- conteudo pagina -->
+            <div class="content" id="">
+                <nav class="navbar navbar-expand-lg menu-topo">
+                    <div class="container-fluid p-0">
+                        <div class="float-left  d-flex">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="marca-bradesco d-flex">
+                            <span class="logo-bradesco my-auto">
+                                <img src="img/icon-logo-bradesco.png" alt="">
+                            </span>
+                            <div class="title-sistema d-flex my-auto">
+                                <h1 class="my-auto">Simulador Rede <span>+</span></h1>
+                            </div>
+                        </div>
+                        <div class="user float-right d-flex">
+                            <div class="btn-group my-auto">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">João Carvalho</p>                                    
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
+                                <div class="col-lg-6">
+                                    <div class="title-page">
+                                        <h1>Itens Coluna</h1>
+                                    </div>
+                                </div>          
+                                <div class="col-lg-6">
+                                    <button type="button" name="button" onclick="window.location.href='cadastro-itens-coluna.html'" class="btn btn-cadastrar float-right mr-3">Cadastrar Pacotes Simuláveis</button>                      
+                                </div>     
+                                <div class="col-lg-12"><hr></div>
+                            </div> 
+                            <div class="row mt-5">
+                                <div class="col-lg-8">                                    
+                                    <div class="form">
+                                        <input type="text" name="item-coluna" autocomplete="off" class="">
+                                        <label for="item-coluna" class="label-name">
+                                            <span class="content-name">Item Coluna</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input type="text" name="senhas" autocomplete="off" class="">
+                                        <label for="senhas" class="label-name">
+                                            <span class="content-name">%Senhas</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input type="text" name="cm" autocomplete="off" class="">
+                                        <label for="cm" class="label-name">
+                                            <span class="content-name">%CM</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="col-lg-6 mt-5">                                    
+                                    <p class="p-select">Item Pacote</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected>Selecione</option>
+                                        <option value="2">Item Pacote 1</option>
+                                        <option value="3">Item Pacote 2</option>                                        
+                                        <option value="4">Item Pacote 3</option>                                        
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 mt-5">                                    
+                                    <p class="p-select">Nível Coluna</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected>Selecione</option>
+                                        <option value="2">Nível Coluna 1</option>
+                                        <option value="3">Nível Coluna 2</option>                                        
+                                        <option value="4">Nível Coluna 3</option>                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row btns-opcoes mt-5">
+                                <div class="col-lg-12">
+                                    <button type="reset"  value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
+                                    <button type="button" name="button" class="btn btn-buscar float-right">Buscar</button>                                     
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blank">
+                            <div class="container-fluid">
+                                <div class="row d-flex">
+                                    <div class="col-lg-6 my-auto">
+                                        <div class="resultado-filtro-todos">
+                                            <h4 class="float-left">Itens Encontrados:<span>2</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 my-auto">                                        
+                                        <a href="#" class="excluir float-right excluir-todos d-none" data-toggle="modal" data-target="#modalExluirLote">
+                                            <img src="img/excluir.svg" class="i-excluir" title="" data-toggle="tooltip" data-original-title="Excluir Selecionados">
+                                        </a>                                        
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>              
+                                            <th>
+                                                <div class="ex-checkbox m-0 excluir-todos-check" data-toggle="tooltip" data-original-title="Marcar todos">
+                                                    <input type="checkbox" onclick="marcarTodos(this.checked);" id="checkbox_one" class="">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </th>                        
+                                            <th></th>
+                                            <th>Item Coluna</th>
+                                            <th>Item Pacote</th>
+                                            <th>Nível Coluna</th>
+                                            <th>%CM</th>
+                                            <th>%Senhas</th>        
+                                            <th>Início Vigência</th> 
+                                            <th>Fim Vigência</th>                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td-check por-2">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions ac-2 por-2">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="excluir" >
+                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir" title="" data-toggle="tooltip" data-original-title="Excluir">
+                                                    </a>
+                                                    <a href="#" class="editar" onclick="window.location.href='alterar-itens-coluna.html'">
+                                                        <img src="img/editar.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Alterar">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Artrodese Lombar 1 Nível</td>
+                                            <td>Artrodese</td>
+                                            <td>Lombar 1 Nível</td>
+                                            <td>80</td>
+                                            <td>20</td>                                        
+                                            <td>01/01/2010</td>  
+                                            <td>-</td>  
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-check por-2">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions ac-2 por-2">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="excluir" >
+                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir" title="" data-toggle="tooltip" data-original-title="Excluir">
+                                                    </a>
+                                                    <a href="#" class="editar" onclick="window.location.href='alterar-itens-coluna.html'">
+                                                        <img src="img/editar.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Alterar">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Artrodese Lombar 2 Nível</td>
+                                            <td>Artrodese</td>
+                                            <td>Lombar 2 Nível</td>
+                                            <td>100</td>
+                                            <td>15</td>                                        
+                                            <td>01/01/2010</td>  
+                                            <td>-</td>  
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <ul class="pagination lista-contatos">
+                            <li>
+                                <a href="#" class="prev">
+                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                            <a href="#" class="prev">
+                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                            <a href="#" class="next">
+                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="#" class="next">
+                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+        
+        <!-- Modais -->
+            <!-- Modal Excluir -->
+            <div class="modal fade" id="modalExluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="modalExcluirTitle">Tem certeza que deseja excluir este item?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-salvar float-right" data-dismiss="modal">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim Modal Excluir -->
+            <!-- Modal Excluir Lote -->
+            <div class="modal fade" id="modalExluirLote" tabindex="-1" role="dialog" aria-labelledby="modalExcluirLoteTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="modalExcluirLoteTitle">Tem certeza que deseja excluir estes itens?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-salvar float-right" data-dismiss="modal">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim Modal Excluir Lote -->
+        <!-- Fim Modais -->
+    
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
