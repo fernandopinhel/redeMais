@@ -1,3 +1,10 @@
+// tabela com header fixo
+var $th = $('.tableFixHead').find('thead th')
+$('.tableFixHead').on('scroll', function() {
+  $th.css('transform', 'translateY('+ this.scrollTop +'px)');
+});
+// fim tabela com header fixo
+
 // carregando divs
 $('#identificacao-do-prestador').on('click', function () {
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
@@ -190,4 +197,3 @@ if($(".input-date").val(length.css("display", "none"))){
   });   
 }
 // fim efeitos nos inputs
-

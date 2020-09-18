@@ -28,7 +28,8 @@ h4{font-size: 16px;}
 h1, h2, h3, h4, h5, h6 {
 	font-family:'Bradesco Sans', sans-serif;
 	font-weight: 500;
-	color:#000;
+    color:#000;
+    margin: 0;
 }
 
 body {
@@ -375,6 +376,11 @@ a {
 /* fim icons */
 
 /* form */
+label.descricao{
+    top: -30px;
+    left: 17px;
+}
+
 .h-35 {
     height: 35px;
     background: transparent;
@@ -422,12 +428,12 @@ a {
 
 textarea.form-control{
     border: 1px solid #D6D6D6;
-    color: #4d4e53;
+    color: #989a9e;
 }
 
 textarea.form-control:focus{
     border: 1px solid #BABABA !important;
-    color: #4d4e53;
+    color: #989a9e;
 }
 
 textarea.form-control:focus{
@@ -726,6 +732,17 @@ input:focus ~ label.check-estilo, label.check-estilo{
 
 .ex-checkbox input[type=checkbox]:disabled + label::before {
 	border: 1px solid #bcbcbc;
+}
+
+
+.ex-checkbox input.chk-func[type=checkbox]{
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+    position: relative;    
 }
 /* fim checkbox */
 
@@ -1132,6 +1149,14 @@ li.sub-active > a{
 
 
 /* tabela  */
+
+/* tabela  header fixo */
+.tableFixHead{
+    overflow-y: auto;
+    height: 400px;
+}
+/* fim tabela  header fixo */
+
 .bg-table{
     background: #F5F5F9;
     padding: 10px 25px 25px 25px;
@@ -1165,6 +1190,8 @@ table {background-color: none;}
     background: #fff;
     border: none;
     padding: 15px;
+    position: relative;
+    z-index: 2;
 }
     
 .table > tbody > tr.separator{
@@ -1800,7 +1827,6 @@ tr:hover td.a-2 .menu-invisible{
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: #faf9f9;
     color: #CE0732;
     padding: 5px;
     font-weight: 500;
