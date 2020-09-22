@@ -50,7 +50,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#painelSubmenu" onclick="window.location.href='/painel-negociacoes.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" onclick="window.location.href='/consulta-painel-negociacao.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Painel de Negociações</span>
                         </a>
                     </li>
@@ -143,7 +143,7 @@
                                     </div>
                                 </div>          
                                 <div class="col-lg-6 my-auto">
-                                    <button type="button" name="button" onclick="window.location.href='cadastro-associar-perfis-funcionalidade.html'" class="btn btn-cadastrar float-right mr-3">Cadastrar Associação Perfis à Funcionalidade</button>                      
+                                    <button type="button" name="button" onclick="window.location.href='cadastro-associar-perfis-funcionalidade.html'" class="btn btn-cadastrar float-right mr-3">Associação</button>                      
                                 </div>     
                                 <div class="col-lg-12"><hr></div>
                             </div> 
@@ -184,7 +184,7 @@
                                 <div class="row d-flex">
                                     <div class="col-lg-6 my-auto">
                                         <div class="resultado-filtro-todos">
-                                            <h4 class="float-left">Itens Encontrados:<span>5</span></h4>
+                                            <h4 class="float-left">Itens Encontrados:<span>?</span></h4>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 my-auto">                                        
@@ -198,7 +198,8 @@
                             <div class="table-responsive tableFixHead">
                                 <table class="table">
                                     <thead>
-                                        <tr>                               
+                                        <tr>                   
+                                            <th></th>            
                                             <th>Perfis</th>
                                             <th>Funcionalidade do Sistema</th>                                              
                                             <th class="text-center">Consultar</th>
@@ -211,6 +212,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td></td>
                                             <td>Administrador</td>
                                             <td>Apoio, Coluna e Buco</td>
                                             <td class="text-center">
@@ -254,6 +256,315 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
+                                            <td></td>
+                                            <td>Administrador</td>
+                                            <td>Associar Perfil X Funcionalidade</td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled checked>
+                                                    <label for="checkbox_two" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled checked>
+                                                    <label for="checkbox_three" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled checked>
+                                                    <label for="checkbox_four" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_five" disabled>
+                                                    <label for="checkbox_five" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_six" disabled>
+                                                    <label for="checkbox_six" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Administrador</td>
+                                            <td>Associar Usuário X Perfil</td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled checked>
+                                                    <label for="checkbox_two" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled checked>
+                                                    <label for="checkbox_three" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled checked>
+                                                    <label for="checkbox_four" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_five" disabled>
+                                                    <label for="checkbox_five" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_six" disabled>
+                                                    <label for="checkbox_six" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Administrador</td>
+                                            <td>Atualização da Base de Negociação</td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled checked>
+                                                    <label for="checkbox_two" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled checked>
+                                                    <label for="checkbox_three" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled checked>
+                                                    <label for="checkbox_four" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_five" disabled>
+                                                    <label for="checkbox_five" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_six" disabled>
+                                                    <label for="checkbox_six" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Administrador</td>
+                                            <td>Painel de Negociações</td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled checked>
+                                                    <label for="checkbox_two" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled checked>
+                                                    <label for="checkbox_three" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled checked>
+                                                    <label for="checkbox_four" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_five" disabled>
+                                                    <label for="checkbox_five" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_six" disabled>
+                                                    <label for="checkbox_six" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Administrador</td>
+                                            <td>Procedimentos não Listados</td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled checked>
+                                                    <label for="checkbox_two" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled checked>
+                                                    <label for="checkbox_three" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled checked>
+                                                    <label for="checkbox_four" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_five" disabled>
+                                                    <label for="checkbox_five" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_six" disabled>
+                                                    <label for="checkbox_six" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Administrador</td>
+                                            <td>Premissas/Alçadas</td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled checked>
+                                                    <label for="checkbox_two" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled checked>
+                                                    <label for="checkbox_three" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled checked>
+                                                    <label for="checkbox_four" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_five" disabled>
+                                                    <label for="checkbox_five" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_six" disabled>
+                                                    <label for="checkbox_six" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Administrador</td>
+                                            <td>Cálculo de Economia</td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled checked>
+                                                    <label for="checkbox_two" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled checked>
+                                                    <label for="checkbox_three" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled checked>
+                                                    <label for="checkbox_four" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_five" disabled>
+                                                    <label for="checkbox_five" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_six" disabled>
+                                                    <label for="checkbox_six" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
                                             <td>Administrador</td>
                                             <td>Apoio, Coluna e Buco</td>
                                             <td class="text-center">
@@ -297,11 +608,12 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td>Administrador</td>
-                                            <td>Apoio, Coluna e Buco</td>
+                                            <td>PPS por Procedimento/de para Grupos PPAS</td>
                                             <td class="text-center">
                                                 <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled>
                                                     <label for="checkbox_one" class="check-estilo"></label>
                                                 </div>
                                             </td>
@@ -340,8 +652,25 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
-                                            <td>Administrador</td>
-                                            <td>Apoio, Coluna e Buco</td>
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="excluir" data-toggle="tooltip" data-original-title="Excluir">
+                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                    </a>
+                                                    <a href="#" class="editar" onclick="window.location.href='alterar-perfil.html'" data-toggle="tooltip" data-original-title="Alterar">
+                                                        <img src="img/editar.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Estatística</td>
+                                            <td>PPS por Procedimento/de para Grupos PPAS</td>
                                             <td class="text-center">
                                                 <div class="ex-checkbox">
                                                     <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
@@ -350,62 +679,19 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled checked>
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled>
                                                     <label for="checkbox_two" class="check-estilo"></label>
                                                 </div>
                                             </td>
                                             <td class="text-center">
                                                 <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled checked>
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled>
                                                     <label for="checkbox_three" class="check-estilo"></label>
                                                 </div>
                                             </td>
                                             <td class="text-center">
                                                 <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled checked>
-                                                    <label for="checkbox_four" class="check-estilo"></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_five" disabled>
-                                                    <label for="checkbox_five" class="check-estilo"></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_six" disabled>
-                                                    <label for="checkbox_six" class="check-estilo"></label>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="separator">
-                                            <td colspan="5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Administrador</td>
-                                            <td>Apoio, Coluna e Buco</td>
-                                            <td class="text-center">
-                                                <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_one" disabled checked>
-                                                    <label for="checkbox_one" class="check-estilo"></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_two" disabled checked>
-                                                    <label for="checkbox_two" class="check-estilo"></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_three" disabled checked>
-                                                    <label for="checkbox_three" class="check-estilo"></label>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled checked>
+                                                    <input type="checkbox" class="marcar chk-func" id="checkbox_four" disabled>
                                                     <label for="checkbox_four" class="check-estilo"></label>
                                                 </div>
                                             </td>

@@ -610,17 +610,17 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo{
 }
 
 .ex-radio input[type="radio"]:disabled + label {
-	color: #000;
+	color: #989a9e;
 	cursor: not-allowed;
 }
 
 .ex-radio input[type=radio]:disabled +  label::before,
 .ex-radio input[type=radio]:checked:disabled +  label::before {
-	border: 1px solid #000;
+	border: 1px solid #989a9e;
 }
 
 .ex-radio input[type=radio]:checked:disabled +  label::after {
-	background-color: #000;
+	background-color: #989a9e;
 }
 
 .radio-title{
@@ -1154,7 +1154,9 @@ li.sub-active > a{
 .tableFixHead{
     overflow-y: auto;
     height: 400px;
+    padding-top:0 !important;
 }
+.tableFixHead > thead{border: 1px solid #fff;}
 /* fim tabela  header fixo */
 
 .bg-table{
@@ -1348,6 +1350,8 @@ table {background-color: none;}
 /* fim tabela com header */
 
 /* tamanhos td´s tabela */
+.por-2{width: 2% !important;}
+.por-3{width: 3% !important;}
 .por-5{width: 5% !important;}
 .por-8{width: 8% !important;}
 .por-10{width: 10% !important;}
@@ -1828,7 +1832,7 @@ tr:hover td.a-2 .menu-invisible{
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #CE0732;
-    padding: 5px;
+    padding: 5px 5px 5px 0;
     font-weight: 500;
 }
 
