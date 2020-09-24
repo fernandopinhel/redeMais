@@ -8,58 +8,66 @@ $('.tableFixHead').on('scroll', function() {
 // carregando divs
 $('#identificacao-do-prestador').on('click', function () {
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( ".card-painel-slider").each(function() {$(this).removeClass("active");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
   $('.identificacao-do-prestador').removeClass('hidden');
-  $('#identificacao-do-prestador > .card-painel-slider').addClass('active');
+  $('#identificacao-do-prestador > .card-painel').addClass('active');
 });
 
 $('#identificacao-do-procedimento').on('click', function () {    
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( ".card-painel-slider").each(function() {$(this).removeClass("active");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
   $('.identificacao-do-procedimento').removeClass('hidden');
-  $('#identificacao-do-procedimento  > .card-painel-slider').addClass('active');
+  $('#identificacao-do-procedimento  > .card-painel').addClass('active');
 });
 
 $('#marcacao-lista-prioritaria-pmo').on('click', function () {    
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( ".card-painel-slider").each(function() {$(this).removeClass("active");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
   $('.marcacao-lista-prioritaria-pmo').removeClass('hidden');
-  $('#marcacao-lista-prioritaria-pmo  > .card-painel-slider').addClass('active');
+  $('#marcacao-lista-prioritaria-pmo  > .card-painel').addClass('active');
 });
 
 $('#sinistro-cm-alcadas').on('click', function () {    
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( ".card-painel-slider").each(function() {$(this).removeClass("active");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
   $('.sinistro-cm-alcadas').removeClass('hidden');
-  $('#sinistro-cm-alcadas  > .card-painel-slider').addClass('active');
+  $('#sinistro-cm-alcadas  > .card-painel').addClass('active');
 });
 
 $('#pmo-negociacoes').on('click', function () {    
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( ".card-painel-slider").each(function() {$(this).removeClass("active");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
   $('.pmo-negociacoes').removeClass('hidden');
-  $('#pmo-negociacoes  > .card-painel-slider').addClass('active');
+  $('#pmo-negociacoes  > .card-painel').addClass('active');
 });
 
 $('#pmo-aditivos').on('click', function () {    
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( ".card-painel-slider").each(function() {$(this).removeClass("active");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
   $('.pmo-aditivos').removeClass('hidden');
-  $('#pmo-aditivos  > .card-painel-slider').addClass('active');
+  $('#pmo-aditivos  > .card-painel').addClass('active');
 });
 
 $('#premissas-etapas-de-calculo-economia').on('click', function () {    
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( ".card-painel-slider").each(function() {$(this).removeClass("active");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
   $('.premissas-etapas-de-calculo-economia').removeClass('hidden');
-  $('#premissas-etapas-de-calculo-economia  > .card-painel-slider').addClass('active');
+  $('#premissas-etapas-de-calculo-economia  > .card-painel').addClass('active');
 });
 
 $('#economias-potencial-negociada-implantada').on('click', function () {    
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( ".card-painel-slider").each(function() {$(this).removeClass("active");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
   $('.economias-potencial-negociada-implantada').removeClass('hidden');
-  $('#economias-potencial-negociada-implantada  > .card-painel-slider').addClass('active');
+  $('#economias-potencial-negociada-implantada  > .card-painel').addClass('active');
 });
 // fim carregando divs
 

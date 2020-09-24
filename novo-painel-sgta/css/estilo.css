@@ -25,6 +25,8 @@
 h1{font-size: 22px;}   
 h4{font-size: 16px;}
 
+b, strong{font-weight: bold;}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family:'Bradesco Sans', sans-serif;
 	font-weight: 500;
@@ -48,6 +50,8 @@ a {
     list-style: none !important;    
     outline: none;
 }
+
+/* hr{margin-top: 0;} */
 
 .btn-cancelar {
     background: transparent;
@@ -138,6 +142,7 @@ a {
     font-weight: 400;
     border: 1px solid #0e9c4c;
     border-radius: 20px;
+    width: 98px;
 }
 
 .btn-salvar:hover {
@@ -220,6 +225,12 @@ a {
 .space{height: 100px;}
 .space2{height: 120px;}
 
+.border-a{border:1px solid #2365a7;}
+.color-a{color: #2365a7;}
+.border-c{border:1px solid #a5aab6;}
+.color-c{color: #a5aab6;}
+.border-lc{border:1px solid #d2d4da;}
+
 .sub-title {
     background: #f9f7f7;
     padding: 10px;
@@ -228,7 +239,7 @@ a {
     -moz-border-radius: 5px;
 }
 
-.sub-title>h6 {
+.sub-title > h6 {
     color: #989a9e;
     padding-top: 5px;
     text-transform: uppercase;
@@ -428,12 +439,12 @@ label.descricao{
 
 textarea.form-control{
     border: 1px solid #D6D6D6;
-    color: #989a9e;
+    color: #4d4e53;
 }
 
 textarea.form-control:focus{
     border: 1px solid #BABABA !important;
-    color: #989a9e;
+    color: #4d4e53;
 }
 
 textarea.form-control:focus{
@@ -463,7 +474,7 @@ input{
 	padding: 5px;
 	-webkit-appearance: none;
 	display: block;
-	color: #989a9e;
+	color: #4d4e53;
 	width: 100%;
 	border: none;
 	border-radius: 0;
@@ -1186,9 +1197,9 @@ table {background-color: none;}
 
 .table > thead > tr > th {
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     color: #4d4e53;
-    font-size: 11px;
+    font-size: 14px;
     background: #fff;
     border: none;
     padding: 15px;
@@ -1208,7 +1219,7 @@ table {background-color: none;}
     padding: 13px;
     font-weight: 500;
     color: #4d4e53;
-    font-size: 12px;
+    font-size: 13px;
     background: transparent;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
@@ -1385,9 +1396,7 @@ table {background-color: none;}
 }
   
 .pagination li a {
-    margin-left: 12px;
-    padding: 8px 13px;
-    line-height: 27px;
+    padding: 8px 13px;    
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
@@ -1401,15 +1410,30 @@ table {background-color: none;}
     -moz-transition:all 0.2s linear;
 }
   
-.pagination a.active, .pagination a:hover  {
+.pagination a.active{
     cursor: pointer;
+    padding: 8px 14px;    
     color: #fff !important;
     background: #4d4e53 !important;
     border-color: #4d4e53 !important;
     text-decoration: none;
 }
   
+.pagination a:hover{
+    cursor: pointer;
+    padding: 8px 13px;    
+    color: #fff !important;
+    background: #4d4e53 !important;
+    border-color: #4d4e53 !important;
+    text-decoration: none;
+}
+
 .pagination li a.prev, li a.next {
+    position: relative;
+    padding: 8px 15px;
+}
+
+.pagination li a.prev:hover, li a.next:hover {
     position: relative;
     padding: 8px 15px;
 }
@@ -1574,26 +1598,101 @@ tr:hover td.a-2 .menu-invisible{
 /* fim titulo tabelas */
 /* fim tabela */
 
+/* accordion multilistas abertas painel */
+.accordion .card:last-of-type{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
+}
+
+.accordion .card .card-header{
+    background: #fff;
+    margin-bottom: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.accordion .card .card-body{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-bottom: 0;
+}
+
+#accordion .card .card-header h6 button{
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2365a7;
+    font-weight: 500;
+}
+
+.card-header{padding: 0;}
+
+.b-icon > button {
+    display: block;
+    position: relative;
+}
+
+.seta-accordion-painel{
+    position: absolute;
+    right: 15px;
+    background:url(../img/seta-accordion-painel.svg);
+    transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+    width: 30px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.6s all;
+}
+
+.b-icon > button[aria-expanded="true"] .seta-accordion-painel{
+    position: absolute;
+    right: 15px;
+    background:url(../img/seta-accordion-painel.svg);
+    width: 30px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(0deg);
+    transition: 0.6s all;
+}
+/* fim accordion multilistas abertas painel */
+
 /* painel carrossel */
-.card-painel-slider{
-    background: transparent;
+.box-id-prestador{
+    padding: 5px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.card-painel{
+    background: #e2dee2;
 	padding: 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	-webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
+	/* -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
 	-moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
-    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17); */
     -webkit-transition: all 0.6s ease-in-out;
     -moz-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
     cursor: pointer;;
-    -ms-transform: scale(1,0.9); /* IE 9 */
-    transform: scale(1,0.9); /* Standard syntax */
+    -ms-transform: scale(0.9,0.9); /* IE 9 */
+    transform: scale(0.9,0.9); /* Standard syntax */
 }
 
-.card-painel-slider:hover{
+.card-painel:hover{
     background: #fff;
 	padding: 20px;
 	-webkit-border-radius: 5px;
@@ -1606,19 +1705,20 @@ tr:hover td.a-2 .menu-invisible{
     -moz-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
-    -ms-transform: scale(1.1,1); /* IE 9 */
-    transform: scale(1.1,1); /* Standard syntax */
+    -ms-transform: scale(1,1); /* IE 9 */
+    transform: scale(1,1); /* Standard syntax */
 }
 
-.card-painel-slider > .item-principal > h1{
+.card-painel > .item-principal > h1{
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #000;
     font-weight: 500;
+    text-align: center;
 }
 
-.card-painel-slider.active{
+.card-painel.active{
     background: #fff;
 	padding: 20px;
 	-webkit-border-radius: 5px;
@@ -1631,11 +1731,11 @@ tr:hover td.a-2 .menu-invisible{
     -moz-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
-    -ms-transform: scale(1.1,1); /* IE 9 */
-    transform: scale(1.1,1); /* Standard syntax */
+    -ms-transform: scale(1,1); /* IE 9 */
+    transform: scale(1,1); /* Standard syntax */
 }
 
-.card-painel-slider.active:hover{
+.card-painel.active:hover{
     background: #fff;
 	padding: 20px;
 	-webkit-border-radius: 5px;
@@ -1648,16 +1748,17 @@ tr:hover td.a-2 .menu-invisible{
     -moz-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
-    -ms-transform: scale(1.1,1); /* IE 9 */
-    transform: scale(1.1,1); /* Standard syntax */
+    -ms-transform: scale(1,1); /* IE 9 */
+    transform: scale(1,1); /* Standard syntax */
 }
 
-.card-painel-slider.active > .item-principal > h1{
+.card-painel.active > .item-principal > h1{
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #CE0732;
+    color: #2365a7;
     font-weight: 500;
+    text-align: center;
 }
 /* fim painel carrossel*/
 
@@ -1828,10 +1929,10 @@ tr:hover td.a-2 .menu-invisible{
 /* Painel */
 
 .title-page > h6{
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #CE0732;
+    color: #2365a7;
     padding: 5px 5px 5px 0;
     font-weight: 500;
 }
