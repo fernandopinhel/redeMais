@@ -15,6 +15,8 @@
         <link rel="stylesheet" type="text/css" href="css/ie.css">
         <!-- Icons -->
         <link rel="stylesheet" href="css/icones-bradesco.css">
+        <!-- estilo toggle on/off -->
+        <link rel="stylesheet" href="css/bootstrap4-toggle.min.css">
     </head>
     <body>
         <!-- conteudo geral wrapper -->
@@ -172,10 +174,22 @@
                                             <h4 class="float-left">Itens Encontrados:<span>2</span></h4>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 my-auto">                                        
-                                        <a href="#" class="excluir float-right excluir-todos d-none" data-toggle="modal" data-target="#modalExluirLote">
-                                            <img src="img/excluir.svg" class="i-excluir" title="" data-toggle="tooltip" data-original-title="Excluir Selecionados">
-                                        </a>                                        
+                                    <div class="col-sm-6 col-lg-6 my-auto pr-0">         
+                                        <div class="btn-group actions-table mr-3">
+                                            <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="mr-3">Mais Ações</span>
+                                            <div class="options">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <span class="dropdown-item" data-toggle="modal" data-target="#modalInativarLote"><a href="#">Inativar Itens Selecionados</a></span>
+                                                <div class="dropdown-divider"></div>
+                                                <span class="dropdown-item" data-toggle="modal" data-target="#modalAtivarLote"><a href="#">Ativar Itens Selecionados</a></span>
+                                            </div>
+                                        </div>                                       
                                     </div>
                                 </div>
                                 <hr>
@@ -191,6 +205,7 @@
                                                 </div>
                                             </th>                        
                                             <th></th>
+                                            <th></th>
                                             <th>Nome do Perfil</th>
                                             <th>Descrição</th>
                                             <th>Divulgar Procedimentos?</th>
@@ -204,21 +219,12 @@
                                                     <label for="checkbox_one" class="check-estilo"></label>
                                                 </div>
                                             </td>
-                                            <td class="actions ac-2 por-2">
-                                                <div class="float-right">
-                                                <div class="menu-visible">
-                                                    <span class="circle"></span>
-                                                    <span class="circle"></span>
-                                                    <span class="circle"></span>
-                                                </div>
-                                                <div class="menu-invisible">
-                                                    <a href="#" class="excluir">
-                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir" title="" data-original-title="Excluir">
-                                                    </a>
+                                            <td class="por-2"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
+                                            <td class="actions-visible por-2">
+                                                <div>
                                                     <a href="#" class="editar" onclick="window.location.href='alterar-perfil.html'">
                                                         <img src="img/editar.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Alterar">
                                                     </a>
-                                                </div>
                                                 </div>
                                             </td>
                                             <td>Administrador</td>
@@ -235,21 +241,12 @@
                                                     <label for="checkbox_one" class="check-estilo"></label>
                                                 </div>
                                             </td>
-                                            <td class="actions ac-2 por-2">
-                                                <div class="float-right">
-                                                <div class="menu-visible">
-                                                    <span class="circle"></span>
-                                                    <span class="circle"></span>
-                                                    <span class="circle"></span>
-                                                </div>
-                                                <div class="menu-invisible">
-                                                    <a href="#" class="excluir">
-                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir" title="" data-original-title="Excluir">
-                                                    </a>
+                                            <td class="por-2"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
+                                            <td class="actions-visible por-2">
+                                                <div>
                                                     <a href="#" class="editar" onclick="window.location.href='alterar-perfil.html'">
                                                         <img src="img/editar.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Alterar">
                                                     </a>
-                                                </div>
                                                 </div>
                                             </td>
                                             <td>Estatística</td>
@@ -295,11 +292,11 @@
             </div>
         </div><!-- fim conteudo geral wrapper -->
          <!-- Modal Excluir -->
-         <div class="modal fade" id="modalExluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirTitle" aria-hidden="true">
+         <div class="modal fade" id="modalAtivarLote" tabindex="-1" role="dialog" aria-labelledby="modalAtivarTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="modalExcluirTitle">Tem certeza que deseja excluir este item?</h5>
+                <h5 class="modal-title" id="modalAtivarTitle">Tem certeza que deseja Ativar estes Perfis Selecionados?</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -315,11 +312,11 @@
         </div>
         <!-- Fim Modal Excluir -->
         <!-- Modal Excluir Lote -->
-        <div class="modal fade" id="modalExluirLote" tabindex="-1" role="dialog" aria-labelledby="modalExcluirLoteTitle" aria-hidden="true">
+        <div class="modal fade" id="modalInativarLote" tabindex="-1" role="dialog" aria-labelledby="modalInativarLoteTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="modalExcluirLoteTitle">Tem certeza que deseja excluir estes itens?</h5>
+                <h5 class="modal-title" id="modalInativarLoteTitle">Tem certeza que deseja inativar estes Perfis Selecionados?</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -347,6 +344,8 @@
         <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
         <script src="js/jquery.mask.min.js"></script>
+        <!-- script toggle on/off -->
+        <script src="js/bootstrap4-toggle.min.js"></script>
         <!-- scripts -->
         <script src="js/script.js"></script>
         <script>

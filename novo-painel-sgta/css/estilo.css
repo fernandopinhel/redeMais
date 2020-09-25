@@ -54,6 +54,10 @@ a {
 label{margin-bottom: 0;}
 
 /* hr{margin-top: 0;} */
+.toggle-off, .toggle-off:hover {
+    background: #cc092f;
+    color: #fff;
+}
 
 .btn-cancelar {
     background: transparent;
@@ -382,9 +386,9 @@ label{margin-bottom: 0;}
     cursor: pointer;
 }
 
-.i-detalhes, .i-editar{
-    width: 32px;
-    height: 32px;
+.i-detalhes, .i-excluir, .i-editar, .i-historico{
+    width: 37px;
+    height: 37px;
 }
 /* fim icons */
 
@@ -1164,6 +1168,78 @@ li.sub-active > a{
 
 
 /* tabela  */
+.actions-table {
+    border: 1px solid;
+    border-radius: 7px;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    transition: 0.6s all;
+    float: right;
+}
+
+.actions-table .dropdown-menu {
+    padding: 10px !important;
+    background: #F6F7FB;
+    transform: translate3d(-158px, 31px, 0px) !important;
+    border-color:#000;
+    top: 10px !important;
+    
+}
+
+.dropdown-item:first-child {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.dropdown-item:last-child {
+    border-bottom-right-radius: calc(.25rem - 1px);
+    border-bottom-left-radius: calc(.25rem - 1px);
+}
+
+.actions-table .dropdown-menu>span>a {color: #000;}
+
+.actions-table:hover > button {color: #fff;}
+
+.actions-table:hover button .options span {background: #fff;}
+
+.actions-table button .options {float: right;}
+
+.actions-table button .options span {
+    background: #000;
+    width: 4px;
+    height: 4px;
+    margin-top: 3px;
+    display: block;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    transition: 0.6s all;
+}
+
+.actions-table:hover {
+    border: 1px solid;
+    border-radius: 7px;
+    text-align: center;
+    background: #000;
+    font-weight: 500;
+    transition: 0.6s all;
+    cursor: pointer;
+}
+
 .td-check > .ex-checkbox{
     position: relative;
     font-size: 14px;
@@ -1592,6 +1668,10 @@ tr:hover td.a-2 .menu-invisible{
     opacity: 1;
 }
 
+td.actions-visible > div {
+    position: relative;
+    top: -5px;
+}
 /*  tabela sem hover */
 .no-hover .table > tbody > tr:hover > td{
     border-top: 2px solid #fff;
