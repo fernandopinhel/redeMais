@@ -51,6 +51,8 @@ a {
     outline: none;
 }
 
+label{margin-bottom: 0;}
+
 /* hr{margin-top: 0;} */
 
 .btn-cancelar {
@@ -665,10 +667,9 @@ input[type=file]{
 .f-13{font-size: 13px !important;}
 
 input:focus ~ label.check-estilo, label.check-estilo{
-    top: -10px !important;
+    top: -16px !important;
     transform: none !important;
     left: 0 !important;
-    padding-left: 27px !important;
     color: #989a9e !important;
     font-weight: normal !important;
     display: inline-block !important;
@@ -676,12 +677,14 @@ input:focus ~ label.check-estilo, label.check-estilo{
 }
 
 .ex-checkbox{
-	position: relative;
-	font-size: 14px;
+    position: relative;
+    font-size: 14px;
+    height: 30px;
 }
 
 .ex-checkbox label{
-	padding-left: 32px;
+    height: 20px;
+    width:  20px;
 	line-height: 140%;
 	font-weight: normal;
 	display: inline-block;
@@ -689,13 +692,13 @@ input:focus ~ label.check-estilo, label.check-estilo{
 }
 
 .ex-checkbox input[type=checkbox]{
-	margin: 0;
-	opacity: 0;
-	cursor: pointer;
-	width: 20px;
-	height: 20px;
-	z-index: 10;
-    position: absolute;    
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    position: absolute;
 }
 
 .ex-checkbox input[type=checkbox] + label::before {
@@ -733,12 +736,13 @@ input:focus ~ label.check-estilo, label.check-estilo{
 
 .ex-checkbox input[type=checkbox]:disabled + label {
 	color: #bcbcbc;
-	cursor: not-allowed;
+    cursor: not-allowed;
 }
 
 .ex-checkbox input[type=checkbox]:disabled:checked + label::before {
-	border: 1px solid transparent;
-	background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBmaWxsPSIjYmNiY2JjIiBkPSJNMTguOSA4LjhsLTguNyA4LjdjLS4xLjEtLjIuMS0uMyAwbC00LjktNC45Yy0uMS0uMS0uMS0uMiAwLS4zbDEuMi0xLjJjLjEtLjEuMi0uMS4zIDBsMy42IDMuNiA3LjMtNy4zYy4xLS4xLjItLjEuMyAwbDEuMiAxLjJjLjEgMCAuMS4xIDAgLjJ6IiAvPjwvc3ZnPg==') no-repeat center center;
+    border: 1px solid transparent;
+    cursor: not-allowed;
+	/* background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBmaWxsPSIjYmNiY2JjIiBkPSJNMTguOSA4LjhsLTguNyA4LjdjLS4xLjEtLjIuMS0uMyAwbC00LjktNC45Yy0uMS0uMS0uMS0uMiAwLS4zbDEuMi0xLjJjLjEtLjEuMi0uMS4zIDBsMy42IDMuNiA3LjMtNy4zYy4xLS4xLjItLjEuMyAwbDEuMiAxLjJjLjEgMCAuMS4xIDAgLjJ6IiAvPjwvc3ZnPg==') no-repeat center center; */
 }
 
 .ex-checkbox input[type=checkbox]:disabled + label::before {
@@ -749,11 +753,11 @@ input:focus ~ label.check-estilo, label.check-estilo{
 .ex-checkbox input.chk-func[type=checkbox]{
 	margin: 0;
 	opacity: 0;
-	cursor: pointer;
+	/* cursor: pointer; */
 	width: 100%;
-	height: 100%;
+	height: 20px;
 	z-index: 1;
-    position: relative;    
+    position: relative;        
 }
 /* fim checkbox */
 
@@ -1160,6 +1164,20 @@ li.sub-active > a{
 
 
 /* tabela  */
+.td-check > .ex-checkbox{
+    position: relative;
+    font-size: 14px;
+}
+
+.th-check > .ex-checkbox{
+    position: relative;
+    font-size: 14px;
+    height: 22px;
+}
+
+.td-check input:focus ~ label.check-estilo, .td-check label.check-estilo{top: 0 !important;}
+
+.th-check input:focus ~ label.check-estilo, .th-check label.check-estilo{top: 0 !important;}
 
 /* tabela  header fixo */
 .tableFixHead{

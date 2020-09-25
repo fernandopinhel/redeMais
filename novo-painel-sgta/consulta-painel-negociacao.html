@@ -137,11 +137,11 @@
                     <div class="container-fluid">
                         <div class="bg-blank mb-5">
                             <div class="row mb-3">
-                                <div class="col-lg-6 my-auto">
+                                <div class="col-lg-12 my-auto">
                                     <div class="title-page">
-                                        <h1>Consulta Painel de Negociação</h1>
+                                        <h1>Consultar Painel de Negociação</h1>
                                     </div>
-                                </div>          
+                                </div>     
                                 <div class="col-lg-12"><hr></div>
                             </div> 
                             <div class="row mt-5">
@@ -187,10 +187,148 @@
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
                                     <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
-                                    <button type="button" name="button" class="btn btn-buscar float-right" onclick="window.location.href='/painel-negociacao.html'">Buscar</button>                                     
+                                    <button type="button" name="button" class="btn btn-buscar float-right">Buscar</button>                                     
                                 </div>
                             </div>
                         </div>
+                        <div class="bg-blank">
+                            <div class="container-fluid">
+                                <div class="row d-flex">
+                                    <div class="col-lg-6 my-auto">
+                                        <div class="resultado-filtro-todos">
+                                            <h4 class="float-left">Itens Encontrados:<span>2</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 my-auto">                                        
+                                        <a href="#" class="exportar float-right" data-toggle="tooltip" data-original-title="Exportar XLS">
+                                            <img src="img/exportar.svg" title="">
+                                        </a>                                        
+                                    </div>     
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>              
+                                            <th class="th-check">
+                                                <div class="ex-checkbox m-0 excluir-todos-check" data-toggle="tooltip" data-original-title="Marcar todos">
+                                                    <input type="checkbox" onclick="marcarTodos(this.checked);" id="checkbox_one" class="">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </th>                        
+                                            <th></th>
+                                            <th>Código do Prestador</th>
+                                            <th>Nome do Prestador</th>
+                                            <th>Rede</th>
+                                            <th>Tipo Negociação</th>
+                                            <th>Macro Grupo</th>
+                                            <th>Grupo</th>
+                                            <th>Sucursal</th>
+                                            <th>Grupo Prestador</th>
+                                            <th>UF</th>                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td-check por-2">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions por-2">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="editar ml-2" onclick="window.location.href='/painel-negociacao.html'">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Visualizar/Alterar">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>51</td>
+                                            <td>Jocemari da Silva Vieira</td>
+                                            <td>Top</td>
+                                            <td>Coluna</td>
+                                            <td>Artrodese</td>
+                                            <td>Artrodese + uti</td>
+                                            <td>Rio de Janeiro</td>
+                                            <td>-</td>
+                                            <td>RJ</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-check por-2">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions por-2">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="editar ml-2" onclick="window.location.href='/painel-negociacao.html'">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Visualizar/Alterar">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>116</td>
+                                            <td>CEPERJ CENTRO DE PREMATUR</td>
+                                            <td>Top</td>
+                                            <td>Coluna</td>
+                                            <td>Artrodese</td>
+                                            <td>Artrodese + uti</td>
+                                            <td>Rio de Janeiro</td>
+                                            <td>Américas</td>
+                                            <td>RJ</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <ul class="pagination lista-contatos">
+                            <li>
+                                <a href="#" class="prev">
+                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                            <a href="#" class="prev">
+                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                            <a href="#" class="next">
+                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="#" class="next">
+                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </form>
             </div>
