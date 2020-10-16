@@ -45,11 +45,16 @@ body {
     font-weight: 300;
 }
 
-a {
+a, a:focus, a:hover, a:visited{
     text-decoration: none !important;
     list-style: none !important;    
     outline: none;
 }
+
+a:focus, button:focus, textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+} 
 
 label{margin-bottom: 0;}
 
@@ -251,7 +256,7 @@ label{margin-bottom: 0;}
 }
 
 .sub-title > h6 {
-    color: #99000f;
+    color: #4d4e53;
     padding-top: 5px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -261,6 +266,34 @@ label{margin-bottom: 0;}
     font-weight: 600;
 }
 /* fim globais */
+
+/* alertas */
+#msg-input-error > div > div > div > p {
+    margin: 0 0 0 40px;
+    font-weight: 500;
+}
+
+.alert-danger{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.btn-close{
+    float: right;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    -webkit-border: none;
+    -moz-border: none;
+    padding: 0;
+}
+
+.btn-close > img{
+    width: 19px;
+    height: 16px;
+}
+/* fim alertas */
 
 /* modal */
 .modal-header{
@@ -377,6 +410,18 @@ label{margin-bottom: 0;}
 /* fim breadcrumb */
 
 /* icons */
+.calculadora{
+    position: absolute;
+    right: 8px;
+    background: url(../img/calculadora.svg);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -15px;
+    cursor: pointer;
+}
+
 .exportar{
     position: absolute;
     right: 157px;
@@ -442,7 +487,7 @@ label.descricao{
     border-radius: 0;
     line-height: 1.4;
     height: 35px;
-    color: #989a9e;
+    color: #4d4e53;
 }
 
 .input-date{
@@ -453,10 +498,14 @@ label.descricao{
 .input-date:disabled{
     background: transparent;
     padding-bottom: 10px !important;
+    color: #989a9e;
 }
 
 /*  input animado */
-.form-control:disabled, .form-control[readonly]{background-color: transparent;}
+.form-control:disabled, .form-control[readonly]{
+    background-color: transparent;
+    color: #989a9e;
+}
 
 textarea.form-control{
     border: 1px solid #D6D6D6;
@@ -553,6 +602,7 @@ input:disabled {
     padding: 0 !important;
     position: relative !important;
     top: 10px !important;
+    color: #989a9e;
 }
 /* fim input animado */
 
@@ -1223,7 +1273,7 @@ li.sub-active > a{
     border-bottom-right-radius: calc(.25rem - 1px);
     border-bottom-left-radius: calc(.25rem - 1px);
 }
-
+.dropdown-item:hover, .dropdown-item:visited{background: transparent;}
 .actions-table .dropdown-menu > span > a {color: #000;}
 
 .actions-table:hover > button {color: #fff;}
@@ -1807,7 +1857,7 @@ td.actions-visible > div {
     position: absolute;
     right: 15px;
     background:url(../img/seta-accordion-painel.svg);
-    transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+    transform: rotate(0deg);
     width: 30px;
     height: 21px;
     background-repeat: no-repeat;
@@ -1823,12 +1873,18 @@ td.actions-visible > div {
     height: 21px;
     background-repeat: no-repeat;
     background-position: center;
-    transform: rotate(0deg);
+    transform: rotate(180deg); /* Equal to rotateZ(45deg) */
     transition: 0.6s all;
 }
 /* fim accordion multilistas abertas painel */
 
 /* painel carrossel */
+.txt-item > img{
+    float: left;
+    margin-top: 3px;
+    margin-right: 20px;
+}
+
 .box-id-prestador{
     padding: 5px;
     margin: 5px 0;
@@ -1871,10 +1927,30 @@ td.actions-visible > div {
 }
 
 .card-painel > .item-principal > h1{
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 21px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #000;
+    font-weight: 500;
+    text-align: center;
+}
+
+.card-painel > .item-principal > div > h1{
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+}
+
+.card-painel.active > .item-principal > div > h1 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:#721c24;
     font-weight: 500;
     text-align: center;
 }
@@ -1914,7 +1990,7 @@ td.actions-visible > div {
 }
 
 .card-painel.active > .item-principal > h1{
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #2365a7;

@@ -1,3 +1,9 @@
+// scripts msg alertas
+$(".close-error").click(function(){
+  $('#msg-input-error').addClass('d-none')
+});
+// fim scripts msg alertas
+
 // tabela com header fixo
 var $th = $('.tableFixHead').find('thead th')
 $('.tableFixHead').on('scroll', function() {
