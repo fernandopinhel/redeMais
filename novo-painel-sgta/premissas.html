@@ -133,23 +133,26 @@
                         </div>
                     </div>
                 </nav>                 
-                <div class="container-fluid">     
-                    <div class="row mb-3">
-                        <div class="col-lg-12 mb-2">
-                            <div class="title-page">
-                                <h1>Painel de Negociação</h1>
-                            </div>
-                        </div>          
-                    </div>                  
+                <div class="container-fluid">               
+                    <div class="row bread-alterar-premissas-aderencia-efetividade">
+                        <div class="col-lg-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#" class="btn-alteracao-premissas">Consulta</a></li>                                                
+                                    <li class="breadcrumb-item">Premissas - Alterar Premissas Aderência/Efetividade</li>                                  
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
                     <div class="row mb-4">
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 active" id="identificacao-do-procedimento">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 active" id="premissas-inflacao">
                             <div class="card-painel active">
                                 <div class="item-principal">
-                                    <h1>Premissa Inflação</h1>                                        
+                                    <h1>Premissas Inflação</h1>                                        
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3" id="marcacao-lista-prioritaria-pmo">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3" id="premissas-aderencia">
                             <div class="card-painel">
                                 <div class="item-principal">
                                     <h1>Premissas Aderência / Efetividade</h1>                                        
@@ -159,17 +162,17 @@
                     </div>
                 </div>
                 <form action=""  id="group-cards">
-                    <div class="container-fluid identificacao-do-procedimento">
+                    <div class="container-fluid premissas-inflacao">
                         <div class="bg-blank">
                             <div class="row mb-3">
-                                <div class="col-6 col-md-2 col-lg-6 my-auto">
-                                    <div class="title-page">                                        
-                                        <h6>Consulta de Inflação</h6>
+                                <div class="col-lg-6 my-auto">
+                                    <div class="title-page">
+                                        <h1>Premissas - Consulta de Inflação</h1>
                                     </div>
-                                </div>      
+                                </div>   
                                 <div class="col-6 col-md-2 col-lg-6 my-auto">
                                     <button type="button" name="button" class="btn btn-cadastrar float-right mr-3" onclick="window.location.href='cadastrar-premissa-inflacao.html'">Cadastrar Índice Inflação</button>                      
-                                </div>    
+                                </div>            
                                 <div class="col-lg-12"><hr></div>
                             </div>
                             <div class="row">
@@ -251,10 +254,16 @@
                                                 </td>
                                                 <td>201912</td>
                                                 <td>0.45</td>
-                                                <td>0.68</td>
-                                                <td>1.49</td>
+                                                <td>
+                                                   <span class="color-b" title="" data-toggle="tooltip" data-original-title="Ipca = 50 A.M:0.45 * 1.5">0.68</span>
+                                                </td>
+                                                <td>
+                                                    <span class="color-b" title="" data-toggle="tooltip" data-original-title="Fator = Fator anterior: 1.4844748465832153782802623902978 * (1 + Ipca 50:0.6750000000000000000000000000000 / 100)">1.49</span>
+                                                </td>
                                                 <td>0.7</td>
-                                                <td>1.53</td>
+                                                <td>
+                                                    <span class="color-b" title="" data-toggle="tooltip" data-original-title="Fator = Fator anterior: 1.5175440468946611487572287846821 * (1 + Vcmh a.m:0.7 / 100)">1.53</span>
+                                                </td>
                                             </tr>
                                             <tr class="separator">
                                                 <td colspan="5"></td>
@@ -276,10 +285,16 @@
                                                 </td>
                                                 <td>201911</td>
                                                 <td>0.32</td>
-                                                <td>0.48</td>
-                                                <td>1.48</td>
+                                                <td>
+                                                    <span class="color-b" title="" data-toggle="tooltip" data-original-title="Ipca = 50 A.M:0.45 * 1.5">0.48</span>
+                                                </td>
+                                                <td>
+                                                    <span class="color-b" title="" data-toggle="tooltip" data-original-title="Fator = Fator anterior: 1.4844748465832153782802623902978 * (1 + Ipca 50:0.6750000000000000000000000000000 / 100)">1.48</span>
+                                                </td>
                                                 <td>0.55</td>
-                                                <td>1.52</td>
+                                                <td>
+                                                    <span class="color-b" title="" data-toggle="tooltip" data-original-title="Fator = Fator anterior: 1.5175440468946611487572287846821 * (1 + Vcmh a.m:0.7 / 100)">1.52</span>
+                                                </td>
                                             </tr>
                                             <tr class="separator">
                                                 <td colspan="5"></td>
@@ -317,151 +332,424 @@
                             </ul>                    
                         </div>
                     </div>
-                    <div class="container-fluid marcacao-lista-prioritaria-pmo hidden">                        
-                        <div class="bg-blank">
+                    <div class="container-fluid premissas-aderencia hidden">                        
+                        <div class="bg-blank mb-5">
                             <div class="row mb-3">
-                                <div class="col-lg-12">
-                                    <div class="title-page">                                        
-                                        <h6>Marcação Para Lista Prioritária - PMO</h6>
+                                <div class="col-lg-6 my-auto">
+                                    <div class="title-page">
+                                        <h1 class="title-premissas-consulta">Premissas - Consultar Premissas Aderência/Efetividade</h1>
+                                        <h1 class="title-premissas-alterar">Premissas - Alterar Premissas Aderência/Efetividade</h1>
                                     </div>
-                                </div>          
+                                </div>   
+                                <div class="col-6 col-md-2 col-lg-6 my-auto">
+                                    <button type="button" name="button" class="btn btn-cadastrar float-right alterar-premissas-1 mr-3">Alterar Premissas Aderência/Efetividade</button>                      
+                                </div>            
                                 <div class="col-lg-12"><hr></div>
                             </div>
-                            <div class="row mt-5 mb-5">
-                                <div class="col-lg-2 col-xl-1">                           
-                                    <p class="p-select">Lista 1T19?</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>N</option>                                   
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-xl-1">                           
-                                    <p class="p-select">Lista 2T19?</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>N</option>                                   
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-xl-1">                           
-                                    <p class="p-select">Lista 3T19?</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>N</option>                                   
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-xl-1">                           
-                                    <p class="p-select">Lista 4T19?</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>N</option>                                   
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-xl-2">                           
-                                    <p class="p-select">Elegível para lista Prioritária?</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>Não</option>                                   
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-lg-12">
-                                    <div class="title-page">                                        
-                                        <h6>Sinistro, CM e Alçadas</h6>
+                            <div class="row">
+                                <div class="box-efetividade border pt-3 col-lg-6">
+                                    <div class="container-fluid">
+                                        <div class="row d-flex">
+                                            <div class="col-lg-12 my-auto">
+                                                <div class="resultado-filtro-todos">
+                                                    <h4 class="float-left">Efetividade Esperada</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
                                     </div>
-                                </div>          
-                                <div class="col-lg-12"><hr></div>
-                            </div>    
-                            <div class="row mt-2 mb-4">
-                                <div class="col-lg-12">
-                                    <div class="sub-title">
-                                        <h6>12 Meses Mais Recentes</h6>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>                   
+                                                    <th></th>            
+                                                    <th>PPAs</th>
+                                                    <th>Demais</th>                                              
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>% Captura Cirúrgicos e PS</td>
+                                                    <td>70.00</td>
+                                                    <td>90.00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row mt-5 mb-5">
-                                <div class="col-lg-2">                                    
-                                    <div class="form">
-                                        <input type="text" value="201805" name="ultimo-mes-cm-atual" autocomplete="off" class="used" disabled>
-                                        <label for="ultimo-mes-cm-atual" class="label-name">
-                                            <span class="content-name">Último Mês do CM Atual</span>
-                                        </label>
-                                    </div>                      
+                                <div class="box-aderencia-esperada border pt-3 col-lg-6">
+                                    <div class="container-fluid">
+                                        <div class="row d-flex">
+                                            <div class="col-lg-12 my-auto">
+                                                <div class="resultado-filtro-todos">
+                                                    <h4 class="float-left">Aderência Esperada</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="table-responsive tableFixHead">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>                   
+                                                    <th>Tipo Negociação</th>            
+                                                    <th>Sinistro Excedente</th>
+                                                    <th>Captura de Economia</th>
+                                                    <th>Criação do Modelo</th>                                              
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Cirurgia do Aparelho Digestivo</td>
+                                                    <td>
+                                                        <span class="show-inputs">6.50</span>
+                                                        <input type="text" value="6.50" class="hidden-inputs">
+                                                    </td>
+                                                    <td>
+                                                        <span class="show-inputs">50.00</span>
+                                                        <input type="text" value="50.00" class="hidden-inputs">
+                                                    </td>
+                                                    <td>
+                                                        <span class="show-inputs">2017</span>
+                                                        <input type="text" value="2017" class="hidden-inputs">
+                                                    </td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Coluna</td>
+                                                    <td>
+                                                        <span class="show-inputs">16.00</span>
+                                                        <input type="text" value="16.00" class="hidden-inputs">
+                                                    </td>
+                                                    <td>
+                                                        <span class="show-inputs">50.00</span>
+                                                        <input type="text" value="50.00" class="hidden-inputs">
+                                                    </td>                                                
+                                                    <td>
+                                                        <span class="show-inputs">2016</span>
+                                                        <input type="text" value="2016" class="hidden-inputs">
+                                                    </td>                                                     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ginecologia</td>
+                                                    <td>
+                                                        <span class="show-inputs">17.10</span>
+                                                        <input type="text" value="17.10" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">50.00</span>
+                                                        <input type="text" value="50.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2017</span>
+                                                        <input type="text" value="2017" class="hidden-inputs">
+                                                    </td>     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hermodinâmica</td>
+                                                    <td>
+                                                        <span class="show-inputs">11.35</span>
+                                                        <input type="text" value="11.35" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">50.00</span>
+                                                        <input type="text" value="50.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2017</span>
+                                                        <input type="text" value="2017" class="hidden-inputs">
+                                                    </td>     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Urologia</td>
+                                                    <td>
+                                                        <span class="show-inputs">1.30</span>
+                                                        <input type="text" value="1.30" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">80.00</span>
+                                                        <input type="text" value="80.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2016</span>
+                                                        <input type="text" value="2016" class="hidden-inputs">
+                                                    </td>                                                     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Buco</td>
+                                                    <td>
+                                                        <span class="show-inputs">11.35</span>
+                                                        <input type="text" value="11.35" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">50.00</span>
+                                                        <input type="text" value="50.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2016</span>
+                                                        <input type="text" value="2016" class="hidden-inputs">
+                                                    </td>     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Otorrino</td>
+                                                    <td>
+                                                        <span class="show-inputs">3.60</span>
+                                                        <input type="text" value="3.60" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">70.00</span>
+                                                        <input type="text" value="70.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2017</span>
+                                                        <input type="text" value="2017" class="hidden-inputs">
+                                                    </td>     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ortopedia</td>
+                                                    <td>
+                                                        <span class="show-inputs">4.90</span>
+                                                        <input type="text" value="4.90" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">50.00</span>
+                                                        <input type="text" value="50.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2017</span>
+                                                        <input type="text" value="2017" class="hidden-inputs">
+                                                    </td>                                                     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PS Adulto</td>
+                                                    <td>
+                                                        <span class="show-inputs">4.60</span>
+                                                        <input type="text" value="4.60" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">88.00</span>
+                                                        <input type="text" value="88.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2017</span>
+                                                        <input type="text" value="2017" class="hidden-inputs">
+                                                    </td>     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PS Infantil</td>
+                                                    <td>
+                                                        <span class="show-inputs">4.60</span>
+                                                        <input type="text" value="4.60" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">88.00</span>
+                                                        <input type="text" value="88.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2017</span>
+                                                        <input type="text" value="2017" class="hidden-inputs">
+                                                    </td>     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Angiologia</td>
+                                                    <td>
+                                                        <span class="show-inputs">0.00</span>
+                                                        <input type="text" value="0.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">0.00</span>
+                                                        <input type="text" value="0.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2018</span>
+                                                        <input type="text" value="2018" class="hidden-inputs">
+                                                    </td>     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Parto</td>
+                                                    <td>
+                                                        <span class="show-inputs">0.00</span>
+                                                        <input type="text" value="0.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">0.00</span>
+                                                        <input type="text" value="0.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2018.00</span>
+                                                        <input type="text" value="2018.00" class="hidden-inputs">
+                                                    </td>                                                     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Endocrino</td>
+                                                    <td>
+                                                        <span class="show-inputs">0.00</span>
+                                                        <input type="text" value="0.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">0.00</span>
+                                                        <input type="text" value="0.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2019</span>
+                                                        <input type="text" value="2019" class="hidden-inputs">
+                                                    </td>     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bariátrica</td>
+                                                    <td>
+                                                        <span class="show-inputs">0.00</span>
+                                                        <input type="text" value="0.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">0.00</span>
+                                                        <input type="text" value="0.00" class="hidden-inputs">
+                                                    </td>     
+                                                    <td>
+                                                        <span class="show-inputs">2019</span>
+                                                        <input type="text" value="2019" class="hidden-inputs">
+                                                    </td>     
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>                            
+                                <div class="box-premissas-cobranca border mt-3 pt-3 col-lg-6">
+                                    <div class="container-fluid">
+                                        <div class="row d-flex">
+                                            <div class="col-lg-12 my-auto">
+                                                <div class="resultado-filtro-todos">
+                                                    <h4 class="float-left">Premissas para Cobrança de Assinatura de Aditivos</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>                   
+                                                    <th>Intervalo entre Cobranças (dias)</th>            
+                                                    <th>Tempo para Negociação sem Atualização</th>
+                                                    <th>Tempo até efetivação do Bloqueio</th>                                              
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="show-inputs">7</span>
+                                                        <input type="text" value="7" class="hidden-inputs">
+                                                    </td>
+                                                    <td>
+                                                        <span class="show-inputs">90</span>
+                                                        <input type="text" value="90" class="hidden-inputs">
+                                                    </td>
+                                                    <td>
+                                                        <span class="show-inputs">60</span>
+                                                        <input type="text" value="60" class="hidden-inputs">
+                                                    </td>                                                
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <div class="col-lg-2 col-lx-1">                                    
-                                    <p class="p-select">Senha Atual</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>3</option>                                     
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-lx-1">                                    
-                                    <p class="p-select">Sinistro Atual</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>10</option>                                     
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-lx-1">                                 
-                                    <p class="p-select">CM Atual</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>3</option>                                     
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row mt-2 mb-4">
-                                <div class="col-lg-12">
-                                    <div class="sub-title mt-4">
-                                        <h6>12 Meses Antes de Fechar Negociação</h6>
+                                <div class="box-premissas-data-inflacao border mt-3 pt-3 col-lg-6">
+                                    <div class="container-fluid">
+                                        <div class="row d-flex">
+                                            <div class="col-lg-12 my-auto">
+                                                <div class="resultado-filtro-todos">
+                                                    <h4 class="float-left">Premissas de Datas para Inflação</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>                   
+                                                    <th>Tempo entre Fechar <br>e Implantar</th>            
+                                                    <th>Final do Ano <br>Atual (Fórmula)</th>
+                                                    <th>Final do Ano <br>Atual</th>   
+                                                    <th>Mês Atual</th>                                              
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="show-inputs">46</span>
+                                                        <input type="text" value="46" class="hidden-inputs">
+                                                    </td>
+                                                    <td>201912</td>
+                                                    <td>
+                                                        <span class="show-inputs">31/12/19</span>
+                                                        <input class="form-control form_date input-date hidden-inputs" size="16" type="text" value="31/12/19" maxlength="10" name="final-do-ano-atual" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                    </td>
+                                                    <td>
+                                                        <span class="show-inputs">201901</span>
+                                                        <input type="text" value="201901" class="hidden-inputs">
+                                                    </td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-5 mb-5">
-                                <div class="col-lg-2">                                    
-                                    <div class="form">
-                                        <input type="text" value="201805" name="ultimo-mes-cm-pre-pp" autocomplete="off" class="used" disabled>
-                                        <label for="ultimo-mes-cm-pre-pp" class="label-name">
-                                            <span class="content-name">Último Mês do CM Pré PP</span>
-                                        </label>
-                                    </div>                      
-                                </div>
-                                <div class="col-lg-2 col-lx-1">                                    
-                                    <p class="p-select">CM Pré PP</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>3</option>                                     
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-lx-1">                                    
-                                    <p class="p-select">Senhas Pré PP</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>3</option>                                     
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-lx-1">                                 
-                                    <p class="p-select">Sinistro Pré PP</p>
-                                    <select class="form-control h-35" disabled>
-                                        <option value="1">Selecione</option>
-                                        <option value="2" selected>10</option>                                     
-                                    </select>
-                                </div>
-                                <div class="col-lg-2">                                    
-                                    <div class="form">
-                                        <input type="text" value="30.700" name="alcada-diretoria" autocomplete="off" class="used" disabled>
-                                        <label for="alcada-diretoria" class="label-name">
-                                            <span class="content-name">Alçada Diretoria</span>
-                                        </label>
-                                    </div>                      
-                                </div>
-                                <div class="col-lg-2">                                    
-                                    <div class="form">
-                                        <input type="text" value="30.700" name="alcada-matriz" autocomplete="off" class="used" disabled>
-                                        <label for="alcada-matriz" class="label-name">
-                                            <span class="content-name">Alçada Matriz</span>
-                                        </label>
-                                    </div>                      
+                            <div class="row btns-opcoes btns-premissas mt-5">
+                                <div class="col-lg-12">
+                                    <button type="button" data-toggle="tooltip" data-placement="right" data-original-title="Voltar para Consulta" value="voltar" name="button" class="btn btn-voltar float-left btn-alteracao-premissas mr-3">Voltar</button>
+                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
+                                    <button type="button" name="button" data-toggle="modal" data-target="#modalAlterar" class="btn btn-salvar w-98 float-right btn-alteracao-premissas">Salvar</button>                                     
                                 </div>
                             </div>
                         </div>
@@ -470,7 +758,25 @@
             </div>
         </div><!-- fim conteudo geral wrapper -->
 
-        
+         <!-- Modal -->
+            <!-- Modal Alterar -->
+            <div class="modal fade" id="modalAlterar" tabindex="-1" role="dialog" aria-labelledby="modalAlterarTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title modal-alterar-title" id="modalAlterarTitle">Alteração Realizada com Sucesso!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="img/check-circle.gif" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim Modal Alterar -->
+        <!-- Fim Modal -->
 
         <!-- jQuery -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>

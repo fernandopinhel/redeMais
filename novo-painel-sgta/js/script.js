@@ -75,6 +75,50 @@ $('#economias-potencial-negociada-implantada').on('click', function () {
   $('.economias-potencial-negociada-implantada').removeClass('hidden');
   $('#economias-potencial-negociada-implantada  > .card-painel').addClass('active');
 });
+
+// Premissas
+$('.bread-alterar-premissas-aderencia-efetividade').addClass('hidden');
+$('.hidden-inputs').addClass('hidden');
+$('.alterar-premissas-2').addClass('hidden');
+$('.title-premissas-alterar').addClass('hidden');
+$('.btns-premissas').addClass('hidden');
+
+$('.alterar-premissas-1').on('click', function () {    
+  $('.bread-alterar-premissas-aderencia-efetividade').removeClass('hidden');
+  $('.hidden-inputs').removeClass('hidden');
+  $('.btns-premissas').removeClass('hidden');
+  $('.title-premissas-alterar').removeClass('hidden');
+  $('.title-premissas-consulta').addClass('hidden');
+  $('.alterar-premissas-1').addClass('hidden');
+  $('.show-inputs').addClass('hidden');
+});
+
+$('.btn-alteracao-premissas').on('click', function () {    
+  $('.bread-alterar-premissas-aderencia-efetividade').addClass('hidden');
+  $('.hidden-inputs').addClass('hidden');
+  $('.btns-premissas').addClass('hidden');
+  $('.title-premissas-alterar').addClass('hidden');
+  $('.title-premissas-consulta').removeClass('hidden');
+  $('.alterar-premissas-1').removeClass('hidden');
+  $('.show-inputs').removeClass('hidden');
+});
+
+$('#premissas-inflacao').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.premissas-inflacao').removeClass('hidden');
+  $('#premissas-inflacao  > .card-painel').addClass('active');
+  $('.bread-alterar-premissas-aderencia-efetividade').addClass('hidden');
+});
+
+$('#premissas-aderencia').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
+  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.premissas-aderencia').removeClass('hidden');
+  $('#premissas-aderencia  > .card-painel').addClass('active');
+});
 // fim carregando divs
 
 
