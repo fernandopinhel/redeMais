@@ -34,28 +34,28 @@
                         </a>
                         <ul class="collapse list-unstyled list-style-2 list-subs" id="controleDeAcessoSubmenu">
                             <li>
-                                <a href="/perfis.html">Perfis</a>
+                                <a href="perfis.html">Perfis</a>
                             </li>
                             <li>
-                                <a href="/associar-perfis-funcionalidade.html">Associar Perfis à Funcionalidade</a>
+                                <a href="associar-perfis-funcionalidade.html">Associar Perfis à Funcionalidade</a>
                             </li>
                             <li>
-                                <a href="/associar-perfis-usuario.html">Associar Perfis ao Usuário</a>
+                                <a href="associar-perfis-usuario.html">Associar Perfis ao Usuário</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#cargaBaseRedeMaisSubmenu" onclick="window.location.href='/carga-base-rede-mais.html'" id="carga-da-base-rede-mais-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#cargaBaseRedeMaisSubmenu" onclick="window.location.href='carga-base-rede-mais.html'" id="carga-da-base-rede-mais-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Carga da Base Rede +</span>                            
                         </a>
                     </li>
                     <li>
-                        <a href="#painelSubmenu" onclick="window.location.href='/consulta-painel-negociacao.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" onclick="window.location.href='consulta-painel-negociacao.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Painel de Negociações</span>
                         </a>
                     </li>
                     <li  class="active">
-                        <a href="#naoListadosSubmenu" onclick="window.location.href='/nao-listados.html'" id="nao-listados-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#naoListadosSubmenu" onclick="window.location.href='nao-listados.html'" id="nao-listados-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Não Listados</span>
                         </a>
                     </li>
@@ -66,15 +66,15 @@
                         </a>
                         <ul class="collapse list-unstyled list-style-2 list-subs" id="premissasAlcadasSubmenu">
                             <li>
-                                <a href="/premissas.html">Premissas</a>
+                                <a href="premissas.html">Premissas</a>
                             </li>
                             <li>
-                                <a href="/alcadas.html">Alçadas</a>
+                                <a href="alcadas.html">Alçadas</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#calculo-economia-Submenu" onclick="window.location.href='/calculo-economia.html'" id="calculo-economia-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#calculo-economia-Submenu" onclick="window.location.href='calculo-economia.html'" id="calculo-economia-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Cálculo de Economia</span>
                         </a>
                     </li>
@@ -85,12 +85,12 @@
                         </a>
                         <ul class="collapse list-unstyled list-style-2 list-subs" id="apoioSubmenu">
                             <li>
-                                <a href="/coluna-buco.html">Coluna e Buco</a>
+                                <a href="coluna-buco.html">Coluna e Buco</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#ppsDeParaSubmenu" onclick="window.location.href='/pps-de-para.html'" id="pps-de-para-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#ppsDeParaSubmenu" onclick="window.location.href='pps-de-para.html'" id="pps-de-para-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">PPs / DE - PARA</span>
                         </a>
                     </li>
@@ -148,7 +148,7 @@
                                 <div class="col-lg-12"><hr></div>
                             </div> 
                             <div class="row mt-5">
-                                <div class="col-lg-4">                                    
+                                <div class="col-lg-3">                                    
                                     <p class="p-select">Sucursal</p>
                                     <select class="form-control h-35">
                                         <option value="1" selected>Selecione</option>
@@ -167,7 +167,7 @@
                                     </div> 
                                 </div>
                                 <div class="space"></div>
-                                <div class="col-lg-6">                                    
+                                <div class="col-lg-4">                                    
                                     <div class="form">
                                         <input type="text" name="nome-prestador" autocomplete="off">
                                         <label for="nome-prestador" class="label-name">
@@ -175,6 +175,17 @@
                                         </label>
                                     </div> 
                                 </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">                                    
+                                    <p class="p-select">Tipo de Negociação</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected>Selecione</option>
+                                        <option value="2">1</option>                                   
+                                        <option value="3">2</option>  
+                                        <option value="4">3</option>                                                                                                  
+                                    </select>
+                                </div>
+                                <div class="space"></div>
                             </div>
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
@@ -210,6 +221,8 @@
                                             <th>Tipo Negociação</th>
                                             <th>Nome PP</th>
                                             <th>Código PP</th>
+                                            <th>Migração</th>
+                                            <th>Data da Migração</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -237,6 +250,8 @@
                                             <td>Ortopedia</td>
                                             <td>Lesão de Tendão de Ombro</td>
                                             <td>84521201</td>
+                                            <td>-</td>
+                                            <td>10/10/2020</td>
                                         </tr>
                                         <tr class="separator">
                                             <td colspan="5"></td>
@@ -265,6 +280,8 @@
                                             <td>Otorrino</td>
                                             <td>Timpano-mastoidectomia</td>
                                             <td>84510617</td>
+                                            <td>-</td>
+                                            <td>10/10/2020</td>
                                         </tr>
                                         <tr class="separator">
                                             <td colspan="5"></td>
@@ -272,34 +289,34 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                        <ul class="pagination">
-                            <li>
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" class="prev">
+                                    <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
                                 <a href="#" class="prev">
-                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                    <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
                                 </a>
-                            </li>
-                            <li>
-                            <a href="#" class="prev">
-                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                            </a>
-                            </li>
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                            <a href="#" class="next">
-                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                            </a>
-                            </li>
-                            <li>
+                                </li>
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
                                 <a href="#" class="next">
-                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                    <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
                                 </a>
-                            </li>
-                        </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="next">
+                                        <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </form>
             </div>

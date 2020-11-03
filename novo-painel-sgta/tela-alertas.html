@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>SGTA - Painel de Controle Rede +</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+        <!-- estilo toggle on/off -->
+        <link rel="stylesheet" href="css/bootstrap4-toggle.min.css">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#HelpAjudaSubmenu" onclick="window.location.href='help-ajuda.html'" id="help-ajuda-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Help / Ajuda</span>
+                        </a>                        
+                    </li>
+                    <li>
+                        <a href="#controleDeAcessoSubmenu" id="controle-de-acesso-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Controle de Acesso</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="controleDeAcessoSubmenu">
+                            <li>
+                                <a href="perfis.html">Perfis</a>
+                            </li>
+                            <li>
+                                <a href="associar-perfis-funcionalidade.html">Associar Perfis à Funcionalidade</a>
+                            </li>
+                            <li>
+                                <a href="associar-perfis-usuario.html">Associar Perfis ao Usuário</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#cargaBaseRedeMaisSubmenu" onclick="window.location.href='carga-base-rede-mais.html'" id="carga-da-base-rede-mais-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Carga da Base Rede +</span>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#painelSubmenu" onclick="window.location.href='consulta-painel-negociacao.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel de Negociações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#naoListadosSubmenu" onclick="window.location.href='nao-listados.html'" id="nao-listados-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Não Listados</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#premissasAlcadasSubmenu" id="premissas-alcadas-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Premissas / Alçadas</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="premissasAlcadasSubmenu">
+                            <li>
+                                <a href="premissas.html">Premissas</a>
+                            </li>
+                            <li>
+                                <a href="alcadas.html">Alçadas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#calculo-economia-Submenu" onclick="window.location.href='calculo-economia.html'" id="calculo-economia-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Cálculo de Economia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#apoioSubmenu" onclick="window.location.href='#'" id="apoio-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Apoio</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="apoioSubmenu">
+                            <li>
+                                <a href="coluna-buco.html">Coluna e Buco</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#ppsDeParaSubmenu" onclick="window.location.href='pps-de-para.html'" id="pps-de-para-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">PPs / DE - PARA</span>
+                        </a>
+                    </li>
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+            <!-- conteudo pagina -->
+            <div class="content" id="">
+                <nav class="navbar navbar-expand-lg menu-topo">
+                    <div class="container-fluid p-0">
+                        <div class="float-left  d-flex">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="marca-bradesco d-flex">
+                            <span class="logo-bradesco my-auto">
+                                <img src="img/icon-logo-bradesco.png" alt="">
+                            </span>
+                            <div class="title-sistema d-flex my-auto">
+                                <h1 class="my-auto">SGTA - Painel de Controle Rede <span>+</span></h1>
+                            </div>
+                        </div>
+                        <div class="user float-right d-flex">
+                            <div class="btn-group my-auto">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">João Carvalho</p>                                    
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
+                                <div class="col-12 my-auto">
+                                    <div class="title-page">
+                                        <h1>Tela Alertas</h1>
+                                    </div>
+                                </div>          
+                                <div class="col-lg-12"><hr></div>
+                            </div> 
+                            <div class="alert alert-danger mb-3" id="msg-input-error" role="alert">
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <img src="../img/alert-error.svg" width="23" class="float-left">
+                                            <p><span class="mr-2">Mensagem de erro</span></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="button" class="btn btn-close close-error">
+                                                <img src="../img/close.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-lg-4">                                    
+                                    <div class="form">
+                                        <input type="text" value="error" name="nome-perfil" autocomplete="off" class="used error">
+                                        <label for="nome-perfil" class="label-name error">
+                                            <span class="content-name error">Input</span>
+                                        </label>
+                                        <p class="error"><small>Mensagem de erro</small></p>
+                                    </div>                      
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">                                    
+                                    <p class="p-select error">Combo</p>
+                                    <select class="form-control h-35 error">
+                                        <option value="1" selected="">Error</option>
+                                        <option value="2">1</option>                                   
+                                        <option value="3">2</option>  
+                                        <option value="4">3</option>                                                                                                  
+                                    </select>
+                                    <p class="error"><small>Mensagem de erro</small></p>
+                                </div>
+                                <div class="space"></div>
+                            </div>
+                            <div class="row btns-opcoes mt-3">
+                                <div class="col-lg-12">
+                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
+                                    <button type="button" name="button" class="btn btn-buscar float-right">Buscar</button>                                     
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blank">
+                            <div class="container-fluid">
+                                <div class="row d-flex">
+                                    <div class="col-12 my-auto">
+                                        <div class="resultado-filtro-todos">
+                                            <h4 class="float-left">Itens Encontrados:<span>0</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="table-responsive">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <div class="box-img-result">
+                                                <img src="../img/result.svg" alt="" width="120px">
+                                            </div>
+                                            <div class="box-txt-result">
+                                                <h6>Nenhum resultado encontrado</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row btns-opcoes mt-3">
+                                <div class="col-lg-12">
+                                    <button type="button" name="button" data-toggle="modal" data-target="#modalErroCadastrar" class="btn btn-salvar float-right" style="width: 128px;">CLICAR AQUI</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+         <!-- Modal -->
+            <!-- Modal Cadastrar -->
+            <div class="modal fade" id="modalErroCadastrar" tabindex="-1" role="dialog" aria-labelledby="modal-erro-cadastrar-titlee" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title modal-erro-cadastrar-title" id="modalErroCadastrarTitle">Erro ao Cadastrar!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="img/no-circle.gif" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim Modal Cadastrar -->
+        <!-- Fim Modal -->
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>
+        <!-- script toggle on/off -->
+        <script src="js/bootstrap4-toggle.min.js"></script>
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+        <script>
+           
+        </script>
+    </body>
+</html>

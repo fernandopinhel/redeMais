@@ -1,3 +1,13 @@
+// input file
+$(document).ready(function(){
+	$('#filer_input').filer({
+		showThumbs: true,
+		addMore: true,
+		allowDuplicates: false
+	});
+});
+// fim input file
+
 // scripts msg alertas
 $(".close-error").click(function(){
   $('#msg-input-error').addClass('d-none')
@@ -255,3 +265,4 @@ if($(".input-date").val(length.css("display", "none"))){
   });   
 }
 // fim efeitos nos inputs
+

@@ -58,6 +58,18 @@ a:focus, button:focus, textarea:focus, input:focus, select:focus {
 
 label{margin-bottom: 0;}
 
+.error{
+    color: #BC1B3D;
+    margin-top: 5px;
+}
+
+input.error{border-bottom: 1px solid #BC1B3D;}
+
+select.error{
+    color: #BC1B3D !important;
+    border-bottom: 1px solid #BC1B3D;
+}
+
 /* hr{margin-top: 0;} */
 .toggle-off, .toggle-off:hover {
     background: #cc092f;
@@ -1233,6 +1245,17 @@ li.sub-active > a{
 
 
 /* tabela  */
+
+/* resultado tabela */
+.box-txt-result > h6{
+    text-transform: uppercase;
+    color: #99000f;
+    margin-top: 10px;    
+    font-size: 20px;
+}
+
+/* fim resultado tabela */
+
 .actions-table {
     border: 1px solid;
     border-radius: 7px;

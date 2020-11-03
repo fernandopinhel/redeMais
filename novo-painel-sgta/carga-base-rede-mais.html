@@ -23,7 +23,7 @@
             <nav id="sidebar">
                 <ul class="list-unstyled components">
                     <li>
-                        <a href="#HelpAjudaSubmenu" onclick="window.location.href='/help-ajuda.html'" id="help-ajuda-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#HelpAjudaSubmenu" onclick="window.location.href='help-ajuda.html'" id="help-ajuda-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Help / Ajuda</span>
                         </a>                        
                     </li>
@@ -34,28 +34,28 @@
                         </a>
                         <ul class="collapse list-unstyled list-style-2 list-subs" id="controleDeAcessoSubmenu">
                             <li>
-                                <a href="/perfis.html">Perfis</a>
+                                <a href="perfis.html">Perfis</a>
                             </li>
                             <li>
-                                <a href="/associar-perfis-funcionalidade.html">Associar Perfis à Funcionalidade</a>
+                                <a href="associar-perfis-funcionalidade.html">Associar Perfis à Funcionalidade</a>
                             </li>
                             <li>
-                                <a href="/associar-perfis-usuario.html">Associar Perfis ao Usuário</a>
+                                <a href="associar-perfis-usuario.html">Associar Perfis ao Usuário</a>
                             </li>
                         </ul>
                     </li>
                     <li class="active">
-                        <a href="#cargaBaseRedeMaisSubmenu" onclick="window.location.href='/carga-base-rede-mais.html'" id="carga-da-base-rede-mais-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#cargaBaseRedeMaisSubmenu" onclick="window.location.href='carga-base-rede-mais.html'" id="carga-da-base-rede-mais-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Carga da Base Rede +</span>                            
                         </a>
                     </li>
                     <li>
-                        <a href="#painelSubmenu" onclick="window.location.href='/consulta-painel-negociacao.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" onclick="window.location.href='consulta-painel-negociacao.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Painel de Negociações</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#naoListadosSubmenu" onclick="window.location.href='/nao-listados.html'" id="nao-listados-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#naoListadosSubmenu" onclick="window.location.href='nao-listados.html'" id="nao-listados-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Não Listados</span>
                         </a>
                     </li>
@@ -66,15 +66,15 @@
                         </a>
                         <ul class="collapse list-unstyled list-style-2 list-subs" id="premissasAlcadasSubmenu">
                             <li>
-                                <a href="/premissas.html">Premissas</a>
+                                <a href="premissas.html">Premissas</a>
                             </li>
                             <li>
-                                <a href="/alcadas.html">Alçadas</a>
+                                <a href="alcadas.html">Alçadas</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#calculo-economia-Submenu" onclick="window.location.href='/calculo-economia.html'" id="calculo-economia-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#calculo-economia-Submenu" onclick="window.location.href='calculo-economia.html'" id="calculo-economia-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Cálculo de Economia</span>
                         </a>
                     </li>
@@ -85,7 +85,7 @@
                         </a>
                         <ul class="collapse list-unstyled list-style-2 list-subs" id="apoioSubmenu">
                             <li>
-                                <a href="/coluna-buco.html">Coluna e Buco</a>
+                                <a href="coluna-buco.html">Coluna e Buco</a>
                             </li>
                         </ul>
                     </li>
@@ -143,19 +143,48 @@
                                     </div>
                                 </div>          
                                 <div class="col-6 col-md-2 col-lg-6 my-auto">
-                                    <button type="button" name="button" class="btn btn-cadastrar float-right mr-3">Solicitar Importação</button>                      
+                                    <button type="button" name="button" onclick="window.location.href='solicitar-importacao.html'" class="btn btn-cadastrar float-right mr-3">Solicitar Importação</button>                      
                                 </div>     
                                 <div class="col-lg-12"><hr></div>
                             </div>
                             <div class="row mt-5">
-                                <div class="col-lg-4">                                    
+                                <div class="col-lg-3">                                    
                                     <div class="form">
-                                        <input type="text" value="" name="cod-prestador" autocomplete="off">
-                                        <label for="cod-prestador" class="label-name">
-                                            <span class="content-name">Browse</span>
+                                        <input type="text" value="" name="protocolo" autocomplete="off">
+                                        <label for="protocolo" class="label-name">
+                                            <span class="content-name">Protocolo</span>
                                         </label>
                                     </div>                      
                                 </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="data-base" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input type="text" value="" name="versao-planilha" autocomplete="off">
+                                        <label for="versao-planilha" class="label-name">
+                                            <span class="content-name">Versão da Planilha</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-5">                                    
+                                    <div class="form">
+                                        <input type="text" value="" name="usuario" autocomplete="off">
+                                        <label for="usuario" class="label-name">
+                                            <span class="content-name">Usuário</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="space"></div>
                             </div>
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
