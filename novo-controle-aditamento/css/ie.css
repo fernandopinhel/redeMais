@@ -24,4 +24,8 @@
     .exportar{
         top: -10px !important;
     }
+    .combos-painel{
+        display: inline-flex;
+        width: 100%;
+    }
 }

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>SGTA - Controle de Aditamento</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#HelpAjudaSubmenu" onclick="window.location.href='help-ajuda.html'" id="help-ajuda-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Help / Ajuda</span>
+                        </a>                        
+                    </li>
+                    <li>
+                        <a href="#controleDeAcessoSubmenu" id="controle-de-acesso-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Controle de Acesso</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="controleDeAcessoSubmenu">
+                            <li>
+                                <a href="perfis.html">Perfis</a>
+                            </li>
+                            <li>
+                                <a href="associar-perfis-funcionalidade.html">Associar Perfis à Funcionalidade</a>
+                            </li>
+                            <li>
+                                <a href="associar-perfis-usuario.html">Associar Perfis ao Usuário</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#cargaBaseRedeMaisSubmenu" onclick="window.location.href='carga-base-rede-mais.html'" id="carga-da-base-rede-mais-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Carga da Base Rede +</span>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#painelSubmenu" onclick="window.location.href='consulta-painel-negociacao.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel de Negociações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#naoListadosSubmenu" onclick="window.location.href='/nao-listados.html'" id="nao-listados-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Não Listados</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#premissasAlcadasSubmenu" id="premissas-alcadas-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                            <span class="item-menu">Premissas / Alçadas</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse show list-unstyled list-style-2 list-subs" id="premissasAlcadasSubmenu">
+                            <li>
+                                <a href="premissas.html">Premissas</a>
+                            </li>
+                            <li class="active">
+                                <a href="alcadas.html">Alçadas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#calculo-economia-Submenu" onclick="window.location.href='calculo-economia.html'" id="calculo-economia-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Cálculo de Economia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#apoioSubmenu" onclick="window.location.href='#'" id="apoio-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Apoio</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="apoioSubmenu">
+                            <li>
+                                <a href="coluna-buco.html">Coluna e Buco</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#ppsDeParaSubmenu" onclick="window.location.href='pps-de-para.html'" id="pps-de-para-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">PPs / DE - PARA</span>
+                        </a>
+                    </li>
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+            <!-- conteudo pagina -->
+            <div class="content" id="">
+                <nav class="navbar navbar-expand-lg menu-topo">
+                    <div class="container-fluid p-0">
+                        <div class="float-left  d-flex">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="marca-bradesco d-flex">
+                            <span class="logo-bradesco my-auto">
+                                <img src="img/icon-logo-bradesco.png" alt="">
+                            </span>
+                            <div class="title-sistema d-flex my-auto">
+                                <h1 class="my-auto">SGTA - Controle de Aditamento</h1>
+                            </div>
+                        </div>
+                        <div class="user float-right d-flex">
+                            <div class="btn-group my-auto">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">João Carvalho</p>                                    
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="row mb-1">
+                            <div class="col-6 col-lg-6 my-auto">
+                                <div class="title-page">
+                                    <h1>Painel - ADM</h1>
+                                </div>
+                            </div>          
+                            <div class="col-6 col-lg-6 my-auto pr-0">         
+                                <div class="btn-group actions-table mr-3">
+                                    <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-3">Mais Ações</span>
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <span class="dropdown-item" data-toggle="modal" data-target="#modalInativarLote"><a href="#">Inativar Itens Selecionados</a></span>
+                                        <div class="dropdown-divider"></div>
+                                        <span class="dropdown-item" data-toggle="modal" data-target="#modalAtivarLote"><a href="#">Ativar Itens Selecionados</a></span>
+                                    </div>
+                                </div>                                       
+                            </div>
+                            <div class="col-lg-12"><hr></div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-lg-2 mb-2"> 
+                                <div class="d-flex combos-painel">
+                                <span class="p-select-2">Sucursal:</span>                                                               
+                                <select class="form-control h-35">
+                                    <option value="1" selected="">Selecione</option>
+                                    <option value="2">RJ</option>                                   
+                                    <option value="3">MG</option>  
+                                    <option value="4">SP</option>                                                                                                  
+                                </select>
+                                </div>
+                            </div>                                 
+                            <div class="col-lg-3 mb-2"> 
+                                <div class="d-flex combos-painel">
+                                <span class="p-select-2 w-150">Tipo de Ficha:</span>                                                               
+                                <select class="form-control h-35">
+                                    <option value="1" selected="">Selecione</option>
+                                    <option value="2">RJ</option>                                   
+                                    <option value="3">MG</option>  
+                                    <option value="4">SP</option>                                                                                                  
+                                </select>
+                                </div>
+                            </div>                                                                       
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="bg-blank h100">
+                                    <div class="title-painel"><h1>Status</h1></div>
+                                    <div class="status-col-1">
+                                        <p><span class="status-content">Aguardando Distribuição</span><span class="linha l-1"></span><span class="status-num">201</span></p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Aguardando Conferência</span> <span class="linha l-2"></span> 19</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Resposta Solicitante - Distribuição</span> <span class="linha l-3"></span> 19</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Em Emissão</span> <span class="linha l-4"></span> 37</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Resposta Solicitante - Emissão</span> <span class="linha l-5"></span> 8</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Aguardando Assinatura Prestador</span> <span class="linha l-6"></span> 19</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Ag. Envio P/Implantação</span> <span class="linha l-7"></span> 13</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Aguardando Físico</span> <span class="linha l-8"></span> 32</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Devolução P/Solicitante - Distribuição</span> <span class="linha l-9"></span> 14</p>
+                                        <div class="space3"></div>
+                                    </div>
+                                    <div class="status-col-2">
+                                        <p><span class="status-content">Devolução P/Solicitante - Emissão</span> <span class="linha l-10"></span> 22</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Devolução P/Solicitante - Retorno</span> <span class="linha l-11"></span> 2</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Aprovação Comitê Executivo</span> <span class="linha l-12"></span> 155</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Solicitação Enviada Para Matriz</span> <span class="linha l-13"></span> 356</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Em Processo de Implatação</span> <span class="linha l-14"></span> 9</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Enviado P/Assinatura do Prestador</span> <span class="linha l-15"></span> 28</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Pendente de Processamento</span> <span class="linha l-16"></span> 1</p>
+                                        <div class="space3"></div>
+                                        <p><span class="status-content">Resposta de Pendência - ADM</span> <span class="linha l-17"></span> 3</p>
+                                        <div class="space3"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="status-col-3">
+                                        <div class="total-status">
+                                            <p><span>Total</span><span>938</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="bg-blank h100">
+                                    <div class="title-painel"><h1>Prazos</h1></div>
+                                    <div class="chart" id="prazos"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="bg-blank h100">
+                                    <div class="title-painel"><h1>Tipo de Aditivos</h1></div>
+                                    <div class="chart" id="tipo-aditivo"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+        
+        
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+        <!-- GOOGLE CHARTS - Load the AJAX API-->
+        <script type="text/javascript" src="libs/google-charts/loader.js"></script>
+        <script type="text/javascript" src="libs/google-charts/scripts-google-charts.js"></script>
+    </body>
+</html>

@@ -242,11 +242,13 @@ select.error{
 }
 
 .w-98{width: 98px !important;}
+.w-150{width: 150px !important;}
 .h-100{height: 100px !important;}
 .h-122{height: 122px !important;}
 
 .space{height: 100px;}
 .space2{height: 120px;}
+.space3{height: 10px;}
 
 .border-a{border:1px solid #2365a7;}
 .color-a{color: #2365a7;}
@@ -277,6 +279,8 @@ select.error{
     margin: 0;
     font-weight: 600;
 }
+
+.h100{height: 100%;}
 /* fim globais */
 
 /* alertas */
@@ -483,6 +487,8 @@ label.descricao{
     margin-top: -16px;
     padding-top: 5px;
 }
+
+.p-select-2 {margin: 5px 15px 0 0;}
 
 .form-control:focus{
     background-color: transparent;
@@ -2186,50 +2192,104 @@ td.actions-visible > div {
     display: none;
 }
 
-/* Painel */
-
-.title-page > h6{
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #2365a7;
-    padding: 5px 5px 5px 0;
-    font-weight: 500;
+/* painel aditivo */
+.title-painel > h1{
+ text-transform: uppercase;
+ color: #627188;
+ margin-bottom: 20px;
+ padding-bottom: 5px;
+ border-bottom: 1px solid #f2f2f2;
 }
 
-/* Fim Painel */
+.status-col-1 > p, .status-col-2 > p {margin-bottom: 0px;}
 
-/* Help / Ajuda */
-.header-orientacoes{background:#282828;}
+.status-col-1, .status-col-2{
+    max-width: 46%;
+    float: left;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-bottom: 20px;    
+}
 
-.header-orientacoes > div > div > h6{
-    margin: 0;
+.status-col-1{margin-right: 8%;}
+
+.status-col-3{
+    display: block;
+    max-width: 100%;
+}
+
+.status-content{width: 100%;}
+
+.linha{
+    background: #000;    
+    display: inline-block;
+    width: 80%;
+    margin: 0 5px 0 0;
+    height: 3px;
+}
+
+.status-num{width: 20%;}
+
+.l-1{background: #fff351;}
+
+.l-2{background: #20b37f;}
+
+.l-3{background: #00afe6;}
+
+.l-4{background: #4d509f;}
+
+.l-5{background: #f591ba;}
+
+.l-6{background: #d05259;}
+
+.l-7{background: #f34d47;}
+
+.l-8{background: #f59740;}
+
+.l-9{background: #ffdaae;}
+
+.l-10{background: #d6dc4a;}
+
+.l-11{background: #44b85d;}
+
+.l-12{background: #24a39e;}
+
+.l-13{background: #2e3b8d;}
+
+.l-14{background: #936eaf;}
+
+.l-15{background: #a02461;}
+
+.l-16{background: #5e5f61;}
+
+.l-17{background: #6c5e57;}
+
+.total-status{
+    background: #627188;
+    padding: 15px 15px 40px 15px;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: 900;
 }
 
-.bg-coluna{background: #faf9f9;}
-
-.box-title-ajuda, .box-orientacoes{
-    border: 1px solid #f2f2f2;
-    padding: 10px;
-}
-
-.box-title-ajuda > h6{
-    margin: 0;
-    text-transform: uppercase;    
-    letter-spacing: 2px;
-    color: #ce0233;
-}
-
-.box-texto-ajuda{
-    border: 1px solid #f2f2f2;
-    padding: 10px;
-}
-
-.box-texto-ajuda > p{
+.total-status > p{
     margin: 0;
 }
-/* fim Help / Ajuda */
+
+.total-status > p > span:first-child{ 
+    float: left;
+}
+.total-status > p > span:last-child{ 
+    float: right;
+}
+
+/* fim painel aditivo */
 /* fim conteúdo */
+
+/* google chart */
+.chart {
+    width: 100%; 
+    min-height: 450px;
+}
+/* fim google chart */
