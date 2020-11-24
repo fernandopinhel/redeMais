@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>SGTA - Painel de Controle Rede +</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#HelpAjudaSubmenu" onclick="window.location.href='help-ajuda.html'" id="help-ajuda-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Help / Ajuda</span>
+                        </a>                        
+                    </li>
+                    <li>
+                        <a href="#controleDeAcessoSubmenu" id="controle-de-acesso-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Controle de Acesso</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="controleDeAcessoSubmenu">
+                            <li>
+                                <a href="perfis.html">Perfis</a>
+                            </li>
+                            <li>
+                                <a href="associar-perfis-funcionalidade.html">Associar Perfis à Funcionalidade</a>
+                            </li>
+                            <li>
+                                <a href="associar-perfis-usuario.html">Associar Perfis ao Usuário</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#cargaBaseRedeMaisSubmenu" onclick="window.location.href='carga-base-rede-mais.html'" id="carga-da-base-rede-mais-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Carga da Base Rede +</span>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#painelSubmenu" onclick="window.location.href='consulta-painel-negociacao.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel de Negociações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#naoListadosSubmenu" onclick="window.location.href='nao-listados.html'" id="nao-listados-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Não Listados</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="#premissasAlcadasSubmenu" id="premissas-alcadas-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Premissas / Alçadas</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="premissasAlcadasSubmenu">
+                            <li>
+                                <a href="premissas.html">Premissas</a>
+                            </li>
+                            <li>
+                                <a href="alcadas.html">Alçadas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#calculo-economia-Submenu" onclick="window.location.href='calculo-economia.html'" id="calculo-economia-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Cálculo de Economia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#apoioSubmenu" onclick="window.location.href='#'" id="apoio-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Apoio</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="apoioSubmenu">
+                            <li>
+                                <a href="coluna-buco.html">Coluna e Buco</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#ppsDeParaSubmenu" onclick="window.location.href='/pps-de-para.html'" id="pps-de-para-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">PPs / DE - PARA</span>
+                        </a>
+                    </li>
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+            <!-- conteudo pagina -->
+            <div class="content" id="">
+                <nav class="navbar navbar-expand-lg menu-topo">
+                    <div class="container-fluid p-0">
+                        <div class="float-left  d-flex">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="marca-bradesco d-flex">
+                            <span class="logo-bradesco my-auto">
+                                <img src="img/icon-logo-bradesco.png" alt="">
+                            </span>
+                            <div class="title-sistema d-flex my-auto">
+                                <h1 class="my-auto">SGTA - Painel de Controle Rede <span>+</span></h1>
+                            </div>
+                        </div>
+                        <div class="user float-right d-flex">
+                            <div class="btn-group my-auto">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">João Carvalho</p>                                    
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>                 
+                <div class="container-fluid">               
+                    <div class="row bread-alterar-pp">
+                        <div class="col-lg-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="pps-de-para.html" class="btn-alteracao-pp">Consulta</a></li>                                                
+                                    <li class="breadcrumb-item">PPs / DE PARA - Alterar De-Para Grupos e PPAs</li>                                  
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <form action=""  id="group-cards">
+                    <div class="container-fluid">
+                        <div class="bg-blank">
+                            <div class="row mb-3">
+                                <div class="col-12 my-auto">
+                                    <div class="title-page">
+                                        <h1>PPs / DE PARA - Alterar De-Para Grupos e PPAs</h1>
+                                    </div>
+                                </div>   
+                                <div class="col-lg-12"><hr></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">                                    
+                                    <div class="form">
+                                        <input type="text" value="213" name="cod-prestador" autocomplete="off" class="used">
+                                        <label for="cod-prestador" class="label-name">                                            
+                                            <span class="content-name">Cód. Prestador</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-4">                                    
+                                    <div class="form">
+                                        <input type="text" value="Hospital Climed LTDA" name="nome-prestador" autocomplete="off" class="used">
+                                        <label for="nome-prestador" class="label-name">                                            
+                                            <span class="content-name">Nome Prestador</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-4">                                    
+                                    <p class="p-select">Grupo </p>
+                                    <select class="form-control h-35">
+                                        <option value="1">Selecione</option>
+                                        <option value="2" selected>Américas</option>                               
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-4">
+                                    <div class="radio-title mb-2">
+                                        <h6 class="mb-2">PPA?</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio_yes1" name="radio_group1" checked>
+                                            <label for="radio-estilo" class="radio-estilo">Sim</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio_no1" name="radio_group1" checked="">
+                                            <label for="radio-estilo" class="radio-estilo">Não</label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                            </div>
+                            <div class="row btns-opcoes mt-2">
+                                <div class="col-lg-12">
+                                    <button type="button" data-toggle="tooltip" data-placement="right" data-original-title="Voltar para Consulta" value="voltar" onclick="window.location.href='pps-de-para.html'" name="button" class="btn btn-voltar float-left mr-3">Voltar</button>
+                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
+                                    <button type="button" name="button" data-toggle="modal" data-target="#modalAlterar" class="btn btn-salvar w-98 float-right">Salvar</button>                                     
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+         <!-- Modal -->
+            <!-- Modal Alterar -->
+            <div class="modal fade" id="modalAlterar" tabindex="-1" role="dialog" aria-labelledby="modalAlterarTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title modal-alterar-title" id="modalAlterarTitle">Alteração Realizada com Sucesso!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="img/check-circle.gif" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim Modal Alterar -->
+        <!-- Fim Modal -->
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+        <script>
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>SGTA - Painel de Controle Rede +</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#HelpAjudaSubmenu" onclick="window.location.href='help-ajuda.html'" id="help-ajuda-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Help / Ajuda</span>
+                        </a>                        
+                    </li>
+                    <li>
+                        <a href="#controleDeAcessoSubmenu" id="controle-de-acesso-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Controle de Acesso</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="controleDeAcessoSubmenu">
+                            <li>
+                                <a href="perfis.html">Perfis</a>
+                            </li>
+                            <li>
+                                <a href="associar-perfis-funcionalidade.html">Associar Perfis à Funcionalidade</a>
+                            </li>
+                            <li>
+                                <a href="associar-perfis-usuario.html">Associar Perfis ao Usuário</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#cargaBaseRedeMaisSubmenu" onclick="window.location.href='carga-base-rede-mais.html'" id="carga-da-base-rede-mais-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Carga da Base Rede +</span>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#painelSubmenu" onclick="window.location.href='consulta-painel-negociacao.html'" id="painel-negociacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel de Negociações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#naoListadosSubmenu" onclick="window.location.href='nao-listados.html'" id="nao-listados-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Não Listados</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#premissasAlcadasSubmenu" id="premissas-alcadas-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Premissas / Alçadas</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="premissasAlcadasSubmenu">
+                            <li>
+                                <a href="premissas.html">Premissas</a>
+                            </li>
+                            <li>
+                                <a href="alcadas.html">Alçadas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#calculo-economia-Submenu" onclick="window.location.href='calculo-economia.html'" id="calculo-economia-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Cálculo de Economia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#apoioSubmenu" onclick="window.location.href='#'" id="apoio-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Apoio</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="apoioSubmenu">
+                            <li>
+                                <a href="coluna-buco.html">Coluna e Buco</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#ppsDeParaSubmenu" onclick="window.location.href=' pps-de-para.html'" id="pps-de-para-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">PPs / DE - PARA</span>
+                        </a>
+                    </li>
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+            <!-- conteudo pagina -->
+            <div class="content" id="">
+                <nav class="navbar navbar-expand-lg menu-topo">
+                    <div class="container-fluid p-0">
+                        <div class="float-left  d-flex">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="marca-bradesco d-flex">
+                            <span class="logo-bradesco my-auto">
+                                <img src="img/icon-logo-bradesco.png" alt="">
+                            </span>
+                            <div class="title-sistema d-flex my-auto">
+                                <h1 class="my-auto">SGTA - Painel de Controle Rede <span>+</span></h1>
+                            </div>
+                        </div>
+                        <div class="user float-right d-flex">
+                            <div class="btn-group my-auto">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">João Carvalho</p>                                    
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="bg-blank mb-5">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="title-page">
+                                        <h1>Help / Ajuda</h1>
+                                    </div>
+                                </div>    
+                                <div class="col-lg-12"><hr></div>                           
+                            </div> 
+                            <div class="row">                            
+                               <div class="col-12">
+                                   <div class="box-title-ajuda">
+                                        <h6>Instrução de Uso</h6>
+                                    </div>
+                               </div>
+                               <div class="col-12 mt-2">
+                                    <div class="box-texto-ajuda">
+                                        <h6>1) Preenchimento</h6>
+                                        <p>Devem ser preenchidas apenas as células em tom amarelo, localizadas mais à direita na aba com o nome da respectiva sucursal, segundo as orientações abaixo para cada Coluna:</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid mt-4">
+                                <div class="row">
+                                    <div class="col-12 header-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 mt-2 mb-2"><h6>Coluna</h6></div>
+                                            <div class="col-9 mt-2 mb-2"><h6>Orientação</h6></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.1) Bloqueio do Prestador Sugerido</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchida apenas com a indicação "Sim" ou "Não", onde o "Sim" deve ser colocado caso tenha havido a sugestão de bloqueio na definição de estratégia ou durante as negociações. Caso haja uma reversão da sugestão do bloqueio, deve ser preenchido como "Não".</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes bg-coluna">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.2) Valor Negociado</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchida apenas caso a negociação já tenha sido concluída com o prestador. Não deve ser preenchida quando houver bloqueio ou enquanto a negociação não estiver concluída.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.3) Valor Reajustado</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchida apenas caso a negociação já tenha sido reajustada com o prestador. Não deve ser preenchida quando houver bloqueio ou enquanto a negociação não estiver reajustada.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes bg-coluna">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.4) Para PS, Especificar tipo de PP</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div>                                        
+                                                    <p>Deve ser preenchida apenas caso a negociação de PS já tenha sido concluída com o prestador, informando qual modelo de PP foi negociado. Não deve ser preenchida quando houver bloqueio ou enquanto a negociação não estiver concluída.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.5) Data Proposta</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchida apenas quando o PP já tiver sido apresentado ao prestador, com a data correspondente à apresentação. Deve ser preenchida apenas com datas, qualquer outro texto ou informação deve constar na coluna "Comentários".</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes bg-coluna">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.6) Data Negociação de PP/Definição de bloqueio</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchida com a data em que houve a conclusão da negociação com o prestador ou a definição do bloqueio. Deve ser preenchida apenas com datas, qualquer outro texto ou informação deve constar na coluna "Comentários".</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.7) Data de Envio (Aditivo ou Distrato)</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchida com a data em que houve o envio do aditivo ou da carta de bloqueio para o prestador. Deve ser preenchida apenas com datas, qualquer outro texto ou informação deve constar na coluna "Comentários".</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes bg-coluna">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.8) Data da Assinatura do Aditivo</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchida com a data em que houve a assinatura do aditivo (no caso de negociações) ou com a data com o fim do prazo legal para implantação do bloqueio. Deve ser preenchida apenas quando o aditivo voltar para a Matriz assinado ou quando se concluir o prazo do bloqueio; Não deve haver o preenchimento de datas futuras. Deve ser preenchida apenas com datas, qualquer outro texto ou informação deve constar na coluna "Comentários".</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.9) Data Implementação no Sistema (Aditivo/Distrato)</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchida com a data em que houve a implantação em sistema do aditivo ou do bloqueio. Deve ser preenchida apenas quando o aditivo ou bloqueio for de fato implantado em sistema; não deve haver o preenchimento de datas futuras. Deve ser preenchida apenas com datas, qualquer outro texto ou informação deve constar na coluna "Comentários".</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes bg-coluna">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.10) Data Último Reajuste</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchida com a data em que houve a implantação em sistema do reajuste do aditivo. Deve ser preenchida apenas quando o reajuste do aditivo for de fato implantado em sistema; não deve haver o preenchimento de datas futuras. Deve ser preenchida apenas com datas, qualquer outro texto ou informação deve constar na coluna "Comentários".</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.11) Custo Médio fora da Negociação</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Deve ser preenchido apenas caso a negociação do procedimento padronizado não seja no formato completo, deixando parte do sinistro sem cobertura no aditivo (ex: PS sem exames de imagem). Para ser  preenchido, deve-se levantar valor sem cobertura com a área de Estatística.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes bg-coluna">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>1.12) Comentários</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Coluna livre para comentários que sejam considerados pertinentes para aquela negociação.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">                            
+                                <div class="col-12">
+                                    <div class="box-title-ajuda">
+                                         <h6>Instrução de Uso</h6>
+                                     </div>
+                                </div>
+                                <div class="col-12 mt-2">
+                                     <div class="box-texto-ajuda">
+                                         <h6>2) Verificação</h6>
+                                         <p>As colunas "Check" e "Check Datas" (Colunas "AN" e "AO") na aba "Rede D´Or" Servem para verificar facilmente se o preenchimento daquela linha cumpre todas as orientações acima.</p>
+                                         <p>Caso haja alguma inconsistência, as células se tornarão vermelhas com uma das seguintes mensagens:</p>
+                                     </div>
+                                 </div>
+                            </div>
+                            <div class="container-fluid mt-4">
+                                <div class="row">
+                                    <div class="col-12 header-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 mt-2 mb-2"><h6>Aviso</h6></div>
+                                            <div class="col-9 mt-2 mb-2"><h6>Significado e Orientação</h6></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>2.1) Bloqueio com Valor</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Surge nos casos em que houver a indicação de bloqueio "Sim" e um valor negociado na mesma negociação. Neste caso, deve-se verificar o status atualizado daquela negociação: caso ela tenha sido de fato realizada, deve-se corrigir o bloqueio sugerido para "Não"; caso tenha se mantido o bloqueio, deve-se retirar o valor negociado.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes bg-coluna">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>2.2) Negociação Não Concluída com Valor</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Surge nos casos em que houver datas de negociação do PP e/ou de implementação em sistema, mas em que há um valor negociado na mesma negociação. Neste caso, deve-se verificar o status atualizado daquela negociação: caso ela já tenha sido de fato concluída, deve-se incluir a respectiva data de conclusão; caso a negociação ainda esteja em andamento, deve-se retirar o valor negociado.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>2.3) Negociação Concluída sem Valor</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Surge nos casos em que houver datas de negociação do PP e/ou de implementação em sistema, mas em que não há um valor negociado na mesma negociação. Neste caso, deve-se verificar o status atualizado daquela negociação: caso ela já tenha sido de fato concluída, deve-se incluir o valor negociado; caso a negociação ainda esteja em andamento, deve-se retirar a respectiva data de conclusão.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes bg-coluna">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>2.4) Datas Inconsistentes</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>"Surge nos casos em que uma a sequência de datas entre as partes do processo de aditivação não é coerente (ex: data de assinatura anterior a data de envio do aditivo).</p>
+                                                    <p>Obs: No caso de implantação em data retroativa, desconsiderar".</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 box-orientacoes">
+                                        <div class="row">
+                                            <div class="col-3 d-flex border-right">
+                                                <div class="my-auto">
+                                                    <h6>2.5) Data Futura</h6>                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-9 d-flex">
+                                                <div class="my-auto">                                        
+                                                    <p>Surge nos casos em que alguma das datas preenchidas é posterior ao dia de hoje, o que não deve acontecer.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+        
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+        <script>
+           
+        </script>
+    </body>
+</html>

@@ -287,6 +287,15 @@ span.jFiler-icon-file.f-audio {
     border-radius: 4px;
     border: 1px solid #e3e3e3;
     font-size: 21px;
+    position: relative;
+    top: -9px;
+}
+
+.icon-jfi-trash{
+    background: url(../img/excluir.svg) no-repeat !important;
+    width: 36px;
+    height: 36px;
+    display: block;
 }
 
 .jFiler-items-default .jFiler-item-assets .jFiler-item-trash-action:hover,
