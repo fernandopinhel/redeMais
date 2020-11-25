@@ -33,7 +33,7 @@ google.charts.load("current", {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart2);
 function drawChart2() {
   var data = google.visualization.arrayToDataTable([
-    ["Tipo Aditivo", "Valor", { role: "style" } ],    
+    ["Tipo Aditivo", "Tipos", { role: "style" } ],    
     ["Rede +", 65, "#c86366"],
     ["Prioridade", 35, "#149dc1"],
     ["Normal", 25, "#608918"]
