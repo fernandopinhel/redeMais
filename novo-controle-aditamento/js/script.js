@@ -1,3 +1,9 @@
+// script icone animacao info prestadores
+function toggleFunction(x) {
+  x.classList.toggle("change");
+}
+// fim script icone animacao info prestadores
+
 // script btn topo 
 window.onscroll = function() {scrollFunction()};
 

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>SGTA - Painel de Controle Rede +</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#cadastrosSubmenu" id="cadastros" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Cadastros</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="cadastrosSubmenu">
+                            <li>
+                                <a href="acompanhamento-slas.html">Acompanhamento de SLAs</a>
+                            </li>
+                            <li>
+                                <a href="aditivos.html">Aditivos</a>
+                            </li>
+                            <li>
+                                <a href="equipe.html">Equipe</a>
+                            </li>
+                            <li>
+                                <a href="grandes-grupos.html">Grandes Grupos</a>
+                            </li>
+                            <li>
+                                <a href="grupo-tipo-aditivo.html">Grupo Tipo Aditivo</a>
+                            </li>
+                            <li>
+                                <a href="perfil-usuario.html">Perfil Usuário</a>
+                            </li>
+                            <li>
+                                <a href="procedimentos.html">Procedimentos</a>
+                            </li>
+                            <li>
+                                <a href="sucursal.html">Sucursal</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#painelAdmSubmenu" onclick="window.location.href='painel-administrativo.html'" id="painel-administrativo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel Administrativo</span>
+                        </a>                        
+                    </li>
+                    <li>
+                        <a href="#processosSubmenu" id="processos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Processos</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="processosSubmenu">
+                            <li>
+                                <a href="trocar-emissor.html">Trocar Emissor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#relatoriosSubmenu" id="relatorios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Relatórios</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
+                            <li>
+                                <a href="relatorio-controle.html">Relatório Controle</a>
+                            </li>
+                            <li>
+                                <a href="relatorio-controle-trimestral.html">Relatório Controle Trimestral</a>
+                            </li>
+                            <li>
+                                <a href="relatorio-sla.html">Relatório SLA Tempo Total da Ficha</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+            <!-- conteudo pagina -->
+            <div class="content" id="">
+                <nav class="navbar navbar-expand-lg menu-topo">
+                    <div class="container-fluid p-0">
+                        <div class="float-left  d-flex">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="marca-bradesco d-flex">
+                            <span class="logo-bradesco my-auto">
+                                <img src="img/icon-logo-bradesco.png" alt="">
+                            </span>
+                            <div class="title-sistema d-flex my-auto">
+                                <h1 class="my-auto">SGTA - Controle de Aditamento</h1>
+                            </div>
+                        </div>
+                        <div class="user float-right d-flex">
+                            <div class="btn-group my-auto">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">João Carvalho</p>                                    
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="painel-administrativo.html">Painel Administrativo</a></li>                                                
+                                        <li class="breadcrumb-item">Detalhes</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
+                                <div class="col-lg-6">
+                                    <div class="title-page">
+                                        <h1>Detalhes</h1>
+                                        <h6 class="detalhes-title-sla">Aguardando Distribuição</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p class="title-status float-right">Dentro do Prazo<span class="circle green ml-3"></span></p>
+                                    <p class="title-status float-right mr-2">Prioridade: <span class="prioridade">5</span> |</p>
+                                </div>
+                                <div class="col-lg-12"><hr></div>
+                            </div> 
+                            <div class="row mt-5">
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input type="text" name="cod-prestador" autocomplete="off">
+                                        <label for="cod-prestador" class="label-name">
+                                            <span class="content-name">Cód. Identificador</span>
+                                        </label>
+                                    </div> 
+                                </div>
+                                <div class="space"></div>
+                                <div class="form">
+                                    <input type="text" name="cod-prestador" autocomplete="off">
+                                    <label for="cod-prestador" class="label-name">
+                                        <span class="content-name">CNPJ/CPF</span>
+                                    </label>
+                                </div> 
+                                <div class="space"></div>
+                                <div class="col-lg-2">                                    
+                                    <p class="p-select">Classe Solicitação</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected>Selecione</option>
+                                        <option value="2">Ajuste</option>                                   
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">                                    
+                                    <div class="form">
+                                        <input type="text" name="nome-prestador" autocomplete="off">
+                                        <label for="nome-prestador" class="label-name">
+                                            <span class="content-name">Nome do Prestador</span>
+                                        </label>
+                                    </div> 
+                                </div>
+                                <div class="space"></div>
+                            </div>                            
+                            <div class="row btns-opcoes mt-5">
+                                <div class="col-lg-12">
+                                    <button type="button" data-toggle="tooltip" data-placement="right" data-original-title="Voltar para o Painel" value="voltar" onclick="window.location.href='painel-administrativo.html'" name="button" class="btn btn-voltar float-left mr-3 mb-3">Voltar</button>
+                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
+                                    <button type="button" name="button" class="btn btn-buscar float-right">Buscar</button>                                     
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blank mb-5">
+                            <div class="container-fluid">
+                                <div class="row d-flex">
+                                    <div class="col-lg-6 my-auto">
+                                        <div class="resultado-filtro-todos">
+                                            <h4 class="float-left">Itens Encontrados:<span>5</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 my-auto">                                        
+                                        <a href="#" class="excluir float-right excluir-todos d-none" data-toggle="modal" data-target="#modalExluirLote">
+                                            <img src="img/excluir.svg" class="i-excluir" title="" data-toggle="tooltip" data-original-title="Excluir Selecionados">
+                                        </a>                                        
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>                   
+                                            <th></th>            
+                                            <th>Cód. Identificador</th>
+                                            <th>Tipo Ficha</th>                                              
+                                            <th>Empresa</th>
+                                            <th>Aditivo</th>
+                                            <th>Grupo Aditivo</th>
+                                            <th>Prioridade</th>
+                                            <th>Status</th>
+                                            <th>CNPJ/CPF</th>
+                                            <th>Nome do Prestador</th>
+                                            <th>Data Status</th>
+                                            <th>Data Entrada</th>
+                                            <th>Classe Solicitação</th>                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="excluir" data-toggle="tooltip" data-original-title="Excluir">
+                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                    </a>
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-ficha.html'" data-toggle="tooltip" data-original-title="Visualizar Ficha">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>#2020009817R</td>
+                                            <td>M</td>
+                                            <td>Bradesco Saúde</td>
+                                            <td>PP</td>
+                                            <td>-</td>
+                                            <td>Normal</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>33.620.007/0001-91</td>
+                                            <td>Hospital Climede</td>
+                                            <td>23/10/2020</td>
+                                            <td>14/07/2020</td>
+                                            <td>Ajuste</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="excluir" data-toggle="tooltip" data-original-title="Excluir">
+                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                    </a>
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-ficha.html'" data-toggle="tooltip" data-original-title="Visualizar Ficha">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>#2020009817R</td>
+                                            <td>M</td>
+                                            <td>Bradesco Saúde</td>
+                                            <td>PP</td>
+                                            <td>-</td>
+                                            <td>Normal</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>33.620.007/0001-91</td>
+                                            <td>Hospital Climede</td>
+                                            <td>23/10/2020</td>
+                                            <td>14/07/2020</td>
+                                            <td>Ajuste</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="excluir" data-toggle="tooltip" data-original-title="Excluir">
+                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                    </a>
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-ficha.html'" data-toggle="tooltip" data-original-title="Visualizar Ficha">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>#2020009817R</td>
+                                            <td>M</td>
+                                            <td>Bradesco Saúde</td>
+                                            <td>PP</td>
+                                            <td>-</td>
+                                            <td>Normal</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>33.620.007/0001-91</td>
+                                            <td>Hospital Climede</td>
+                                            <td>23/10/2020</td>
+                                            <td>14/07/2020</td>
+                                            <td>Ajuste</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="excluir" data-toggle="tooltip" data-original-title="Excluir">
+                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                    </a>
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-ficha.html'" data-toggle="tooltip" data-original-title="Visualizar Ficha">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>#2020009817R</td>
+                                            <td>M</td>
+                                            <td>Bradesco Saúde</td>
+                                            <td>PP</td>
+                                            <td>-</td>
+                                            <td>Normal</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>33.620.007/0001-91</td>
+                                            <td>Hospital Climede</td>
+                                            <td>23/10/2020</td>
+                                            <td>14/07/2020</td>
+                                            <td>Ajuste</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="excluir" data-toggle="tooltip" data-original-title="Excluir">
+                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                    </a>
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-ficha.html'" data-toggle="tooltip" data-original-title="Visualizar Ficha">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>#2020009817R</td>
+                                            <td>M</td>
+                                            <td>Bradesco Saúde</td>
+                                            <td>PP</td>
+                                            <td>-</td>
+                                            <td>Normal</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>33.620.007/0001-91</td>
+                                            <td>Hospital Climede</td>
+                                            <td>23/10/2020</td>
+                                            <td>14/07/2020</td>
+                                            <td>Ajuste</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" class="prev">
+                                    <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                <a href="#" class="prev">
+                                    <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                </a>
+                                </li>
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                <a href="#" class="next">
+                                    <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="next">
+                                        <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+         <!-- Modal Excluir -->
+         <div class="modal fade" id="modalExluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalExcluirTitle">Tem certeza que deseja excluir este item?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-salvar float-right" data-dismiss="modal">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fim Modal Excluir -->
+        <!-- Modal Excluir Lote -->
+        <div class="modal fade" id="modalExluirLote" tabindex="-1" role="dialog" aria-labelledby="modalExcluirLoteTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalExcluirLoteTitle">Tem certeza que deseja excluir estes itens?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-salvar float-right" data-dismiss="modal">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fim Modal Excluir Lote -->
+        
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+        <script>
+
+        </script>
+    </body>
+</html>
