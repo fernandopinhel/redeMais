@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>SGTA - Painel de Controle Rede +</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#slasSubmenu" onclick="window.location.href='acompanhamento-slas.html'" id="slas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Acompanhamento de SLAs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#aditivosSubmenu" onclick="window.location.href='aditivos.html'" id="aditivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Aditivos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#equipeSubmenu" onclick="window.location.href='equipes.html'" id="equipes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Equipe</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#grandesGruposSubmenu" onclick="window.location.href='grandes-grupos.html'" id="grandes-grupos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Grandes Grupos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#grupoTipoAditivoSubmenu" onclick="window.location.href='grupo-tipo-aditivo.html'" id="grupo-tipo-aditivo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Grupo Tipo Aditivo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#perfilUsuarioSubmenu" onclick="window.location.href='perfil-usuario.html'" id="perfil-usuario" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Perfil Usuário</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#procedimentosSubmenu" onclick="window.location.href='procedimentos.html'" id="preocedimentos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Procedimentos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sucursalSubmenu" onclick="window.location.href='sucursal.html'" id="sucursal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Sucursal</span>                            
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#painelAdmSubmenu" onclick="window.location.href='painel-administrativo.html'" id="painel-administrativo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel Administrativo</span>
+                        </a>                        
+                    </li>
+                    <li>
+                        <a href="#processosSubmenu" id="processos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Processos</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="processosSubmenu">
+                            <li>
+                                <a href="trocar-emissor.html">Trocar Emissor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#relatoriosSubmenu" id="relatorios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Relatórios</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
+                            <li>
+                                <a href="relatorio-controle.html">Relatório Controle</a>
+                            </li>
+                            <li>
+                                <a href="relatorio-controle-trimestral.html">Relatório Controle Trimestral</a>
+                            </li>
+                            <li>
+                                <a href="relatorio-sla.html">Relatório SLA Tempo Total da Ficha</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+            <!-- conteudo pagina -->
+            <div class="content" id="">
+                <nav class="navbar navbar-expand-lg menu-topo">
+                    <div class="container-fluid p-0">
+                        <div class="float-left  d-flex">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="marca-bradesco d-flex">
+                            <span class="logo-bradesco my-auto">
+                                <img src="img/icon-logo-bradesco.png" alt="">
+                            </span>
+                            <div class="title-sistema d-flex my-auto">
+                                <h1 class="my-auto">SGTA - Controle de Aditamento</h1>
+                            </div>
+                        </div>
+                        <div class="user float-right d-flex">
+                            <div class="btn-group my-auto">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">João Carvalho</p>                                    
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="painel-administrativo.html"> Voltar para o Painel Adm</a></li>            
+                                        <li class="breadcrumb-item"><a href="busca-avancada.html"> Voltar para Busca Avançada</a></li>                                                                                            
+                                        <li class="breadcrumb-item">Detalhes Busca Avançada</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
+                                <div class="col-lg-12">
+                                    <div class="title-page">
+                                        <h1>Detalhes Busca Avançada</h1>                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-12"><hr></div>
+                            </div> 
+                            <div class="row mt-3">
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Cód. Solicitação</p>
+                                    <p><b>#2020010652Rj</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Tipo Ficha</p>
+                                    <p><b>M</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Cód. Prestador</p>
+                                    <p><b>248</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">CNPJ/CPF</p>
+                                    <p><b>30.145.502/0001-71</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Nome do Prestador</p>
+                                    <p><b>Niterói D´or</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Grandes Grupos</p>
+                                    <p><b>Bradesco</b></p>
+                                </div>
+                                <div class="col-12"><hr></div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">UF</p>
+                                    <p><b>RJ</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Sucursal</p>
+                                    <p><b>Rio de Janeiro</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Empresa</p>
+                                    <p><b>Bradesco Seguros</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Priorização</p>
+                                    <p><b>Normal</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Alçada</p>
+                                    <p><b>-</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Tipo Aditivo</p>
+                                    <p><b>Vacina</b></p>
+                                </div>
+                                <div class="col-12"><hr></div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Data Entrada</p>
+                                    <p><b>02/11/2020</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Status</p>
+                                    <p><b>Ativo</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Responsável</p>
+                                    <p><b>Bradesco Seguros</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Situação</p>
+                                    <p><b>Ativo</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Data Status</p>
+                                    <p><b>05/11/2020</b></p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="mb-2">Data Fim</p>
+                                    <p><b>27/11/2020</b></p>
+                                </div>
+                                <div class="col-12"><hr></div>                                
+                                <div class="col-lg-12">
+                                    <p class="mb-2">Justificativa</p>
+                                    <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis enim ac metus ultrices, id molestie sapien molestie.</b></p>
+                                </div>
+                                <div class="col-12"><hr></div>    
+                            </div>
+                            <div class="row btns-opcoes mt-3">
+                                <div class="col-lg-12">
+                                    <button type="button" data-toggle="tooltip" data-placement="right" data-original-title="Voltar para Busca Avançada" value="voltar" onclick="window.location.href='busca-avancada.html'" name="button" class="btn btn-voltar float-left mr-3 mb-3">Voltar</button>
+                                    <button type="button" name="button" class="btn btn-salvar float-right">Exportar</button>                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+        
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+    </body>
+</html>

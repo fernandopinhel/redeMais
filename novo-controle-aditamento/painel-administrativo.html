@@ -21,74 +21,82 @@
         <div class="wrapper">
             <!-- sidebar -->
             <nav id="sidebar">
-                <ul class="list-unstyled components">
-                    <li>
-                        <a href="#cadastrosSubmenu" id="cadastros" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Cadastros</span>
-                            <span class="seta-accordion"></span>
-                        </a>
-                        <ul class="collapse list-unstyled list-style-2 list-subs" id="cadastrosSubmenu">
-                            <li>
-                                <a href="acompanhamento-slas.html">Acompanhamento de SLAs</a>
-                            </li>
-                            <li>
-                                <a href="aditivos.html">Aditivos</a>
-                            </li>
-                            <li>
-                                <a href="equipe.html">Equipe</a>
-                            </li>
-                            <li>
-                                <a href="grandes-grupos.html">Grandes Grupos</a>
-                            </li>
-                            <li>
-                                <a href="grupo-tipo-aditivo.html">Grupo Tipo Aditivo</a>
-                            </li>
-                            <li>
-                                <a href="perfil-usuario.html">Perfil Usuário</a>
-                            </li>
-                            <li>
-                                <a href="procedimentos.html">Procedimentos</a>
-                            </li>
-                            <li>
-                                <a href="sucursal.html">Sucursal</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="active">
-                        <a href="#painelAdmSubmenu" onclick="window.location.href='painel-administrativo.html'" id="painel-administrativo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Painel Administrativo</span>
-                        </a>                        
-                    </li>
-                    <li>
-                        <a href="#processosSubmenu" id="processos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Processos</span>
-                            <span class="seta-accordion"></span>
-                        </a>
-                        <ul class="collapse list-unstyled list-style-2 list-subs" id="processosSubmenu">
-                            <li>
-                                <a href="trocar-emissor.html">Trocar Emissor</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#relatoriosSubmenu" id="relatorios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Relatórios</span>
-                            <span class="seta-accordion"></span>
-                        </a>
-                        <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
-                            <li>
-                                <a href="relatorio-controle.html">Relatório Controle</a>
-                            </li>
-                            <li>
-                                <a href="relatorio-controle-trimestral.html">Relatório Controle Trimestral</a>
-                            </li>
-                            <li>
-                                <a href="relatorio-sla.html">Relatório SLA Tempo Total da Ficha</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>                
-            </nav>
+              <ul class="list-unstyled components">
+                  <li>
+                      <a href="#slasSubmenu" onclick="window.location.href='acompanhamento-slas.html'" id="slas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Acompanhamento de SLAs</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#aditivosSubmenu" onclick="window.location.href='aditivos.html'" id="aditivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Aditivos</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#equipeSubmenu" onclick="window.location.href='equipes.html'" id="equipes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Equipe</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#grandesGruposSubmenu" onclick="window.location.href='grandes-grupos.html'" id="grandes-grupos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Grandes Grupos</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#grupoTipoAditivoSubmenu" onclick="window.location.href='grupo-tipo-aditivo.html'" id="grupo-tipo-aditivo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Grupo Tipo Aditivo</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#perfilUsuarioSubmenu" onclick="window.location.href='perfil-usuario.html'" id="perfil-usuario" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Perfil Usuário</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#procedimentosSubmenu" onclick="window.location.href='procedimentos.html'" id="preocedimentos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Procedimentos</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#sucursalSubmenu" onclick="window.location.href='sucursal.html'" id="sucursal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Sucursal</span>                            
+                      </a>
+                  </li>
+                  <li class="active">
+                      <a href="#painelAdmSubmenu" onclick="window.location.href='painel-administrativo.html'" id="painel-administrativo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Painel Administrativo</span>
+                      </a>                        
+                  </li>
+                  <li>
+                      <a href="#processosSubmenu" id="processos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Processos</span>
+                          <span class="seta-accordion"></span>
+                      </a>
+                      <ul class="collapse list-unstyled list-style-2 list-subs" id="processosSubmenu">
+                          <li>
+                              <a href="trocar-emissor.html">Trocar Emissor</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#relatoriosSubmenu" id="relatorios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                          <span class="item-menu">Relatórios</span>
+                          <span class="seta-accordion"></span>
+                      </a>
+                      <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
+                          <li>
+                              <a href="relatorio-controle.html">Relatório Controle</a>
+                          </li>
+                          <li>
+                              <a href="relatorio-controle-trimestral.html">Relatório Controle Trimestral</a>
+                          </li>
+                          <li>
+                              <a href="relatorio-sla.html">Relatório SLA Tempo Total da Ficha</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>                
+          </nav>
             <!-- fim sidebar -->
             <!-- conteudo pagina -->
             <div class="content" id="">
@@ -159,7 +167,7 @@
                                 <span class="p-select-2">Sucursal:</span>                                                               
                                 <select class="form-control h-35">
                                     <option value="1" selected="">Selecione</option>
-                                    <option value="2">Rio Janeiro</option>                                   
+                                    <option value="2">Rio de Janeiro</option>                                   
                                     <option value="3">Minas</option>  
                                     <option value="4">NO - CO</option>
                                     <option value="4">Nordeste I</option>

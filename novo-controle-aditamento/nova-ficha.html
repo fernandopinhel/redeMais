@@ -25,36 +25,44 @@
             <nav id="sidebar">
                 <ul class="list-unstyled components">
                     <li>
-                        <a href="#cadastrosSubmenu" id="cadastros" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Cadastros</span>
-                            <span class="seta-accordion"></span>
+                        <a href="#slasSubmenu" onclick="window.location.href='acompanhamento-slas.html'" id="slas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Acompanhamento de SLAs</span>
                         </a>
-                        <ul class="collapse list-unstyled list-style-2 list-subs" id="cadastrosSubmenu">
-                            <li>
-                                <a href="acompanhamento-slas.html">Acompanhamento de SLAs</a>
-                            </li>
-                            <li>
-                                <a href="aditivos.html">Aditivos</a>
-                            </li>
-                            <li>
-                                <a href="equipe.html">Equipe</a>
-                            </li>
-                            <li>
-                                <a href="grandes-grupos.html">Grandes Grupos</a>
-                            </li>
-                            <li>
-                                <a href="grupo-tipo-aditivo.html">Grupo Tipo Aditivo</a>
-                            </li>
-                            <li>
-                                <a href="perfil-usuario.html">Perfil Usuário</a>
-                            </li>
-                            <li>
-                                <a href="procedimentos.html">Procedimentos</a>
-                            </li>
-                            <li>
-                                <a href="sucursal.html">Sucursal</a>
-                            </li>
-                        </ul>
+                    </li>
+                    <li>
+                        <a href="#aditivosSubmenu" onclick="window.location.href='aditivos.html'" id="aditivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Aditivos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#equipeSubmenu" onclick="window.location.href='equipes.html'" id="equipes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Equipe</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#grandesGruposSubmenu" onclick="window.location.href='grandes-grupos.html'" id="grandes-grupos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Grandes Grupos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#grupoTipoAditivoSubmenu" onclick="window.location.href='grupo-tipo-aditivo.html'" id="grupo-tipo-aditivo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Grupo Tipo Aditivo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#perfilUsuarioSubmenu" onclick="window.location.href='perfil-usuario.html'" id="perfil-usuario" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Perfil Usuário</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#procedimentosSubmenu" onclick="window.location.href='procedimentos.html'" id="preocedimentos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Procedimentos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sucursalSubmenu" onclick="window.location.href='sucursal.html'" id="sucursal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Sucursal</span>                            
+                        </a>
                     </li>
                     <li class="active">
                         <a href="#painelAdmSubmenu" onclick="window.location.href='painel-administrativo.html'" id="painel-administrativo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
@@ -134,7 +142,7 @@
                             <div class="col-lg-12">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="painel-administrativo.html">Painel Administrativo</a></li>                                                
+                                        <li class="breadcrumb-item"><a href="painel-administrativo.html">Voltar para o Painel Adm</a></li>                                                
                                         <li class="breadcrumb-item">Incluir Ficha</li>
                                     </ol>
                                 </nav>
@@ -194,6 +202,25 @@
                                         </a>
                                     </li>
                                 </ul>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="alert alert-danger mb-3" id="msg-input-error" role="alert">
+                                            <div class="container-fluid p-0">
+                                                <div class="row">
+                                                    <div class="col-10">
+                                                        <img src="img/alert-error.svg" width="23" class="float-left">
+                                                        <p><span class="mr-2">Serviço MedService indisponível</span></p>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" class="btn btn-close close-error">
+                                                            <img src="img/close.svg">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="accordion mb-5" id="accordion" role="tablist" aria-multiselectable="true">
                                     <div class="card">
                                       <div class="card-header" role="tab" id="heading-1">
@@ -282,7 +309,7 @@
                                 <button type="button" name="button" class="btn prev arrow-left-tab"></button>
                                 <div class="tab-content">
                                     <!-- info gerais negociacao -->
-                                    <div role="tabpanel" class="tab-pane" id="tab-info-gerais-negociacao">
+                                    <div role="tabpanel" class="tab-pane active" id="tab-info-gerais-negociacao">
                                         <div class="design-process-content bg-blank">
                                             <div class="row d-flex mb-3">
                                                 <div class="col-lg-12 my-auto">
@@ -375,8 +402,8 @@
                                                 <div class="col-lg-3">                                    
                                                     <p class="p-select">Tipo</p>
                                                     <select class="form-control h-35">
-                                                        <option value="1">Selecione</option>
-                                                        <option value="2" selected="">Tipo 1</option>                                   
+                                                        <option value="1" selected>Selecione</option>
+                                                        <option value="2">PP RADIOTERAPIA R+</option>                                   
                                                     </select>
                                                 </div>
                                                 <div class="space"></div>
@@ -432,7 +459,7 @@
                                                 <div class="col-lg-12"><hr></div>
                                                 <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                                                     <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Tipo: <strong>Tipo 1</strong></p>
+                                                        <p class="m-0 ">Tipo: <strong>PP RADIOTERAPIA R+</strong></p>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-sm-6 col-md-4 col-lg-2">
@@ -442,7 +469,7 @@
                                                 </div>
                                                 <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                                                     <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Cód Prestador: <strong>4813345</strong></p>
+                                                        <p class="m-0 ">Cód Prestador: <strong>4813345 | 238</strong></p>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -454,7 +481,7 @@
                                         </div>
                                     </div>
                                     <!-- detalhes MATMED -->
-                                    <div role="tabpanel" class="tab-pane active" id="tab-detalhes-matmed">
+                                    <div role="tabpanel" class="tab-pane" id="tab-detalhes-matmed">
                                         <div class="design-process-content bg-blank">
                                             <div class="row d-flex mb-1">
                                                 <div class="col-lg-12 my-auto">
@@ -480,7 +507,7 @@
                                                 <div class="space"></div>
                                                 <div class="col-lg-6 mt-2">
                                                     <label for="comentarios" class="comentarios">Medicamentos de uso restrito</label>
-                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3" disabled></textarea>
+                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
                                                 </div>
                                                 <div class="space"></div>     
                                                 <div class="col-lg-6 mt-5">
@@ -490,25 +517,100 @@
                                                 <div class="space"></div>
                                                 <div class="col-lg-6 mt-5">
                                                     <label for="comentarios" class="comentarios">Tabela de OPME negociada</label>
-                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3" disabled></textarea>
+                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
                                                 </div>
-                                                <div class="space"></div>                
+                                                <div class="space"></div>    
+                                                <div class="col-lg-2 mt-4">                                    
+                                                    <div class="form">
+                                                        <input type="text" name="taxa-comercializacao" autocomplete="off">
+                                                        <label for="taxa-comercializacao" class="label-name">
+                                                            <span class="content-name">Taxa de Comercialização</span>
+                                                        </label>
+                                                    </div> 
+                                                </div>     
+                                                <div class="space"></div>    
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-lg-12">
+                                                    <div class="sub-title">
+                                                        <h6>Negociação de materiais e medicamentos clínicas especializadas<small> *Exceto terapias</small></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-5 mb-4">
+                                                <div class="space"></div>
+                                                <div class="col-lg-6 mt-2">
+                                                    <label for="comentarios" class="comentarios">Medicamentos</label>
+                                                    <textarea class="form-control" id="medicamentos" rows="3"></textarea>
+                                                </div>
+                                                <div class="space"></div>
+                                                <div class="col-lg-6 mt-2">
+                                                    <label for="comentarios" class="comentarios">Materiais de consumo</label>
+                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
+                                                </div>
+                                                <div class="space"></div>     
                                             </div>
                                         </div>
                                     </div>
-                                        <!-- anexo rede+ -->
-                                        <div role="tabpanel" class="tab-pane" id="tab-anexo-rede-mais">
+                                    <!-- anexo rede+ -->
+                                    <div role="tabpanel" class="tab-pane" id="tab-anexo-rede-mais">
                                         <div class="design-process-content bg-blank">
                                             <div class="row d-flex mb-3">
                                                 <div class="col-lg-12 my-auto">
                                                     <div class="title-page">                                        
                                                         <h6>Anexo Rede+</h6>
                                                     </div>
+                                                    <small><b>*No caso de negociação Rede+</b>, os valores deverão ser preenchidos nos anexos de acordo com a especialidade.</small><br>
+                                                    <small>*Informar as Redes e/ou Planos para negociações com valores diferenciados. Se não houver diferença de valor, preencher somente o VALOR E$ |.</small>
                                                 </div>   
                                                 <div class="col-lg-12"><hr></div>
-                                            </div>                                            
+                                            </div>         
+                                            <div class="row mt-3 mb-4">
+                                                <div class="space"></div>     
+                                                <div class="col-lg-4 mt-4">                                    
+                                                    <div class="form">
+                                                        <input type="text" name="redes-bradesco" autocomplete="off">
+                                                        <label for="redes-bradesco" class="label-name">
+                                                            <span class="content-name">Valor I: Redes (Bradesco)</span>
+                                                        </label>
+                                                    </div> 
+                                                </div>    
+                                                <div class="space"></div>     
+                                                <div class="col-lg-8 mt-4">                                    
+                                                    <div class="form">
+                                                        <input type="text" name="planos-mediservice" autocomplete="off">
+                                                        <label for="planos-mediservice" class="label-name">
+                                                            <span class="content-name">Planos (Mediservice)</span>
+                                                        </label>
+                                                    </div> 
+                                                </div>    
+                                                <div class="space"></div>     
+                                                <div class="col-lg-4 mt-4">                                    
+                                                    <div class="form">
+                                                        <input type="text" name="redes-bradesco-2" autocomplete="off">
+                                                        <label for="redes-bradesco-2" class="label-name">
+                                                            <span class="content-name">Valor II: Redes (Bradesco)</span>
+                                                        </label>
+                                                    </div> 
+                                                </div>    
+                                                <div class="space"></div>     
+                                                <div class="col-lg-8 mt-4">                                    
+                                                    <div class="form">
+                                                        <input type="text" name="planos-mediservice-2" autocomplete="off">
+                                                        <label for="planos-mediservice-2" class="label-name">
+                                                            <span class="content-name">Planos (Mediservice)</span>
+                                                        </label>
+                                                    </div> 
+                                                </div>    
+                                                <div class="space"></div>     
+                                                <div class="col-lg-12 mt-5">
+                                                    <label for="comentarios" class="comentarios"><small>*Informar as Redes e/ou Planos para negociações com valores diferenciados. Se não houver diferença de valor, preencher somente o VALOR E$ |.</small></label>
+                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3" disabled></textarea>
+                                                </div>
+                                                <div class="space"></div>     
+                                            </div>                               
                                         </div>
-                                        </div>
+                                    </div>
                                     <!-- justificativa -->
                                     <div role="tabpanel" class="tab-pane" id="tab-justificativa">
                                         <div class="design-process-content bg-blank">
@@ -520,13 +622,35 @@
                                                 </div>   
                                                 <div class="col-lg-12"><hr></div>
                                             </div>    
+                                            <div class="row">
+                                                <div class="col-lg-12 mt-3">
+                                                    <label for="comentarios" class="comentarios">Caso necessário justifique a solicitação</label>
+                                                    <textarea class="form-control" id="medicamentos" rows="3">Testando Mais de um Prestador de 3 Cias</textarea>
+                                                </div>
+                                                <div class="space"></div>  
+                                                <div class="col-lg-12 mt-4">
+                                                    <h6 class="mb-3">Observações:</h6>
+                                                    <p><small><b>1 - Regime de Atendimento</b><br>No caso de negociação hospitalar deverá ser informado se a negociação é exclusiva para um determinado Regime de Atendimento.
+                                                        Como por exemplo negociação de agravo no SADT: Informar se a negociação é válida somente para paciente internado ou valerá também para o Pronto Socorro;</small></p>
+                                                    <p><small><b>2 - Procedimento Padronizado (Exceto REDE+)</b><br>Em negociação de Procedimento Padronizado informar o código TUSS e a composição do PP;</small></p>
+                                                    <p><small><b>3 - Diárias e Taxas</b><br>A tabela de D&T deverá ser enviada com a codificação nomenclatura TUSS e a coluna fator deverá estar preenchida;</small></p>
+                                                    <p><small><b>4 - Rol Não</b><br>Não pode ser emitido acordo com procedimento Rol não para Mediservice. Para a Bradesco os procedimentos Rol não terão cobertura somente
+                                                         para os procedimentos divulgados na tabela disponível no site do referenciado;</small></p>
+                                                    <p><small><b>5 - Percentual de Reajuste</b><br>O percentual negociado deve ser informado para cada acordo negociado. Exemplo: D&T: 4% | Procedimentos Padronizados: 5% etc.</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="row btns-opcoes mt-5">
+                                                <div class="col-lg-12">
+                                                    <button type="button" name="button" class="btn btn-salvar w-160 float-right">Baixar Arquivos</button>                                     
+                                                    <button type="reset" value="Reset" name="button" class="btn btn-info float-right w-160 mr-3">Relatório de Ficha</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="buttons-tab">
                                     <button type="button" name="button" class="btn btn-prev float-left prev">Anterior</button>
                                     <button type="button" name="button" class="btn btn-next float-right next">Próximo</button>
-                                    <button type="button" name="button" class="btn btn-final float-right d-none">Finalizar</button>
                                 </div>
                             </div>
                         </div>

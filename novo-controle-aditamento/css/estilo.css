@@ -178,6 +178,23 @@ select.error{
     border-radius: 20px;
 }
 
+.btn-info {
+    background:#17a2b8;
+    color: #fff;
+    font-weight: 400;
+    border: 1px solid#17a2b8;
+    border-radius: 20px;
+    width: 98px;
+}
+
+.btn-info:hover {
+    background: #1496aa;
+    color: #fff;
+    font-weight: 400;
+    border: 1px solid #1496aa;
+    border-radius: 20px;
+}
+
 .btn-voltar {
     background: transparent;
     color: #499ED0;
@@ -246,6 +263,12 @@ select.error{
 .w-98{width: 98px !important;}
 .w-150{width: 150px !important;}
 .w-155{width: 155px !important;}
+.w-160{width: 160px !important;}
+.w-170{width: 170px !important;}
+.w-180{width: 180px !important;}
+.w-190{width: 190px !important;}
+.w-200{width: 200px !important;}
+.w-290{width: 290px !important;}
 .h-100{height: 100px !important;}
 .h-122{height: 122px !important;}
 
@@ -287,6 +310,26 @@ select.error{
 .h100{height: 100%;}
 
 .p-30{padding: 30px;}
+
+.icon-seta-esquerda-a::before{
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.breadcrumb-item > a{
+    color: #0e81ed;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+.breadcrumb-item > a:hover{
+    color: #e60935;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
 /* fim globais */
 
 /* alertas */

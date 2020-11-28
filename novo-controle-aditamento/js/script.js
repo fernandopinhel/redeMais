@@ -283,8 +283,12 @@ $(".excluir-todos-check").click(function(){
 });
 // fim marcar todos checkbox exclusão
 
-// efeitos nos inputs
- $(window, document, undefined).ready(function() {
+// inputs animado
+$(window, document, undefined).ready(function() {
+  $('.input-date').change(function() {
+      $(this).focus();
+  })
+  
   $('input').blur(function() {
     var $this = $(this);
     if ($this.val())
@@ -334,13 +338,6 @@ $(".excluir-todos-check").click(function(){
   });
 });
 
-$('input[type=checkbox').removeClass('used')
-  
-var inputDate = $('.input-date')
-if($(".input-date").val(length.css("display", "none"))){
-    $(".datetimepicker").click(function(inputDate){
-    $(this).addClass("used");
-  });   
-}
-// fim efeitos nos inputs
 
+$('input[type=checkbox').removeClass('used')
+// fim Inputs animado
