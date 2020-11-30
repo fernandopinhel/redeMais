@@ -1899,6 +1899,33 @@ td.actions-visible > div {
     transform: rotate(180deg); /* Equal to rotateZ(45deg) */
     transition: 0.6s all;
 }
+
+.bar-geral{
+    position: absolute;
+    right: 15px;
+}
+
+.bar1, .bar2{
+    width: 14px;
+    height: 2px;
+    background-color: #2365a7;
+    margin: 0;
+    transition: 0.4s;
+}
+
+.bar2{width: 14px; opacity: 1;}
+
+.bar1 {
+    -webkit-transform: rotate(-90deg) translate(-3px, 0px);
+    transform: rotate(-90deg) translate(-3px, 0px);
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(0deg) translate(-3px, 0px);
+    transform: rotate(0deg) translate(-3px, 0px);
+}
+
+.change .bar2 {opacity: 0;}
 /* fim accordion multilistas abertas painel */
 
 /* painel carrossel */

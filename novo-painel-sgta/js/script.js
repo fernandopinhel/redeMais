@@ -1,3 +1,8 @@
+// script icone animacao info prestadores
+function toggleFunction(x) {
+  x.classList.toggle("change");
+}
+// fim script icone animacao info prestadores
 // input file
 $(document).ready(function(){
 	$('#filer_input').filer({
