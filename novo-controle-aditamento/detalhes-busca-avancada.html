@@ -114,7 +114,7 @@
                                 <img src="img/icon-logo-bradesco.png" alt="">
                             </span>
                             <div class="title-sistema d-flex my-auto">
-                                <h1 class="my-auto">SGTA - Controle de Aditamento</h1>
+                                <h1 class="my-auto">SGTA - PAINEL ADITIVOS</h1>
                             </div>
                         </div>
                         <div class="user float-right d-flex">
@@ -148,101 +148,175 @@
                             </div>
                         </div>
                         <div class="bg-blank mb-5">
-                            <div class="row mb-3">
-                                <div class="col-lg-12">
-                                    <div class="title-page">
-                                        <h1>Detalhes Busca Avançada</h1>                                        
+                            <div class="container-fluid">
+                                <div class="row d-flex">
+                                    <div class="col-12 col-md-6 col-lg-6 my-auto">
+                                        <div class="title-page">
+                                            <h1>Detalhes Busca Avançada</h1>                                        
+                                        </div>                                       
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6 my-auto">
+                                        <div class="exportar" title="" data-toggle="tooltip" data-original-title="Exportar"></div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12"><hr></div>
-                            </div> 
-                            <div class="row mt-3">
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Cód. Solicitação</p>
-                                    <p><b>#2020010652Rj</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Tipo Ficha</p>
-                                    <p><b>M</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Cód. Prestador</p>
-                                    <p><b>248</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">CNPJ/CPF</p>
-                                    <p><b>30.145.502/0001-71</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Nome do Prestador</p>
-                                    <p><b>Niterói D´or</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Grandes Grupos</p>
-                                    <p><b>Bradesco</b></p>
-                                </div>
-                                <div class="col-12"><hr></div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">UF</p>
-                                    <p><b>RJ</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Sucursal</p>
-                                    <p><b>Rio de Janeiro</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Empresa</p>
-                                    <p><b>Bradesco Seguros</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Priorização</p>
-                                    <p><b>Normal</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Alçada</p>
-                                    <p><b>-</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Tipo Aditivo</p>
-                                    <p><b>Vacina</b></p>
-                                </div>
-                                <div class="col-12"><hr></div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Data Entrada</p>
-                                    <p><b>02/11/2020</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Status</p>
-                                    <p><b>Ativo</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Responsável</p>
-                                    <p><b>Bradesco Seguros</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Situação</p>
-                                    <p><b>Ativo</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Data Status</p>
-                                    <p><b>05/11/2020</b></p>
-                                </div>
-                                <div class="col-lg-2">
-                                    <p class="mb-2">Data Fim</p>
-                                    <p><b>27/11/2020</b></p>
-                                </div>
-                                <div class="col-12"><hr></div>                                
-                                <div class="col-lg-12">
-                                    <p class="mb-2">Justificativa</p>
-                                    <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis enim ac metus ultrices, id molestie sapien molestie.</b></p>
-                                </div>
-                                <div class="col-12"><hr></div>    
+                                <hr>
                             </div>
-                            <div class="row btns-opcoes mt-3">
-                                <div class="col-lg-12">
-                                    <button type="button" data-toggle="tooltip" data-placement="right" data-original-title="Voltar para Busca Avançada" value="voltar" onclick="window.location.href='busca-avancada.html'" name="button" class="btn btn-voltar float-left mr-3 mb-3">Voltar</button>
-                                    <button type="button" name="button" class="btn btn-salvar float-right">Exportar</button>                                     
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>                      
+                                            <th>Cód. Solicitação</th>      
+                                            <th>Tipo Ficha</th>    
+                                            <th>Cód. Prestador</th>   
+                                            <th>CNPJ/CPF</th>  
+                                            <th>Nome Prestador</th>   
+                                            <th>Grandes Grupos</th>   
+                                            <th>UF</th>  
+                                            <th>Sucursal</th>                                     
+                                            <th>Empresa</th>  
+                                            <th>Priorização</th>   
+                                            <th>Alçada</th>            
+                                            <th>Tipo do Aditivo</th>  
+                                            <th>Data Entrada</th>                                                                                                                                                                      
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#2020010652RJ</td> 
+                                            <td>M</td>
+                                            <td>327417</td>
+                                            <td>30.145.502/0001-71</td>
+                                            <td>NITERÓI D´OR</td>
+                                            <td>BRADESCO</td>
+                                            <td>RJ</td>
+                                            <td>RJ - ES</td>
+                                            <td>Bradesco Saúde</td>
+                                            <td>Normal</td>
+                                            <td>Sup. Regional</td>
+                                            <td>-</td>
+                                            <td>03/11/2020</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row d-flex">
+                                    <div class="col-lg-12 my-auto">
+                                        <div class="resultado-filtro-todos">
+                                            <h4 class="float-left">Itens Encontrados:<span>50</span></h4>
+                                        </div>
+                                    </div>
                                 </div>
+                                <hr>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>                      
+                                            <th>Status</th>      
+                                            <th>Responsável</th>    
+                                            <th>Situação</th>   
+                                            <th>Data Status</th>  
+                                            <th>Data Fim</th>    
+                                            <th>Justificativa</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Aguardando Distribuição</td> 
+                                            <td>-</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>03/11/2020</td>
+                                            <td>03/11/2020</td>
+                                            <td>Justificativa</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aguardando Distribuição</td> 
+                                            <td>-</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>03/11/2020</td>
+                                            <td>03/11/2020</td>
+                                            <td>Justificativa</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aguardando Distribuição</td> 
+                                            <td>-</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>03/11/2020</td>
+                                            <td>03/11/2020</td>
+                                            <td>Justificativa</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aguardando Distribuição</td> 
+                                            <td>-</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>03/11/2020</td>
+                                            <td>03/11/2020</td>
+                                            <td>Justificativa</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aguardando Distribuição</td> 
+                                            <td>-</td>
+                                            <td>Fora do Prazo</td>
+                                            <td>03/11/2020</td>
+                                            <td>03/11/2020</td>
+                                            <td>Justificativa</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row btns-opcoes mt-2">
+                                <div class="col-lg-2">
+                                    <button type="button" data-toggle="tooltip" data-placement="right" data-original-title="Voltar para a Consulta" value="voltar" onclick="window.location.href='busca-avancada.html'" name="button" class="btn btn-voltar float-left mr-3 mb-3">Voltar</button>        
+                                </div>
+                                <div class="col-lg-8">
+                                    <ul class="pagination mt-2">
+                                        <li>
+                                            <a href="#" class="prev">
+                                            <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        <a href="#" class="prev">
+                                            <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                        </a>
+                                        </li>
+                                        <li><a href="#" class="active">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li>
+                                        <a href="#" class="next">
+                                            <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2"></div>
                             </div>
                         </div>
                     </div>

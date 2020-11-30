@@ -489,13 +489,13 @@ select.error{
 
 .exportar{
     position: absolute;
-    right: 157px;
+    right: 20px;
     background: url(../img/excel.svg);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-position: center;
-    top: -25px;
+    top: -16px;
     cursor: pointer;
 }
 

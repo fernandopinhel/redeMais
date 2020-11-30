@@ -114,7 +114,7 @@
                                 <img src="img/icon-logo-bradesco.png" alt="">
                             </span>
                             <div class="title-sistema d-flex my-auto">
-                                <h1 class="my-auto">SGTA - Controle de Aditamento</h1>
+                                <h1 class="my-auto">SGTA - PAINEL ADITIVOS</h1>
                             </div>
                         </div>
                         <div class="user float-right d-flex">
@@ -141,7 +141,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="painel-administrativo.html"> Voltar para o Painel Adm</a></li>                                                                                         
-                                        <li class="breadcrumb-item">Grandes Grupos</li>
+                                        <li class="breadcrumb-item">Consultar Grandes Grupos</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -150,7 +150,7 @@
                             <div class="row mb-3">
                                 <div class="col-6 col-md-2 col-lg-6 my-auto">
                                     <div class="title-page">
-                                        <h1>Grandes Grupos</h1>                                        
+                                        <h1>Consultar Grandes Grupos</h1>                                        
                                     </div>
                                 </div>       
                                 <div class="col-6 col-md-2 col-lg-6 my-auto">
@@ -159,6 +159,15 @@
                                 <div class="col-lg-12"><hr></div>
                             </div> 
                             <div class="row">
+                                <div class="col-lg-3">                                    
+                                    <div class="form">
+                                        <input type="text" name="descricao" autocomplete="off">
+                                        <label for="descricao" class="label-name">
+                                            <span class="content-name">Descrição</span>
+                                        </label>
+                                    </div> 
+                                </div>
+                                <div class="space"></div>
                                 <div class="col-lg-2 col-xl-2">
                                     <div class="radio-title mb-2">
                                         <h6 class="mb-2">Tipos de Grandes Grupos</h6>
@@ -179,7 +188,7 @@
                                     </div>
                                 </div>
                             </div>                            
-                            <div class="row btns-opcoes mt-5">
+                            <div class="row btns-opcoes">
                                 <div class="col-lg-12">
                                     <button type="button" data-toggle="tooltip" data-placement="right" data-original-title="Voltar para o Painel" value="voltar" onclick="window.location.href='painel-administrativo.html'" name="button" class="btn btn-voltar float-left mr-3 mb-3">Voltar</button>
                                     <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
@@ -221,8 +230,8 @@
                                                     <a href="#" class="editar" onclick="window.location.href='editar-grandes-grupos.html'" data-toggle="tooltip" data-original-title="Editar">
                                                         <img src="img/editar.svg" class="i-editar" title="">
                                                     </a>
-                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                        <img src="img/excluir.svg" class="i-editar" title="">
+                                                    <a href="#" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Excluir">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -246,8 +255,8 @@
                                                     <a href="#" class="editar" onclick="window.location.href='editar-grandes-grupos.html'" data-toggle="tooltip" data-original-title="Editar">
                                                         <img src="img/editar.svg" class="i-editar" title="">
                                                     </a>
-                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                        <img src="img/excluir.svg" class="i-editar" title="">
+                                                    <a href="#" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Excluir">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -271,8 +280,8 @@
                                                     <a href="#" class="editar" onclick="window.location.href='editar-grandes-grupos.html'" data-toggle="tooltip" data-original-title="Editar">
                                                         <img src="img/editar.svg" class="i-editar" title="">
                                                     </a>
-                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                        <img src="img/excluir.svg" class="i-editar" title="">
+                                                    <a href="#" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Excluir">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -296,8 +305,8 @@
                                                     <a href="#" class="editar" onclick="window.location.href='editar-grandes-grupos.html'" data-toggle="tooltip" data-original-title="Editar">
                                                         <img src="img/editar.svg" class="i-editar" title="">
                                                     </a>
-                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                        <img src="img/excluir.svg" class="i-editar" title="">
+                                                    <a href="#" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Excluir">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -321,8 +330,8 @@
                                                     <a href="#" class="editar" onclick="window.location.href='editar-grandes-grupos.html'" data-toggle="tooltip" data-original-title="Editar">
                                                         <img src="img/editar.svg" class="i-editar" title="">
                                                     </a>
-                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                        <img src="img/excluir.svg" class="i-editar" title="">
+                                                    <a href="#" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Excluir">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -371,7 +380,26 @@
             </div>
         </div><!-- fim conteudo geral wrapper -->
         
-
+           <!-- Modal Excluir -->
+           <div class="modal fade" id="modalExluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalExcluirTitle">Tem certeza que deseja excluir este item?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-salvar w-98 float-left" data-dismiss="modal">Sim</button>
+                        <button type="button" class="btn btn-cancelar w-98 float-right" data-dismiss="modal">Não</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fim Modal Excluir -->
         <!-- jQuery -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>
         <!-- Popper.JS -->
