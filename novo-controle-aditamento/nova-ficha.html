@@ -178,17 +178,9 @@
                                     </a>
                                     </li>
                                     <li role="presentation">
-                                    <a href="#tab-detalhes-matmed" aria-controls="tab-detalhes-matmed" role="tab" data-toggle="tab">
-                                        <span class="border-active">
-                                        <span>3</span>
-                                        </span>
-                                        <p>Detalhes MATMED</p>
-                                    </a>
-                                    </li>
-                                    <li role="presentation">
                                         <a href="#tab-anexo-rede-mais" aria-controls="tab-anexo-rede-mais" role="tab" data-toggle="tab">
                                         <span class="border-active">
-                                            <span>4</span>
+                                            <span>3</span>
                                         </span>
                                         <p>Anexo Rede+</p>
                                         </a>
@@ -196,7 +188,7 @@
                                     <li role="presentation">
                                         <a href="#tab-justificativa" aria-controls="tab-justificativa" role="tab" data-toggle="tab">
                                         <span class="border-active">
-                                            <span>5</span>
+                                            <span>4</span>
                                         </span>
                                         <p>Justificativa</p>
                                         </a>
@@ -384,171 +376,169 @@
                                     <!-- aditivos -->
                                     <div role="tabpanel" class="tab-pane" id="tab-aditivos">
                                         <div class="design-process-content bg-blank">
-                                            <div class="row d-flex mb-3">
-                                                <div class="col-lg-10 my-auto">
-                                                    <div class="title-page">                                        
-                                                        <h6>Aditivos</h6>
-                                                    </div>
-                                                    <small>Tipos de Aditivos que serão emitidos - <b>*No caso de negociação Rede+</b>, os valores deverão ser preenchidos no Item 4 (Anexo Rede+) de acordo com a especialidade negociada e informada no Item 2 (Aditivos).</small>
-                                                </div>   
-                                                <div class="col-lg-2  my-auto">
-                                                    <a href="#" data-toggle="modal" data-target="#modalInfoAditivo">
-                                                        <img src="img/info.svg" width="25" alt="" class="float-right" data-toggle="tooltip" data-original-title="Tipo de Atendimento x Tipo de Prestador">
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-12"><hr></div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-3">                                    
-                                                    <p class="p-select">Tipo</p>
-                                                    <select class="form-control h-35">
-                                                        <option value="1" selected>Selecione</option>
-                                                        <option value="2">PP RADIOTERAPIA R+</option>                                   
-                                                    </select>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-2 col-xl-2">
-                                                    <div class="radio-title mb-2">
-                                                        <h6 class="mb-2">Qual Forma</h6>
-                                                    </div>
-                                                    <div class="d-flex">
-                                                        <div class="ex-radio mr-4">
-                                                            <input type="radio" id="radio_yes1" name="radio_group1">
-                                                            <label for="radio-estilo" class="radio-estilo">Reajuste</label>
+                                            <ul class="nav tabs-fichas">
+                                                <li class="tabs-fichas-aditivos">
+                                                    <a class="fichas-aditivos active"  href="#navtabs-aditivo">ADITIVOS</a>
+                                                </li>
+                                                <li class="tabs-fichas-matmed">
+                                                    <a class="fichas-matmed"  href="#navtabs-matmed">MATMED</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content-fichas mt-4">
+                                                <div class="tab-pane-fichas container-fluid active" id="navtabs-aditivo">
+                                                    <div class="row d-flex mb-3">
+                                                        <div class="col-lg-10 my-auto">
+                                                            <small>Tipos de Aditivos que serão emitidos - <b>*No caso de negociação Rede+</b>, os valores deverão ser preenchidos no Item 4 (Anexo Rede+) de acordo com a especialidade negociada e informada no Item 2 (Aditivos).</small>
+                                                        </div>   
+                                                        <div class="col-lg-2  my-auto">
+                                                            <a href="#" data-toggle="modal" data-target="#modalInfoAditivo">
+                                                                <img src="img/info.svg" width="25" alt="" class="float-right" data-toggle="tooltip" data-original-title="Tipo de Atendimento x Tipo de Prestador">
+                                                            </a>
                                                         </div>
-                                                        <div class="ex-radio">
-                                                            <input type="radio" id="radio_no1" name="radio_group1">
-                                                            <label for="radio-estilo" class="radio-estilo">Novo</label>
+                                                        <div class="col-lg-12"><hr></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">                                    
+                                                            <p class="p-select">Tipo</p>
+                                                            <select class="form-control h-35">
+                                                                <option value="1" selected>Selecione</option>
+                                                                <option value="2">PP RADIOTERAPIA R+</option>                                   
+                                                            </select>
+                                                        </div>
+                                                        <div class="space"></div>
+                                                        <div class="col-lg-2 col-xl-2">
+                                                            <div class="radio-title mb-2">
+                                                                <h6 class="mb-2">Qual Forma</h6>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="ex-radio mr-4">
+                                                                    <input type="radio" id="radio_yes1" name="radio_group1">
+                                                                    <label for="radio-estilo" class="radio-estilo">Reajuste</label>
+                                                                </div>
+                                                                <div class="ex-radio">
+                                                                    <input type="radio" id="radio_no1" name="radio_group1">
+                                                                    <label for="radio-estilo" class="radio-estilo">Novo</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="space"></div>
+                                                        <div class="col-lg-4">
+                                                            <p class="p-check">Cód. Prestador</p>
+                                                            <div class="ex-checkbox-2 d-inline mr-5" data-toggle="tooltip" data-original-title="" title="">
+                                                                <input type="checkbox" id="">
+                                                                <label for="" class="check-estilo-2"><span class="ml-4">4813345</span></label>
+                                                            </div>
+                                                            <div class="ex-checkbox-2 d-inline ml-5" data-toggle="tooltip" data-original-title="" title="">
+                                                                <input type="checkbox" id="">
+                                                                <label for="" class="check-estilo-2"><span class="ml-4">238</span></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="space"></div>
+                                                        <div class="col-lg-12 mt-2">
+                                                            <label for="comentarios" class="comentarios">Descrição da Solicitação</label>
+                                                            <textarea class="form-control" id="desc-solicitacao" rows="3"></textarea>
+                                                        </div>
+                                                        <div class="space"></div>    
+                                                        <div class="col-lg-12">
+                                                            <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
+                                                            <button type="button" name="button" class="btn btn-salvar float-right w-155">Adicionar Aditivo</button>                                     
+                                                        </div>             
+                                                    </div>
+                                                    <div class="row aditivos-add mt-5 border p-3 mb-4">
+                                                        <div class="col-lg-10 my-auto">
+                                                            <div class="title-page-2">                                        
+                                                                <h6>Aditivos Adicionados</h6>
+                                                            </div>
+                                                        </div>   
+                                                        <div class="col-lg-2 my-auto" >
+                                                            <a href="#" class="excluir float-right" data-toggle="tooltip" data-original-title="Excluir">
+                                                                <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                            </a>
+                                                        </div>   
+                                                        <div class="col-lg-12"><hr></div>
+                                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                                                            <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                                                <p class="m-0 ">Tipo: <strong>PP RADIOTERAPIA R+</strong></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                                                            <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                                                <p class="m-0 ">Qual Forma: <strong>Reajuste</strong></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                                                            <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                                                <p class="m-0 ">Cód Prestador: <strong>4813345 | 238</strong></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="border-lc d-flex box-id-prestador">
+                                                                <p class="m-0 ">Descrição: <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et finibus magna. Phasellus blandit vehicula porta. Fusce fermentum tempus risus, at cursus nisl mattis eget.</strong></p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-4">
-                                                    <p class="p-check">Cód. Prestador</p>
-                                                    <div class="ex-checkbox-2 d-inline mr-5" data-toggle="tooltip" data-original-title="" title="">
-                                                        <input type="checkbox" id="">
-                                                        <label for="" class="check-estilo-2"><span class="ml-4">4813345</span></label>
+                                                <div class="tab-pane-fichas container-fluid hidden" id="navtabs-matmed">
+                                                    <div class="row mb-4">
+                                                        <div class="col-lg-12">
+                                                            <div class="sub-title">
+                                                                <h6>Negociação de materiais e medicamentos <small>*Regime de Internação, Ambulatório e PS</small></h6>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="ex-checkbox-2 d-inline ml-5" data-toggle="tooltip" data-original-title="" title="">
-                                                        <input type="checkbox" id="">
-                                                        <label for="" class="check-estilo-2"><span class="ml-4">238</span></label>
+                                                    <div class="row mt-5 mb-4">
+                                                        <div class="space"></div>
+                                                        <div class="col-lg-6 mt-2">
+                                                            <label for="comentarios" class="comentarios">Medicamentos</label>
+                                                            <textarea class="form-control" id="medicamentos" rows="3"></textarea>
+                                                        </div>
+                                                        <div class="space"></div>
+                                                        <div class="col-lg-6 mt-2">
+                                                            <label for="comentarios" class="comentarios">Medicamentos de uso restrito</label>
+                                                            <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
+                                                        </div>
+                                                        <div class="space"></div>     
+                                                        <div class="col-lg-6 mt-5">
+                                                            <label for="comentarios" class="comentarios">Materiais de consumo</label>
+                                                            <textarea class="form-control" id="materiais-consumo" rows="3"></textarea>
+                                                        </div>
+                                                        <div class="space"></div>
+                                                        <div class="col-lg-6 mt-5">
+                                                            <label for="comentarios" class="comentarios">Tabela de OPME negociada</label>
+                                                            <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
+                                                        </div>
+                                                        <div class="space"></div>    
+                                                        <div class="col-lg-2 mt-4">                                    
+                                                            <div class="form">
+                                                                <input type="text" name="taxa-comercializacao" autocomplete="off">
+                                                                <label for="taxa-comercializacao" class="label-name">
+                                                                    <span class="content-name">Taxa de Comercialização</span>
+                                                                </label>
+                                                            </div> 
+                                                        </div>     
+                                                        <div class="space"></div>    
                                                     </div>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-12 mt-2">
-                                                    <label for="comentarios" class="comentarios">Descrição da Solicitação</label>
-                                                    <textarea class="form-control" id="desc-solicitacao" rows="3"></textarea>
-                                                </div>
-                                                <div class="space"></div>    
-                                                <div class="col-lg-12">
-                                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
-                                                    <button type="button" name="button" class="btn btn-salvar float-right w-155">Adicionar Aditivo</button>                                     
-                                                </div>             
-                                            </div>
-                                            <div class="row aditivos-add mt-5 border p-3 mb-4">
-                                                <div class="col-lg-10 my-auto">
-                                                    <div class="title-page-2">                                        
-                                                        <h6>Aditivos Adicionados</h6>
+                                                    <div class="row mb-4">
+                                                        <div class="col-lg-12">
+                                                            <div class="sub-title">
+                                                                <h6>Negociação de materiais e medicamentos clínicas especializadas<small> *Exceto terapias</small></h6>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>   
-                                                <div class="col-lg-2 my-auto" >
-                                                    <a href="#" class="excluir float-right" data-toggle="tooltip" data-original-title="Excluir">
-                                                        <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
-                                                    </a>
-                                                </div>   
-                                                <div class="col-lg-12"><hr></div>
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Tipo: <strong>PP RADIOTERAPIA R+</strong></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Qual Forma: <strong>Reajuste</strong></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Cód Prestador: <strong>4813345 | 238</strong></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="border-lc d-flex box-id-prestador">
-                                                        <p class="m-0 ">Descrição: <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et finibus magna. Phasellus blandit vehicula porta. Fusce fermentum tempus risus, at cursus nisl mattis eget.</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- detalhes MATMED -->
-                                    <div role="tabpanel" class="tab-pane" id="tab-detalhes-matmed">
-                                        <div class="design-process-content bg-blank">
-                                            <div class="row d-flex mb-1">
-                                                <div class="col-lg-12 my-auto">
-                                                    <div class="title-page">                                        
-                                                        <h6>Detalhes MATMED</h6>
-                                                    </div>
-                                                </div>   
-                                                <div class="col-lg-12"><hr></div>
-                                            </div>
-                                            <div class="row mb-4">
-                                                <div class="col-lg-12">
-                                                    <div class="sub-title">
-                                                        <h6>Negociação de materiais e medicamentos <small>*Regime de Internação, Ambulatório e PS</small></h6>
+                                                    <div class="row mt-5 mb-4">
+                                                        <div class="space"></div>
+                                                        <div class="col-lg-6 mt-2">
+                                                            <label for="comentarios" class="comentarios">Medicamentos</label>
+                                                            <textarea class="form-control" id="medicamentos" rows="3"></textarea>
+                                                        </div>
+                                                        <div class="space"></div>
+                                                        <div class="col-lg-6 mt-2">
+                                                            <label for="comentarios" class="comentarios">Materiais de consumo</label>
+                                                            <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
+                                                        </div>
+                                                        <div class="space"></div>     
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row mt-5 mb-4">
-                                                <div class="space"></div>
-                                                <div class="col-lg-6 mt-2">
-                                                    <label for="comentarios" class="comentarios">Medicamentos</label>
-                                                    <textarea class="form-control" id="medicamentos" rows="3"></textarea>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-6 mt-2">
-                                                    <label for="comentarios" class="comentarios">Medicamentos de uso restrito</label>
-                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
-                                                </div>
-                                                <div class="space"></div>     
-                                                <div class="col-lg-6 mt-5">
-                                                    <label for="comentarios" class="comentarios">Materiais de consumo</label>
-                                                    <textarea class="form-control" id="materiais-consumo" rows="3"></textarea>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-6 mt-5">
-                                                    <label for="comentarios" class="comentarios">Tabela de OPME negociada</label>
-                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
-                                                </div>
-                                                <div class="space"></div>    
-                                                <div class="col-lg-2 mt-4">                                    
-                                                    <div class="form">
-                                                        <input type="text" name="taxa-comercializacao" autocomplete="off">
-                                                        <label for="taxa-comercializacao" class="label-name">
-                                                            <span class="content-name">Taxa de Comercialização</span>
-                                                        </label>
-                                                    </div> 
-                                                </div>     
-                                                <div class="space"></div>    
-                                            </div>
-                                            <div class="row mb-4">
-                                                <div class="col-lg-12">
-                                                    <div class="sub-title">
-                                                        <h6>Negociação de materiais e medicamentos clínicas especializadas<small> *Exceto terapias</small></h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-5 mb-4">
-                                                <div class="space"></div>
-                                                <div class="col-lg-6 mt-2">
-                                                    <label for="comentarios" class="comentarios">Medicamentos</label>
-                                                    <textarea class="form-control" id="medicamentos" rows="3"></textarea>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-6 mt-2">
-                                                    <label for="comentarios" class="comentarios">Materiais de consumo</label>
-                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
-                                                </div>
-                                                <div class="space"></div>     
                                             </div>
                                         </div>
                                     </div>

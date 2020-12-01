@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="css/icones-bradesco.css">
         <!-- css inputfile -->
         <link href="css/jquery.filer.css" rel="stylesheet">
+        <!-- Multiselect -->
+        <link rel="stylesheet" href="css/bootstrap-select.css" />
     </head>
     <body>
         <!-- conteudo geral wrapper -->
@@ -150,11 +152,11 @@
                             </div>
                         </div>
                         <div class="bg-blank mb-5">
-                            <div class="row mb-3">
+                            <div class="row">
                                 <div class="col-lg-6">
                                     <div class="title-page">
                                         <h1>Detalhamento da Ficha</h1>
-                                        <h6 class="detalhes-title-sla">Aguardando Distribuição</h6>
+                                        <h6 class="detalhes-title-sla mt-1">Aguardando Distribuição</h6>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">                                    
@@ -162,49 +164,44 @@
                                 </div>
                                 <div class="col-lg-12"><hr></div>
                             </div> 
-                            <div class="row mt-5">
-                                <div class="col-lg-3 col-xl-2">
-                                    <div class="radio-title mb-2">
-                                        <h6 class="mb-2">Tipo de Ficha</h6>
-                                    </div>
+                            <div class="row">
+                                <div class="col-lg-5">       
                                     <div class="d-flex">
-                                        <div class="ex-radio mr-4">
+                                        <p class="p-select-2">Empresa:</p>
+                                        <select class="formcontrol selectpicker" multiple data-live-search="true">
+                                            <option>Bradesco Saúde</option>
+                                            <option>MedService</option>
+                                            <option>Bradesco Operadora</option>
+                                        </select>
+                                    </div>                             
+                                </div>              
+                                <div class="space5"></div>
+                                <div class="col-lg-6 mt-2">
+                                    <div class="d-flex">
+                                        <div class="radio-title">
+                                            <p class="p-select-2">Tipo de Ficha:</p>
+                                        </div>
+                                        <div class="ex-radio mr-4 mt-1">
                                             <input type="radio" id="radio_yes1" name="radio_group1">
                                             <label for="radio-estilo" class="radio-estilo">Credenciamento</label>
                                         </div>
-                                        <div class="ex-radio">
+                                        <div class="ex-radio mt-1">
                                             <input type="radio" id="radio_no1" name="radio_group1" checked>
                                             <label for="radio-estilo" class="radio-estilo">Manutenção</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="space"></div>
+                                <div class="space5"></div>
                                 <div class="col-lg-3">                                    
-                                    <div class="form ml-5">
+                                    <div class="form">
                                         <input type="text" name="grandes-grupos" autocomplete="off">
                                         <label for="grandes-grupos" class="label-name">
                                             <span class="content-name">Grandes Grupos</span>
                                         </label>
                                     </div> 
-                                </div>
+                                </div>         
                                 <div class="space"></div>
-                                <div class="col-lg-4">
-                                    <p class="p-check">Empresa</p>
-                                    <div class="ex-checkbox-2 d-inline" data-toggle="tooltip" data-original-title="" title="">
-                                        <input type="checkbox" id="" checked>
-                                        <label for="" class="check-estilo-2 w-170"><span class="ml-4">Bradesco Saúde</span></label>
-                                    </div>
-                                    <div class="ex-checkbox-2 d-inline" data-toggle="tooltip" data-original-title="" title="">
-                                        <input type="checkbox" id="">
-                                        <label for="" class="check-estilo-2 w-170"><span class="ml-4">MedService</span></label>
-                                    </div>
-                                    <div class="ex-checkbox-2 d-inline" data-toggle="tooltip" data-original-title="" title="">
-                                        <input type="checkbox" id="">
-                                        <label for="" class="check-estilo-2 w-180"><span class="ml-4">Bradesco Operadora</span></label>
-                                    </div>
-                                </div>                               
-                                <div class="space"></div>
-                                <div class="col-lg-3">      
+                                <div class="col-lg-2">      
                                     <div class="form">
                                         <input type="text" class="used" name="cpf-cnpj" value="32.620.097/0001-94" autocomplete="off">
                                         <label for="cpf-cnpj" class="label-name">
@@ -222,7 +219,7 @@
                                     </div> 
                                 </div>
                                 <div class="space"></div>
-                                <div class="col-lg-4">      
+                                <div class="col-lg-3">      
                                     <div class="form">
                                         <input type="text" class="used" value="HOSPITAL CLIMEDE" name="prestador" autocomplete="off">
                                         <label for="prestador" class="label-name">
@@ -248,7 +245,7 @@
                                         <option value="2" selected="">Rio de Janeiro</option>                                   
                                     </select>
                                 </div>
-                                <div class="space"></div>
+                                <div class="space5"></div>
                             </div>          
                             <div class="row mb-4">
                                 <div class="col-lg-12">
@@ -260,14 +257,14 @@
                             <div class="row">
                                 <div class="col-lg-6">      
                                     <div class="form">
-                                        <input type="text" class="used" name="justificativa" value="Justificativa Aguardando Distribuição" autocomplete="off">
+                                        <input type="text" name="justificativa" value="" autocomplete="off">
                                         <label for="justificativa" class="label-name">
                                             <span class="content-name">Justificativa</span>
                                         </label>
                                     </div> 
                                 </div>
                                 <div class="space"></div>
-                                <div class="col-lg-4">                                    
+                                <div class="col-lg-2">                                    
                                     <p class="p-select">Classe Solicitação</p>
                                     <select class="form-control h-35">
                                         <option value="1">Selecione</option>
@@ -300,7 +297,153 @@
                                         </div>
                                     </div>
                                 </div>                                
-                            </div>      
+                            </div>   
+                            <div class="accordion accordion-no-shadow" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card">
+                                  <div class="card-header" role="tab" id="heading-1">
+                                    <h6 class="mb-0 b-icon sub-title p-0">
+                                      <button class="btn btn-link d-flex align-items-center p-3" onclick="toggleFunction(this)" type="button" data-parent="#accordion" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                                       Detalhes da Distribuição
+                                        <div class="bar-geral">
+                                            <div class="bar1"></div>
+                                            <div class="bar2"></div>
+                                        </div>
+                                      </button>
+                                    </h6>
+                                  </div>                                 
+                                  <div id="collapse-1" class="collapse" role="tabpanel" aria-labelledby="heading-1">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="table-responsive pt-0">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>                            
+                                                            <th>Colaborador</th>
+                                                            <th>Total</th>                                              
+                                                            <th>Rede+</th>
+                                                            <th>Prioridade</th>
+                                                            <th>Normal</th>                                        
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>0137334 - Gabriel Peixoto (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0157537 - Livea Granado (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0189445 - Daniel Almeida Ramos (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0998877 - Carolina de Souza Conceição (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0137334 - Hebert Nunes de Souza Cunha (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0137334 - Rhuan Arcanjo Neves Menezes (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0137334 - Leandro de Almeida Nunes (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0137334 - Isac de Oliveira Candido (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0137334 - Jessica Silva Reis (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0137334 - Cristiane do Sacramento (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>0137334 - Claudia Lins de Paula e Silva (Ebix)</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>      
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>   
                             <div class="row mb-2 mt-3">
                                 <div class="col-lg-12">
                                     <div class="sub-title">
@@ -421,6 +564,8 @@
         <!-- script inputfile -->
         <script src="js/jquery-3.1.0.min.js"></script>
         <script src="js/jquery.filer.min.js"></script>
+        <!-- script multiselect -->   
+        <script src="js/bootstrap-select.min.js"></script>
         <!-- scripts -->
         <script src="js/script.js"></script>
     </body>

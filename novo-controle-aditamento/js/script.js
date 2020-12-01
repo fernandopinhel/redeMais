@@ -1,3 +1,19 @@
+//tabpanes nova ficha
+$(".tabs-fichas-matmed").click(function(){
+  $('#navtabs-aditivo').addClass('hidden')
+  $('#navtabs-matmed').removeClass('hidden')
+  $('.tabs-fichas-aditivos > a').removeClass('active')
+  $('.tabs-fichas-matmed > a').addClass('active')
+});
+
+$(".tabs-fichas-aditivos").click(function(){
+  $('#navtabs-aditivo').removeClass('hidden')
+  $('#navtabs-matmed').addClass('hidden')
+  $('.tabs-fichas-aditivos > a').addClass('active')
+  $('.tabs-fichas-matmed > a').removeClass('active')
+});
+//fim tabpanes nova ficha
+
 // script icone animacao info prestadores
 function toggleFunction(x) {
   x.classList.toggle("change");

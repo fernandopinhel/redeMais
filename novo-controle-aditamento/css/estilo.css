@@ -22,6 +22,8 @@
 /* fim fonts */
 
 /* globais */
+html{scroll-behavior: smooth;}
+
 h1{font-size: 22px;}   
 h4{font-size: 16px;}
 
@@ -276,6 +278,7 @@ select.error{
 .space2{height: 120px;}
 .space3{height: 10px;}
 .space4{height: 40px;}
+.space5{height: 80px;}
 
 .border-a{border:1px solid #2365a7;}
 .color-a{color: #2365a7;}
@@ -331,6 +334,11 @@ select.error{
     transition: all 0.6s ease-in-out;
 }
 /* fim globais */
+
+/* bootstrap select */
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){width: 100% !important;}
+.bootstrap-select > .dropdown-menu{min-width: 100% !important;}
+/* fim bootstrap select */
 
 /* alertas */
 #msg-input-error > div > div > div > p {
@@ -1991,6 +1999,40 @@ td.actions-visible > div {
 /* fim tabela */
 
 /* accordion multilistas abertas painel */
+.accordion-no-shadow .card:first-of-type{
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.accordion-no-shadow .card:last-of-type{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;
+}
+
+.accordion-no-shadow:hover .card:last-of-type{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17) !important;
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17) !important;
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17) !important;
+    transition: 0.8s all !important;
+}
+
+.accordion-no-shadow .card .card-header h6 button{
+    color: #4d4e53 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    margin: 0 !important; 
+    font-weight: 600 !important;
+    padding: 10px !important;
+}
+
 .accordion .card:last-of-type{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -2091,6 +2133,28 @@ td.actions-visible > div {
 /* conteudo */
 
 /*  etapas */
+.tabs-fichas > li > a{
+    width: 120px;
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4d4e53;    
+    font-weight: 500;
+}
+
+.tabs-fichas > li > a.active{
+    width: 120px;
+    padding: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2365a7;
+    font-weight: 500;
+    border: 1px solid #2365a7;
+    border-radius: 13px;
+}
+
 .title-page > h6{
     font-size: 14px;
     text-transform: uppercase;
@@ -2141,7 +2205,7 @@ td.actions-visible > div {
     margin: 0 auto;
     position: absolute;
     top: 34px;
-    left: 151px;
+    left: 188px;
     width: 15%;
     z-index: -1;
     transition: all 300ms linear;
@@ -2156,7 +2220,7 @@ td.actions-visible > div {
     margin: 0 auto;
     position: absolute;
     top: 34px;
-    left: 377px;
+    left: 458px;
     width: 15%;
     z-index: -1;
     transition: all 300ms linear;
@@ -2171,22 +2235,7 @@ td.actions-visible > div {
     margin: 0 auto;
     position: absolute;
     top: 34px;
-    left: 603px;
-    width: 15%;
-    z-index: -1;
-    transition: all 300ms linear;
-}
-
-.process-model li:nth-child(4)::after {
-    background: #dadbdd;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 1px;
-    margin: 0 auto;
-    position: absolute;
-    top: 34px;
-    left: 829px;
+    left: 734px;
     width: 15%;
     z-index: -1;
     transition: all 300ms linear;
@@ -2205,7 +2254,7 @@ td.actions-visible > div {
     margin: 0 auto;
     position: absolute;
     top: 34px;
-    left: 137px;
+    left: 188px;
     width: 15%;
     z-index: 0;
     transition: all 300ms linear;
@@ -2220,7 +2269,7 @@ td.actions-visible > div {
     margin: 0 auto;
     position: absolute;
     top: 34px;
-    left: 365px;
+    left: 458px;
     width: 15%;
     z-index: 0;
     transition: all 300ms linear;
@@ -2235,7 +2284,7 @@ td.actions-visible > div {
     margin: 0 auto;
     position: absolute;
     top: 34px;
-    left: 594px;
+    left: 734px;
     width: 15%;
     z-index: 0;
     transition: all 300ms linear;
@@ -2260,7 +2309,7 @@ td.actions-visible > div {
     display: inline-block;
     text-align: center;
     float: none;
-    width: 20%;
+    width: 24%;
     transition: all 300ms linear;
 }
   
@@ -2548,16 +2597,16 @@ td.actions-visible > div {
 
 /* detalhes */
 .detalhes-title-sla{
-    letter-spacing: 2px;
-    font-weight: 400;
-    color: #ce0233;
+    font-size: 19px;
     text-transform: uppercase;
-    margin-top: 10px;
-    font-size: 14px;
+    letter-spacing: 2px;
+    color: #2365a7;
+    padding: 5px 5px 5px 0;
+    font-weight: 500;
 }
 
 .title-status{text-transform: uppercase; letter-spacing: 2px;}
-.prioridade{font-weight: 600; color: #2365a7;}
+.prioridade{font-weight: 600; color: #2365a7; font-size: 17px;}
 /* fim detalhes */
 
 
@@ -2569,14 +2618,16 @@ td.actions-visible > div {
 
 /* painel aditivo */
 .title-painel > h1{
- text-transform: uppercase;
- color: #627188;
- margin-bottom: 20px;
- padding-bottom: 5px;
- border-bottom: 1px solid #f2f2f2;
+    font-size: 19px;
+    text-transform: uppercase;
+    color: #627188;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f2f2f2;
 }
 
 .title-painel > h3{
+    font-size: 17px;
     text-transform: uppercase;
     color: #627188;
     text-align: center;
