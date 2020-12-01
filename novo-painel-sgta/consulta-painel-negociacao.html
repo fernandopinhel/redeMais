@@ -136,7 +136,7 @@
                 <form action="">
                     <div class="container-fluid">
                         <div class="bg-blank mb-5">
-                            <div class="row mb-3">
+                            <div class="row">
                                 <div class="col-lg-12 my-auto">
                                     <div class="title-page">
                                         <h1>Consultar Painel de Negociação</h1>
@@ -144,7 +144,7 @@
                                 </div>     
                                 <div class="col-lg-12"><hr></div>
                             </div> 
-                            <div class="row mt-5">
+                            <div class="row mt-2">
                                 <div class="col-lg-2">                                    
                                     <p class="p-select">Sucursal</p>
                                     <select class="form-control h-35">
@@ -209,7 +209,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row btns-opcoes mt-3">
+                            <div class="row btns-opcoes">
                                 <div class="col-lg-12">
                                     <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
                                     <button type="button" name="button" class="btn btn-buscar float-right">Buscar</button>                                     
@@ -280,8 +280,8 @@
                                                 <a href="#" class="editar" onclick="window.location.href='painel-negociacao.html'">
                                                     <img src="img/detalhes.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Visualizar/Alterar">
                                                 </a>
-                                                <span href="#" class="Desbloqueado">
-                                                    <img src="img/desbloquear.svg" class="i-cadeado" title="" data-toggle="tooltip" data-original-title="Desbloqueado">
+                                                <span href="#" class="bloquear" data-toggle="tooltip" data-original-title="Bloquear">
+                                                    <img src="img/desbloquear.svg" class="i-cadeado" data-toggle="modal" data-target="#modalBloquearLote" title="">
                                                 </span>
                                             </td>
                                             <td>51</td>
@@ -309,8 +309,8 @@
                                                 <a href="#" class="editar" onclick="window.location.href='painel-negociacao.html'">
                                                     <img src="img/detalhes.svg" class="i-editar" title="" data-toggle="tooltip" data-original-title="Visualizar/Alterar">
                                                 </a>
-                                                <span href="#" class="Bloqueado">
-                                                    <img src="img/bloquear.svg" class="i-cadeado" title="" data-toggle="tooltip" data-original-title="Bloqueado">
+                                                <span href="#" class="desbloquear" data-toggle="tooltip" data-original-title="Desbloquear">
+                                                    <img src="img/bloquear.svg" data-toggle="modal" data-target="#modalDesbloquearLote" class="i-cadeado" title="">
                                                 </span>
                                             </td>
                                             <td>116</td>
@@ -358,7 +358,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="bg-blank mb-5 mt-5">
+                        <div class="bg-blank mb-5 mt-3">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-12 p-0">

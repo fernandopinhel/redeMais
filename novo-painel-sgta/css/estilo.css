@@ -459,8 +459,8 @@ select.error{
 }
 
 .i-detalhes, .i-excluir, .i-editar, .i-historico, .i-cadeado{
-    width: 37px;
-    height: 37px;
+    width: 30px;
+    height: 30px;
 }
 /* fim icons */
 
@@ -1394,11 +1394,13 @@ li.sub-active > a{
 /* tabela  header fixo */
 .tableFixHead{
     overflow-y: auto;
-    height: 400px;
+    height: 600px;
     padding-top:0 !important;
 }
 .tableFixHead > thead{border: 1px solid #fff;}
 /* fim tabela  header fixo */
+
+.desbloquear, .bloquear{cursor: pointer;}
 
 .bg-table{
     background: #F5F5F9;
@@ -1831,6 +1833,13 @@ td.actions-visible > div {
 }
 /* fim titulo tabelas */
 /* fim tabela */
+
+/* calculo de economia */
+.i-editar-vlr-negociado {
+    width: 20px;
+    height: 20px;
+}
+/* fim calculo de economia */
 
 /* accordion multilistas abertas painel */
 .accordion .card:last-of-type{

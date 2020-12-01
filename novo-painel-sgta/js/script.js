@@ -1,3 +1,11 @@
+// calculo de economia
+$(".vlr-alterado").addClass("d-none");
+$(".btn-alterar-vlr").click(function(){
+  $(".vlr-alterado").removeClass("d-none");
+  $(".vlr-alterar").addClass("d-none");
+});
+// fim calculo de economia
+
 // script icone animacao info prestadores
 function toggleFunction(x) {
   x.classList.toggle("change");
