@@ -148,17 +148,13 @@ small{
 
 .btns{margin-top: 30px;}
 
-.title-registros{color: #0070BE;}
-
-.title-registros>span{
-  color:#fff;
-  font-weight: 700;
-  font-size: 10px;
-  background: #0070BE;
-  padding: 3px;
-  border: 1px solid #0070BE;
-  border-radius: 100%;
+.title-registros{
+  color: #0070BE;
+  text-transform: uppercase;
+  font-weight: 600;
 }
+
+
 /* Fim Geral */
 
 /* Header */
@@ -466,6 +462,10 @@ header .nav-tabs>li{margin-bottom:-11px;}
 /* Fim aba */
 
 /* Form */
+.multiselect.dropdown-toggle{
+  border-radius: 2px;
+}
+
 .form-group{margin-bottom: 35px;}
 
 label{font-weight: 600;}
@@ -603,10 +603,34 @@ button.btn-third:hover{
 .pull-right .btn-cancel{margin-right:20px;}
 
 .mt-20{margin-top: 20px;}
+.mt-30{margin-top: 30px;}
+.mr-5{margin-right: 5px;}
+.mr-10{margin-right: 10px;}
 
 .box-add > .row, .box-item > .row{margin-bottom: 50px;}
 
 .mb-0{margin-bottom: 0;}
+
+.selectpicker .show-tick .formcontrol{width: 100%;}
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){width: 100%!important;}
+.bootstrap-select > .dropdown-toggle, .bootstrap-select > .dropdown-toggle:focus, .bootstrap-select > .dropdown-toggle:hover{
+  border: 1px solid #ccc !important;
+  border-radius: 4px;
+  background: #ffff;
+  padding: 6px 12px;
+  color: #555555;
+}
+.bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:active{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner{
+  text-transform: initial;
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: #555555;
+}
 
 .datetimepicker{
   left: 0;
@@ -637,8 +661,12 @@ button.btn-third:hover{
 }
 
 input[type="file"] {
-  display: none;
-  background: transparent;
+  display: block;
+  background: #ffff;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
 }
 
 input.input-date[type="text"]{
@@ -1627,7 +1655,7 @@ form.btn-search .input-group > input{height: 39px;}
   }
 }
 
-input[type="file"] {display: none;}
+
 
 .label-bordered {
   border: 1px solid #cecece;
