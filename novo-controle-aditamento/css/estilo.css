@@ -1444,14 +1444,20 @@ li.sub-active > a{
     left:0;
 }
 
-.sort > img{width: 10px;}
+.sort > img{
+    width: 10px;
+    height: 10px;
+}
 
 .sort-2{
     position: absolute;
     left:0;
 }
 
-.sort-2 > img{width: 10px;}
+.sort-2 > img{
+    width: 10px;
+    height: 10px;
+}
 
 .sort-3{
     position: absolute;
@@ -1459,7 +1465,10 @@ li.sub-active > a{
     top: 33px;
 }
 
-.sort-4 > img{width: 10px;}
+.sort-4 > img{
+    width: 10px;
+    height: 10px;
+}
 
 .sort-4{
     position: absolute;
@@ -1467,7 +1476,10 @@ li.sub-active > a{
     top: 54px;
 }
 
-.sort-3 > img{width: 10px;}
+.sort-3 > img{
+    width: 10px;
+    height: 10px;
+}
 
 /* resultado tabela */
 .box-txt-result > h6{
