@@ -280,6 +280,9 @@ select.error{
 .space4{height: 40px;}
 .space5{height: 80px;}
 
+.color{color: #4d4e53;}
+.color-r{color: #ce0233;}
+
 .border-a{border:1px solid #2365a7;}
 .color-a{color: #2365a7;}
 .border-c{border:1px solid #a5aab6;}
@@ -499,8 +502,32 @@ select.error{
     position: absolute;
     right: 20px;
     background: url(../img/excel.svg);
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -16px;
+    cursor: pointer;
+}
+
+.baixar-doc{
+    position: absolute;
+    right: 20px;
+    background: url(../img/doc.svg);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -16px;
+    cursor: pointer;
+}
+
+.exportar-pdf{
+    position: absolute;
+    right: 60px;
+    background: url(../img/pdf.svg);
+    width: 35px;
+    height: 35px;
     background-repeat: no-repeat;
     background-position: center;
     top: -16px;
@@ -511,8 +538,8 @@ select.error{
     position: absolute;
     right: 17px;
     background: url(../img/excel.svg);
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background-repeat: no-repeat;
     background-position: center;
     top: 0;
@@ -1411,6 +1438,36 @@ li.sub-active > a{
 
 
 /* tabela  */
+.sort{
+    position: absolute;
+    top: 13px;
+    left:0;
+}
+
+.sort > img{width: 10px;}
+
+.sort-2{
+    position: absolute;
+    left:0;
+}
+
+.sort-2 > img{width: 10px;}
+
+.sort-3{
+    position: absolute;
+    left:0;
+    top: 33px;
+}
+
+.sort-4 > img{width: 10px;}
+
+.sort-4{
+    position: absolute;
+    left:0;
+    top: 54px;
+}
+
+.sort-3 > img{width: 10px;}
 
 /* resultado tabela */
 .box-txt-result > h6{

@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>SGTA - Painel de Controle Rede +</title>
+        <title>SGTA - PAINEL ADITIVOS</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -201,7 +201,7 @@
                                                 <div class="row">
                                                     <div class="col-10">
                                                         <img src="img/alert-error.svg" width="23" class="float-left">
-                                                        <p><span class="mr-2">Serviço MedService indisponível</span></p>
+                                                        <p><span class="mr-2">Serviço Mediservice indisponível</span></p>
                                                     </div>
                                                     <div class="col-2">
                                                         <button type="button" class="btn btn-close close-error">
@@ -388,7 +388,7 @@
                                                 <div class="tab-pane-fichas container-fluid active" id="navtabs-aditivo">
                                                     <div class="row d-flex mb-3">
                                                         <div class="col-lg-10 my-auto">
-                                                            <small>Tipos de Aditivos que serão emitidos - <b>*No caso de negociação Rede+</b>, os valores deverão ser preenchidos no Item 4 (Anexo Rede+) de acordo com a especialidade negociada e informada no Item 2 (Aditivos).</small>
+                                                            <small>Tipos de Aditivos que serão emitidos - <b>*No caso de negociação Rede+</b>, os valores deverão ser preenchidos no Item 3 (Anexo Rede+) de acordo com a especialidade negociada e informada no Item 2 (Aditivos).</small>
                                                         </div>   
                                                         <div class="col-lg-2  my-auto">
                                                             <a href="#" data-toggle="modal" data-target="#modalInfoAditivo">
@@ -401,8 +401,9 @@
                                                         <div class="col-lg-3">                                    
                                                             <p class="p-select">Tipo</p>
                                                             <select class="form-control h-35">
-                                                                <option value="1" selected>Selecione</option>
-                                                                <option value="2">PP RADIOTERAPIA R+</option>                                   
+                                                                <option value="1">Selecione</option>
+                                                                <option value="2">PP RADIOTERAPIA R+</option>   
+                                                                <option value="3" selected>Pronto Socorro Rede+</option>
                                                             </select>
                                                         </div>
                                                         <div class="space"></div>
@@ -422,7 +423,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="space"></div>
-                                                        <div class="col-lg-4">
+                                                        <div class="col-lg-2">
                                                             <p class="p-check">Cód. Prestador</p>
                                                             <div class="ex-checkbox-2 d-inline mr-5" data-toggle="tooltip" data-original-title="" title="">
                                                                 <input type="checkbox" id="">
@@ -434,46 +435,77 @@
                                                             </div>
                                                         </div>
                                                         <div class="space"></div>
-                                                        <div class="col-lg-12 mt-2">
+                                                        <div class="col-lg-2">                                    
+                                                            <div class="form">
+                                                                <input type="text" name="cm-os" autocomplete="off">
+                                                                <label for="cm-os" class="label-name">
+                                                                    <span class="content-name">CM OS</span>
+                                                                </label>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="space"></div>
+                                                        <div class="col-lg-11 mt-2">
                                                             <label for="comentarios" class="comentarios">Descrição da Solicitação</label>
                                                             <textarea class="form-control" id="desc-solicitacao" rows="3"></textarea>
                                                         </div>
-                                                        <div class="space"></div>    
-                                                        <div class="col-lg-12">
-                                                            <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
-                                                            <button type="button" name="button" class="btn btn-salvar float-right w-155">Adicionar Aditivo</button>                                     
-                                                        </div>             
-                                                    </div>
-                                                    <div class="row aditivos-add mt-5 border p-3 mb-4">
-                                                        <div class="col-lg-10 my-auto">
-                                                            <div class="title-page-2">                                        
-                                                                <h6>Aditivos Adicionados</h6>
-                                                            </div>
-                                                        </div>   
-                                                        <div class="col-lg-2 my-auto" >
-                                                            <a href="#" class="excluir float-right" data-toggle="tooltip" data-original-title="Excluir">
-                                                                <img src="img/excluir.svg" class="i-excluir" data-toggle="modal" data-target="#modalExluir">
+                                                        <div class="space"></div>     
+                                                        <div class="col-lg-1">
+                                                            <a href="" data-toggle="tooltip" data-original-title="Adicionar">
+                                                                <img src="img/add.svg" width="25" alt="" class="mt-4">
                                                             </a>
-                                                        </div>   
-                                                        <div class="col-lg-12"><hr></div>
-                                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                            <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                                <p class="m-0 ">Tipo: <strong>PP RADIOTERAPIA R+</strong></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                            <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                                <p class="m-0 ">Qual Forma: <strong>Reajuste</strong></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                            <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                                <p class="m-0 ">Cód Prestador: <strong>4813345 | 238</strong></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="border-lc d-flex box-id-prestador">
-                                                                <p class="m-0 ">Descrição: <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et finibus magna. Phasellus blandit vehicula porta. Fusce fermentum tempus risus, at cursus nisl mattis eget.</strong></p>
+                                                        </div>     
+                                                    </div>
+                                                    <div class="container-fluid mt-3">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 mb-2">
+                                                                <div class="title-page-2">                                        
+                                                                    <h6>Aditivos Adicionados</h6>
+                                                                </div>
+                                                            </div>                                                        
+                                                            <div class="col-lg-12 p-0">
+                                                                <div class="table-responsive border">
+                                                                    <table class="table">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="por-5"></th>                            
+                                                                                <th class="por-15">Tipo</th>   
+                                                                                <th class="por-10">Qual Forma</th>      
+                                                                                <th>Cód Prestador</th> 
+                                                                                <th>CM OS</th>    
+                                                                                <th>Descrição</th>                                                                                                                                                       
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="actions ac-2">
+                                                                                    <div class="float-right">
+                                                                                    <div class="menu-visible">
+                                                                                        <span class="circle"></span>
+                                                                                        <span class="circle"></span>
+                                                                                        <span class="circle"></span>
+                                                                                    </div>
+                                                                                    <div class="menu-invisible">
+                                                                                        <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
+                                                                                            <img src="img/editar.svg" class="i-editar" title="">
+                                                                                        </a>
+                                                                                        <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
+                                                                                            <img src="img/excluir.svg" class="i-editar" title="">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>PP RADIOTERAPIA R+</td> 
+                                                                                <td>Reajuste</td>
+                                                                                <td>4813345 | 238</td>
+                                                                                <td>-</td>
+                                                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et finibus magna.</td>                                                                                
+                                                                            </tr>
+                                                                            <tr class="separator">
+                                                                                <td colspan="5"></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -482,7 +514,7 @@
                                                     <div class="row mb-4">
                                                         <div class="col-lg-12">
                                                             <div class="sub-title">
-                                                                <h6>Negociação de materiais e medicamentos <small>*Regime de Internação, Ambulatório e PS</small></h6>
+                                                                <h6>Negociação de materiais e medicamentos <small>Negociação de materiais e medicamentos Unidade Hospitalar *Regimes de internação, ambulatorial e P.S.</small></h6>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -556,43 +588,170 @@
                                                 <div class="col-lg-12"><hr></div>
                                             </div>         
                                             <div class="row mt-3 mb-4">
+                                                <div class="col-lg-3">                                    
+                                                    <p class="p-select">Cód. Procedimento</p>
+                                                    <select class="form-control h-35">
+                                                        <option value="1" selected="">Selecione</option>
+                                                        <option value="2">050448949840 - Lorem</option>                                   
+                                                    </select>
+                                                </div>
                                                 <div class="space"></div>     
-                                                <div class="col-lg-4 mt-4">                                    
+                                                <div class="col-lg-2">                                    
+                                                    <p class="p-select">Rede</p>
+                                                    <select class="form-control h-35">
+                                                        <option value="1" selected="">Selecione</option>
+                                                        <option value="2">Bradesco</option>     
+                                                        <option value="3">Mediservice</option>                                   
+                                                    </select>
+                                                </div>
+                                                <div class="space"></div>     
+                                                <div class="col-lg-2">                                    
                                                     <div class="form">
-                                                        <input type="text" name="redes-bradesco" autocomplete="off">
-                                                        <label for="redes-bradesco" class="label-name">
-                                                            <span class="content-name">Valor I: Redes (Bradesco)</span>
+                                                        <input type="text" name="valor" autocomplete="off">
+                                                        <label for="valor" class="label-name">
+                                                            <span class="content-name">Valor</span>
                                                         </label>
                                                     </div> 
-                                                </div>    
-                                                <div class="space"></div>     
-                                                <div class="col-lg-8 mt-4">                                    
-                                                    <div class="form">
-                                                        <input type="text" name="planos-mediservice" autocomplete="off">
-                                                        <label for="planos-mediservice" class="label-name">
-                                                            <span class="content-name">Planos (Mediservice)</span>
-                                                        </label>
-                                                    </div> 
-                                                </div>    
-                                                <div class="space"></div>     
-                                                <div class="col-lg-4 mt-4">                                    
-                                                    <div class="form">
-                                                        <input type="text" name="redes-bradesco-2" autocomplete="off">
-                                                        <label for="redes-bradesco-2" class="label-name">
-                                                            <span class="content-name">Valor II: Redes (Bradesco)</span>
-                                                        </label>
-                                                    </div> 
-                                                </div>    
-                                                <div class="space"></div>     
-                                                <div class="col-lg-8 mt-4">                                    
-                                                    <div class="form">
-                                                        <input type="text" name="planos-mediservice-2" autocomplete="off">
-                                                        <label for="planos-mediservice-2" class="label-name">
-                                                            <span class="content-name">Planos (Mediservice)</span>
-                                                        </label>
-                                                    </div> 
-                                                </div>    
-                                                <div class="space"></div>     
+                                                </div>
+                                                <div class="space"></div>
+                                                <div class="col-lg-1">
+                                                    <a href="" data-toggle="tooltip"  data-original-title="Adicionar">
+                                                        <img src="img/add.svg" width="25" alt="" class="mt-4">
+                                                    </a>
+                                                </div>
+                                                <div class="space"></div>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 mb-2">
+                                                            <div class="title-page-2">                                        
+                                                                <h6>Procedimentos Adicionados</h6>
+                                                            </div>
+                                                        </div>                                                        
+                                                        <div class="col-lg-12">
+                                                            <div class="table-responsive border">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="por-5"></th>                            
+                                                                            <th class="por-15"><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Cód. Procedimento</th>   
+                                                                            <th class="por-30"><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Descrição do Procedimento Padronizado</th>      
+                                                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Rede</th>    
+                                                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Status</th>   
+                                                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Valor</th>                                                                                                                                                              
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="actions ac-2">
+                                                                                <div class="float-right">
+                                                                                <div class="menu-visible">
+                                                                                    <span class="circle"></span>
+                                                                                    <span class="circle"></span>
+                                                                                    <span class="circle"></span>
+                                                                                </div>
+                                                                                <div class="menu-invisible">
+                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
+                                                                                        <img src="img/editar.svg" class="i-editar" title="">
+                                                                                    </a>
+                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
+                                                                                        <img src="img/excluir.svg" class="i-editar" title="">
+                                                                                    </a>
+                                                                                </div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>050448949840</td> 
+                                                                            <td>Lorem</td>
+                                                                            <td>Bradesco</td>
+                                                                            <td>Ativo</td>
+                                                                            <td>R$ 5.000,00</td>
+                                                                        </tr>
+                                                                        <tr class="separator">
+                                                                            <td colspan="5"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="actions ac-2">
+                                                                                <div class="float-right">
+                                                                                <div class="menu-visible">
+                                                                                    <span class="circle"></span>
+                                                                                    <span class="circle"></span>
+                                                                                    <span class="circle"></span>
+                                                                                </div>
+                                                                                <div class="menu-invisible">
+                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
+                                                                                        <img src="img/editar.svg" class="i-editar" title="">
+                                                                                    </a>
+                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
+                                                                                        <img src="img/excluir.svg" class="i-editar" title="">
+                                                                                    </a>
+                                                                                </div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>050448949840</td> 
+                                                                            <td>Lorem</td>
+                                                                            <td>Bradesco</td>
+                                                                            <td>Ativo</td>
+                                                                            <td>R$ 2.000,00</td>
+                                                                        </tr>
+                                                                        <tr class="separator">
+                                                                            <td colspan="5"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="actions ac-2">
+                                                                                <div class="float-right">
+                                                                                <div class="menu-visible">
+                                                                                    <span class="circle"></span>
+                                                                                    <span class="circle"></span>
+                                                                                    <span class="circle"></span>
+                                                                                </div>
+                                                                                <div class="menu-invisible">
+                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
+                                                                                        <img src="img/editar.svg" class="i-editar" title="">
+                                                                                    </a>
+                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
+                                                                                        <img src="img/excluir.svg" class="i-editar" title="">
+                                                                                    </a>
+                                                                                </div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>050448949840</td> 
+                                                                            <td>Lorem</td>
+                                                                            <td>Bradesco</td>
+                                                                            <td>Ativo</td>
+                                                                            <td>R$ 3.000,00</td>
+                                                                        </tr>
+                                                                        <tr class="separator">
+                                                                            <td colspan="5"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="actions ac-2">
+                                                                                <div class="float-right">
+                                                                                <div class="menu-visible">
+                                                                                    <span class="circle"></span>
+                                                                                    <span class="circle"></span>
+                                                                                    <span class="circle"></span>
+                                                                                </div>
+                                                                                <div class="menu-invisible">
+                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
+                                                                                        <img src="img/editar.svg" class="i-editar" title="">
+                                                                                    </a>
+                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
+                                                                                        <img src="img/excluir.svg" class="i-editar" title="">
+                                                                                    </a>
+                                                                                </div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>050448949840</td> 
+                                                                            <td>Lorem</td>
+                                                                            <td>Mediservice</td>
+                                                                            <td>Ativo</td>
+                                                                            <td>R$ 3.000,00</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="col-lg-12 mt-5">
                                                     <label for="comentarios" class="comentarios"><small>*Informar as Redes e/ou Planos para negociações com valores diferenciados. Se não houver diferença de valor, preencher somente o VALOR E$ |.</small></label>
                                                     <textarea class="form-control" id="medicamentos-restrito" rows="3" disabled></textarea>
@@ -605,11 +764,15 @@
                                     <div role="tabpanel" class="tab-pane" id="tab-justificativa">
                                         <div class="design-process-content bg-blank">
                                             <div class="row d-flex mb-3">
-                                                <div class="col-lg-12 my-auto">
+                                                <div class="col-12 col-md-6 col-lg-6 my-auto">
                                                     <div class="title-page">                                        
                                                         <h6>Justificativa</h6>
                                                     </div>
                                                 </div>   
+                                                <div class="col-12 col-md-6 col-lg-6 my-auto">
+                                                    <div class="baixar-doc" title="" data-toggle="tooltip" data-original-title="Baixar Arquivos"></div>
+                                                    <div class="exportar-pdf" title="" data-toggle="tooltip" data-original-title="Relatório de Ficha"></div>
+                                                </div>
                                                 <div class="col-lg-12"><hr></div>
                                             </div>    
                                             <div class="row">
@@ -627,12 +790,6 @@
                                                     <p><small><b>4 - Rol Não</b><br>Não pode ser emitido acordo com procedimento Rol não para Mediservice. Para a Bradesco os procedimentos Rol não terão cobertura somente
                                                          para os procedimentos divulgados na tabela disponível no site do referenciado;</small></p>
                                                     <p><small><b>5 - Percentual de Reajuste</b><br>O percentual negociado deve ser informado para cada acordo negociado. Exemplo: D&T: 4% | Procedimentos Padronizados: 5% etc.</small></p>
-                                                </div>
-                                            </div>
-                                            <div class="row btns-opcoes mt-5">
-                                                <div class="col-lg-12">
-                                                    <button type="button" name="button" class="btn btn-salvar w-160 float-right">Baixar Arquivos</button>                                     
-                                                    <button type="reset" value="Reset" name="button" class="btn btn-info float-right w-160 mr-3">Relatório de Ficha</button>
                                                 </div>
                                             </div>
                                         </div>

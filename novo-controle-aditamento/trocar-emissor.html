@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>SGTA - Painel de Controle Rede +</title>
+        <title>SGTA - PAINEL ADITIVOS</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -164,6 +164,59 @@
                                     </select>
                                 </div>
                                 <div class="space"></div>
+                                <div class="col-lg-2">                                    
+                                    <p class="p-select">Ficha</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected="">Selecione</option>
+                                        <option value="2">#2020000041RJ</option>                                   
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">                                    
+                                    <p class="p-select">Empresa</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected="">Selecione</option>
+                                        <option value="2">Bradesco</option>                                   
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">                                    
+                                    <p class="p-select">Aditivo</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected="">Selecione</option>
+                                        <option value="2">PP</option>                                   
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">                                    
+                                    <div class="form">
+                                        <input type="text" name="nome-prestador" autocomplete="off">
+                                        <label for="nome-prestador" class="label-name">
+                                            <span class="content-name">Prestador</span>
+                                        </label>
+                                    </div> 
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input class="form-control form_date input-date h-35" size="16" type="text" value="" maxlength="10" name="data-inicial" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="data-inicial" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data Inicial</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input class="form-control form_date input-date h-35" size="16" type="text" value="" maxlength="10" name="data-final" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="data-final" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data Final</span>
+                                        </label>
+                                    </div>                          
+                                </div>
+                                <div class="space"></div>
                             </div>                            
                             <div class="row btns-opcoes">
                                 <div class="col-lg-12">
@@ -177,7 +230,7 @@
                                 <div class="row d-flex">
                                     <div class="col-lg-12 my-auto">
                                         <div class="resultado-filtro-todos">
-                                            <h4 class="float-left">Itens Encontrados:<span>5</span></h4>
+                                            <h4 class="float-left">Itens Encontrados: 5 <span class="color">/</span> <span class="color-r">Total de Aditivo: 5</span></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -192,12 +245,14 @@
                                                     <input type="checkbox" onclick="marcarTodos(this.checked);" id="checkbox_one" class="">
                                                     <label for="checkbox_one" class="check-estilo"></label>
                                                 </div>
-                                            </th>                                                 
-                                            <th>Ficha</th>
-                                            <th>Empresa</th>                                              
-                                            <th>Aditivo</th>
-                                            <th>Prestador</th>
-                                            <th>Data Status</th>
+                                            </th>     
+                                            <th></th>                                            
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Ficha</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Empresa</th>                                              
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Aditivo</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Prestador</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Data Inicial</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Data Final</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -207,11 +262,26 @@
                                                     <input type="checkbox" class="marcar" id="checkbox_one">
                                                     <label for="checkbox_one" class="check-estilo"></label>
                                                 </div>
-                                            </td>                                           
+                                            </td>  
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-troca-emissor.html'" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>                                         
                                             <td>#2020000041RJ</td>
                                             <td>Bradesco Saúde</td>
                                             <td>PP</td>    
                                             <td>HOSPITAL CLIMEDE</td>    
+                                            <td>10/11/2020</td> 
                                             <td>10/12/2020</td>                               
                                         </tr>
                                         <tr class="separator">
@@ -223,11 +293,26 @@
                                                     <input type="checkbox" class="marcar" id="checkbox_one">
                                                     <label for="checkbox_one" class="check-estilo"></label>
                                                 </div>
-                                            </td>                                           
+                                            </td>  
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-troca-emissor.html'" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>                                         
                                             <td>#2020000041RJ</td>
                                             <td>Bradesco Saúde</td>
                                             <td>PP</td>    
                                             <td>HOSPITAL CLIMEDE</td>    
+                                            <td>10/11/2020</td> 
                                             <td>10/12/2020</td>                               
                                         </tr>
                                         <tr class="separator">
@@ -239,11 +324,26 @@
                                                     <input type="checkbox" class="marcar" id="checkbox_one">
                                                     <label for="checkbox_one" class="check-estilo"></label>
                                                 </div>
-                                            </td>                                           
+                                            </td>  
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-troca-emissor.html'" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>                                         
                                             <td>#2020000041RJ</td>
                                             <td>Bradesco Saúde</td>
                                             <td>PP</td>    
                                             <td>HOSPITAL CLIMEDE</td>    
+                                            <td>10/11/2020</td> 
                                             <td>10/12/2020</td>                               
                                         </tr>
                                         <tr class="separator">
@@ -255,11 +355,26 @@
                                                     <input type="checkbox" class="marcar" id="checkbox_one">
                                                     <label for="checkbox_one" class="check-estilo"></label>
                                                 </div>
-                                            </td>                                           
+                                            </td>  
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-troca-emissor.html'" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>                                         
                                             <td>#2020000041RJ</td>
                                             <td>Bradesco Saúde</td>
                                             <td>PP</td>    
                                             <td>HOSPITAL CLIMEDE</td>    
+                                            <td>10/11/2020</td> 
                                             <td>10/12/2020</td>                               
                                         </tr>
                                         <tr class="separator">
@@ -271,11 +386,26 @@
                                                     <input type="checkbox" class="marcar" id="checkbox_one">
                                                     <label for="checkbox_one" class="check-estilo"></label>
                                                 </div>
-                                            </td>                                           
+                                            </td>  
+                                            <td class="actions ac-2 por-5">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#" class="editar" onclick="window.location.href='detalhes-troca-emissor.html'" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        <img src="img/detalhes.svg" class="i-editar" title="">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>                                         
                                             <td>#2020000041RJ</td>
                                             <td>Bradesco Saúde</td>
                                             <td>PP</td>    
                                             <td>HOSPITAL CLIMEDE</td>    
+                                            <td>10/11/2020</td> 
                                             <td>10/12/2020</td>                               
                                         </tr>
                                         <tr class="separator">

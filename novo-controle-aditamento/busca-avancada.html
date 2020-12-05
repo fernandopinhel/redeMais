@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>SGTA - Painel de Controle Rede +</title>
+        <title>SGTA - PAINEL ADITIVOS</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -209,7 +209,7 @@
                                     <p class="p-select">Grandes Grupos</p>
                                     <select class="form-control h-35">
                                         <option value="1" selected="">Selecione</option>
-                                        <option value="2">Medservice Premier</option>                                   
+                                        <option value="2">Mediservice Premier</option>                                   
                                         <option value="3">Bradesco</option>                                   
                                         <option value="4">Grupo Rede D´or</option>                                   
                                     </select>
@@ -220,8 +220,35 @@
                                     <select class="form-control h-35">
                                         <option value="1" selected="">Selecione</option>
                                         <option value="2">Bradesco Saúde</option>                                   
-                                        <option value="3">MedService</option>                                   
+                                        <option value="3">Mediservice</option>                                   
                                         <option value="4">Bradesco Operadora</option>                                   
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">                                    
+                                    <p class="p-select">Status</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected="">Selecione</option>
+                                        <option value="2">Ativo</option>                                   
+                                        <option value="3">Inativo</option>                                                                                                         
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">                                    
+                                    <p class="p-select">Usuário</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected="">Selecione</option>
+                                        <option value="2">Solicitante</option>                                   
+                                        <option value="3">Analista Interno</option>                                                                                                         
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">                                    
+                                    <p class="p-select">Classe Solicitação</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected="">Selecione</option>
+                                        <option value="2">Classe 1</option>                                   
+                                        <option value="3">Classe 2</option>                                                                                                         
                                     </select>
                                 </div>
                                 <div class="col-lg-2">                                    
@@ -233,12 +260,14 @@
                                     </div> 
                                 </div>
                                 <div class="space"></div>
-                                <div class="form">
-                                    <input type="text" name="cod-prestador" autocomplete="off">
-                                    <label for="cod-prestador" class="label-name">
-                                        <span class="content-name">CNPJ/CPF</span>
-                                    </label>
-                                </div> 
+                                <div class="col-lg-2">    
+                                    <div class="form">
+                                        <input type="text" name="cod-prestador" autocomplete="off">
+                                        <label for="cod-prestador" class="label-name">
+                                            <span class="content-name">CNPJ/CPF</span>
+                                        </label>
+                                    </div> 
+                                </div>
                                 <div class="space"></div>
                                 <div class="col-lg-2">                                    
                                     <div class="form">
@@ -326,14 +355,18 @@
                                                 </div>
                                             </th>          
                                             <th></th>            
-                                            <th>Cód. Solicitação</th>
-                                            <th>Tipo Ficha</th>                                              
-                                            <th>CNPJ/CPF</th>
-                                            <th>Nome do Prestador</th>
-                                            <th>Tipo Aditivo</th>
-                                            <th>Empresa</th>
-                                            <th>Priorização</th>
-                                            <th>Data Entrada</th>                                         
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Cód. Solicitação</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Tipo Ficha</th>                                              
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>CNPJ/CPF</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Nome do Prestador</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Tipo Aditivo</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Empresa</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Priorização</th>
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Data Entrada</th>  
+                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Situação Aditivo</th>       
+                                            <th class="text-center"><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>PDF Ficha</th>       
+                                            <th class="text-center"><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>PDF Aditivo</th>       
+                                            <th class="text-center"><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Anexo</th>                                         
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -365,7 +398,11 @@
                                             <td>-</td>
                                             <td>Bradesco Saúde</td>
                                             <td>Normal</td>
-                                            <td>03/11/2020</td>                                           
+                                            <td>03/11/2020</td>       
+                                            <td>Cancelado</td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/doc.svg" alt="" width="35"></a></td>
                                         </tr>
                                         <tr class="separator">
                                             <td colspan="5"></td>
@@ -398,7 +435,11 @@
                                             <td>-</td>
                                             <td>Bradesco Saúde</td>
                                             <td>Normal</td>
-                                            <td>03/11/2020</td>                                           
+                                            <td>03/11/2020</td>       
+                                            <td>Cancelado</td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/doc.svg" alt="" width="35"></a></td>
                                         </tr>
                                         <tr class="separator">
                                             <td colspan="5"></td>
@@ -431,7 +472,11 @@
                                             <td>-</td>
                                             <td>Bradesco Saúde</td>
                                             <td>Normal</td>
-                                            <td>03/11/2020</td>                                           
+                                            <td>03/11/2020</td>       
+                                            <td>-</td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/doc.svg" alt="" width="35"></a></td>
                                         </tr>
                                         <tr class="separator">
                                             <td colspan="5"></td>
@@ -464,7 +509,11 @@
                                             <td>-</td>
                                             <td>Bradesco Saúde</td>
                                             <td>Normal</td>
-                                            <td>03/11/2020</td>                                           
+                                            <td>03/11/2020</td>       
+                                            <td>-</td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/doc.svg" alt="" width="35"></a></td>
                                         </tr>
                                         <tr class="separator">
                                             <td colspan="5"></td>
@@ -497,7 +546,11 @@
                                             <td>-</td>
                                             <td>Bradesco Saúde</td>
                                             <td>Normal</td>
-                                            <td>03/11/2020</td>                                           
+                                            <td>03/11/2020</td>       
+                                            <td>-</td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/pdf.svg" alt="" width="35"></a></td>
+                                            <td class="text-center"><a href="#"><img src="img/doc.svg" alt="" width="35"></a></td>
                                         </tr>
                                         <tr class="separator">
                                             <td colspan="5"></td>

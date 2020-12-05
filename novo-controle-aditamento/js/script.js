@@ -1,3 +1,21 @@
+// datepicker mes e ano
+$('#datepickerMes').datetimepicker({
+    language:  'pt-BR',
+    format: "mm",
+    startView: 3,
+    minView: 3,
+    forceParse: 0
+});
+
+$('#datepickerAno').datetimepicker({
+    language:  'pt-BR',
+    format: "yyyy",
+    startView: 4,
+    minView: 4,
+    forceParse: 0
+});
+// fim datepicker mes e ano
+
 //tabpanes nova ficha
 $(".tabs-fichas-matmed").click(function(){
   $('#navtabs-aditivo').addClass('hidden')
