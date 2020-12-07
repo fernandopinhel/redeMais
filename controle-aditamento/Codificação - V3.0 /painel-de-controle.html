@@ -76,22 +76,15 @@
           <li>
             <a href="#processosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Processos</a>
             <ul class="collapse list-unstyled" id="processosSubmenu">
-                <li><a href="painel-de-controle.html">Painel de Negociações</a></li>
-                <li><a href="#">item 2</a></li>
-                <li><a href="#">item 3</a></li>
+                <li><a href="painel-de-controle.html">Controle de Negociações</a></li>
             </ul>
           </li>
           <li>
             <a href="#relatoriosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Relatórios</a>
             <ul class="collapse list-unstyled" id="relatoriosSubmenu">
-                <li><a href="#">Relatório Controle</a></li>
-                <li><a href="#">Relatório Controle Trimestral</a></li>
-                <li><a href="#">Relatório SLA Tempo total da ficha</a></li>
+                <li><a href="relatorio-controle">Relatório Controle</a></li>
             </ul>
           </li>
-          <li class="active">
-            <a href="controle-de-negociacoes.html" class="menu-principal">Controle de Negociações</a>
-          </li>         
           <li>
             <a href="importacoes.html" class="menu-principal">Importações</a>
           </li>
@@ -115,16 +108,6 @@
         <div class="clear"></div>
         <form action="">
             <div class="row">
-              <div class="col-sm-2">                                    
-                <label>Sucursal</label>
-                <div class="clearboth"></div>
-                <select class="formcontrol selectpicker" multiple data-live-search="true">
-                    <option>Cód. Prestador</option>
-                    <option>Nome Prestador</option>
-                    <option>Materiais e Medicamentos</option>
-                    <option>Diária Global</option>
-                </select>
-              </div>
               <div class="col-sm-1">
                 <div class="form-group">
                   <label>Cód. do Prestador</label>
@@ -137,12 +120,32 @@
                   <input type="text" class="form-control">
                 </div>
               </div>
+              <div class="col-sm-2">                                    
+                <label>Aditivos</label>
+                <div class="clearboth"></div>
+                <select class="formcontrol selectpicker" multiple data-live-search="true">
+                    <option>Quimioterapia</option>
+                    <option>Ambulatório</option>
+                    <option>Materiais e Medicamentos</option>
+                    <option>Diária Global</option>
+                </select>
+              </div>
+              <div class="col-sm-2">                                    
+                <label>Sucursal</label>
+                <div class="clearboth"></div>
+                <select class="formcontrol selectpicker" multiple data-live-search="true">
+                    <option>Sucursal 1</option>
+                    <option>Sucursal 2</option>
+                    <option>Sucursal 3</option>
+                    <option>Sucursal 4</option>
+                </select>
+              </div>
                <div class="col-sm-2">
                   <form>
                     <label>Aditivo Finalizado </label>
                     <div class="clearboth"></div>
                     <label class="radio-inline">
-                      <input type="radio" name="optradio" checked>Todos
+                      <input type="radio" name="optradio">Todos
                     </label>
                     <label class="radio-inline">
                       <input type="radio" name="optradio">Sim
@@ -152,8 +155,9 @@
                     </label>
                   </form>
                </div>
-                <div class="col-sm-2">
-                    <button type="button" class="btn btn-primary  mt-20 ">Buscar</button>
+                <div class="col-sm-2">                  
+                  <button type="button" class="btn btn-third mt-20">Limpar</button>
+                    <button type="button" class="btn btn-primary mt-20 mr-10">Buscar</button>
                 </div>
             </div>
         </form>
@@ -161,36 +165,30 @@
           <div class="box-white mt-30">
             <div class="row header-aba-busca-avancada">
                 <div class="col-sm-12">
-                  <p class="title-registros">Registros <span>500</span></p>
+                  <p class="title-registros">Itens encontrados: <span>4</span></p>
                 </div>
             </div>
             <div class="bg-table table-responsive">
               <table class="table tables-adm">
                 <thead>
                   <tr>
-                    <th>CÓD. IDENTIFICADOR</th>   
-                    <th>CNPJ/CPF</th>
+                    <th style="width: 5%;"></th>
+                    <th>CÓD. Prestador</th>   
                     <th>NOME DO PRESTADOR</th>
-                    <th>PRIORIZAÇÃO</th>
-                    <th>QNTD. DE TERMOS</th>                      
-                    <th>STATUS DA SOLICITAÇÃO</th>                      
-                    <th>DATA STATUS</th>                      
-                    <th>DATA ENTRADA</th>                      
-                    <th>CLASSE SOLICITAÇÃO</th>                      
+                    <th>Aditivos</th>                            
+                    <th>Sucursal</th>          
+                    <th>Aditivo Finalizado</th>                                 
                     <th class="larg-actions"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar" checked=" "><span>5464849</span></td>                                                                  
-                    <td>999.999.999-99</td>
+                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span></span></td>                                                                  
+                    <td>51</td>
                     <td>Marcelo Barreto</td>
-                    <td> - </td>
-                    <td>5</td>
-                    <td>Status A</td>
-                    <td>28/12/16</td>
-                    <td>28/12/17</td>
-                    <td>C</td>
+                    <td>Quimioterapia</td>
+                    <td>Rio de Janeiro</td>
+                    <td>Não</td>
                     <td class="actions">
                       <div class="pull-right">
                         <div class="menu">
@@ -199,8 +197,7 @@
                           <span class="circle"></span>
                         </div>
                         <div class="menu-invisible">
-                          <a href="#"><span class="icon-nav-busca" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes"></span></a>
-                          <a href="#"><span class="icon-nav-editar" title="" data-toggle="tooltip" data-original-title="Editar"></span></a>
+                          <a href="detalhes-controle.html"><span class="icon-nav-busca" title="" data-toggle="tooltip" data-original-title="Visualizar/Editar"></span></a>
                           <a href="#"><span class="icon-nav-fechar" title="" data-toggle="tooltip" data-original-title="Excluir"></span></a>
                         </div>
                       </div>
@@ -209,15 +206,12 @@
                   </tr>
                   <tr class="separator"><td colspan="5"></td></tr>
                   <tr>
-                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span>5464849</span></td>                                                                  
-                    <td>999.999.999-99</td>
+                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span></span></td>                                                                  
+                    <td>51</td>
                     <td>Marcelo Barreto</td>
-                    <td> - </td>
-                    <td>5</td>
-                    <td>Status A</td>
-                    <td>28/12/16</td>
-                    <td>28/12/17</td>
-                    <td>C</td>
+                    <td>Ambulatório</td>
+                    <td>Rio de Janeiro</td>
+                    <td>Não</td>
                     <td class="actions">
                       <div class="pull-right">
                         <div class="menu">
@@ -226,8 +220,7 @@
                           <span class="circle"></span>
                         </div>
                         <div class="menu-invisible">
-                          <a href="#"><span class="icon-nav-busca" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes"></span></a>
-                          <a href="#"><span class="icon-nav-editar" title="" data-toggle="tooltip" data-original-title="Editar"></span></a>
+                          <a href="detalhes-controle.html"><span class="icon-nav-busca" title="" data-toggle="tooltip" data-original-title="Visualizar/Editar"></span></a>
                           <a href="#"><span class="icon-nav-fechar" title="" data-toggle="tooltip" data-original-title="Excluir"></span></a>
                         </div>
                       </div>
@@ -236,15 +229,12 @@
                   </tr>
                   <tr class="separator"><td colspan="5"></td></tr>
                   <tr>
-                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span>5464849</span></td>                                                                  
-                    <td>999.999.999-99</td>
+                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span></span></td>                                                                  
+                    <td>51</td>
                     <td>Marcelo Barreto</td>
-                    <td> - </td>
-                    <td>5</td>
-                    <td>Status A</td>
-                    <td>28/12/16</td>
-                    <td>28/12/17</td>
-                    <td>C</td>
+                    <td>Materiais e Medicamentos</td>
+                    <td>Rio de Janeiro</td>
+                    <td>Não</td>
                     <td class="actions">
                       <div class="pull-right">
                         <div class="menu">
@@ -253,8 +243,7 @@
                           <span class="circle"></span>
                         </div>
                         <div class="menu-invisible">
-                          <a href="#"><span class="icon-nav-busca" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes"></span></a>
-                          <a href="#"><span class="icon-nav-editar" title="" data-toggle="tooltip" data-original-title="Editar"></span></a>
+                          <a href="detalhes-controle.html"><span class="icon-nav-busca" title="" data-toggle="tooltip" data-original-title="Visualizar/Editar"></span></a>
                           <a href="#"><span class="icon-nav-fechar" title="" data-toggle="tooltip" data-original-title="Excluir"></span></a>
                         </div>
                       </div>
@@ -263,15 +252,12 @@
                   </tr>
                   <tr class="separator"><td colspan="5"></td></tr>
                   <tr>
-                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span>5464849</span></td>                                                                  
-                    <td>999.999.999-99</td>
+                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span></span></td>                                                                  
+                    <td>51</td>
                     <td>Marcelo Barreto</td>
-                    <td> - </td>
-                    <td>5</td>
-                    <td>Status A</td>
-                    <td>28/12/16</td>
-                    <td>28/12/17</td>
-                    <td>C</td>
+                    <td>Diária Global</td>
+                    <td>Rio de Janeiro</td>
+                    <td>Não</td>
                     <td class="actions">
                       <div class="pull-right">
                         <div class="menu">
@@ -280,8 +266,7 @@
                           <span class="circle"></span>
                         </div>
                         <div class="menu-invisible">
-                          <a href="#"><span class="icon-nav-busca" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes"></span></a>
-                          <a href="#"><span class="icon-nav-editar" title="" data-toggle="tooltip" data-original-title="Editar"></span></a>
+                          <a href="detalhes-controle.html"><span class="icon-nav-busca" title="" data-toggle="tooltip" data-original-title="Visualizar/Editar"></span></a>
                           <a href="#"><span class="icon-nav-fechar" title="" data-toggle="tooltip" data-original-title="Excluir"></span></a>
                         </div>
                       </div>
@@ -289,59 +274,40 @@
                     </td>
                   </tr>
                   <tr class="separator"><td colspan="5"></td></tr>
-                  <tr>
-                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span>5464849</span></td>                                                                  
-                    <td>999.999.999-99</td>
-                    <td>Marcelo Barreto</td>
-                    <td> - </td>
-                    <td>5</td>
-                    <td>Status A</td>
-                    <td>28/12/16</td>
-                    <td>28/12/17</td>
-                    <td>C</td>
-                    <td class="actions">
-                      <div class="pull-right">
-                        <div class="menu">
-                          <span class="circle"></span>
-                          <span class="circle"></span>
-                          <span class="circle"></span>
-                        </div>
-                        <div class="menu-invisible">
-                          <a href="#"><span class="icon-nav-busca" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes"></span></a>
-                          <a href="#"><span class="icon-nav-editar" title="" data-toggle="tooltip" data-original-title="Editar"></span></a>
-                          <a href="#"><span class="icon-nav-fechar" title="" data-toggle="tooltip" data-original-title="Excluir"></span></a>
-                        </div>
-                      </div>
-                      <div class="clear"></div>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
-            <div class="relative text-center">
-              <ul class="pagination">
-                <li>
-                  <a href="#" class="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                  </a>
-                </li>
-                <li><a href="#" class="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#" class="active">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">12</a></li>
-                <li><a href="#" class="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></li>
-                <li>
-                  <a href="#" class="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                  </a>
-                </li>
-              </ul>
+            <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-2"></div>                
+                  <div class="col-lg-8 text-center">
+                      <ul class="pagination">
+                        <li>
+                          <a href="#" class="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                          </a>
+                        </li>
+                        <li><a href="#" class="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#" class="active">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">12</a></li>
+                        <li><a href="#" class="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></li>
+                        <li>
+                          <a href="#" class="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                          </a>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-2">
+                    <button type="button" class="btn btn-second mt-20 pull-right">Exportar</button>
+                  </div>
+              </div>
             </div>
-          </div>
         
       </div>
     </section>

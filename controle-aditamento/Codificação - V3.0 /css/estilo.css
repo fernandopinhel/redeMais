@@ -154,8 +154,155 @@ small{
   font-weight: 600;
 }
 
+.box-id-prestador {
+  padding: 5px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.box-id-prestador > p{
+  margin: 0;
+}
+
+.border-lc {
+  border: 1px solid #edeff2;
+}
 
 /* Fim Geral */
+
+/* accordion multilistas abertas painel */
+.accordion .card:last-of-type{
+  background: #fff;
+  padding: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.13);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.13);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.13);
+}
+
+.accordion .card .card-header{
+  background: #fff;
+  margin-bottom: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.accordion .card .card-body{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding-bottom: 0;
+}
+
+#accordion .card .card-header h6 button{
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2365a7;
+  font-weight: 500;
+  border-radius: 0;
+  padding: 0;
+  border: transparent;
+}
+
+#accordion .card .card-header h6 button:hover{
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2365a7;
+  font-weight: 500;
+  background: transparent;
+  border: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+#accordion .card .card-header h6 button:focus{
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2365a7;
+  font-weight: 500;
+  background: transparent;
+  border: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.card-header{padding: 0;}
+
+.b-icon > button {
+  display: block;
+  position: relative;
+}
+
+.seta-accordion-painel{
+  position: absolute;
+  right: 15px;
+  background:url(../img/seta-accordion-painel.svg);
+  transform: rotate(0deg);
+  width: 30px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.6s all;
+}
+
+.b-icon > button[aria-expanded="true"] .seta-accordion-painel{
+  position: absolute;
+  right: 15px;
+  background:url(../img/seta-accordion-painel.svg);
+  width: 30px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+  transition: 0.6s all;
+}
+
+#accordion .card .card-header h6 button > .bar-geral{
+  position: absolute;
+  right: 15px;
+  top: 0;
+  float: inherit;
+  margin-right: 0;
+  padding-top: 0;
+}
+
+#accordion .card .card-header h6 button > .bar-geral .bar1, #accordion .card .card-header h6 button > .bar-geral .bar2{
+  width: 14px;
+  height: 2px;
+  background-color: #2365a7;
+  margin: 0;
+  transition: 0.4s;
+}
+
+#accordion .card .card-header h6 button > .bar-geral .bar2{width: 14px !important; opacity: 1 !important;}
+
+#accordion .card .card-header h6 button > .bar-geral .bar1 {
+  -webkit-transform: rotate(-90deg) translate(-3px, 0px) !important;
+  transform: rotate(-90deg) translate(-3px, 0px) !important;
+}
+
+#accordion .card .card-header h6 button.change .bar-geral .bar1 {
+  -webkit-transform: rotate(0deg) translate(-3px, 0px) !important;
+  transform: rotate(0deg) translate(-3px, 0px) !important;
+}
+#accordion .card .card-header h6 button .bar-geral .bar2{opacity: 1 !important;}
+#accordion .card .card-header h6 button.change .bar-geral .bar2 {opacity: 0 !important;}
+/* fim accordion multilistas abertas painel */
 
 /* Header */
 header > div > nav > h3{
@@ -606,6 +753,7 @@ button.btn-third:hover{
 .mt-30{margin-top: 30px;}
 .mr-5{margin-right: 5px;}
 .mr-10{margin-right: 10px;}
+.mb-0{margin-bottom: 0px;}
 
 .box-add > .row, .box-item > .row{margin-bottom: 50px;}
 
@@ -1144,6 +1292,122 @@ tr:hover td {
 /* Fim tabela diferente */
 /* Fim tabelas */
 
+.card-painel{
+  background: #e2dee2;
+padding: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+/* -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
+-moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
+  box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17); */
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;;
+  -ms-transform: scale(0.9,0.9); /* IE 9 */
+  transform: scale(0.9,0.9); /* Standard syntax */
+}
+
+.card-painel:hover{
+  background: #fff;
+padding: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.17);
+-moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.17);
+  box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.17);
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  -ms-transform: scale(1,1); /* IE 9 */
+  transform: scale(1,1); /* Standard syntax */
+}
+
+.card-painel > .item-principal > h1{
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+}
+
+.card-painel > .item-principal > div > h1{
+  font-size: 13px;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* .card-painel.active > .item-principal > div > h1 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color:#721c24;
+  font-weight: 500;
+  text-align: center;
+} */
+
+.card-painel.active{
+  background: #fff;
+padding: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.17);
+-moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.17);
+  box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.17);
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  -ms-transform: scale(1,1); /* IE 9 */
+  transform: scale(1,1); /* Standard syntax */
+}
+
+.card-painel.active:hover{
+  background: #fff;
+padding: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.17);
+-moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.17);
+  box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.17);
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  -ms-transform: scale(1,1); /* IE 9 */
+  transform: scale(1,1); /* Standard syntax */
+}
+
+.card-painel.active > .item-principal > h1{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2365a7;
+  font-weight: 500;
+  text-align: center;
+}
+
+.title-page > h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2365a7;
+  padding: 5px 5px 5px 0;
+  font-weight: 500;
+}
+
 /* Paginação */
 .pagination {margin-top: 20px;}
 
@@ -1480,8 +1744,8 @@ tr:hover td {
 
 /* Busca avançada */
 .title-page{
-  margin-top: 10px;
-  margin-bottom: 40px;
+  /* margin-top: 10px; */
+  margin-bottom: 20px;
 }
 .header-aba-busca-avancada{padding: 10px 0;}
 

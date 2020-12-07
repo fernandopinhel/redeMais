@@ -1,3 +1,11 @@
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+function toggleFunction(x) {
+  x.classList.toggle("change");
+}
+
 $(document).ready(function() {
     $('#multiple-selected').multiselect();
 });
@@ -41,10 +49,6 @@ function changeMenu(x) {
 
     })(jQuery);
 
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-        })
-
         $('#datepickerMes').datetimepicker({
             language:  'pt-BR',
             format: "mm",
@@ -74,3 +78,28 @@ function changeMenu(x) {
       campo.value = data;
       }
     }
+
+
+
+    // carregando divs
+$('#premissas').on('click', function () {
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.premissas').removeClass('hidden');
+  $('#premissas > .card-painel').addClass('active');
+});
+
+$('#tab-praticada').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});  
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.tab-praticada').removeClass('hidden');
+  $('#tab-praticada  > .card-painel').addClass('active');
+});
+
+$('#congelamento-desagravo').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});  
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.congelamento-desagravo').removeClass('hidden');
+  $('#mcongelamento-desagravo  > .card-painel').addClass('active');
+});
+// fim carregando divs
