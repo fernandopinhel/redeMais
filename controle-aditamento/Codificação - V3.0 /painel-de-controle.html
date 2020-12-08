@@ -74,15 +74,17 @@
             <a href="#" class="menu-principal">Painel Administrativo</a>
           </li>
           <li>
-            <a href="#processosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Processos</a>
-            <ul class="collapse list-unstyled" id="processosSubmenu">
-                <li><a href="painel-de-controle.html">Controle de Negociações</a></li>
+            <a href="#processosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="true">Processos</a>
+            <ul class="collapse show list-unstyled" id="processosSubmenu">
+                <li class="active"><a href="painel-de-controle.html">Controle de Negociações</a></li>
+                <li><a href="painel-de-controle-nao-listados.html">Controle de Neg. Não Listados</a></li>
             </ul>
           </li>
           <li>
             <a href="#relatoriosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Relatórios</a>
             <ul class="collapse list-unstyled" id="relatoriosSubmenu">
-                <li><a href="relatorio-controle">Relatório Controle</a></li>
+                <li><a href="relatorio-controle.html">Relatório de Controle</a></li>
+                <li><a href="relatorio-nao-listados.html">Relatório Não Listados</a></li>
             </ul>
           </li>
           <li>
@@ -100,7 +102,7 @@
       </nav>
       <div class="container-fluid">
         <div class="title-page row">
-          <div class="col-sm-12">
+          <div class="col-lg-12">
             <h2>Controle de Negociações</h2>
             <div class="btn-voltar"><a href="#" title="Voltar"><span class="icon-seta-esquerda-c"></span>Voltar</a></div>
           </div>
@@ -108,19 +110,19 @@
         <div class="clear"></div>
         <form action="">
             <div class="row">
-              <div class="col-sm-1">
+              <div class="col-lg-1">
                 <div class="form-group">
                   <label>Cód. do Prestador</label>
                   <input type="text" class="form-control">
                 </div>
               </div>
-              <div class="col-sm-3">
+              <div class="col-lg-3">
                 <div class="form-group">
                   <label>Nome do Prestador</label>
                   <input type="text" class="form-control">
                 </div>
               </div>
-              <div class="col-sm-2">                                    
+              <div class="col-lg-2">                                    
                 <label>Aditivos</label>
                 <div class="clearboth"></div>
                 <select class="formcontrol selectpicker" multiple data-live-search="true">
@@ -130,7 +132,7 @@
                     <option>Diária Global</option>
                 </select>
               </div>
-              <div class="col-sm-2">                                    
+              <div class="col-lg-2">                                    
                 <label>Sucursal</label>
                 <div class="clearboth"></div>
                 <select class="formcontrol selectpicker" multiple data-live-search="true">
@@ -140,7 +142,7 @@
                     <option>Sucursal 4</option>
                 </select>
               </div>
-               <div class="col-sm-2">
+               <div class="col-lg-2">
                   <form>
                     <label>Aditivo Finalizado </label>
                     <div class="clearboth"></div>
@@ -155,7 +157,7 @@
                     </label>
                   </form>
                </div>
-                <div class="col-sm-2">                  
+                <div class="col-lg-2">                  
                   <button type="button" class="btn btn-third mt-20">Limpar</button>
                     <button type="button" class="btn btn-primary mt-20 mr-10">Buscar</button>
                 </div>
@@ -164,15 +166,14 @@
         
           <div class="box-white mt-30">
             <div class="row header-aba-busca-avancada">
-                <div class="col-sm-12">
+                <div class="col-lg-12">
                   <p class="title-registros">Itens encontrados: <span>4</span></p>
                 </div>
             </div>
             <div class="bg-table table-responsive">
               <table class="table tables-adm">
                 <thead>
-                  <tr>
-                    <th style="width: 5%;"></th>
+                  <tr>                    
                     <th>CÓD. Prestador</th>   
                     <th>NOME DO PRESTADOR</th>
                     <th>Aditivos</th>                            
@@ -182,8 +183,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span></span></td>                                                                  
+                  <tr>                                                         
                     <td>51</td>
                     <td>Marcelo Barreto</td>
                     <td>Quimioterapia</td>
@@ -205,8 +205,7 @@
                     </td>
                   </tr>
                   <tr class="separator"><td colspan="5"></td></tr>
-                  <tr>
-                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span></span></td>                                                                  
+                  <tr>                                                                          
                     <td>51</td>
                     <td>Marcelo Barreto</td>
                     <td>Ambulatório</td>
@@ -228,8 +227,7 @@
                     </td>
                   </tr>
                   <tr class="separator"><td colspan="5"></td></tr>
-                  <tr>
-                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span></span></td>                                                                  
+                  <tr>                                                                           
                     <td>51</td>
                     <td>Marcelo Barreto</td>
                     <td>Materiais e Medicamentos</td>
@@ -251,8 +249,7 @@
                     </td>
                   </tr>
                   <tr class="separator"><td colspan="5"></td></tr>
-                  <tr>
-                    <td><input type="checkbox" name="check-selecionar" id="check-selecionar" value="check-selecionar"><span></span></td>                                                                  
+                  <tr>                                                                            
                     <td>51</td>
                     <td>Marcelo Barreto</td>
                     <td>Diária Global</td>
@@ -278,9 +275,8 @@
               </table>
             </div>
             <div class="container-fluid">
-              <div class="row">
-                  <div class="col-lg-2"></div>                
-                  <div class="col-lg-8 text-center">
+              <div class="row">                          
+                  <div class="col-lg-12 text-center">
                       <ul class="pagination">
                         <li>
                           <a href="#" class="prev">
@@ -302,9 +298,6 @@
                           </a>
                         </li>
                       </ul>
-                  </div>
-                  <div class="col-lg-2">
-                    <button type="button" class="btn btn-second mt-20 pull-right">Exportar</button>
                   </div>
               </div>
             </div>

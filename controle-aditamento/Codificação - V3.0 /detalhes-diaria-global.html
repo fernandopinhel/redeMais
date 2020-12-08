@@ -61,35 +61,37 @@
     <div class="wrapper">
     <!-- Sidebar -->
     <nav id="sidebar"> 
-        <ul class="list-unstyled components">              
-            <li>
-                <a href="#cadastroSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Cadastro</a>
-                <ul class="collapse list-unstyled" id="cadastroSubmenu">
-                    <li><a href="#">item 1</a></li>
-                    <li><a href="#">item 2</a></li>
-                    <li><a href="#">item 3</a></li>
-                </ul>
-            </li>
-            <li>
-              <a href="#" class="menu-principal">Painel Administrativo</a>
-            </li>
-            <li>
-              <a href="#processosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Processos</a>
-              <ul class="collapse list-unstyled" id="processosSubmenu">
-                  <li><a href="painel-de-controle.html">Controle de Negociações</a></li>
+      <ul class="list-unstyled components">              
+          <li>
+              <a href="#cadastroSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Cadastro</a>
+              <ul class="collapse list-unstyled" id="cadastroSubmenu">
+                  <li><a href="#">item 1</a></li>
+                  <li><a href="#">item 2</a></li>
+                  <li><a href="#">item 3</a></li>
               </ul>
-            </li>
-            <li>
-              <a href="#relatoriosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Relatórios</a>
-              <ul class="collapse list-unstyled" id="relatoriosSubmenu">
-                  <li><a href="relatorio-controle">Relatório Controle</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="importacoes.html" class="menu-principal">Importações</a>
-            </li>
-        </ul>
-      </nav>
+          </li>
+          <li>
+            <a href="#" class="menu-principal">Painel Administrativo</a>
+          </li>
+          <li>
+            <a href="#processosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="true">Processos</a>
+            <ul class="collapse show list-unstyled" id="processosSubmenu">
+                <li class="active"><a href="painel-de-controle.html">Controle de Negociações</a></li>
+                <li><a href="painel-de-controle-nao-listados.html">Controle de Neg. Não Listados</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#relatoriosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Relatórios</a>
+            <ul class="collapse list-unstyled" id="relatoriosSubmenu">
+                <li><a href="relatorio-controle.html">Relatório de Controle</a></li>
+                <li><a href="relatorio-nao-listados.html">Relatório Não Listados</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="importacoes.html" class="menu-principal">Importações</a>
+          </li>
+      </ul>
+    </nav>
     <section class="container-fluid">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -99,7 +101,7 @@
       </nav>
       <div class="container-fluid">
         <div class="title-page row">
-          <div class="col-sm-12">
+          <div class="col-lg-12">
             <h2>Detalhes Controle de Negociações</h2>
             <div class="btn-voltar"><a href="painel-de-controle.html" title="Voltar"><span class="icon-seta-esquerda-c"></span>Voltar</a></div>
           </div>
@@ -121,27 +123,27 @@
                   </div>
                 <div class="card-body">
                   <div class="row mb-3">                                
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">Cód. Prestador: <strong>51</strong></p>
                           </div>
                       </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-4">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">Nome do Prestador: <strong>Marcelo Barreto</strong></p>
                           </div>
                       </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">Cidade: <strong>Rio de Janeiro</strong></p>
                           </div>
                       </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">UF: <strong>RJ</strong></p>
                           </div>
                       </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">Sucursal: <strong>Rio de Janeiro</strong></p>
                           </div>
@@ -151,12 +153,12 @@
                 <div id="collapse-1" class="collapse" role="tabpanel" aria-labelledby="heading-1">
                   <div class="card-body">
                       <div class="row mb-3">                                    
-                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                          <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                               <div class="border-lc d-flex justify-content-center box-id-prestador">
                                   <p class="m-0 ">Grande Grupo: <strong>-</strong></p>
                               </div>
                           </div>
-                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                          <div class="col-xs-12 col-lg-6 col-md-4 col-lg-4">
                             <div class="border-lc d-flex justify-content-center box-id-prestador">
                                 <p class="m-0 ">Período Base: <strong>12/2018 - 11/2019</strong></p>
                             </div>
@@ -179,31 +181,31 @@
                     <div class="col-lg-12"><hr></div>
                 </div>
                 <div class="row">
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Sinistro Total</label>
                       <input type="text" value="R$ 81.186.367,66" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Senhas para Cálculo</label>
                       <input type="text" value="2227" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Sinistro para Cálculo</label>
                       <input type="text" value="R$ 29.682.817,48" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Meta PMO - Redução de 10% do Sinistro</label>
                       <input type="text" value="#REFI" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Negociação Concluída</label>
                       <select class="form-control" disabled>
@@ -212,7 +214,7 @@
                       </select>
                     </div>
                   </div>                 
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group mb-0">
                       <label for="dtp_input1">Data da Conclusão</label>
                       <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
@@ -222,7 +224,7 @@
                       <input type="hidden" id="dtp_input1" value=""><br>
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-lg-4">
                     <div class="form-group">
                       <label>Modelo Fechado</label>
                       <input type="text" value="MODELO 1 - INTERNAÇÃO + TAXA POR PORTE - UTI AGRUPADA" class="form-control">
@@ -237,37 +239,37 @@
                     </div>
                 </div>       
                 <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                           <label>Valor Negociado <br>Enfermaria</label>
                           <input type="text" value="R$ 1.100,10" class="form-control" >
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                           <label>Valor Negociado <br>Day Clinic</label>
                           <input type="text" value="R$ 1.100,10" class="form-control" >
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                           <label>Valor Negociado <br>Quarto</label>
                           <input type="text" value="R$ 1.100,10" class="form-control" >
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                           <label>Valor Negociado <br>UTI - Agrupada</label>
                           <input type="text" value="R$ 1.100,10" class="form-control" >
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                           <label>Valor Negociado <br>UTI - Adulta</label>
                           <input type="text" value="R$ 1.100,10" class="form-control" >
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Valor Negociado <br>UTI - Pediátrica/Neonatal</label>
                           <input type="text" value="R$ 1.100,10" class="form-control">
@@ -282,7 +284,7 @@
                     </div>
                 </div>   
                 <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Valor</label>
                           <input type="text" value="" class="form-control">
@@ -297,49 +299,49 @@
                     </div>
                 </div>   
                 <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Porte 1</label>
                             <input type="text" value="R$ 5.222,00" class="form-control">
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Porte 2</label>
                             <input type="text" value="R$ 5.222,00" class="form-control">
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Porte 3</label>
                             <input type="text" value="R$ 5.222,00" class="form-control">
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Porte 4</label>
                             <input type="text" value="R$ 5.222,00" class="form-control">
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Porte 5</label>
                             <input type="text" value="R$ 5.222,00" class="form-control">
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Porte 6</label>
                             <input type="text" value="R$ 5.222,00" class="form-control">
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Porte 7</label>
                             <input type="text" value="R$ 5.222,00" class="form-control">
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Porte 8</label>
                           <input type="text" value="R$ 5.222,00" class="form-control">
@@ -354,13 +356,13 @@
                     </div>
                 </div>   
                 <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label>Economia Gerada</label>
                           <input type="text" value="R$ 5.222,00" class="form-control">
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div class="form-group mb-0">
                           <label for="dtp_input1">Data da Assinatura do Aditivo</label>
                           <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
@@ -370,7 +372,7 @@
                           <input type="hidden" id="dtp_input1" value=""><br>
                         </div>
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-lg-12">
                         <div class="form-group">
                           <label>Observação</label>
                           <div class="clear"></div>

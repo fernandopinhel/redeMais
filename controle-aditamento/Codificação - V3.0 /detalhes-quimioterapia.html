@@ -61,51 +61,53 @@
     <div class="wrapper">
     <!-- Sidebar -->
     <nav id="sidebar"> 
-        <ul class="list-unstyled components">              
-            <li>
-                <a href="#cadastroSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Cadastro</a>
-                <ul class="collapse list-unstyled" id="cadastroSubmenu">
-                    <li><a href="#">item 1</a></li>
-                    <li><a href="#">item 2</a></li>
-                    <li><a href="#">item 3</a></li>
-                </ul>
-            </li>
-            <li>
-              <a href="#" class="menu-principal">Painel Administrativo</a>
-            </li>
-            <li>
-              <a href="#processosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Processos</a>
-              <ul class="collapse list-unstyled" id="processosSubmenu">
-                  <li><a href="painel-de-controle.html">Controle de Negociações</a></li>
+      <ul class="list-unstyled components">              
+          <li>
+              <a href="#cadastroSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Cadastro</a>
+              <ul class="collapse list-unstyled" id="cadastroSubmenu">
+                  <li><a href="#">item 1</a></li>
+                  <li><a href="#">item 2</a></li>
+                  <li><a href="#">item 3</a></li>
               </ul>
-            </li>
-            <li>
-              <a href="#relatoriosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Relatórios</a>
-              <ul class="collapse list-unstyled" id="relatoriosSubmenu">
-                  <li><a href="relatorio-controle">Relatório Controle</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="importacoes.html" class="menu-principal">Importações</a>
-            </li>
-        </ul>
-      </nav>
+          </li>
+          <li>
+            <a href="#" class="menu-principal">Painel Administrativo</a>
+          </li>
+          <li>
+            <a href="#processosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="true">Processos</a>
+            <ul class="collapse show list-unstyled" id="processosSubmenu">
+                <li class="active"><a href="painel-de-controle.html">Controle de Negociações</a></li>
+                <li><a href="painel-de-controle-nao-listados.html">Controle de Neg. Não Listados</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#relatoriosSubmenu" class="menu-principal" data-toggle="collapse" aria-expanded="false">Relatórios</a>
+            <ul class="collapse list-unstyled" id="relatoriosSubmenu">
+                <li><a href="relatorio-controle.html">Relatório de Controle</a></li>
+                <li><a href="relatorio-nao-listados.html">Relatório Não Listados</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="importacoes.html" class="menu-principal">Importações</a>
+          </li>
+      </ul>
+    </nav>
     <section class="container-fluid">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="painel-de-controle.html">Painel de Controle</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Detalhes Controle de Negociações</li>          
+          <li class="breadcrumb-item active" aria-current="page">Detalhes Controle de Negociações - Quimioterapia</li>          
         </ol>
       </nav>
       <div class="container-fluid">
         <div class="title-page row">
-          <div class="col-sm-12">
-            <h2>Detalhes Controle de Negociações</h2>
+          <div class="col-lg-12">
+            <h2>Detalhes Controle de Negociações - Quimioterapia</h2>
             <div class="btn-voltar"><a href="painel-de-controle.html" title="Voltar"><span class="icon-seta-esquerda-c"></span>Voltar</a></div>
           </div>
         </div>
         <div class="clear"></div>
-        <div class="container-fluid">
+        <div class="container-fluid pr-0 pl-0">
           <div class="accordion mb-5" id="accordion" role="tablist" aria-multiselectable="true">
               <div class="card">
                   <div class="card-header" role="tab" id="heading-1">
@@ -121,27 +123,27 @@
                   </div>
                 <div class="card-body">
                   <div class="row mb-3">                                
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">Cód. Prestador: <strong>51</strong></p>
                           </div>
                       </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-4">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">Nome do Prestador: <strong>Marcelo Barreto</strong></p>
                           </div>
                       </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">Cidade: <strong>Rio de Janeiro</strong></p>
                           </div>
                       </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">UF: <strong>RJ</strong></p>
                           </div>
                       </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                      <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                           <div class="border-lc d-flex justify-content-center box-id-prestador">
                               <p class="m-0 ">Sucursal: <strong>Rio de Janeiro</strong></p>
                           </div>
@@ -151,12 +153,12 @@
                 <div id="collapse-1" class="collapse" role="tabpanel" aria-labelledby="heading-1">
                   <div class="card-body">
                       <div class="row mb-3">                                    
-                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                          <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                               <div class="border-lc d-flex justify-content-center box-id-prestador">
                                   <p class="m-0 ">Tipo de Serviço: <strong>-</strong></p>
                               </div>
                           </div>
-                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                          <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
                               <div class="border-lc d-flex justify-content-center box-id-prestador">
                                   <p class="m-0 ">Grande Grupo: <strong>Oncoclínicas</strong></p>
                               </div>
@@ -165,22 +167,6 @@
                   </div>
                 </div>
               </div>
-          </div>
-          <div class="row mb-4 mt-30">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 active" id="planilha-acompanhamento">
-                <div class="card-painel active">
-                    <div class="item-principal">
-                        <h1>Planilha de Acompanhamento</h1>                                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3" id="nao-listados">
-                <div class="card-painel">
-                    <div class="item-principal">
-                        <h1>Não Listados</h1>                                        
-                    </div>
-                </div>
-            </div>
           </div>
         </div>        
         <form action="" class="box-white" id="group-cards">
@@ -195,61 +181,61 @@
                     <div class="col-lg-12"><hr></div>
                 </div>
                 <div class="row">
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Período</label>
                       <input type="text" value="-" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Senha</label>
                       <input type="text" value="-" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Tipo Item Médico</label>
                       <input type="text" value="-" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Frequência</label>
                       <input type="text" value="124" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Vlr. Sinistro Médico Pago</label>
                       <input type="text" value="1.028.502,55" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Controle Agravo Atual</label>
                       <input type="text" value="1,18" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Vlr. Sinistro sem Agravo</label>
                       <input type="text" value="871.612,33" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Controle Agravo Negociado</label>
                       <input type="text" value="1,00" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Vlr. Sinistro Agravo Negociado</label>
                       <input type="text" value="871.612,33" class="form-control" disabled>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Negociação Concluída</label>
                       <select class="form-control">
@@ -258,19 +244,19 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>% Agravo Atual</label>
                       <input type="text" value="18%" class="form-control">
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>% Agravo Negociado</label>
                       <input type="text" value="0%" class="form-control">
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group mb-0">
                       <label for="dtp_input1">Data da Negociação</label>
                       <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
@@ -280,7 +266,7 @@
                       <input type="hidden" id="dtp_input1" value=""><br>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group mb-0">
                       <label for="dtp_input1">Data da Assinatura do Aditivo</label>
                       <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
@@ -290,13 +276,13 @@
                       <input type="hidden" id="dtp_input1" value=""><br>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Versão Negociada</label>
                       <input type="text" value="896 de 05/03/2018" class="form-control">
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Status</label>
                       <select class="form-control" disabled>
@@ -304,7 +290,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-sm-2">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Potencial de Economia</label>
                       <input type="text" value="156.890,22" class="form-control" disabled>
@@ -317,147 +303,6 @@
                     </div>
                   </div>            
             </div>
-          </div>
-          <div class="container-fluid nao-listados hidden">
-            <div>
-              <div class="row">
-                  <div class="col-lg-12">
-                      <div class="title-page mb-0">                                        
-                          <h6>Não Listados</h6>
-                      </div>
-                  </div>          
-                  <div class="col-lg-12"><hr></div>
-              </div>
-              <div class="row mt-5 mb-5">
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Sinistro Pago</label>
-                    <input type="text" value="999999,55" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Versão 2017_02</label>
-                    <input type="text" value="44.444,01" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Versão 2017_07</label>
-                    <input type="text" value="16.161,16" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Versão 2018_01</label>
-                    <input type="text" value="7.777,01" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Versão 2018_03</label>
-                    <input type="text" value="-" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Versão 2018_07</label>
-                    <input type="text" value="5.555,91" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Versão 2019_02</label>
-                    <input type="text" value="-" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Versão Negociada</label>
-                    <input type="text" value="" class="form-control">
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group mb-0">
-                    <label for="dtp_input1">Data de Negociação</label>
-                    <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                      <label for="dtp_input1" class="icon-dt-apresentacao"><span class="input-group-addon span-date icon-doc-calendario" aria-hidden="true"></span></label>
-                      <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder="  /    /  ">                      
-                    </div>
-                    <input type="hidden" id="dtp_input1" value=""><br>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group mb-0">
-                    <label for="dtp_input1">Data de Emissão</label>
-                    <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                      <label for="dtp_input1" class="icon-dt-apresentacao"><span class="input-group-addon span-date icon-doc-calendario" aria-hidden="true"></span></label>
-                      <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder="  /    /  ">                      
-                    </div>
-                    <input type="hidden" id="dtp_input1" value=""><br>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group mb-0">
-                    <label for="dtp_input1">Data da Assinatura</label>
-                    <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                      <label for="dtp_input1" class="icon-dt-apresentacao"><span class="input-group-addon span-date icon-doc-calendario" aria-hidden="true"></span></label>
-                      <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder="  /    /  ">                      
-                    </div>
-                    <input type="hidden" id="dtp_input1" value=""><br>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Check Preenchimento</label>
-                    <select class="form-control" disabled>
-                      <option selected>Em Aberto</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Gerada</label>
-                    <input type="text" value="" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Sinistro Atual Inflacionado</label>
-                    <input type="text" value="" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Sinistro Negociado Inflacionado</label>
-                    <input type="text" value="" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Cenário Conservador</label>
-                    <input type="text" value="" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Cenário Agressivo</label>
-                    <input type="text" value="" class="form-control" disabled>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <label>Economia Intermediária</label>
-                    <input type="text" value="" class="form-control" disabled>
-                  </div>
-                </div>
-              </div>   
-              <div class="row btns-opcoes">
-                <div class="col-lg-12">
-                    <button type="button" name="button" class="btn btn-primary pull-right">Salvar</button>
-                </div>
-              </div>                     
-          </div>
           </div>
         </form>
       <div class="container-fluid btns-group mt-10 mb-3">
