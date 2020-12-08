@@ -749,15 +749,38 @@ button.btn-third:hover{
 
 .pull-right .btn-cancel{margin-right:20px;}
 
-.mt-20{margin-top: 20px;}
-.mt-30{margin-top: 30px;}
-.mr-5{margin-right: 5px;}
-.mr-10{margin-right: 10px;}
-.mb-0{margin-bottom: 0px;}
+.mt-10{margin-top: 10px !important;}
+.mt-20{margin-top: 20px !important;}
+.mt-30{margin-top: 30px !important;}
+.mr-5{margin-right: 5px !important;}
+.mr-10{margin-right: 10px !important;}
+.mb-0{margin-bottom: 0px !important;}
+.mb-10{margin-bottom: 10px !important;}
+.mb-20{margin-bottom: 20px !important;}
+.p-0{padding: 0px !important;}
+.pl-0{padding-left: 0px !important;}
+.pr-0{padding-right: 0px !important;}
 
 .box-add > .row, .box-item > .row{margin-bottom: 50px;}
 
-.mb-0{margin-bottom: 0;}
+.sub-title {
+  background: #f9f7f7;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.sub-title > h6 {
+  color: #4d4e53;
+  padding-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 600;
+}
 
 .selectpicker .show-tick .formcontrol{width: 100%;}
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){width: 100%!important;}
@@ -923,6 +946,7 @@ label > .span-date > span{
   background-color: #286090 !important;
   border-color: #204d74 !important;
 }
+textarea{border: 1px solid #ccc;}
 /* Fim form */
 
 /* Tabelas */

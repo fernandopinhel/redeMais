@@ -49,6 +49,13 @@ function changeMenu(x) {
 
     })(jQuery);
 
+    $('.form_date').datetimepicker({
+      language:  'pt-BR',
+      autoclose: 1,
+      minView: 2,
+      format: "dd/mm/yyyy"
+      });
+
         $('#datepickerMes').datetimepicker({
             language:  'pt-BR',
             format: "mm",
@@ -81,7 +88,38 @@ function changeMenu(x) {
 
 
 
-    // carregando divs
+// carregando divs
+// quimioterapia
+$('#planilha-acompanhamento').on('click', function () {
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.planilha-acompanhamento').removeClass('hidden');
+  $('#planilha-acompanhamento > .card-painel').addClass('active');
+});
+
+$('#nao-listados').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});  
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.nao-listados').removeClass('hidden');
+  $('#nao-listados  > .card-painel').addClass('active');
+});
+// fim quimioterapia
+// ambulatorio
+$('#pps-ambulatoriais').on('click', function () {
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.pps-ambulatoriais').removeClass('hidden');
+  $('#pps-ambulatoriais > .card-painel').addClass('active');
+});
+
+$('#neg-nao-listados').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});  
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.neg-nao-listados').removeClass('hidden');
+  $('#neg-nao-listados  > .card-painel').addClass('active');
+});
+// fim ambulatorio
+// materiais e medicamentos
 $('#premissas').on('click', function () {
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
   $( ".card-painel").each(function() {$(this).removeClass("active");});
@@ -100,6 +138,7 @@ $('#congelamento-desagravo').on('click', function () {
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});  
   $( ".card-painel").each(function() {$(this).removeClass("active");});
   $('.congelamento-desagravo').removeClass('hidden');
-  $('#mcongelamento-desagravo  > .card-painel').addClass('active');
+  $('#congelamento-desagravo  > .card-painel').addClass('active');
 });
+// fim materiais e medicamentos
 // fim carregando divs
