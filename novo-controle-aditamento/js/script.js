@@ -14,6 +14,18 @@ $('#datepickerAno').datetimepicker({
     minView: 4,
     forceParse: 0
 });
+
+$('#datepickerMesAno').datetimepicker({
+  language:  'pt-BR',
+  format: "mm/yyyy",
+  startView: 3,
+  minView: 3,  
+  startDate:'01/2010',
+  forceParse: 0
+  // weekStart: 1,
+  // todayHighlight: 1,
+  // todayBtn: 1
+});
 // fim datepicker mes e ano
 
 //tabpanes nova ficha
@@ -133,116 +145,60 @@ $('.tableFixHead').on('scroll', function() {
 });
 // fim tabela com header fixo
 
-// carregando divs
-$('#identificacao-do-prestador').on('click', function () {
+// carregando divs controle de negociacao
+// quimioterapia
+$('#planilha-acompanhamento').on('click', function () {
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
   $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.identificacao-do-prestador').removeClass('hidden');
-  $('#identificacao-do-prestador > .card-painel').addClass('active');
+  $('.planilha-acompanhamento').removeClass('hidden');
+  $('#planilha-acompanhamento > .card-painel').addClass('active');
 });
 
-$('#identificacao-do-procedimento').on('click', function () {    
+$('#nao-listados').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});  
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.nao-listados').removeClass('hidden');
+  $('#nao-listados  > .card-painel').addClass('active');
+});
+// fim quimioterapia
+// ambulatorio
+$('#pps-ambulatoriais').on('click', function () {
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
   $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.identificacao-do-procedimento').removeClass('hidden');
-  $('#identificacao-do-procedimento  > .card-painel').addClass('active');
+  $('.pps-ambulatoriais').removeClass('hidden');
+  $('#pps-ambulatoriais > .card-painel').addClass('active');
 });
 
-$('#marcacao-lista-prioritaria-pmo').on('click', function () {    
+$('#neg-nao-listados').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});  
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.neg-nao-listados').removeClass('hidden');
+  $('#neg-nao-listados  > .card-painel').addClass('active');
+});
+// fim ambulatorio
+// materiais e medicamentos
+$('#tab-praticada').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});  
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.tab-praticada').removeClass('hidden');
+  $('#tab-praticada  > .card-painel').addClass('active');
+});
+
+$('#congelamento-desagravo').on('click', function () {    
+  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});  
+  $( ".card-painel").each(function() {$(this).removeClass("active");});
+  $('.congelamento-desagravo').removeClass('hidden');
+  $('#congelamento-desagravo  > .card-painel').addClass('active');
+});
+
+$('#premissas').on('click', function () {
   $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
   $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.marcacao-lista-prioritaria-pmo').removeClass('hidden');
-  $('#marcacao-lista-prioritaria-pmo  > .card-painel').addClass('active');
+  $('.premissas').removeClass('hidden');
+  $('#premissas > .card-painel').addClass('active');
 });
-
-$('#sinistro-cm-alcadas').on('click', function () {    
-  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
-  $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.sinistro-cm-alcadas').removeClass('hidden');
-  $('#sinistro-cm-alcadas  > .card-painel').addClass('active');
-});
-
-$('#pmo-negociacoes').on('click', function () {    
-  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
-  $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.pmo-negociacoes').removeClass('hidden');
-  $('#pmo-negociacoes  > .card-painel').addClass('active');
-});
-
-$('#pmo-aditivos').on('click', function () {    
-  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
-  $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.pmo-aditivos').removeClass('hidden');
-  $('#pmo-aditivos  > .card-painel').addClass('active');
-});
-
-$('#premissas-etapas-de-calculo-economia').on('click', function () {    
-  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
-  $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.premissas-etapas-de-calculo-economia').removeClass('hidden');
-  $('#premissas-etapas-de-calculo-economia  > .card-painel').addClass('active');
-});
-
-$('#economias-potencial-negociada-implantada').on('click', function () {    
-  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
-  $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.economias-potencial-negociada-implantada').removeClass('hidden');
-  $('#economias-potencial-negociada-implantada  > .card-painel').addClass('active');
-});
-
-// Premissas
-$('.bread-alterar-premissas-aderencia-efetividade').addClass('hidden');
-$('.hidden-inputs').addClass('hidden');
-$('.alterar-premissas-2').addClass('hidden');
-$('.title-premissas-alterar').addClass('hidden');
-$('.btns-premissas').addClass('hidden');
-
-$('.alterar-premissas-1').on('click', function () {    
-  $('.bread-alterar-premissas-aderencia-efetividade').removeClass('hidden');
-  $('.hidden-inputs').removeClass('hidden');
-  $('.btns-premissas').removeClass('hidden');
-  $('.title-premissas-alterar').removeClass('hidden');
-  $('.title-premissas-consulta').addClass('hidden');
-  $('.alterar-premissas-1').addClass('hidden');
-  $('.show-inputs').addClass('hidden');
-});
-
-$('.btn-alteracao-premissas').on('click', function () {    
-  $('.bread-alterar-premissas-aderencia-efetividade').addClass('hidden');
-  $('.hidden-inputs').addClass('hidden');
-  $('.btns-premissas').addClass('hidden');
-  $('.title-premissas-alterar').addClass('hidden');
-  $('.title-premissas-consulta').removeClass('hidden');
-  $('.alterar-premissas-1').removeClass('hidden');
-  $('.show-inputs').removeClass('hidden');
-});
-
-$('#premissas-inflacao').on('click', function () {    
-  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
-  $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.premissas-inflacao').removeClass('hidden');
-  $('#premissas-inflacao  > .card-painel').addClass('active');
-  $('.bread-alterar-premissas-aderencia-efetividade').addClass('hidden');
-});
-
-$('#premissas-aderencia').on('click', function () {    
-  $( "#group-cards > div").each(function() {$(this).addClass("hidden");});
-  $( "#group-cards > div.btns-group").each(function() {$(this).removeClass("hidden");});
-  $( ".card-painel").each(function() {$(this).removeClass("active");});
-  $('.premissas-aderencia').removeClass('hidden');
-  $('#premissas-aderencia  > .card-painel').addClass('active');
-});
-// fim carregando divs
-
+// fim materiais e medicamentos
+// fim carregando divs controle de negociacao
 
 // script Toggle menu
 $(document).ready(function () {

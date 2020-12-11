@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>SGTA - PAINEL ADITIVOS</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#slasSubmenu" onclick="window.location.href='acompanhamento-slas.html'" id="slas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Acompanhamento de SLAs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#aditivosSubmenu" onclick="window.location.href='aditivos.html'" id="aditivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Aditivos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#equipeSubmenu" onclick="window.location.href='equipes.html'" id="equipes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Equipe</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#grandesGruposSubmenu" onclick="window.location.href='grandes-grupos.html'" id="grandes-grupos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Grandes Grupos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#grupoTipoAditivoSubmenu" onclick="window.location.href='grupo-tipo-aditivo.html'" id="grupo-tipo-aditivo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Grupo Tipo Aditivo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#perfilUsuarioSubmenu" onclick="window.location.href='perfil-usuario.html'" id="perfil-usuario" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Perfil Usuário</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#procedimentosSubmenu" onclick="window.location.href='procedimentos.html'" id="preocedimentos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Procedimentos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sucursalSubmenu" onclick="window.location.href='sucursal.html'" id="sucursal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Sucursal</span>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#painelAdmSubmenu" onclick="window.location.href='painel-administrativo.html'" id="painel-administrativo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel Administrativo</span>
+                        </a>                        
+                    </li>
+                    <li>
+                        <a href="#processosSubmenu" id="processos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Processos</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="processosSubmenu">
+                            <li>
+                                <a href="trocar-emissor.html">Trocar Emissor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#relatoriosSubmenu" id="relatorios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Relatórios</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
+                            <li>
+                                <a href="relatorio-controle.html">Relatório Controle</a>
+                            </li>
+                            <li>
+                                <a href="relatorio-controle-trimestral.html">Relatório Controle Trimestral</a>
+                            </li>
+                            <li>
+                                <a href="relatorio-sla.html">Relatório SLA Tempo Total da Ficha</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#controleNegSubmenu" id="controlesNeg" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                            <span class="item-menu">Controle de Negociações</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse show list-unstyled list-style-2 list-subs" id="controleNegSubmenu">
+                            <li class="active">
+                                <a href="controle-de-negociacoes-listados.html">Listados</a>
+                            </li>
+                            <li>
+                              <a href="controle-de-negociacoes-nao-listados.html">Não Listados</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+            <!-- conteudo pagina -->
+            <div class="content" id="">
+                <nav class="navbar navbar-expand-lg menu-topo">
+                    <div class="container-fluid p-0">
+                        <div class="float-left  d-flex">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="marca-bradesco d-flex">
+                            <span class="logo-bradesco my-auto">
+                                <img src="img/icon-logo-bradesco.png" alt="">
+                            </span>
+                            <div class="title-sistema d-flex my-auto">
+                                <h1 class="my-auto">SGTA - PAINEL ADITIVOS</h1>
+                            </div>
+                        </div>
+                        <div class="user float-right d-flex">
+                            <div class="btn-group my-auto">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">João Carvalho</p>                                    
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="controle-de-negociacoes-listados.html"> Voltar para Consulta</a></li>                                                                                         
+                                        <li class="breadcrumb-item">Detalhes Controle de Neg. Listados - Diária Global</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="title-page">
+                                    <h1>Detalhes Controle de Neg. Listados - Diária Global</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion mb-5" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="heading-1">
+                                    <h6 class="mb-0 b-icon title-page">
+                                      <button class="btn btn-link d-flex align-items-center" onclick="toggleFunction(this)" type="button" data-parent="#accordion" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                                        Identificação do Prestador
+                                        <div class="bar-geral">
+                                            <div class="bar1"></div>
+                                            <div class="bar2"></div>
+                                        </div>
+                                      </button>
+                                    </h6>
+                                </div>
+                              <div class="card-body">
+                                <div class="row mb-3">                                    
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                                        <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                            <p class="m-0 ">Código do Prestador: <strong>51</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                                        <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                            <p class="m-0 ">Nome do Prestador: <strong>Marcelo Barreto</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                                        <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                            <p class="m-0 ">Cidade: <strong>Rio de Janeiro</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                                        <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                            <p class="m-0 ">UF: <strong>RJ</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                                        <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                            <p class="m-0 ">Sucursal: <strong>Rio de Janeiro</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              <div id="collapse-1" class="collapse" role="tabpanel" aria-labelledby="heading-1">
+                                <div class="card-body">
+                                    <div class="row mb-3">                                    
+                                        <div class="col-12"></div>
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                                            <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                                <p class="m-0 ">Grande Grupo: <strong>Oncoclínicas</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                                            <div class="border-lc d-flex justify-content-center box-id-prestador">
+                                                <p class="m-0 ">Período Base: <strong>12/2018 - 11/2019</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>  
+                        <div class="bg-blank">
+                            <div class="container-fluid">
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <div class="title-page">                                        
+                                            <h6>Diária Global</h6>
+                                        </div>
+                                    </div>          
+                                    <div class="col-lg-12"><hr></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 81.186.367,66" name="sinistro-total" autocomplete="off" disabled>
+                                            <label for="sinistro-total" class="label-name">
+                                                <span class="content-name">Sinistro Total</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="2227" name="senhas-calculo" autocomplete="off" disabled>
+                                            <label for="senhas-calculo" class="label-name">
+                                                <span class="content-name">Senhas para Cálculo</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 29.628.817,48" name="sinistro-calculo" autocomplete="off" disabled>
+                                            <label for="sinistro-calculo" class="label-name">
+                                                <span class="content-name">Sinistro para Cálculo</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-3">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="#REFI" name="meta-pmo" autocomplete="off" disabled>
+                                            <label for="meta-pmo" class="label-name">
+                                                <span class="content-name">Meta PMO - Redução de 10% do Sinistro</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-2">                                    
+                                        <p class="p-select">Negociação Concluída</p>
+                                        <select class="form-control h-35" disabled>
+                                            <option value="1">Selecione</option>
+                                            <option value="2" selected>Sim</option>                                   
+                                            <option value="3">Não</option>                                   
+                                        </select>
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input class="form-control form_date input-date h-24 used" value="19/03/2016" size="16" type="text" value="" maxlength="10" name="data-conclusao" onkeypress="mascaraData(this, event)" autocomplete="off" disabled>
+                                            <label for="data-conclusao" class="label-name">
+                                                <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                <span>Data Conclusão</span>
+                                            </label>
+                                        </div>                          
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-4">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="Modelo 1 - Internação + Taxa por Porte - UTI Agrupada" name="modelo-fechado" autocomplete="off" disabled>
+                                            <label for="modelo-fechado" class="label-name">
+                                                <span class="content-name">Modelo Fechado</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <div class="sub-title">
+                                            <h6>Internação Clínica</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="vlr-enfermaria" autocomplete="off" disabled>
+                                            <label for="vlr-enfermaria" class="label-name">
+                                                <span class="content-name">Vlr. Negociado Enfermaria</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-3">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="vlr-day-clinic" autocomplete="off" disabled>
+                                            <label for="vlr-day-clinic" class="label-name">
+                                                <span class="content-name">Vlr. Negociado Day Clinic</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-3">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="vlr-quarto" autocomplete="off" disabled>
+                                            <label for="vlr-quarto" class="label-name">
+                                                <span class="content-name">Vlr. Negociado Quarto</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-3">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="vlr-uti-agrupada" autocomplete="off" disabled>
+                                            <label for="vlr-uti-agrupada" class="label-name">
+                                                <span class="content-name">Vlr. Negociado UTI - Agrupada</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>                                    
+                                    <div class="col-lg-3">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="vlr-uti-adulta" autocomplete="off" disabled>
+                                            <label for="vlr-uti-adulta" class="label-name">
+                                                <span class="content-name">Vlr. Negociado UTI - Adulta</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>                                    
+                                    <div class="col-lg-3">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="vlr-uti-pediatrica-neonatal" autocomplete="off" disabled>
+                                            <label for="vlr-uti-pediatrica-neonatal" class="label-name">
+                                                <span class="content-name">Vlr. Negociado UTI - Pediátrica/Neonatal</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <div class="sub-title">
+                                            <h6>Valor Taxa de Porte Único</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="" value="" name="vlr" autocomplete="off">
+                                            <label for="vlr" class="label-name">
+                                                <span class="content-name">Valor</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <div class="sub-title">
+                                            <h6>Valor Taxa de Porte</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="porte-um" autocomplete="off" disabled>
+                                            <label for="porte-um" class="label-name">
+                                                <span class="content-name">Porte 1</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>        
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="porte-dois" autocomplete="off" disabled>
+                                            <label for="porte-dois" class="label-name">
+                                                <span class="content-name">Porte 2</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>        
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="porte-tres" autocomplete="off" disabled>
+                                            <label for="porte-tres" class="label-name">
+                                                <span class="content-name">Porte 3</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>        
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="porte-quatro" autocomplete="off" disabled>
+                                            <label for="porte-quatro" class="label-name">
+                                                <span class="content-name">Porte 4</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>        
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="porte-cinco" autocomplete="off" disabled>
+                                            <label for="porte-cinco" class="label-name">
+                                                <span class="content-name">Porte 5</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>        
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="porte-seis" autocomplete="off" disabled>
+                                            <label for="porte-seis" class="label-name">
+                                                <span class="content-name">Porte 6</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>        
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="porte-sete" autocomplete="off" disabled>
+                                            <label for="porte-sete" class="label-name">
+                                                <span class="content-name">Porte 7</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>        
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="porte-oito" autocomplete="off" disabled>
+                                            <label for="porte-oito" class="label-name">
+                                                <span class="content-name">Porte 8</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-12">
+                                        <div class="sub-title">
+                                            <h6>Informações Finais</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input type="text" class="used" value="R$ 1.100,10" name="eco.gerada" autocomplete="off" disabled>
+                                            <label for="eco-gerada" class="label-name">
+                                                <span class="content-name">Economia Gerada</span>
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="space"></div>   
+                                    <div class="col-lg-2">                                    
+                                        <div class="form">
+                                            <input class="form-control form_date input-date h-24 used" value="19/03/2016" size="16" type="text" maxlength="10" name="data-assinatura" onkeypress="mascaraData(this, event)" autocomplete="off" disabled="">
+                                            <label for="data-assiantura" class="label-name">
+                                                <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                <span>Data da Assinatura</span>
+                                            </label>
+                                        </div>                          
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="col-lg-12">
+                                        <label for="comentarios" class="comentarios">Observação</label>
+                                        <textarea class="form-control" id="brad-saude" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row btns-opcoes mt-4">
+                                    <div class="col-lg-12">
+                                        <button type="reset" value="Reset" name="button" class="btn btn-limpar float-left">Limpar</button>
+                                        <button type="button" name="button" class="btn btn-salvar float-right">Salvar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid btns-group mt-4 mb-3">
+                            <div class="row btns-opcoes">
+                                <div class="col-lg-12">
+                                    <button type="button" data-toggle="tooltip" data-placement="right" data-original-title="Voltar para Consulta" value="voltar" onclick="window.location.href='controle-de-negociacoes-listados.html'" name="button" class="btn btn-voltar float-left">Voltar</button>
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+        <script>
+
+        </script>
+    </body>
+</html>

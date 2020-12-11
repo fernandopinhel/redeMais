@@ -262,6 +262,7 @@ select.error{
     border-radius: 20px;
 }
 
+.w-80{width: 80px !important;}
 .w-98{width: 98px !important;}
 .w-150{width: 150px !important;}
 .w-155{width: 155px !important;}
@@ -3263,4 +3264,15 @@ td.actions-visible > div {
     }
   }
   
+  @media (min-width: 1280px) and (max-width: 1440px) {
+    label{font-size: 14px;}
+    .form-control{font-size: 14px;}
+    .p-select{font-size: 14px;}
+  }
+
+  @media (max-width: 1280px) {
+    label{font-size: 12px;}
+    .form-control{font-size: 12px;}
+    .p-select{font-size: 12px;}
+  }
 /* fim medias querys */
