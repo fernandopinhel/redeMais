@@ -1491,7 +1491,6 @@ li.sub-active > a{
 }
 
 /* fim resultado tabela */
-
 .actions-table {
     border: 1px solid;
     border-radius: 7px;
@@ -1611,6 +1610,56 @@ li.sub-active > a{
     transition: 0.6s all;
     cursor: pointer;
 }
+
+.actions-table-3{
+    border: 1px solid;
+    border-radius: 7px;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    transition: 0.6s all;
+    float: right;
+    right: 14px;
+}
+
+.actions-table-3:hover {
+    border: 1px solid;
+    border-radius: 7px;
+    text-align: center;
+    background: #000;
+    font-weight: 500;
+    transition: 0.6s all;
+    cursor: pointer;
+}
+
+.actions-table-3 .dropdown-menu {
+    padding: 10px !important;
+    background: #F6F7FB;
+    transform: translate3d(-137px, 31px, 0px) !important;
+    border-color:#000;
+    top: 10px !important;
+}
+
+.actions-table-3 .dropdown-menu > span > a {color: #000;}
+
+.actions-table-3:hover > button {color: #fff;}
+
+.actions-table-3:hover button .options span {background: #fff;}
+
+.actions-table-3 button .options {float: right;}
+
+.actions-table-3 button .options span {
+    background: #000;
+    width: 4px;
+    height: 4px;
+    margin-top: 3px;
+    display: block;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    transition: 0.6s all;
+}
+
 
 .td-check > .ex-checkbox{
     position: relative;
