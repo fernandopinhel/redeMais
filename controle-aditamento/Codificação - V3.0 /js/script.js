@@ -1,3 +1,33 @@
+// datepicker mes e ano
+$('#datepickerMes').datetimepicker({
+  language:  'pt-BR',
+  format: "mm",
+  startView: 3,
+  minView: 3,
+  forceParse: 0
+});
+
+$('#datepickerAno').datetimepicker({
+  language:  'pt-BR',
+  format: "yyyy",
+  startView: 4,
+  minView: 4,
+  forceParse: 0
+});
+
+$('#datepickerMesAno').datetimepicker({
+language:  'pt-BR',
+format: "mm/yyyy",
+startView: 3,
+minView: 3,  
+startDate:'01/2010',
+forceParse: 0
+// weekStart: 1,
+// todayHighlight: 1,
+// todayBtn: 1
+});
+// fim datepicker mes e ano
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })

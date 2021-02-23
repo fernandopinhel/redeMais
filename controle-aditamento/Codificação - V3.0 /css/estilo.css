@@ -96,6 +96,8 @@ a{outline: 0;}
 
 .box-add > .row > .col-sm-6:first-child{padding-top: 18px; padding-left: 33px;}
 
+.ultimas > small{color: #1e2933; padding-left: 20px;}
+
 small{
   font-size: 10px;
   color: red;
@@ -167,6 +169,7 @@ small{
   border: 1px solid #edeff2;
 }
 
+.mr-20{margin-right: 20px;}
 /* Fim Geral */
 
 /* accordion multilistas abertas painel */
