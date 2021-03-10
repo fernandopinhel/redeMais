@@ -90,7 +90,8 @@
           <ul class="collapse show list-unstyled" id="relatoriosSubmenu">
             <li><a href="relatorio-controle.html">Relatório de Controle</a></li>
             <li><a href="relatorio-nao-listados.html">Relatório Não Listados</a></li>
-            <li class="active"><a href="relatorio-analitico.html">Relatório Analítico</a></li>
+            <li><a href="relatorio-ranking-prestadores.html">Relatório de Ranking de Prestadores</a></li>
+            <li class="active"><a href="relatorio-sla-pmo-de-aditivos.html">Relatório - SLA do PMO de Aditivos</a></li>
           </ul>
         </li>
         <li>
@@ -103,51 +104,28 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="painel-principal.html">Painel</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Relatório Analítico de Prestadores</li>
+          <li class="breadcrumb-item active" aria-current="page">Relatório - SLA do PMO de Aditivos</li>
         </ol>
       </nav>
       <div class="container-fluid">
         <div class="title-page row">
           <div class="col-lg-12">
-            <h2>Relatório Analítico de Prestadores</h2>
+            <h2>Relatório - SLA do PMO de Aditivos</h2>
+            <small>DATA DA GERAÇÃO: 10/03/2021</small>
           </div>
-        </div>
+        </div>        
         <div class="clear"></div>
         <form action="">
           <div class="row">
             <div class="clear"></div>
             <div class="col-lg-2">
-              <div class="form-group mb-0">
-                <label for="dtp_input1">Data Início</label>
-                <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                  <label for="dtp_input1" class="icon-dt-apresentacao"><span
-                      class="input-group-addon span-date icon-doc-calendario" aria-hidden="true"></span></label>
-                  <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10"
-                    name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder="  /    /  ">
-                </div>
-                <input type="hidden" id="dtp_input1" value=""><br>
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <div class="form-group mb-0">
-                <label for="dtp_input1">Data Fim</label>
-                <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                  <label for="dtp_input1" class="icon-dt-apresentacao"><span
-                      class="input-group-addon span-date icon-doc-calendario" aria-hidden="true"></span></label>
-                  <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10"
-                    name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder="  /    /  ">
-                </div>
-                <input type="hidden" id="dtp_input1" value=""><br>
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <label>Trimestre</label>
+              <label>Sucursal</label>
               <div class="clearboth"></div>
               <select class="formcontrol selectpicker" multiple data-live-search="true">
-                <option>1º Trimestre</option>
-                <option>2º Trimestre</option>
-                <option>3º Trimestre</option>
-                <option>4º Trimestre</option>
+                <option>Sucursal 1</option>
+                <option>Sucursal 2</option>
+                <option>Sucursal 3</option>
+                <option>Sucursal 4</option>
               </select>
             </div>
             <div class="col-lg-4">
