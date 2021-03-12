@@ -81,7 +81,7 @@
           <ul class="collapse list-unstyled" id="processosSubmenu">
             <li><a href="painel-de-controle.html">Controle de Negociações</a></li>
             <li><a href="painel-de-controle-nao-listados.html">Controle de Neg. Não Listados</a></li>
-            <li><a href="reajuste-prestadores.html" class="menu-principal">Reajuste dos Prestadores</a></li>
+            <li><a href="reajuste-prestadores.html" class="menu-principal">Manutenção da data de Reajuste do Prestador</a></li>
             <li><a href="congelamento-relatorios.html">Congelamento Relatórios</a></li>
           </ul>
         </li>
@@ -124,12 +124,24 @@
               <div class="col-lg-2">
                 <label>Trimestre</label>
                 <div class="clearboth"></div>
-                <select class="formcontrol selectpicker" multiple data-live-search="true">
+                <select class="formcontrol selectpicker" data-live-search="true">
                   <option>1º Trimestre</option>
                   <option>2º Trimestre</option>
                   <option>3º Trimestre</option>
                   <option>4º Trimestre</option>
                 </select>
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group mb-0">
+                  <label for="dtp_input1">Data</label>
+                  <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
+                    <label for="dtp_input1" class="icon-dt-apresentacao"><span
+                        class="input-group-addon span-date icon-doc-calendario" aria-hidden="true"></span></label>
+                    <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10"
+                      name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder="  /    /  ">
+                  </div>
+                  <input type="hidden" id="dtp_input1" value=""><br>
+                </div>
               </div>
               <div class="col-lg-2">
                 <label>Sucursal</label>

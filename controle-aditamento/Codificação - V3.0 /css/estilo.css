@@ -67,6 +67,8 @@ a:focus, a:active{text-decoration: none; outline:0;}
 
 a{outline: 0;}
 
+.glyphicon{font-size: 16px;}
+
 .no-margin{margin: 0!important;}
 
 .box-white{

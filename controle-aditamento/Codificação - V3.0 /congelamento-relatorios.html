@@ -81,7 +81,7 @@
           <ul class="collapse show list-unstyled" id="processosSubmenu">
             <li><a href="painel-de-controle.html">Controle de Negociações</a></li>
             <li><a href="painel-de-controle-nao-listados.html">Controle de Neg. Não Listados</a></li>
-            <li><a href="reajuste-prestadores.html" class="menu-principal">Reajuste dos Prestadores</a></li>
+            <li><a href="reajuste-prestadores.html" class="menu-principal">Manutenção da data de Reajuste do Prestador</a></li>
             <li class="active"><a href="congelamento-relatorios.html">Congelamento Relatórios</a></li>
           </ul>
         </li>
@@ -100,10 +100,11 @@
         </li>
       </ul>
     </nav>
-    <section class="container-fluid">
+    <section class="container-fluid busca-avancada">
+
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="painel-de-controle.html">Painel de Controle</a></li>
+          <li class="breadcrumb-item"><a href="painel-principal.html">Painel</a></li>
           <li class="breadcrumb-item active" aria-current="page">Congelamento de Relatórios</li>
         </ol>
       </nav>
@@ -111,217 +112,213 @@
         <div class="title-page row">
           <div class="col-lg-12">
             <h2>Congelamento de Relatórios</h2>
-            <div class="btn-voltar"><a href="painel-de-controle.html" title="Voltar"><span
-                  class="icon-seta-esquerda-c"></span>Voltar</a></div>
+            <div class="btn-voltar"><a href="#" title="Voltar"><span class="icon-seta-esquerda-c"></span>Voltar</a>
+            </div>
           </div>
         </div>
         <div class="clear"></div>
-        <div class="container-fluid pr-0 pl-0">
-          <div class="accordion mb-5" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="card">
-              <div class="card-header" role="tab" id="heading-1">
-                <h6 class="b-icon title-page">
-                  <button class="btn btn-link d-flex align-items-center" onclick="toggleFunction(this)" type="button"
-                    data-parent="#accordion" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false"
-                    aria-controls="collapse-1">
-                    Filtro
-                    <!-- <div class="bar-geral">
-                      <div class="bar1"></div>
-                      <div class="bar2"></div>
-                    </div> -->
-                  </button>
-                </h6>
-              </div>
-              <div class="card-body">
-                <div class="row mb-3">
-                  <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
-                    <label>Versão</label>
-                    <div class="clearboth"></div>
-                    <select class="formcontrol selectpicker" multiple data-live-search="true">
-                      <option>Versão 1</option>
-                      <option>Versão 2</option>
-                      <option>Versão 3</option>
-                      <option>Versão 4</option>
-                    </select>
-                  </div>
-                  <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
-                    <button type="button" class="btn btn-primary mt-20 mr-10">Buscar</button>
-                  </div>
+        <form action="">
+          <div class="row">
+            <div class="clear"></div>
+            <div class="col-lg-2">
+              <label>Trimestre</label>
+              <div class="clearboth"></div>
+              <select class="formcontrol selectpicker" data-live-search="true">
+                <option selected>Selecione</option>
+                <option>1º Trimestre</option>
+                <option>2º Trimestre</option>
+                <option>3º Trimestre</option>
+                <option>4º Trimestre</option>
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <div class="form-group mb-0">
+                <label for="dtp_input1">Ano</label>
+                <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
+                  <label for="dtp_input1" class="icon-dt-apresentacao"><span
+                      class="input-group-addon span-date icon-doc-calendario" aria-hidden="true"></span></label>
+                  <input class="form-control date form_date input-date" id="datepickerAno" size="16" type="text" value="" maxlength="10"
+                    name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder="">
                 </div>
+                <input type="hidden" id="dtp_input1" value=""><br>
               </div>
             </div>
-          </div>
-        </div>
-        <form action="" class="box-white" id="group-cards">
-          <div class="container-fluid premissas">
-            <div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="title-page mb-0">
-                    <h6>Premissas</h6>
-                    <small>Fonte: Cálculo Cesta Bradesco</small>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <hr>
-                </div>
-              </div>
-              <div class="row mt-5 mb-5">
-                <div class="col-lg-2">
-                  <label>Trimestre</label>
-                  <div class="clearboth"></div>
-                  <select class="formcontrol selectpicker" multiple data-live-search="true">
-                    <option>1º Trimestre</option>
-                    <option>2º Trimestre</option>
-                    <option>3º Trimestre</option>
-                    <option>4º Trimestre</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row mt-30">
-                <div class="row header-aba-busca-avancada">
-                  <div class="col-lg-12">
-                    <p class="title-registros">Itens encontrados: <span>100</span></p>
-                  </div>
-                </div>
-                <div class="bg-table table-responsive">
-                  <table class="table tables-adm">
-                    <thead>
-                      <tr>
-                        <th>Mês</th>
-                        <th>IPCA a.m.</th>
-                        <th>Fator IPCA (Inflação 80%)</th>
-                        <th>R$/Dólar</th>
-                        <th>Variação Dólar</th>
-                        <th>Fator Dólar (Inflação 20%)</th>
-                        <th>Fator Ponderado</th>
-                        <th>VCMH a.m.</th>
-                        <th>VCMH VCMH</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>201501</td>
-                        <td>1,24</td>
-                        <td>1,01</td>
-                        <td>2,63</td>
-                        <td>1,03</td>
-                        <td>1,0</td>
-                        <td>1,01</td>
-                        <td>0,83</td>
-                        <td>1,01</td>
-                      </tr>
-                      <tr class="separator">
-                        <td colspan="5"></td>
-                      </tr>
-                      <tr>
-                        <td>201501</td>
-                        <td>1,24</td>
-                        <td>1,01</td>
-                        <td>2,63</td>
-                        <td>1,03</td>
-                        <td>1,0</td>
-                        <td>1,01</td>
-                        <td>0,83</td>
-                        <td>1,01</td>
-                      </tr>
-                      <tr class="separator">
-                        <td colspan="5"></td>
-                      </tr>
-                      <tr>
-                        <td>201501</td>
-                        <td>1,24</td>
-                        <td>1,01</td>
-                        <td>2,63</td>
-                        <td>1,03</td>
-                        <td>1,0</td>
-                        <td>1,01</td>
-                        <td>0,83</td>
-                        <td>1,01</td>
-                      </tr>
-                      <tr class="separator">
-                        <td colspan="5"></td>
-                      </tr>
-                      <tr>
-                        <td>201501</td>
-                        <td>1,24</td>
-                        <td>1,01</td>
-                        <td>2,63</td>
-                        <td>1,03</td>
-                        <td>1,0</td>
-                        <td>1,01</td>
-                        <td>0,83</td>
-                        <td>1,01</td>
-                      </tr>
-                      <tr class="separator">
-                        <td colspan="5"></td>
-                      </tr>
-                      <tr>
-                        <td>201501</td>
-                        <td>1,24</td>
-                        <td>1,01</td>
-                        <td>2,63</td>
-                        <td>1,03</td>
-                        <td>1,0</td>
-                        <td>1,01</td>
-                        <td>0,83</td>
-                        <td>1,01</td>
-                      </tr>
-                      <tr class="separator">
-                        <td colspan="5"></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8 text-center">
-                      <ul class="pagination">
-                        <li>
-                          <a href="#" class="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                          </a>
-                        </li>
-                        <li><a href="#" class="prev"><span class="glyphicon glyphicon-chevron-left"
-                              aria-hidden="true"></span></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#" class="active">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">12</a></li>
-                        <li><a href="#" class="next"><span class="glyphicon glyphicon-chevron-right"
-                              aria-hidden="true"></span></a></li>
-                        <li>
-                          <a href="#" class="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-lg-2">
-                      <button type="button" class="btn btn-primary mt-20 pull-right">Salvar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-xs-12 col-lg-6 col-md-4 col-lg-2">
+              <label>Versão</label>
+              <div class="clearboth"></div>
+              <select class="formcontrol selectpicker" data-live-search="true">
+                <option selected>Selecione</option>
+                <option>Versão 1</option>
+                <option>Versão 2</option>
+                <option>Versão 3</option>
+                <option>Versão 4</option>
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <button type="button" class="btn btn-third mt-20">Limpar</button>
+              <button type="button" class="btn btn-primary mt-20 mr-10">Buscar</button>
             </div>
           </div>
         </form>
-        <div class="container-fluid btns-group mt-10 mb-3">
-          <div class="row btns-opcoes">
+
+        <div class="box-white mt-30">
+          <div class="row header-aba-busca-avancada">
             <div class="col-lg-12">
-              <button type="button" data-toggle="tooltip" data-placement="right"
-                data-original-title="Voltar para Consulta" value="voltar"
-                onclick="window.location.href='painel-de-controle.html'" name="button"
-                class="btn btn-voltar">Voltar</button>
+              <p class="title-registros">Itens encontrados: <span>4</span></p>
+            </div>
+          </div>
+          <div class="bg-table table-responsive">
+            <table class="table tables-adm">
+              <thead>
+                <tr>
+                  <th>Trimestre</th>
+                  <th>Ano</th>
+                  <th>Versão</th>                 
+                  <th class="larg-actions"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2º Trimestre</td>
+                  <td>2020</td>
+                  <td>Versão 1</td>                  
+                  <td class="actions">
+                    <div class="pull-right">
+                      <div class="menu">
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                      </div>
+                      <div class="menu-invisible">
+                        <a href="detalhes-congelamento-relatorios.html"><span class="icon-nav-busca" title="" data-toggle="tooltip"
+                            data-original-title="Visualizar"></span></a>
+                        <a href="detalhes-congelamento-relatorios.html"><span class="icon-nav-editar" title="" data-toggle="tooltip"
+                            data-original-title="Editar"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-trash" title="" data-toggle="tooltip"
+                          data-original-title="Excluir"></span></a>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </td>
+                </tr>
+                <tr class="separator">
+                  <td colspan="5"></td>
+                </tr>
+                <tr>
+                  <td>2º Trimestre</td>
+                  <td>2020</td>
+                  <td>Versão 1</td>                  
+                  <td class="actions">
+                    <div class="pull-right">
+                      <div class="menu">
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                      </div>
+                      <div class="menu-invisible">
+                        <a href="detalhes-congelamento-relatorios.html"><span class="icon-nav-busca" title="" data-toggle="tooltip"
+                            data-original-title="Visualizar"></span></a>
+                        <a href="detalhes-congelamento-relatorios.html"><span class="icon-nav-editar" title="" data-toggle="tooltip"
+                            data-original-title="Editar"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-trash" title="" data-toggle="tooltip"
+                          data-original-title="Excluir"></span></a>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </td>
+                </tr>
+                <tr class="separator">
+                  <td colspan="5"></td>
+                </tr>
+                <tr>
+                  <td>2º Trimestre</td>
+                  <td>2020</td>
+                  <td>Versão 1</td>                  
+                  <td class="actions">
+                    <div class="pull-right">
+                      <div class="menu">
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                      </div>
+                      <div class="menu-invisible">
+                        <a href="detalhes-congelamento-relatorios.html"><span class="icon-nav-busca" title="" data-toggle="tooltip"
+                            data-original-title="Visualizar"></span></a>
+                        <a href="detalhes-congelamento-relatorios.html"><span class="icon-nav-editar" title="" data-toggle="tooltip"
+                            data-original-title="Editar"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-trash" title="" data-toggle="tooltip"
+                          data-original-title="Excluir"></span></a>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </td>
+                </tr>
+                <tr class="separator">
+                  <td colspan="5"></td>
+                </tr>
+                <tr>
+                  <td>2º Trimestre</td>
+                  <td>2020</td>
+                  <td>Versão 1</td>                  
+                  <td class="actions">
+                    <div class="pull-right">
+                      <div class="menu">
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                      </div>
+                      <div class="menu-invisible">
+                        <a href="detalhes-congelamento-relatorios.html"><span class="icon-nav-busca" title="" data-toggle="tooltip"
+                            data-original-title="Visualizar"></span></a>
+                        <a href="detalhes-congelamento-relatorios.html"><span class="icon-nav-editar" title="" data-toggle="tooltip"
+                            data-original-title="Editar"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-trash" title="" data-toggle="tooltip"
+                          data-original-title="Excluir"></span></a>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </td>
+                </tr>
+                <tr class="separator">
+                  <td colspan="5"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-2"></div>
+              <div class="col-lg-8 text-center">
+                <ul class="pagination">
+                  <li>
+                    <a href="#" class="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li><a href="#" class="prev"><span class="glyphicon glyphicon-chevron-left"
+                        aria-hidden="true"></span></a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#" class="active">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">12</a></li>
+                  <li><a href="#" class="next"><span class="glyphicon glyphicon-chevron-right"
+                        aria-hidden="true"></span></a></li>
+                  <li>
+                    <a href="#" class="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
