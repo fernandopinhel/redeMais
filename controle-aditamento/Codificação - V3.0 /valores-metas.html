@@ -81,8 +81,9 @@
           <ul class="collapse list-unstyled" id="processosSubmenu">
             <li><a href="painel-de-controle.html">Controle de Negociações</a></li>
             <li><a href="painel-de-controle-nao-listados.html">Controle de Neg. Não Listados</a></li>
-            <li><a href="reajuste-prestadores.html" class="menu-principal">Manutenção da data de Reajuste do Prestador</a></li>
-            <li><a href="congelamento-relatorios.html">Congelamento Relatórios</a></li>
+            <li><a href="reajuste-prestadores.html" class="menu-principal">Manutenção da data de Reajuste do
+                Prestador</a></li>
+
           </ul>
         </li>
         <li>
@@ -121,6 +122,16 @@
           <div class="row">
             <div class="clear"></div>
             <div class="col-lg-2">
+              <label>Tipo de Aditivos</label>
+              <div class="clearboth"></div>
+              <select class="formcontrol selectpicker" multiple data-live-search="true">
+                <option>Quimioterapia</option>
+                <option>Ambulatório</option>
+                <option>Materiais e Medicamentos</option>
+                <option>Diária Global</option>
+              </select>
+            </div>
+            <div class="col-lg-2">
               <label>Trimestre</label>
               <div class="clearboth"></div>
               <select class="formcontrol selectpicker" data-live-search="true">
@@ -128,6 +139,7 @@
                 <option>2º Trimestre</option>
                 <option>3º Trimestre</option>
                 <option>4º Trimestre</option>
+                <option>Anual</option>
               </select>
             </div>
             <div class="col-lg-2">
@@ -136,8 +148,8 @@
                 <div class="input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
                   <label for="dtp_input1" class="icon-dt-apresentacao"><span
                       class="input-group-addon span-date icon-doc-calendario" aria-hidden="true"></span></label>
-                  <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10"
-                    name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder="  /    /  ">
+                  <input class="form-control date form_date input-date" id="datepickerAno" size="16" type="text"
+                    value="" maxlength="10" name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder=" Ano ">
                 </div>
                 <input type="hidden" id="dtp_input1" value=""><br>
               </div>
@@ -152,13 +164,7 @@
                 <option>Sucursal 4</option>
               </select>
             </div>
-            <div class="col-lg-2">
-              <div class="form-group">
-                <label>Valor de Meta</label>
-                <input type="text" class="form-control">
-              </div>
-            </div>
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <button type="button" class="btn btn-third mt-20">Limpar</button>
               <button type="button" class="btn btn-primary mt-20 mr-10">Buscar</button>
             </div>
@@ -175,42 +181,19 @@
             <table class="table tables-adm">
               <thead>
                 <tr>
+                  <th>Tipo de Aditivo</th>
                   <th>Trimestre</th>
                   <th>Data</th>
                   <th>Sucursal</th>
-                  <th>Valor de Meta</th>
                   <th class="larg-actions"></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>2º Trimestre</td>
-                  <td>10/10/2020</td>
-                  <td>RJ</td>
-                  <td>R$ 100.0000,00</td>
-                  <td class="actions">
-                    <div class="pull-right">
-                      <div class="menu">
-                        <span class="circle"></span>
-                        <span class="circle"></span>
-                        <span class="circle"></span>
-                      </div>
-                      <div class="menu-invisible">
-                        <a href="detalhes-vlr-meta.html"><span class="icon-nav-busca" title="" data-toggle="tooltip"
-                            data-original-title="Visualizar/Editar"></span></a>
-                      </div>
-                    </div>
-                    <div class="clear"></div>
-                  </td>
-                </tr>
-                <tr class="separator">
-                  <td colspan="5"></td>
-                </tr>
-                <tr>
+                  <td>Quimioterapia</td>
                   <td>1º Trimestre</td>
-                  <td>10/10/2020</td>
+                  <td>2020</td>
                   <td>RJ</td>
-                  <td>R$ 100.0000,00</td>
                   <td class="actions">
                     <div class="pull-right">
                       <div class="menu">
@@ -230,33 +213,56 @@
                   <td colspan="5"></td>
                 </tr>
                 <tr>
-                  <td>3º Trimestre</td>
-                  <td>10/10/2020</td>
-                  <td>RJ</td>
-                  <td>R$ 100.0000,00</td>
-                  <td class="actions">
-                    <div class="pull-right">
-                      <div class="menu">
-                        <span class="circle"></span>
-                        <span class="circle"></span>
-                        <span class="circle"></span>
-                      </div>
-                      <div class="menu-invisible">
-                        <a href="detalhes-vlr-meta.html"><span class="icon-nav-busca" title="" data-toggle="tooltip"
-                            data-original-title="Visualizar/Editar"></span></a>
-                      </div>
-                    </div>
-                    <div class="clear"></div>
-                  </td>
-                </tr>
-                <tr class="separator">
-                  <td colspan="5"></td>
-                </tr>
-                <tr>
+                  <td>Quimioterapia</td>
                   <td>2º Trimestre</td>
-                  <td>10/10/2020</td>
+                  <td>2020</td>
                   <td>RJ</td>
-                  <td>R$ 100.0000,00</td>
+                  <td class="actions">
+                    <div class="pull-right">
+                      <div class="menu">
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                      </div>
+                      <div class="menu-invisible">
+                        <a href="detalhes-vlr-meta.html"><span class="icon-nav-busca" title="" data-toggle="tooltip"
+                            data-original-title="Visualizar/Editar"></span></a>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </td>
+                </tr>
+                <tr class="separator">
+                  <td colspan="5"></td>
+                </tr>
+                <tr>
+                  <td>Quimioterapia</td>
+                  <td>3º Trimestre</td>
+                  <td>2020</td>
+                  <td>RJ</td>
+                  <td class="actions">
+                    <div class="pull-right">
+                      <div class="menu">
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                      </div>
+                      <div class="menu-invisible">
+                        <a href="detalhes-vlr-meta.html"><span class="icon-nav-busca" title="" data-toggle="tooltip"
+                            data-original-title="Visualizar/Editar"></span></a>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </td>
+                </tr>
+                <tr class="separator">
+                  <td colspan="5"></td>
+                </tr>
+                <tr>
+                  <td>Quimioterapia</td>
+                  <td>4º Trimestre</td>
+                  <td>2020</td>
+                  <td>RJ</td>
                   <td class="actions">
                     <div class="pull-right">
                       <div class="menu">
