@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#4338ca">
+    <meta name="description" content="Dossiê de uma ficha de aditivo.">
+    <title>Ficha | Orla Esteira</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="app">
+      <aside class="rail"></aside>
+      <div class="main-col">
+        <header class="topbar"></header>
+        <main class="content" id="conteudo" tabindex="-1">
+          <div id="trilha"></div>
+          <section class="card" id="cabecalho" aria-labelledby="pagina-titulo">
+            <h1 id="pagina-titulo">Ficha</h1>
+          </section>
+
+          <div class="dossie mt">
+            <div id="abas" data-tabs-memo="ficha">
+              <div class="tabs__list" role="tablist" aria-label="Partes da ficha">
+                <button class="tabs__tab" type="button" role="tab" id="aba-resumo" data-aba="resumo" aria-controls="painel-resumo">Resumo</button>
+                <button class="tabs__tab" type="button" role="tab" id="aba-aditivos" data-aba="aditivos" aria-controls="painel-aditivos">Aditivos</button>
+                <button class="tabs__tab" type="button" role="tab" id="aba-anexo" data-aba="anexo" aria-controls="painel-anexo">Anexo Rede Prima</button>
+                <button class="tabs__tab" type="button" role="tab" id="aba-mov" data-aba="movimentacao" aria-controls="painel-mov">Movimentação</button>
+              </div>
+              <div role="tabpanel" id="painel-resumo" aria-labelledby="aba-resumo" tabindex="0">
+                <section class="card" aria-labelledby="prest-titulo">
+                  <h2 id="prest-titulo">Prestador</h2>
+                  <dl class="facts" id="fatos-prestador"></dl>
+                </section>
+                <section class="card" aria-labelledby="neg-titulo">
+                  <h2 id="neg-titulo">Negociação</h2>
+                  <dl class="facts" id="fatos-negociacao"></dl>
+                  <h3 class="mt">Justificativa</h3>
+                  <p id="justificativa"></p>
+                </section>
+              </div>
+              <section class="card" role="tabpanel" id="painel-aditivos" aria-labelledby="aba-aditivos" tabindex="0" hidden>
+                <h2>Aditivos</h2>
+                <div id="aditivos"></div>
+              </section>
+              <section class="card" role="tabpanel" id="painel-anexo" aria-labelledby="aba-anexo" tabindex="0" hidden>
+                <h2>Anexo Rede Prima</h2>
+                <div id="anexo"></div>
+              </section>
+              <section class="card" role="tabpanel" id="painel-mov" aria-labelledby="aba-mov" tabindex="0" hidden>
+                <h2>Movimentação</h2>
+                <ol class="timeline" id="linha-tempo"></ol>
+              </section>
+            </div>
+            <aside class="dossie__side" aria-label="Etapa atual e ações">
+              <section class="card action-card" id="acoes"></section>
+            </aside>
+          </div>
+        </main>
+        <footer class="app-foot"></footer>
+      </div>
+    </div>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ficha.js"></script>
+  </body>
+</html>

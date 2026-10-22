@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0e6b57">
+    <meta name="description" content="Manutenção do mês de reajuste dos prestadores.">
+    <title>Reajustes | Orla Placar</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="app-header"></header>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div class="page-head">
+        <div class="page-head__text">
+          <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-calendar"/></svg> Reajustes</span>
+          <h1>Datas de reajuste</h1>
+          <p>O mês de reajuste de cada prestador orienta quando abrir uma nova negociação.</p>
+        </div>
+        <div class="page-head__actions">
+          <button class="btn" type="button" id="rel-interno"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-download"/></svg> Relatório interno</button>
+          <button class="btn" type="button" id="rel-ans"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-download"/></svg> Relatório para a agência reguladora</button>
+        </div>
+      </div>
+
+      <form class="card filters" id="filtros" novalidate aria-labelledby="filtros-titulo">
+        <h2 class="visually-hidden" id="filtros-titulo">Filtros</h2>
+        <div class="form-grid">
+          <div class="field span-3">
+            <label for="f-busca">Prestador ou cidade</label>
+            <input class="input" id="f-busca" name="busca" type="search" autocomplete="off">
+          </div>
+          <div class="field span-3">
+            <label for="f-sucursal">Sucursal</label>
+            <select class="select" id="f-sucursal" name="sucursal"></select>
+          </div>
+          <div class="field span-2">
+            <label for="f-uf">UF</label>
+            <select class="select" id="f-uf" name="uf"></select>
+          </div>
+          <div class="field span-2">
+            <label for="f-indice">Índice</label>
+            <select class="select" id="f-indice" name="indice"></select>
+          </div>
+          <div class="field span-2">
+            <label for="f-de">Reajuste a partir de</label>
+            <input class="input" id="f-de" name="de" type="month" placeholder="AAAA-MM">
+          </div>
+          <div class="field span-2">
+            <label for="f-ate">Reajuste até</label>
+            <input class="input" id="f-ate" name="ate" type="month" placeholder="AAAA-MM">
+          </div>
+        </div>
+        <div class="filters__actions">
+          <button class="btn" type="button" id="limpar">Limpar filtros</button>
+          <button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-search"/></svg> Filtrar</button>
+        </div>
+      </form>
+
+      <section class="card" aria-labelledby="resultado-titulo">
+        <div class="card__head">
+          <div>
+            <h2 id="resultado-titulo">Prestadores</h2>
+            <p id="resultado-info" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="alert alert--info" id="lote" hidden>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-check-circle"/></svg>
+          <div class="alert__body cluster">
+            <p id="lote-info" aria-live="polite"></p>
+            <button class="btn btn--sm btn--primary" type="button" id="alterar-lote">Alterar reajuste dos selecionados</button>
+            <button class="btn btn--sm" type="button" id="limpar-selecao">Limpar seleção</button>
+          </div>
+        </div>
+        <div id="resultado"></div>
+      </section>
+    </main>
+
+    <footer class="app-foot"></footer>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/reajustes.js"></script>
+  </body>
+</html>

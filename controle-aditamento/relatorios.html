@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0e6b57">
+    <meta name="description" content="Relatórios do trimestre, ranking de prestadores, prazo de assinatura e congelamento.">
+    <title>Relatórios | Orla Placar</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="app-header"></header>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div class="page-head">
+        <div class="page-head__text">
+          <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-chart"/></svg> Relatórios</span>
+          <h1>Relatórios</h1>
+          <p>Todos usam o trimestre escolhido na faixa do topo.</p>
+        </div>
+      </div>
+
+      <div id="relatorios" data-tabs-memo="relatorios">
+        <div class="tabs__list" role="tablist" aria-label="Relatórios">
+          <button class="tabs__tab" type="button" role="tab" id="aba-controle" data-aba="controle" aria-controls="painel-controle"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-table"/></svg> Controle</button>
+          <button class="tabs__tab" type="button" role="tab" id="aba-ranking" data-aba="ranking" aria-controls="painel-ranking"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-trophy"/></svg> Ranking de prestadores</button>
+          <button class="tabs__tab" type="button" role="tab" id="aba-sla" data-aba="sla" aria-controls="painel-sla"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-clock"/></svg> Prazo de assinatura</button>
+          <button class="tabs__tab" type="button" role="tab" id="aba-cong" data-aba="congelamentos" aria-controls="painel-cong"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-snowflake"/></svg> Congelamentos</button>
+        </div>
+
+        <section class="card" role="tabpanel" id="painel-controle" aria-labelledby="aba-controle" tabindex="0">
+          <div class="card__head">
+            <div>
+              <h2>Relatório de controle do <span id="controle-titulo-q"></span></h2>
+              <p id="controle-resumo"></p>
+            </div>
+            <div class="btn-row no-print">
+              <button class="btn btn--sm" type="button" id="controle-imprimir"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-print"/></svg> Imprimir</button>
+              <button class="btn btn--sm" type="button" id="controle-csv"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-download"/></svg> Exportar CSV</button>
+            </div>
+          </div>
+          <div id="controle-tabela"></div>
+        </section>
+
+        <section class="card" role="tabpanel" id="painel-ranking" aria-labelledby="aba-ranking" tabindex="0" hidden>
+          <div class="card__head">
+            <div>
+              <h2>Ranking de prestadores</h2>
+              <p id="ranking-legenda"></p>
+            </div>
+            <div class="btn-row">
+              <fieldset class="segmented" id="ranking-periodo">
+                <legend>Período</legend>
+                <label><input type="radio" name="periodo" value="tri" checked> Trimestre</label>
+                <label><input type="radio" name="periodo" value="ano"> Ano</label>
+              </fieldset>
+              <button class="btn btn--sm" type="button" id="ranking-csv"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-download"/></svg> Exportar CSV</button>
+            </div>
+          </div>
+          <div id="ranking-barras" class="mt-sm"></div>
+          <div id="ranking-tabela" class="mt"></div>
+        </section>
+
+        <section class="card" role="tabpanel" id="painel-sla" aria-labelledby="aba-sla" tabindex="0" hidden>
+          <div class="card__head">
+            <div>
+              <h2>Prazo entre o acordo e a assinatura</h2>
+              <p>O alvo é assinar o aditivo em até 30 dias depois do acordo, em pelo menos 80% dos casos.</p>
+            </div>
+            <button class="btn btn--sm" type="button" id="sla-csv"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-download"/></svg> Exportar CSV</button>
+          </div>
+          <div id="sla-tabela"></div>
+        </section>
+
+        <section class="card" role="tabpanel" id="painel-cong" aria-labelledby="aba-cong" tabindex="0" hidden>
+          <div class="card__head">
+            <div>
+              <h2>Relatórios congelados</h2>
+              <p>Uma foto dos números de um trimestre, para o fechamento não mudar depois.</p>
+            </div>
+            <button class="btn btn--primary btn--sm" type="button" id="congelar"></button>
+          </div>
+          <div id="congelamentos"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="app-foot"></footer>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/relatorios.js"></script>
+  </body>
+</html>
