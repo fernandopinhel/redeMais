@@ -30,41 +30,45 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgb(255 255 255 / .86);
+  background: rgb(255 255 255 / .9);
   border-bottom: 1px solid var(--border);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
+/* Topo, faixa do trimestre e conteúdo alinhados na mesma largura. */
 .app-header__bar {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: clamp(1rem, 2vw, 2rem);
   max-width: var(--content-max);
   min-height: var(--header-h);
   margin-inline: auto;
   padding: .5rem clamp(1rem, 3vw, 2rem);
 }
-.app-header__end { display: flex; align-items: center; gap: .5rem; margin-left: auto; }
+.app-header__bar > .brand { flex: none; }
+.app-header__end { display: flex; align-items: center; gap: .35rem; margin-left: auto; flex: none; }
 .btn.app-header__menu { display: none; }
 
-.app-nav ul { display: flex; flex-wrap: nowrap; gap: .1rem; margin: 0; padding: 0; list-style: none; }
+.app-nav { min-width: 0; }
+.app-nav ul { display: flex; flex-wrap: nowrap; gap: .15rem; margin: 0; padding: 0; list-style: none; }
 .app-nav a {
   display: inline-flex;
   align-items: center;
   gap: .45rem;
   min-height: 40px;
-  padding: .4rem .7rem;
-  border-radius: 999px;
+  padding: .4rem .75rem;
+  border-radius: var(--radius-sm);
   white-space: nowrap;
-  color: var(--text);
+  color: var(--text-muted);
   font-size: var(--text-md);
   font-weight: 500;
   text-decoration: none;
+  transition: background-color .15s, color .15s;
 }
-.app-nav a .icon { color: var(--text-muted); }
-.app-nav a:hover { background: var(--surface-3); }
-.app-nav a[aria-current="page"] { background: var(--accent-700); color: #fff; }
-.app-nav a[aria-current="page"] .icon { color: var(--accent-200); }
+.app-nav a .icon { width: 1.15em; height: 1.15em; }
+.app-nav a:hover { background: var(--surface-3); color: var(--text); }
+.app-nav a[aria-current="page"] { background: var(--accent-100); color: var(--accent-800); }
+.app-nav a[aria-current="page"] .icon { color: var(--accent-700); }
 .app-nav__head { display: none; }
 
 /* Faixa da temporada: o trimestre em foco */
@@ -85,7 +89,7 @@
 .season__label { display: inline-flex; align-items: center; gap: .4rem; font-weight: 500; color: var(--accent-800); }
 .season .segmented label { min-height: 32px; padding: .2rem .75rem; }
 .season .select { width: auto; min-height: 36px; padding-block: .25rem; font-size: var(--text-sm); }
-.season__clock { margin-left: auto; color: var(--text-muted); }
+.season__clock { margin: 0 0 0 auto; color: var(--text-muted); }
 .season__clock strong { color: var(--text); font-weight: 500; }
 
 .content {
@@ -94,10 +98,8 @@
   padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem) 3rem;
 }
 
-@media (max-width: 1500px) {
-  .app-header .user-box__name { display: none; }
-}
-@media (max-width: 1100px) {
+/* Abaixo de 1180 px os sete itens não cabem com folga: o menu vira gaveta. */
+@media (max-width: 1180px) {
   /* backdrop-filter criaria um bloco de contenção e prenderia a gaveta dentro do cabeçalho */
   .app-header { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; }
   .app-header:has(.app-nav.is-open) { z-index: 70; }
@@ -117,8 +119,10 @@
   }
   .app-nav.is-open { transform: none; visibility: visible; transition: transform .25s var(--ease); }
   .app-nav__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-  .app-nav ul { flex-direction: column; }
-  .app-nav a { width: 100%; min-height: 46px; border-radius: var(--radius-sm); }
+  .app-nav ul { flex-direction: column; gap: .25rem; }
+  .app-nav a { width: 100%; min-height: 46px; color: var(--text); }
+}
+@media (max-width: 720px) {
   .season__clock { margin-left: 0; width: 100%; }
 }
 @media (max-width: 560px) {

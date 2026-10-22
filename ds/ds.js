@@ -1188,12 +1188,24 @@
     return raiz;
   }
 
-  // Avatar, nome, perfil e botão de sair.
-  function userBox(u, classe) {
-    return h('div', { class: 'user-box ' + (classe || '') },
-      h('span', { class: 'avatar', 'aria-hidden': 'true', text: iniciais(u.nome) }),
-      h('span', { class: 'user-box__name' }, h('strong', { text: u.nome }), h('span', { text: perfilNoApp(u) })),
-      h('button', { type: 'button', class: 'btn btn--sm user-box__sair', onClick: sair }, icon('logout'), h('span', { class: 'user-box__sair-txt', text: 'Sair' })));
+  // Conta: botão com avatar e primeiro nome que abre nome completo, perfil e "Sair".
+  function userBox(u) {
+    const painelId = uid('conta');
+    const primeiro = String(u.nome).split(' ')[0];
+    const botao = h('button', { type: 'button', class: 'account__btn', 'aria-controls': painelId },
+      h('span', { class: 'avatar avatar--sm', 'aria-hidden': 'true', text: iniciais(u.nome) }),
+      h('span', { class: 'account__name', text: primeiro }),
+      h('span', { class: 'visually-hidden', text: ', conta e sair' }),
+      icon('chevron-down'));
+    const painel = h('div', { class: 'menu__panel account__panel', id: painelId },
+      h('div', { class: 'account__who' },
+        h('span', { class: 'avatar', 'aria-hidden': 'true', text: iniciais(u.nome) }),
+        h('strong', { text: u.nome }),
+        h('span', { text: perfilNoApp(u) }),
+        h('span', { text: 'Matrícula ' + u.matricula })),
+      h('button', { type: 'button', class: 'btn btn--block', onClick: sair }, icon('logout'), 'Sair'));
+    disclosure(botao, painel);
+    return h('div', { class: 'menu account' }, botao, painel);
   }
 
   function brand(classe) {

@@ -210,7 +210,7 @@ a:hover { text-decoration-thickness: 2px; }
   text-decoration: none;
 }
 .brand__mark { width: 36px; height: 36px; border-radius: 10px; }
-.brand__text { display: grid; line-height: 1.15; }
+.brand__text { display: grid; line-height: 1.15; white-space: nowrap; }
 .brand__name { font-family: var(--font-display); font-weight: 600; font-size: 1.0625rem; letter-spacing: -.01em; }
 .brand__sub { font-size: .8125rem; color: var(--text-muted); }
 
@@ -1060,17 +1060,32 @@ th[aria-sort="ascending"] .sort-btn, th[aria-sort="descending"] .sort-btn { colo
 .app-link small { color: var(--text-muted); font-size: .8125rem; }
 .app-link[aria-current="page"] { background: var(--accent-50); box-shadow: inset 0 0 0 1px var(--accent-200); }
 
-/* Pessoa logada */
-.user-box { display: flex; align-items: center; gap: .65rem; }
-.user-box__name { display: grid; line-height: 1.2; font-size: var(--text-sm); }
-.user-box__name strong { font-weight: 500; }
-.user-box__name span { color: var(--text-muted); font-size: .8125rem; }
-@media (max-width: 1023.98px) { .user-box__name { display: none; } }
-@media (max-width: 560px) {
-  .user-box .avatar { display: none; }
-  .user-box__sair { width: 36px; padding: 0; }
-  .user-box__sair-txt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* Conta da pessoa logada: avatar e primeiro nome; nome completo, perfil e "Sair" no menu */
+.account__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  min-height: 44px;
+  padding: .25rem .6rem .25rem .3rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: var(--text-md);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
 }
+.account__btn:hover, .account__btn[aria-expanded="true"] { background: var(--surface-3); }
+.account__btn .icon { width: 1em; height: 1em; color: var(--text-muted); transition: transform .15s; }
+.account__btn[aria-expanded="true"] .icon { transform: rotate(180deg); }
+.account__panel { min-width: 280px; padding: 1rem; }
+.account__who { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .25rem .75rem; align-items: center; margin-bottom: .9rem; padding-bottom: .9rem; border-bottom: 1px solid var(--border); }
+.account__who .avatar { grid-row: span 3; width: 44px; height: 44px; font-size: .9375rem; }
+.account__who strong { font-weight: 600; line-height: 1.25; }
+.account__who span { font-size: .8125rem; color: var(--text-muted); line-height: 1.3; }
+@media (max-width: 640px) { .account__name { display: none; } .account__btn { padding-right: .4rem; } }
 
 /* ---------------------------------------------------------- Login escuro */
 .login {
