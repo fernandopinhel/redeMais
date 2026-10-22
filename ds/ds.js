@@ -1302,7 +1302,7 @@
     const busca = h('input', { class: 'input', type: 'search', id: buscaId, placeholder: 'Buscar', autocomplete: 'off' });
     const filtrosEls = (op.filtros || []).map((f) => {
       const id = uid('filtro');
-      const sel = h('select', { class: 'select select--sm', id, 'aria-label': f.label });
+      const sel = h('select', { class: 'select', id, 'aria-label': f.label });
       selectOptions(sel, typeof f.opcoes === 'function' ? f.opcoes() : f.opcoes, f.todos || 'Todos: ' + f.label.toLowerCase());
       if (f.inicial) sel.value = f.inicial;
       sel.addEventListener('change', atualizar);

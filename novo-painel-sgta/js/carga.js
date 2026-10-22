@@ -31,7 +31,7 @@
 
   arquivo.addEventListener('change', () => {
     const f = arquivo.files[0];
-    document.getElementById('arquivo-nome').textContent = f ? f.name : 'Nenhum arquivo escolhido.';
+    document.getElementById('arquivo-nome').textContent = f ? 'Pronto para carregar: ' + f.name + '.' : '';
   });
 
   form.addEventListener('submit', (ev) => {
@@ -67,7 +67,7 @@
       form.removeAttribute('aria-busy');
       DS.fill(enviar, icon('upload'), 'Carregar base');
       form.reset();
-      document.getElementById('arquivo-nome').textContent = 'Nenhum arquivo escolhido.';
+      document.getElementById('arquivo-nome').textContent = '';
       DS.toast('Base carregada: protocolo ' + nova.protocolo + ', ' + nova.linhas + ' linhas lidas.');
     }, 1100);
   });

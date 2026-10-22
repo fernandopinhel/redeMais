@@ -38,11 +38,11 @@
       <form class="card filters" id="filtros" novalidate aria-labelledby="filtros-titulo">
         <h2 class="visually-hidden" id="filtros-titulo">Filtros</h2>
         <div class="form-grid">
-          <div class="field span-3">
+          <div class="field span-4">
             <label for="f-busca">Prestador ou cidade</label>
             <input class="input" id="f-busca" name="busca" type="search" autocomplete="off">
           </div>
-          <div class="field span-3">
+          <div class="field span-4">
             <label for="f-sucursal">Sucursal</label>
             <select class="select" id="f-sucursal" name="sucursal"></select>
           </div>
@@ -54,18 +54,18 @@
             <label for="f-indice">Índice</label>
             <select class="select" id="f-indice" name="indice"></select>
           </div>
-          <div class="field span-2">
+          <div class="field span-3">
             <label for="f-de">Reajuste a partir de</label>
             <input class="input" id="f-de" name="de" type="month" placeholder="AAAA-MM">
           </div>
-          <div class="field span-2">
+          <div class="field span-3">
             <label for="f-ate">Reajuste até</label>
             <input class="input" id="f-ate" name="ate" type="month" placeholder="AAAA-MM">
           </div>
-        </div>
-        <div class="filters__actions">
-          <button class="btn" type="button" id="limpar">Limpar filtros</button>
-          <button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-search"/></svg> Filtrar</button>
+          <div class="filters__actions filters__actions--inline span-6">
+            <button class="btn" type="button" id="limpar">Limpar filtros</button>
+            <button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-search"/></svg> Filtrar</button>
+          </div>
         </div>
       </form>
 
