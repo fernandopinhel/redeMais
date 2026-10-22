@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#a8431c">
+    <meta name="description" content="Cálculo de economia das negociações de pacotes.">
+    <title>Economia | Orla Mesa</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="app-top"></header>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div class="page-head">
+        <div class="page-head__text">
+          <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-coin"/></svg> Economia</span>
+          <h1>Cálculo de economia</h1>
+          <p>Do potencial ao implantado: quanto as negociações já valem e onde a economia se perde no caminho.</p>
+        </div>
+        <div class="page-head__actions">
+          <button class="btn" type="button" id="csv-tipo"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-download"/></svg> Por tipo (CSV)</button>
+          <button class="btn" type="button" id="csv-neg"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-download"/></svg> Por negociação (CSV)</button>
+        </div>
+      </div>
+
+      <form class="card filters" id="filtros" novalidate aria-labelledby="filtros-titulo">
+        <h2 class="visually-hidden" id="filtros-titulo">Filtros</h2>
+        <div class="form-grid">
+          <div class="field span-4"><label for="f-tipo">Tipo de negociação</label><select class="select" id="f-tipo" name="tipo"></select></div>
+          <div class="field span-4"><label for="f-sucursal">Sucursal</label><select class="select" id="f-sucursal" name="sucursal"></select></div>
+        </div>
+      </form>
+
+      <section class="card" aria-labelledby="funil-titulo">
+        <h2 id="funil-titulo">Funil de economia</h2>
+        <ul class="funnel" id="funil" aria-live="polite"></ul>
+      </section>
+
+      <div class="grid-2 mt">
+        <section class="card" aria-labelledby="barras-titulo">
+          <h2 id="barras-titulo">Economia negociada por tipo</h2>
+          <p class="hint">Os mesmos números estão na tabela ao lado.</p>
+          <div id="barras" class="mt-sm"></div>
+        </section>
+        <section class="card" aria-labelledby="tipo-titulo">
+          <h2 id="tipo-titulo">Por tipo de negociação</h2>
+          <div id="por-tipo"></div>
+        </section>
+      </div>
+
+      <section class="card mt" aria-labelledby="neg-titulo">
+        <h2 id="neg-titulo">Por negociação</h2>
+        <div id="por-negociacao"></div>
+      </section>
+    </main>
+
+    <footer class="app-foot"></footer>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/economia.js"></script>
+  </body>
+</html>

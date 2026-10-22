@@ -625,6 +625,12 @@
       document.body.appendChild(dlg);
       applyMasks(dlg);
       dlg.showModal();
+      // Corpo com rolagem e sem nada focável: precisa receber foco para rolar pelo teclado.
+      if (corpo.scrollHeight > corpo.clientHeight && !corpo.querySelector('a, button, input, select, textarea, [tabindex]')) {
+        corpo.setAttribute('tabindex', '0');
+        corpo.setAttribute('role', 'region');
+        corpo.setAttribute('aria-labelledby', tituloId);
+      }
       const foco = dlg.querySelector('[autofocus]') || (op.focoNoConfirmar ? confirmar : corpo.querySelector('input:not([type="checkbox"]), select, textarea')) || confirmar;
       foco.focus();
     });
@@ -1309,7 +1315,7 @@
     const exportar = h('button', { type: 'button', class: 'btn', onClick: exportarCsv }, icon('download'), 'Exportar CSV');
     const tabelaEl = h('div');
 
-    fill(raiz, 
+    fill(raiz,
       h('div', { class: 'toolbar' },
         h('div', { class: 'cluster' },
           h('div', { class: 'search' }, h('label', { class: 'visually-hidden', for: buscaId, text: 'Buscar ' + op.plural }), icon('search'), busca),

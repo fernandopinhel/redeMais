@@ -10,7 +10,7 @@
   const main = document.getElementById('conteudo');
   const neg = P.db.get('negociacoes', DS.param('id'));
   if (!neg) {
-    DS.fill(main, 
+    DS.fill(main,
       DS.breadcrumbs([{ label: 'Negociações', href: 'negociacoes.html' }, { label: 'Não encontrada' }]),
       h('div', { class: 'empty' }, icon('search'), h('h1', { text: 'Não encontramos essa negociação' }),
         h('p', { text: 'Ela pode ter sido criada em outra aba. Os dados do protótipo ficam só na aba atual.' }),
@@ -32,7 +32,7 @@
   function pintaCaixa() {
     const eco = economiaAtual();
     const sin = P.sinistro(neg);
-    DS.fill(caixa, 
+    DS.fill(caixa,
       h('span', { text: 'Economia acordada' }),
       h('strong', { text: fmt.money(eco) }),
       h('small', { text: (sin ? fmt.pct(eco / sin) : '0%') + ' de eficiência sobre ' + fmt.money(sin) + ' de sinistro' }));
@@ -46,7 +46,7 @@
     caixa));
 
   const fato = (dt, dd) => h('div', null, h('dt', { text: dt }), h('dd', { text: dd }));
-  DS.fill(document.getElementById('fatos'), 
+  DS.fill(document.getElementById('fatos'),
     fato('Código do prestador', p.codigo),
     fato('CNPJ', p.cnpj),
     fato('Cidade', p.cidade + ' / ' + p.uf),
@@ -147,7 +147,7 @@
 
   if (!editavel) {
     DS.$$('input, textarea', form).forEach((el) => { el.disabled = true; });
-    DS.fill(document.getElementById('acoes'), 
+    DS.fill(document.getElementById('acoes'),
       h('p', { text: neg.status === 'Finalizada'
         ? 'Aditivo assinado: os valores ficam travados. Para rever um valor, abra uma nova negociação.'
         : 'Negociação encerrada sem acordo.' }),

@@ -29,7 +29,7 @@
     }));
     const total = metas.reduce((s, m) => s + m.valor, 0);
     const real = P.realizado(q);
-    DS.fill(cobertura, 
+    DS.fill(cobertura,
       h('ul', { class: 'kpis' },
         h('li', { class: 'kpi' }, h('span', { class: 'kpi__label' }, icon('target'), 'Meta do ' + q.t + 'º trimestre'), h('span', { class: 'kpi__value', text: fmt.money(total) }), h('span', { class: 'kpi__foot', text: fmt.plural(metas.length, 'meta cadastrada', 'metas cadastradas') + ' de 32 possíveis' })),
         h('li', { class: 'kpi' }, h('span', { class: 'kpi__label' }, icon('trophy'), 'Realizado até agora'), h('span', { class: 'kpi__value', text: fmt.money(real) }), h('span', { class: 'kpi__foot', text: total ? fmt.pct(real / total) + ' da meta' : 'Sem meta para comparar' })),

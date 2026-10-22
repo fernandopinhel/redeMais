@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#a8431c">
+    <meta name="description" content="Premissas do cálculo de economia.">
+    <title>Premissas | Orla Mesa</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="app-top"></header>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div class="page-head">
+        <div class="page-head__text">
+          <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-sliders"/></svg> Premissas</span>
+          <h1>Premissas do cálculo</h1>
+          <p>Percentuais e prazos que a mesa usa para estimar a economia. Ao salvar, a página mostra quanto a economia mudou.</p>
+        </div>
+      </div>
+
+      <div id="abas" data-tabs-memo="premissas">
+        <div class="tabs__list" role="tablist" aria-label="Premissas">
+          <button class="tabs__tab" type="button" role="tab" id="aba-ad" data-aba="aderencia" aria-controls="painel-ad"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-percent"/></svg> Aderência e efetividade</button>
+          <button class="tabs__tab" type="button" role="tab" id="aba-inf" data-aba="inflacao" aria-controls="painel-inf"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-trending-up"/></svg> Inflação</button>
+          <button class="tabs__tab" type="button" role="tab" id="aba-pz" data-aba="prazos" aria-controls="painel-pz"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-clock"/></svg> Prazos</button>
+        </div>
+
+        <form class="card" role="tabpanel" id="painel-ad" aria-labelledby="aba-ad" novalidate>
+          <div data-summary-anchor></div>
+          <h2>Efetividade esperada</h2>
+          <p class="hint">Parte da economia negociada que de fato acontece.</p>
+          <div class="form-grid mt-sm">
+            <div class="field span-3">
+              <label for="efetPPA">Prestadores com PPA</label>
+              <div class="input-group"><input class="input input--num" id="efetPPA" name="efetPPA" inputmode="decimal" data-mask="decimal" data-rules="percent" required><span class="input-group__suffix" aria-hidden="true">%</span></div>
+            </div>
+            <div class="field span-3">
+              <label for="efetDemais">Demais prestadores</label>
+              <div class="input-group"><input class="input input--num" id="efetDemais" name="efetDemais" inputmode="decimal" data-mask="decimal" data-rules="percent" required><span class="input-group__suffix" aria-hidden="true">%</span></div>
+            </div>
+          </div>
+          <h2 class="mt">Aderência por tipo de negociação</h2>
+          <div class="table-wrap mt-sm" role="region" aria-labelledby="ad-cap" tabindex="0">
+            <table class="table table--compact">
+              <caption class="visually-hidden" id="ad-cap">Aderência esperada por tipo de negociação</caption>
+              <thead><tr><th scope="col">Tipo</th><th scope="col" class="num">Sinistro excedente (%)</th><th scope="col" class="num">Captura de economia (%)</th><th scope="col" class="num">Ano do modelo</th></tr></thead>
+              <tbody id="aderencia-corpo"></tbody>
+            </table>
+          </div>
+          <div class="form-actions">
+            <p>Valem para todas as negociações da mesa.</p>
+            <button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-check"/></svg> Salvar premissas</button>
+          </div>
+        </form>
+
+        <section class="card" role="tabpanel" id="painel-inf" aria-labelledby="aba-inf" tabindex="0" hidden>
+          <h2>Índices de inflação</h2>
+          <p class="hint">O custo médio de cada negociação é corrigido mês a mês pelo IPCA, do mês da base até hoje.</p>
+          <div id="inflacao" class="mt-sm"></div>
+        </section>
+
+        <form class="card" role="tabpanel" id="painel-pz" aria-labelledby="aba-pz" novalidate hidden>
+          <div data-summary-anchor></div>
+          <h2>Prazos da operação</h2>
+          <div class="form-grid mt-sm">
+            <div class="field span-6"><label for="intervaloCobranca">Intervalo entre cobranças de assinatura (dias)</label><input class="input input--num" type="number" id="intervaloCobranca" name="intervaloCobranca" min="1" max="60" required></div>
+            <div class="field span-6"><label for="semAtualizacao">Negociação sem atualização vira candidata a bloqueio (dias)</label><input class="input input--num" type="number" id="semAtualizacao" name="semAtualizacao" min="15" max="365" required></div>
+            <div class="field span-6"><label for="ateBloqueio">Tempo até o bloqueio valer (dias)</label><input class="input input--num" type="number" id="ateBloqueio" name="ateBloqueio" min="1" max="180" required></div>
+            <div class="field span-6"><label for="fecharImplantar">Tempo esperado entre fechar e implantar (dias)</label><input class="input input--num" type="number" id="fecharImplantar" name="fecharImplantar" min="1" max="180" required></div>
+          </div>
+          <div class="form-actions">
+            <p>O prazo sem atualização muda quais negociações aparecem como candidatas a bloqueio.</p>
+            <button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-check"/></svg> Salvar prazos</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="app-foot"></footer>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/premissas.js"></script>
+  </body>
+</html>
