@@ -147,6 +147,7 @@
 
   if (!editavel) {
     DS.$$('input, textarea', form).forEach((el) => { el.disabled = true; });
+    document.getElementById('acoes').classList.add('form-actions--static');
     DS.fill(document.getElementById('acoes'),
       h('p', { text: neg.status === 'Finalizada'
         ? 'Aditivo assinado: os valores ficam travados. Para rever um valor, abra uma nova negociação.'

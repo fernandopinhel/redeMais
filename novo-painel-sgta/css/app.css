@@ -182,7 +182,7 @@
 
 /* Matriz de acessos */
 .matrix th, .matrix td { text-align: center; }
-.matrix tbody th { text-align: left; }
+.matrix tbody th, .matrix thead th:first-child { text-align: left; }
 .matrix input { width: 20px; height: 20px; accent-color: var(--primary); }
 
 /* Glossário */

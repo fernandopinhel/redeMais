@@ -70,7 +70,7 @@
 
   arquivo.addEventListener('change', () => {
     const f = arquivo.files[0];
-    document.getElementById('arquivo-nome').textContent = f ? f.name + ' (' + Math.max(1, Math.round(f.size / 1024)) + ' KB)' : 'Nenhum arquivo escolhido.';
+    document.getElementById('arquivo-nome').textContent = f ? 'Pronto para processar: ' + f.name + ' (' + Math.max(1, Math.round(f.size / 1024)) + ' KB).' : '';
   });
 
   form.addEventListener('submit', (ev) => {
@@ -112,7 +112,7 @@
       form.removeAttribute('aria-busy');
       DS.fill(enviar, icon('upload'), 'Processar planilha');
       form.reset();
-      document.getElementById('arquivo-nome').textContent = 'Nenhum arquivo escolhido.';
+      document.getElementById('arquivo-nome').textContent = '';
       DS.toast(avisos ? 'Planilha processada com ' + fmt.plural(avisos, 'aviso', 'avisos') + '. Veja os detalhes no protocolo ' + novo.protocolo + '.' : 'Planilha processada. ' + novo.atualizados + ' prestadores atualizados.', avisos ? 'error' : null);
     }, 1200);
   });

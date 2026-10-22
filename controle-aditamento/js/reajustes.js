@@ -39,7 +39,7 @@
     { key: 'sucursal', label: 'Sucursal', sort: (r) => R.prestador(r.codigo).sucursal, render: (r) => R.prestador(r.codigo).sucursal, csv: (r) => R.sucursalNome(R.prestador(r.codigo).sucursal) },
     { key: 'indice', label: 'Índice', sort: true },
     { key: 'ultimo', label: 'Último reajuste', sort: true, render: (r) => h('span', null, fmt.competencia(r.ultimo), h('span', { class: 'cell-sub', text: fmt.decimal(r.percentual) + '%' })), csv: (r) => fmt.competencia(r.ultimo) + ' (' + fmt.decimal(r.percentual) + '%)' },
-    { key: 'proximo', label: 'Próximo reajuste', sort: true, render: (r) => h('span', { class: 'cluster' }, fmt.competencia(r.proximo), quando(r.proximo)), csv: (r) => fmt.competencia(r.proximo) },
+    { key: 'proximo', label: 'Próximo reajuste', sort: true, render: (r) => h('span', { class: 'cluster nowrap' }, fmt.competencia(r.proximo), quando(r.proximo)), csv: (r) => fmt.competencia(r.proximo) },
     { key: '_acao', label: 'Ações', srOnly: true, class: 'col-actions', render: (r) => h('button', { type: 'button', class: 'btn btn--ghost btn--icon btn--sm', 'aria-label': 'Alterar reajuste de ' + R.prestador(r.codigo).nome, onClick: () => alterar([r.id]) }, icon('edit')) }
   ];
 
