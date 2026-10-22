@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#a8431c">
+    <meta name="description" content="Catálogo de pacotes e tabelas de apoio.">
+    <title>Catálogo | Orla Mesa</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="app-top"></header>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div class="page-head">
+        <div class="page-head__text">
+          <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-book"/></svg> Catálogo</span>
+          <h1 id="pagina-titulo">Catálogo</h1>
+          <p id="pagina-texto"></p>
+        </div>
+      </div>
+      <nav class="subnav" id="catalogo-nav" aria-label="Tabelas do catálogo"></nav>
+      <section class="card" aria-labelledby="pagina-titulo">
+        <div id="lista"></div>
+      </section>
+    </main>
+
+    <footer class="app-foot"></footer>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/catalogo.js"></script>
+  </body>
+</html>

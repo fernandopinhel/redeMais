@@ -229,24 +229,6 @@
 }
 .rows strong { font-weight: 500; }
 
-/* Subnavegação dos cadastros */
-.subnav ul { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1.25rem; padding: 0; list-style: none; }
-.subnav a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 40px;
-  padding: .4rem .9rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--text);
-  font-size: var(--text-md);
-  font-weight: 500;
-  text-decoration: none;
-}
-.subnav a:hover { border-color: var(--accent-200); background: var(--accent-50); }
-.subnav a[aria-current="page"] { background: var(--accent-700); border-color: var(--accent-700); color: #fff; }
-
 /* Matriz de prazos */
 .sla-grid .input { max-width: 110px; margin-left: auto; }
 

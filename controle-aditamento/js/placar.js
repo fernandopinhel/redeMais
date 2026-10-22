@@ -40,7 +40,7 @@
     else ritmoTexto = 'Abaixo do ritmo esperado para hoje (' + fmt.money(esperado) + '). A marca branca na barra mostra esse ponto.';
 
     const stat = (ic, rotulo, valor) => h('div', { class: 'scoreboard__stat' }, h('span', null, icon(ic), rotulo), h('strong', { text: valor }));
-    DS.fill(hero, 
+    DS.fill(hero,
       h('div', null,
         h('span', { class: 'eyebrow' }, icon('trophy'), 'Placar do ' + DS.rotuloTrimestre(q.t, q.ano)),
         h('h1', { id: 'pagina-titulo', text: 'Economia com aditivos' }),

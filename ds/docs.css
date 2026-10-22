@@ -1,0 +1,75 @@
+/* Páginas da suíte (vitrine e documentação do DS). Usa só os tokens do Orla DS. */
+.site-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 1rem clamp(1rem, 3vw, 2rem);
+}
+.site-top nav { margin-left: auto; }
+.site-top nav ul { display: flex; flex-wrap: wrap; gap: .25rem; margin: 0; padding: 0; list-style: none; }
+.site-top nav a { display: inline-flex; align-items: center; min-height: 40px; padding: .4rem .8rem; border-radius: 999px; color: var(--text); font-weight: 500; text-decoration: none; }
+.site-top nav a:hover { background: var(--surface-3); }
+.site-top nav a[aria-current="page"] { background: var(--accent-100); color: var(--accent-800); }
+
+.site { max-width: 1200px; margin-inline: auto; padding: 1rem clamp(1rem, 3vw, 2rem) 3rem; }
+
+.intro { max-width: 760px; margin: 1.5rem 0 2.5rem; }
+.intro h1 { font-size: clamp(2rem, 1.4rem + 2.6vw, 3.1rem); letter-spacing: -.02em; }
+.intro p { font-size: 1.125rem; color: var(--text-muted); }
+
+/* Cartões dos produtos: cada um leva a cor do seu tema */
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin: 0; padding: 0; list-style: none; }
+.product {
+  --p-700: #2c5282;
+  --p-100: #e5eefa;
+  position: relative;
+  display: grid;
+  gap: .75rem;
+  align-content: start;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--p-100), var(--surface) 55%);
+  box-shadow: var(--shadow-sm);
+}
+.product--placar { --p-700: #0e6b57; --p-100: #e3f5ef; }
+.product--esteira { --p-700: #4338ca; --p-100: #e7e6fc; }
+.product--mesa { --p-700: #a8431c; --p-100: #fbe9df; }
+.product img { width: 56px; height: 56px; border-radius: 14px; }
+.product h2 { margin: 0; font-size: 1.375rem; }
+.product h2 a { color: var(--text); text-decoration: none; }
+.product h2 a::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius-lg); }
+.product:has(a:focus-visible) { box-shadow: 0 0 0 3px var(--surface), 0 0 0 6px var(--p-700); }
+.product h2 a:focus-visible { box-shadow: none; }
+.product__was { font-size: var(--text-sm); color: var(--text-muted); }
+.product p { margin: 0; }
+.product ul { margin: 0; padding-left: 1.1rem; color: var(--text-muted); font-size: var(--text-md); }
+.product__go { display: inline-flex; align-items: center; gap: .4rem; color: var(--p-700); font-weight: 600; }
+.product:hover { box-shadow: var(--shadow); }
+
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+.split > .card + .card { margin-top: 0; }
+@media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr); } }
+
+/* Documentação do DS */
+.doc-section { margin-top: 2.5rem; }
+.doc-section > h2 { font-size: 1.5rem; margin-bottom: .35rem; }
+.doc-section > p { color: var(--text-muted); max-width: 72ch; }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: .65rem; margin: 0; padding: 0; list-style: none; }
+.swatch { display: grid; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--surface); font-size: .8125rem; }
+.swatch__color { height: 56px; }
+.swatch__info { display: grid; padding: .45rem .6rem; }
+.swatch__info code { color: var(--text-muted); }
+.themes { display: grid; gap: 1rem; }
+.theme-row { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 1rem; align-items: center; }
+.theme-row .swatches { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+.theme-row .swatch__color { height: 40px; }
+@media (max-width: 640px) { .theme-row { grid-template-columns: minmax(0, 1fr); } }
+.specimen { display: grid; gap: 1rem; }
+.example { padding: 1.25rem; border: 1px dashed var(--border-strong); border-radius: var(--radius); background: var(--surface); }
+.example + .example { margin-top: 1rem; }
+.example__label { margin: 0 0 .75rem; font-size: var(--text-xs); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
+.api { font-size: var(--text-md); }
+.api code { white-space: nowrap; }

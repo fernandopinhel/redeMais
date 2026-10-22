@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#2c5282">
+    <meta name="description" content="Orla DS: o design system compartilhado pelos produtos da suíte Orla.">
+    <title>Orla DS | Suíte Orla</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="ds.css">
+    <link rel="stylesheet" href="docs.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-top">
+      <a class="brand" href="../index.html">
+        <img class="brand__mark" src="favicon.svg" alt="" width="36" height="36">
+        <span class="brand__text"><span class="brand__name">Orla DS</span><span class="brand__sub">Suíte Orla</span></span>
+      </a>
+      <nav aria-label="Páginas da suíte">
+        <ul>
+          <li><a href="../index.html">Produtos</a></li>
+          <li><a href="index.html" aria-current="page">Design system</a></li>
+          <li><a href="https://github.com/fernandopinhel/redeMais">Código no GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="site" id="conteudo">
+      <section class="intro" aria-labelledby="titulo">
+        <span class="eyebrow">Orla DS</span>
+        <h1 id="titulo">Um design system para três produtos diferentes.</h1>
+        <p>O Orla DS dá a base comum: tokens, componentes, ícones e comportamentos acessíveis. Cada produto troca só a escala de cor e monta o seu próprio layout. Tudo em CSS e JavaScript puros, sem framework.</p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="cores-titulo">
+        <h2 id="cores-titulo">Cores de base</h2>
+        <p>Neutros e estados são iguais em toda a suíte. Texto tem contraste de pelo menos 4,5:1, e bordas de campo, de 3:1.</p>
+        <ul class="swatches" id="neutros"></ul>
+      </section>
+
+      <section class="doc-section" aria-labelledby="temas-titulo">
+        <h2 id="temas-titulo">Temas dos produtos</h2>
+        <p>Cada produto define a escala <code>--accent-50</code> a <code>--accent-900</code>, uma cor de apoio (<code>--signal</code>) e os tons da noite do login. Os componentes leem só esses tokens.</p>
+        <div class="themes" id="temas"></div>
+      </section>
+
+      <section class="doc-section" aria-labelledby="tipo-titulo">
+        <h2 id="tipo-titulo">Tipografia</h2>
+        <p>Manrope nos títulos e Inter no texto, só com os pesos 400, 500 e 600, para a interface ficar leve. Números em tabelas usam algarismos de largura fixa.</p>
+        <div class="card specimen">
+          <p class="eyebrow">Sobretítulo</p>
+          <h1>Título da página</h1>
+          <h2>Título de seção</h2>
+          <h3>Título de cartão</h3>
+          <p>Texto corrido em Inter, com linhas curtas e espaçamento confortável. <a href="#tipo-titulo">Links sublinhados</a> e <strong>destaques em 600</strong>.</p>
+          <p class="num">R$ 1.234.567,89</p>
+        </div>
+      </section>
+
+      <section class="doc-section" aria-labelledby="comp-titulo">
+        <h2 id="comp-titulo">Componentes ao vivo</h2>
+        <p>Os exemplos abaixo usam o mesmo código dos produtos.</p>
+
+        <div class="example">
+          <p class="example__label">Botões</p>
+          <div class="btn-row" id="ex-botoes"></div>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Selos e marcadores</p>
+          <div class="cluster" id="ex-selos"></div>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Formulário com validação</p>
+          <form id="ex-form" novalidate></form>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Avisos</p>
+          <div class="stack-sm" id="ex-avisos"></div>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Indicadores, medidores e barras</p>
+          <ul class="kpis" id="ex-kpis"></ul>
+          <div class="grid-2" id="ex-medidores"></div>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Abas</p>
+          <div id="ex-abas">
+            <div class="tabs__list" role="tablist" aria-label="Exemplo de abas">
+              <button class="tabs__tab" type="button" role="tab" id="ex-aba-1" aria-controls="ex-painel-1">Primeira</button>
+              <button class="tabs__tab" type="button" role="tab" id="ex-aba-2" aria-controls="ex-painel-2">Segunda</button>
+              <button class="tabs__tab" type="button" role="tab" id="ex-aba-3" aria-controls="ex-painel-3">Terceira</button>
+            </div>
+            <div role="tabpanel" id="ex-painel-1" aria-labelledby="ex-aba-1" tabindex="0"><p>As setas, Home e End trocam de aba, como pede o padrão do WAI-ARIA.</p></div>
+            <div role="tabpanel" id="ex-painel-2" aria-labelledby="ex-aba-2" tabindex="0" hidden><p>A aba escolhida pode ser lembrada durante a sessão.</p></div>
+            <div role="tabpanel" id="ex-painel-3" aria-labelledby="ex-aba-3" tabindex="0" hidden><p>E pode ser aberta direto pelo endereço, com <code>?aba=</code>.</p></div>
+          </div>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Tabela com ordenação, seleção e paginação</p>
+          <div id="ex-tabela"></div>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Linha do tempo</p>
+          <ol class="timeline" id="ex-timeline"></ol>
+        </div>
+      </section>
+
+      <section class="doc-section" aria-labelledby="api-titulo">
+        <h2 id="api-titulo">O que o ds.js oferece</h2>
+        <p>Cada produto chama <code>DS.app({ chave })</code> e passa a ter estas peças.</p>
+        <div id="api"></div>
+      </section>
+    </main>
+
+    <footer class="case-note">
+      <p>Case de UX/UI de Fernando Pinhel. A Orla Saúde é uma marca fictícia.</p>
+    </footer>
+
+    <script src="ds.js"></script>
+    <script src="docs.js"></script>
+  </body>
+</html>

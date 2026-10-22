@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#2c5282">
+    <meta name="description" content="Case de UX/UI: a suíte Orla, três sistemas de gestão de rede de uma operadora de saúde fictícia, construídos sobre um design system compartilhado.">
+    <title>Suíte Orla | Case de UX/UI</title>
+    <link rel="icon" type="image/svg+xml" href="ds/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="ds/ds.css">
+    <link rel="stylesheet" href="ds/docs.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-top">
+      <a class="brand" href="index.html">
+        <img class="brand__mark" src="ds/favicon.svg" alt="" width="36" height="36">
+        <span class="brand__text"><span class="brand__name">Suíte Orla</span><span class="brand__sub">Orla Saúde</span></span>
+      </a>
+      <nav aria-label="Páginas da suíte">
+        <ul>
+          <li><a href="index.html" aria-current="page">Produtos</a></li>
+          <li><a href="ds/index.html">Design system</a></li>
+          <li><a href="https://github.com/fernandopinhel/redeMais">Código no GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="site" id="conteudo">
+      <section class="intro" aria-labelledby="titulo">
+        <span class="case-tag">Case de UX/UI · 2020 a 2021, revisitado em 2026</span>
+        <h1 id="titulo">Três sistemas, uma só linguagem.</h1>
+        <p>A Orla Saúde é uma operadora fictícia. A suíte reúne os sistemas que a equipe de rede usa para negociar com hospitais e clínicas: do pacote negociado na mesa até o aditivo assinado e a meta do trimestre. Cada produto tem um layout pensado para o seu trabalho, e todos usam o mesmo design system.</p>
+        <p class="cluster"><a class="btn btn--primary" href="novo-painel-sgta/login.html">Começar pela Orla Mesa</a><a class="btn" href="ds/index.html">Ver o design system</a></p>
+      </section>
+
+      <h2 class="visually-hidden">Produtos</h2>
+      <ul class="products">
+        <li class="product product--mesa">
+          <img src="novo-painel-sgta/img/favicon.svg" alt="" width="56" height="56">
+          <h2><a href="novo-painel-sgta/login.html">Orla Mesa</a></h2>
+          <span class="product__was">1. Negociar</span>
+          <p>A mesa de negociação de pacotes com os prestadores da Rede Prima.</p>
+          <ul>
+            <li>Lista e ficha lado a lado</li>
+            <li>Economia calculada enquanto se digita, com memória de cálculo</li>
+            <li>Alçadas, premissas, bloqueios e catálogo de pacotes</li>
+          </ul>
+          <span class="product__go" aria-hidden="true">Abrir a mesa →</span>
+        </li>
+        <li class="product product--esteira">
+          <img src="novo-controle-aditamento/img/favicon.svg" alt="" width="56" height="56">
+          <h2><a href="novo-controle-aditamento/login.html">Orla Esteira</a></h2>
+          <span class="product__was">2. Formalizar</span>
+          <p>A esteira que leva a ficha de aditivo da distribuição à implantação.</p>
+          <ul>
+            <li>Quadro por fase com relógio de prazo em cada ficha</li>
+            <li>Nova ficha em 4 passos e dossiê com ações por etapa</li>
+            <li>Distribuição pela carga, prazos editáveis e relatório de tempo</li>
+          </ul>
+          <span class="product__go" aria-hidden="true">Abrir a esteira →</span>
+        </li>
+        <li class="product product--placar">
+          <img src="controle-aditamento/img/favicon.svg" alt="" width="56" height="56">
+          <h2><a href="controle-aditamento/login.html">Orla Placar</a></h2>
+          <span class="product__was">3. Medir</span>
+          <p>O placar da economia com aditivos contra as metas de cada trimestre.</p>
+          <ul>
+            <li>Placar com ritmo esperado e pódio das sucursais</li>
+            <li>Negociações por item, com economia calculada</li>
+            <li>Metas, reajustes e relatórios congelados no fechamento</li>
+          </ul>
+          <span class="product__go" aria-hidden="true">Abrir o placar →</span>
+        </li>
+      </ul>
+
+      <div class="split">
+        <section class="card" aria-labelledby="acesso-titulo">
+          <h2 id="acesso-titulo">Como explorar</h2>
+          <p>Em qualquer produto, clique em <strong>Usar o acesso de demonstração</strong>. A sessão vale para a suíte inteira: pelo ícone de produtos no topo, dá para passar de um sistema ao outro sem entrar de novo.</p>
+          <p class="muted">Não há back-end. Tudo o que você cadastra fica só nesta aba do navegador, e cada produto tem um botão para restaurar os dados de exemplo.</p>
+        </section>
+        <section class="card" aria-labelledby="ds-titulo">
+          <h2 id="ds-titulo">Um design system, três identidades</h2>
+          <p>Tokens, componentes, ícones e comportamentos vêm do Orla DS. Cada produto define só a sua escala de cor e o seu layout: navegação no topo no Placar, trilho lateral na Esteira e abas com mesa em duas colunas na Mesa.</p>
+          <p><a href="ds/index.html">Conhecer o Orla DS</a></p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="case-note">
+      <p>Case de UX/UI de Fernando Pinhel. A Orla Saúde é uma marca fictícia que representa a empresa onde o projeto nasceu. Pessoas, prestadores, códigos e valores são de exemplo.</p>
+    </footer>
+  </body>
+</html>

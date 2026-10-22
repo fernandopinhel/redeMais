@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#a8431c">
+    <meta name="description" content="Perfis e permissões da mesa.">
+    <title>Acessos | Orla Mesa</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="app-top"></header>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <div class="page-head">
+        <div class="page-head__text">
+          <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-lock"/></svg> Acessos</span>
+          <h1>Acessos</h1>
+          <p>Perfis definem o que cada pessoa vê e pode fazer na mesa.</p>
+        </div>
+      </div>
+
+      <div id="abas" data-tabs-memo="acessos">
+        <div class="tabs__list" role="tablist" aria-label="Acessos">
+          <button class="tabs__tab" type="button" role="tab" id="aba-matriz" data-aba="matriz" aria-controls="painel-matriz"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-grid"/></svg> Permissões</button>
+          <button class="tabs__tab" type="button" role="tab" id="aba-perfis" data-aba="perfis" aria-controls="painel-perfis"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-layers"/></svg> Perfis</button>
+          <button class="tabs__tab" type="button" role="tab" id="aba-pessoas" data-aba="pessoas" aria-controls="painel-pessoas"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-users"/></svg> Pessoas</button>
+        </div>
+        <form class="card" role="tabpanel" id="painel-matriz" aria-labelledby="aba-matriz" novalidate>
+          <h2 id="matriz-titulo">O que cada perfil pode fazer</h2>
+          <div class="alert alert--error" id="matriz-erro" tabindex="-1" hidden></div>
+          <div id="matriz" class="mt-sm"></div>
+          <div class="form-actions">
+            <p>As permissões valem no próximo acesso de cada pessoa.</p>
+            <button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-check"/></svg> Salvar permissões</button>
+          </div>
+        </form>
+        <section class="card" role="tabpanel" id="painel-perfis" aria-labelledby="aba-perfis" tabindex="0" hidden>
+          <h2>Perfis</h2>
+          <div id="perfis"></div>
+        </section>
+        <section class="card" role="tabpanel" id="painel-pessoas" aria-labelledby="aba-pessoas" tabindex="0" hidden>
+          <h2>Pessoas com acesso</h2>
+          <div id="usuarios"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="app-foot"></footer>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/acessos.js"></script>
+  </body>
+</html>

@@ -297,14 +297,14 @@
       h('label', { class: 'visually-hidden', for: anoId, text: 'Ano' }), ano,
       relogio));
 
-    DS.fill(header, 
-      h('div', { class: 'app-header__bar' },
-        DS.brand(),
-        nav,
-        h('div', { class: 'app-header__end' }, DS.appSwitcher(), DS.userBox(u), abrir)),
+    const marca = DS.brand();
+    const fim = h('div', { class: 'app-header__end' }, DS.appSwitcher(), DS.userBox(u), abrir);
+    DS.fill(header,
+      h('div', { class: 'app-header__bar' }, marca, nav, fim),
       op.semTemporada ? null : season);
 
-    DS.drawer({ painel: nav, abrir, fechar, fundo: [main, rodape], mq: '(min-width: 1101px)', rotulo: 'Menu principal' });
+    // Com a gaveta aberta, todo o resto da página (inclusive o topo) fica inert.
+    DS.drawer({ painel: nav, abrir, fechar, fundo: [main, rodape, marca, fim, op.semTemporada ? null : season].filter(Boolean), mq: '(min-width: 1101px)', rotulo: 'Menu principal' });
     if (rodape) DS.caseNote(rodape, db);
     return u;
   }
