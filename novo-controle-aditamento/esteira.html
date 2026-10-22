@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#4338ca">
+    <meta name="description" content="Quadro das fichas de aditivo por fase.">
+    <title>Esteira | Orla Esteira</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="app">
+      <aside class="rail"></aside>
+      <div class="main-col">
+        <header class="topbar"></header>
+        <main class="content" id="conteudo" tabindex="-1">
+          <div class="page-head">
+            <div class="page-head__text">
+              <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-kanban"/></svg> Esteira</span>
+              <h1>Fichas em andamento</h1>
+              <p>As fichas mais perto de estourar o prazo aparecem primeiro em cada fase.</p>
+            </div>
+            <div class="page-head__actions">
+              <div class="segmented" role="group" aria-label="Forma de ver">
+                <button type="button" data-visao="quadro" aria-pressed="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-kanban"/></svg> Quadro</button>
+                <button type="button" data-visao="lista" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-list"/></svg> Lista</button>
+              </div>
+              <a class="btn btn--primary" href="nova-ficha.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-plus"/></svg> Nova ficha</a>
+            </div>
+          </div>
+
+          <h2 class="visually-hidden" id="kpis-titulo">Indicadores</h2>
+          <ul class="kpis" id="kpis" aria-labelledby="kpis-titulo"></ul>
+
+          <form class="card filters" id="filtros" novalidate aria-labelledby="filtros-titulo">
+            <h2 class="visually-hidden" id="filtros-titulo">Filtros</h2>
+            <div class="form-grid">
+              <div class="field span-4">
+                <label for="f-busca">Ficha ou prestador</label>
+                <input class="input" id="f-busca" name="busca" type="search" autocomplete="off" placeholder="Número, nome ou código">
+              </div>
+              <div class="field span-3">
+                <label for="f-sucursal">Sucursal</label>
+                <select class="select" id="f-sucursal" name="sucursal"></select>
+              </div>
+              <div class="field span-3">
+                <label for="f-prioridade">Prioridade</label>
+                <select class="select" id="f-prioridade" name="prioridade"></select>
+              </div>
+              <div class="field span-2">
+                <label for="f-tipo">Tipo de ficha</label>
+                <select class="select" id="f-tipo" name="tipo"></select>
+              </div>
+            </div>
+            <div class="filters__actions filters__actions--split">
+              <div class="cluster">
+                <label class="switch"><input type="checkbox" name="minhas"> Só as que estão comigo</label>
+                <label class="switch"><input type="checkbox" name="atrasadas"> Só fora do prazo</label>
+              </div>
+              <div class="btn-row">
+                <button class="btn" type="button" id="limpar">Limpar filtros</button>
+                <button class="btn btn--primary" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-search"/></svg> Filtrar</button>
+              </div>
+            </div>
+          </form>
+
+          <p class="toolbar__info" id="resultado-info" aria-live="polite"></p>
+
+          <section id="painel-quadro" aria-labelledby="quadro-titulo">
+            <h2 class="visually-hidden" id="quadro-titulo">Quadro por fase</h2>
+            <div class="board" id="quadro"></div>
+          </section>
+
+          <section class="card" id="painel-lista" aria-labelledby="lista-titulo" hidden>
+            <div class="card__head">
+              <h2 id="lista-titulo">Lista de fichas</h2>
+              <button class="btn btn--sm" type="button" id="exportar"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-download"/></svg> Exportar CSV</button>
+            </div>
+            <div id="lista"></div>
+          </section>
+        </main>
+        <footer class="app-foot"></footer>
+      </div>
+    </div>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/esteira.js"></script>
+  </body>
+</html>

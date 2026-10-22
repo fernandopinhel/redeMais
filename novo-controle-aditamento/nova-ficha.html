@@ -1,932 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="author" content="Ebix" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>SGTA - PAINEL ADITIVOS</title>
-        <!-- Bootstrap -->    
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Estilo CSS -->
-        <link rel="stylesheet" href="css/estilo.css">
-        <!-- Estilo CSS IE -->
-        <link rel="stylesheet" type="text/css" href="css/ie.css">
-        <!-- Icons -->
-        <link rel="stylesheet" href="css/icones-bradesco.css">
-        <!-- css inputfile -->
-        <link href="css/jquery.filer.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- conteudo geral wrapper -->
-        <div class="wrapper">
-            <!-- sidebar -->
-            <nav id="sidebar">
-                <ul class="list-unstyled components">
-                    <li>
-                        <a href="#slasSubmenu" onclick="window.location.href='acompanhamento-slas.html'" id="slas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Acompanhamento de SLAs</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#aditivosSubmenu" onclick="window.location.href='aditivos.html'" id="aditivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Aditivos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#equipeSubmenu" onclick="window.location.href='equipes.html'" id="equipes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Equipe</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#grandesGruposSubmenu" onclick="window.location.href='grandes-grupos.html'" id="grandes-grupos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Grandes Grupos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#grupoTipoAditivoSubmenu" onclick="window.location.href='grupo-tipo-aditivo.html'" id="grupo-tipo-aditivo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Grupo Tipo Aditivo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#perfilUsuarioSubmenu" onclick="window.location.href='perfil-usuario.html'" id="perfil-usuario" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Perfil Usuário</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#procedimentosSubmenu" onclick="window.location.href='procedimentos.html'" id="preocedimentos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Procedimentos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#sucursalSubmenu" onclick="window.location.href='sucursal.html'" id="sucursal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Sucursal</span>                            
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="#painelAdmSubmenu" onclick="window.location.href='painel-administrativo.html'" id="painel-administrativo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Painel Administrativo</span>
-                        </a>                        
-                    </li>
-                    <li>
-                        <a href="#processosSubmenu" id="processos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Processos</span>
-                            <span class="seta-accordion"></span>
-                        </a>
-                        <ul class="collapse list-unstyled list-style-2 list-subs" id="processosSubmenu">
-                            <li>
-                                <a href="trocar-emissor.html">Trocar Emissor</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#importacoesSubmenu" onclick="window.location.href='importacoes.html'" id="importacoes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Importações</span>
-                        </a>                        
-                      </li>
-                      <li>
-                          <a href="#relatoriosSubmenu" id="relatorios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                              <span class="item-menu">Relatórios</span>
-                              <span class="seta-accordion"></span>
-                          </a>
-                          <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
-                              <li>
-                                  <a href="relatorio-controle.html">Relatório Controle</a>
-                              </li>
-                              <li>
-                                  <a href="relatorio-controle-trimestral.html">Relatório Controle Trimestral</a>
-                              </li>
-                              <li>
-                                  <a href="relatorio-sla.html">Relatório SLA Tempo Total da Ficha</a>
-                              </li>
-                              <li>
-                                <a href="relatorio-controle-negociacoes.html">Relatório Controle de Negociações</a>
-                            </li>
-                          </ul>
-                      </li>
-                      <li>
-                        <a href="#controleNegSubmenu" id="controlesNeg" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
-                            <span class="item-menu">Controle de Negociações</span>
-                            <span class="seta-accordion"></span>
-                        </a>
-                        <ul class="collapse list-unstyled list-style-2 list-subs" id="controleNegSubmenu">
-                            <li>
-                                <a href="controle-de-negociacoes-listados.html">Listados</a>
-                            </li>
-                            <li>
-                              <a href="controle-de-negociacoes-nao-listados.html">Não Listados</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>                
-            </nav>
-            <!-- fim sidebar -->
-            <!-- conteudo pagina -->
-            <div class="content" id="">
-                <nav class="navbar navbar-expand-lg menu-topo">
-                    <div class="container-fluid p-0">
-                        <div class="float-left  d-flex">
-                            <button type="button" id="sidebarCollapse" class="btn-sidebar my-auto">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
-                        </div>
-                        <div class="marca-bradesco d-flex">
-                            <span class="logo-bradesco my-auto">
-                                <img src="img/icon-logo-bradesco.png" alt="">
-                            </span>
-                            <div class="title-sistema d-flex my-auto">
-                                <h1 class="my-auto">SGTA - PAINEL ADITIVOS</h1>
-                            </div>
-                        </div>
-                        <div class="user float-right d-flex">
-                            <div class="btn-group my-auto">
-                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <p class="float-left">João Carvalho</p>                                    
-                                    <div class="options">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                  <button class="dropdown-item btn-sair" type="button">Sair</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <form action="">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="painel-administrativo.html">Voltar para o Painel Adm</a></li>                                                
-                                        <li class="breadcrumb-item">Incluir Ficha</li>
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-12">
-                                <div class="title-page">
-                                    <h1>Incluir Ficha</h1>
-                                    <h6 class="detalhes-title-sla">#89089078666</h6>
-                                </div>
-                            </div>                                            
-                            <div class="col-lg-12"><hr></div>
-                        </div>
-                        <div class="process-tabs">
-                            <div class="container-fluid">
-                                <button type="button" name="button" class="btn next arrow-right-tab"></button>
-                                <ul class="nav nav-tabs process-model container" role="tablist">
-                                    <li role="presentation" class="active">
-                                    <a href="#tab-info-gerais-negociacao" aria-controls="tab-info-gerais-negociacao" role="tab" data-toggle="tab">
-                                        <span class="border-active">
-                                        <span>1</span>
-                                        </span>
-                                        <p>Informações Gerais Negociação</p>
-                                    </a>
-                                    </li>
-                                    <li role="presentation">
-                                    <a href="#tab-aditivos" aria-controls="tab-aditivos" role="tab" data-toggle="tab">
-                                        <span class="border-active">
-                                        <span>2</span>
-                                        </span>
-                                        <p>Aditivos</p>
-                                    </a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#tab-anexo-rede-mais" aria-controls="tab-anexo-rede-mais" role="tab" data-toggle="tab">
-                                        <span class="border-active">
-                                            <span>3</span>
-                                        </span>
-                                        <p>Anexo Rede+</p>
-                                        </a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#tab-justificativa" aria-controls="tab-justificativa" role="tab" data-toggle="tab">
-                                        <span class="border-active">
-                                            <span>4</span>
-                                        </span>
-                                        <p>Justificativa</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="alert alert-danger mb-3" id="msg-input-error" role="alert">
-                                            <div class="container-fluid p-0">
-                                                <div class="row">
-                                                    <div class="col-10">
-                                                        <img src="img/alert-error.svg" width="23" class="float-left">
-                                                        <p><span class="mr-2">Serviço Mediservice indisponível</span></p>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <button type="button" class="btn btn-close close-error">
-                                                            <img src="img/close.svg">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion mb-5" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="card">
-                                      <div class="card-header" role="tab" id="heading-1">
-                                        <h6 class="mb-0 b-icon title-page">
-                                          <button class="btn btn-link d-flex align-items-center" onclick="toggleFunction(this)" type="button" data-parent="#accordion" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
-                                            Identificação do Prestador
-                                            <div class="bar-geral">
-                                                <div class="bar1"></div>
-                                                <div class="bar2"></div>
-                                            </div>
-                                          </button>
-                                        </h6>
-                                      </div>
-                                      <div class="card-body">
-                                        <div class="row mb-3">                                    
-                                            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                    <p class="m-0 ">Tipo de Ficha: <strong>Manutenção</strong></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                                <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                    <p class="m-0 ">Grandes Grupos: <strong>-</strong></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                                <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                    <p class="m-0 ">Empresa: <strong>Bradesco Saúde</strong></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                    <p class="m-0 ">CNPJ/CPF: <strong>33.620.097/0001-94</strong></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                    <p class="m-0 ">Cód. Prestador: <strong>481335</strong></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                      <div id="collapse-1" class="collapse" role="tabpanel" aria-labelledby="heading-1">
-                                        <div class="card-body">
-                                            <div class="row mb-3">                                    
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Nome do Prestador: <strong>Hospital CLIMEDE</strong></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Terceirizado de outro Prestador:  <strong>Não</strong></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Cluster: <strong>Se sim, qual Prestador?</strong></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Cidade: <strong>Rio de Janeiro</strong></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">UF: <strong>RJ</strong></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Tipo de Priorização: <strong>Normal</strong></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                                    <div class="border-lc d-flex justify-content-center box-id-prestador">
-                                                        <p class="m-0 ">Faturamento Anual: <strong>R$ 100.000,00</strong></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                </div>
-                                <button type="button" name="button" class="btn prev arrow-left-tab"></button>
-                                <div class="tab-content">
-                                    <!-- info gerais negociacao -->
-                                    <div role="tabpanel" class="tab-pane active" id="tab-info-gerais-negociacao">
-                                        <div class="design-process-content bg-blank">
-                                            <div class="row d-flex mb-3">
-                                                <div class="col-lg-12 my-auto">
-                                                    <div class="title-page">                                        
-                                                        <h6>Informações Gerais Negociação</h6>
-                                                    </div>
-                                                </div>   
-                                                <div class="col-lg-12"><hr></div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-2">                                    
-                                                    <div class="form">
-                                                        <input class="form-control form_date input-date h-35" size="16" type="text" value="" maxlength="10" name="data-proposta" onkeypress="mascaraData(this, event)" autocomplete="off">
-                                                        <label for="data-proposta" class="label-name">
-                                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                                            <span>Data Proposta</span>
-                                                        </label>
-                                                    </div>                          
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-2">                                    
-                                                    <p class="p-select">Sucursal</p>
-                                                    <select class="form-control h-35">
-                                                        <option value="1">Selecione</option>
-                                                        <option value="2" selected="">RJ</option>                                   
-                                                    </select>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-2">                                    
-                                                    <p class="p-select">Alçada</p>
-                                                    <select class="form-control h-35">
-                                                        <option value="1">Selecione</option>
-                                                        <option value="2" selected="">Diretoria</option>                                   
-                                                    </select>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-2 col-xl-2">
-                                                    <div class="radio-title mb-2">
-                                                        <h6 class="mb-2">Negociação Exclusiva?</h6>
-                                                    </div>
-                                                    <div class="d-flex">
-                                                        <div class="ex-radio mr-4">
-                                                            <input type="radio" id="radio_yes1" name="radio_group1">
-                                                            <label for="radio-estilo" class="radio-estilo">Sim</label>
-                                                        </div>
-                                                        <div class="ex-radio">
-                                                            <input type="radio" id="radio_no1" name="radio_group1">
-                                                            <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                          </div>
-                                                    </div>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-6 mt-2">
-                                                    <label for="comentarios" class="comentarios">Bradesco Saúde (Rede)</label>
-                                                    <textarea class="form-control" id="brad-saude" rows="3"></textarea>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-6 mt-2">
-                                                    <label for="comentarios" class="comentarios">Mediservice(Plano)</label>
-                                                    <textarea class="form-control" id="mediservice" rows="3" disabled></textarea>
-                                                </div>
-                                                <div class="space"></div>                 
-                                                <div class="col-lg-12 mt-2">    
-                                                    <form enctype="multipart/form-data">
-                                                        <input type="file" name="files[]" id="filer_input" multiple="multiple">
-                                                    </form>
-                                                </div>
-                                                <div class="space"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- aditivos -->
-                                    <div role="tabpanel" class="tab-pane" id="tab-aditivos">
-                                        <div class="design-process-content bg-blank">
-                                            <ul class="nav tabs-fichas">
-                                                <li class="tabs-fichas-aditivos">
-                                                    <a class="fichas-aditivos active"  href="#navtabs-aditivo">ADITIVOS</a>
-                                                </li>
-                                                <li class="tabs-fichas-matmed">
-                                                    <a class="fichas-matmed"  href="#navtabs-matmed">MATMED</a>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content-fichas mt-4">
-                                                <div class="tab-pane-fichas container-fluid active" id="navtabs-aditivo">
-                                                    <div class="row d-flex mb-3">
-                                                        <div class="col-lg-10 my-auto">
-                                                            <small>Tipos de Aditivos que serão emitidos - <b>*No caso de negociação Rede+</b>, os valores deverão ser preenchidos no Item 3 (Anexo Rede+) de acordo com a especialidade negociada e informada no Item 2 (Aditivos).</small>
-                                                        </div>   
-                                                        <div class="col-lg-2  my-auto">
-                                                            <a href="#" data-toggle="modal" data-target="#modalInfoAditivo">
-                                                                <img src="img/info.svg" width="25" alt="" class="float-right" data-toggle="tooltip" data-original-title="Tipo de Atendimento x Tipo de Prestador">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-lg-12"><hr></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-3">                                    
-                                                            <p class="p-select">Tipo</p>
-                                                            <select class="form-control h-35">
-                                                                <option value="1">Selecione</option>
-                                                                <option value="2">PP RADIOTERAPIA R+</option>   
-                                                                <option value="3" selected>Pronto Socorro Rede+</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="space"></div>
-                                                        <div class="col-lg-2 col-xl-2">
-                                                            <div class="radio-title mb-2">
-                                                                <h6 class="mb-2">Qual Forma</h6>
-                                                            </div>
-                                                            <div class="d-flex">
-                                                                <div class="ex-radio mr-4">
-                                                                    <input type="radio" id="radio_yes1" name="radio_group1">
-                                                                    <label for="radio-estilo" class="radio-estilo">Reajuste</label>
-                                                                </div>
-                                                                <div class="ex-radio">
-                                                                    <input type="radio" id="radio_no1" name="radio_group1">
-                                                                    <label for="radio-estilo" class="radio-estilo">Novo</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="space"></div>
-                                                        <div class="col-lg-2">
-                                                            <p class="p-check">Cód. Prestador</p>
-                                                            <div class="ex-checkbox-2 d-inline mr-5" data-toggle="tooltip" data-original-title="" title="">
-                                                                <input type="checkbox" id="">
-                                                                <label for="" class="check-estilo-2"><span class="ml-4">4813345</span></label>
-                                                            </div>
-                                                            <div class="ex-checkbox-2 d-inline ml-5" data-toggle="tooltip" data-original-title="" title="">
-                                                                <input type="checkbox" id="">
-                                                                <label for="" class="check-estilo-2"><span class="ml-4">238</span></label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="space"></div>
-                                                        <div class="col-lg-2">                                    
-                                                            <div class="form">
-                                                                <input type="text" name="cm-os" autocomplete="off">
-                                                                <label for="cm-os" class="label-name">
-                                                                    <span class="content-name">CM OS</span>
-                                                                </label>
-                                                            </div> 
-                                                        </div>
-                                                        <div class="space"></div>
-                                                        <div class="col-lg-11 mt-2">
-                                                            <label for="comentarios" class="comentarios">Descrição da Solicitação</label>
-                                                            <textarea class="form-control" id="desc-solicitacao" rows="3"></textarea>
-                                                        </div>
-                                                        <div class="space"></div>     
-                                                        <div class="col-lg-1">
-                                                            <a href="" data-toggle="tooltip" data-original-title="Adicionar">
-                                                                <img src="img/add.svg" width="25" alt="" class="mt-4">
-                                                            </a>
-                                                        </div>     
-                                                    </div>
-                                                    <div class="container-fluid mt-3">
-                                                        <div class="row">
-                                                            <div class="col-lg-12 mb-2">
-                                                                <div class="title-page-2">                                        
-                                                                    <h6>Aditivos Adicionados</h6>
-                                                                </div>
-                                                            </div>                                                        
-                                                            <div class="col-lg-12 p-0">
-                                                                <div class="table-responsive border">
-                                                                    <table class="table">
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th class="por-5"></th>                            
-                                                                                <th class="por-15">Tipo</th>   
-                                                                                <th class="por-10">Qual Forma</th>      
-                                                                                <th>Cód Prestador</th> 
-                                                                                <th>CM OS</th>    
-                                                                                <th>Descrição</th>                                                                                                                                                       
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="actions ac-2">
-                                                                                    <div class="float-right">
-                                                                                    <div class="menu-visible">
-                                                                                        <span class="circle"></span>
-                                                                                        <span class="circle"></span>
-                                                                                        <span class="circle"></span>
-                                                                                    </div>
-                                                                                    <div class="menu-invisible">
-                                                                                        <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                                                            <img src="img/editar.svg" class="i-editar" title="">
-                                                                                        </a>
-                                                                                        <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
-                                                                                            <img src="img/excluir.svg" class="i-editar" title="">
-                                                                                        </a>
-                                                                                    </div>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>PP RADIOTERAPIA R+</td> 
-                                                                                <td>Reajuste</td>
-                                                                                <td>4813345 | 238</td>
-                                                                                <td>-</td>
-                                                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et finibus magna.</td>                                                                                
-                                                                            </tr>
-                                                                            <tr class="separator">
-                                                                                <td colspan="5"></td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane-fichas container-fluid hidden" id="navtabs-matmed">
-                                                    <div class="row mb-4">
-                                                        <div class="col-lg-12">
-                                                            <div class="sub-title">
-                                                                <h6>Negociação de materiais e medicamentos <small>Negociação de materiais e medicamentos Unidade Hospitalar *Regimes de internação, ambulatorial e P.S.</small></h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-5 mb-4">
-                                                        <div class="space"></div>
-                                                        <div class="col-lg-6 mt-2">
-                                                            <label for="comentarios" class="comentarios">Medicamentos</label>
-                                                            <textarea class="form-control" id="medicamentos" rows="3"></textarea>
-                                                        </div>
-                                                        <div class="space"></div>
-                                                        <div class="col-lg-6 mt-2">
-                                                            <label for="comentarios" class="comentarios">Medicamentos de uso restrito</label>
-                                                            <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
-                                                        </div>
-                                                        <div class="space"></div>     
-                                                        <div class="col-lg-6 mt-5">
-                                                            <label for="comentarios" class="comentarios">Materiais de consumo</label>
-                                                            <textarea class="form-control" id="materiais-consumo" rows="3"></textarea>
-                                                        </div>
-                                                        <div class="space"></div>
-                                                        <div class="col-lg-6 mt-5">
-                                                            <label for="comentarios" class="comentarios">Tabela de OPME negociada</label>
-                                                            <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
-                                                        </div>
-                                                        <div class="space"></div>    
-                                                        <div class="col-lg-2 mt-4">                                    
-                                                            <div class="form">
-                                                                <input type="text" name="taxa-comercializacao" autocomplete="off">
-                                                                <label for="taxa-comercializacao" class="label-name">
-                                                                    <span class="content-name">Taxa de Comercialização</span>
-                                                                </label>
-                                                            </div> 
-                                                        </div>     
-                                                        <div class="space"></div>    
-                                                    </div>
-                                                    <div class="row mb-4">
-                                                        <div class="col-lg-12">
-                                                            <div class="sub-title">
-                                                                <h6>Negociação de materiais e medicamentos clínicas especializadas<small> *Exceto terapias</small></h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-5 mb-4">
-                                                        <div class="space"></div>
-                                                        <div class="col-lg-6 mt-2">
-                                                            <label for="comentarios" class="comentarios">Medicamentos</label>
-                                                            <textarea class="form-control" id="medicamentos" rows="3"></textarea>
-                                                        </div>
-                                                        <div class="space"></div>
-                                                        <div class="col-lg-6 mt-2">
-                                                            <label for="comentarios" class="comentarios">Materiais de consumo</label>
-                                                            <textarea class="form-control" id="medicamentos-restrito" rows="3"></textarea>
-                                                        </div>
-                                                        <div class="space"></div>     
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- anexo rede+ -->
-                                    <div role="tabpanel" class="tab-pane" id="tab-anexo-rede-mais">
-                                        <div class="design-process-content bg-blank">
-                                            <div class="row d-flex mb-3">
-                                                <div class="col-lg-12 my-auto">
-                                                    <div class="title-page">                                        
-                                                        <h6>Anexo Rede+</h6>
-                                                    </div>
-                                                    <small><b>*No caso de negociação Rede+</b>, os valores deverão ser preenchidos nos anexos de acordo com a especialidade.</small><br>
-                                                    <small>*Informar as Redes e/ou Planos para negociações com valores diferenciados. Se não houver diferença de valor, preencher somente o VALOR E$ |.</small>
-                                                </div>   
-                                                <div class="col-lg-12"><hr></div>
-                                            </div>         
-                                            <div class="row mt-3 mb-4">
-                                                <div class="col-lg-3">                                    
-                                                    <p class="p-select">Cód. Procedimento</p>
-                                                    <select class="form-control h-35">
-                                                        <option value="1" selected="">Selecione</option>
-                                                        <option value="2">050448949840 - Lorem</option>                                   
-                                                    </select>
-                                                </div>
-                                                <div class="space"></div>     
-                                                <div class="col-lg-2">                                    
-                                                    <p class="p-select">Rede</p>
-                                                    <select class="form-control h-35">
-                                                        <option value="1" selected="">Selecione</option>
-                                                        <option value="2">Bradesco</option>     
-                                                        <option value="3">Mediservice</option>                                   
-                                                    </select>
-                                                </div>
-                                                <div class="space"></div>     
-                                                <div class="col-lg-2">                                    
-                                                    <div class="form">
-                                                        <input type="text" name="valor" autocomplete="off">
-                                                        <label for="valor" class="label-name">
-                                                            <span class="content-name">Valor</span>
-                                                        </label>
-                                                    </div> 
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="col-lg-1">
-                                                    <a href="" data-toggle="tooltip"  data-original-title="Adicionar">
-                                                        <img src="img/add.svg" width="25" alt="" class="mt-4">
-                                                    </a>
-                                                </div>
-                                                <div class="space"></div>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-lg-12 mb-2">
-                                                            <div class="title-page-2">                                        
-                                                                <h6>Procedimentos Adicionados</h6>
-                                                            </div>
-                                                        </div>                                                        
-                                                        <div class="col-lg-12">
-                                                            <div class="table-responsive border">
-                                                                <table class="table">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th class="por-5"></th>                            
-                                                                            <th class="por-15"><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Cód. Procedimento</th>   
-                                                                            <th class="por-30"><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Descrição do Procedimento Padronizado</th>      
-                                                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Rede</th>    
-                                                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Status</th>   
-                                                                            <th><a href="#" class="sort"><img src="img/sort-1.svg" alt=""></a>Valor</th>                                                                                                                                                              
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td class="actions ac-2">
-                                                                                <div class="float-right">
-                                                                                <div class="menu-visible">
-                                                                                    <span class="circle"></span>
-                                                                                    <span class="circle"></span>
-                                                                                    <span class="circle"></span>
-                                                                                </div>
-                                                                                <div class="menu-invisible">
-                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                                                        <img src="img/editar.svg" class="i-editar" title="">
-                                                                                    </a>
-                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
-                                                                                        <img src="img/excluir.svg" class="i-editar" title="">
-                                                                                    </a>
-                                                                                </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>050448949840</td> 
-                                                                            <td>Lorem</td>
-                                                                            <td>Bradesco</td>
-                                                                            <td>Ativo</td>
-                                                                            <td>R$ 5.000,00</td>
-                                                                        </tr>
-                                                                        <tr class="separator">
-                                                                            <td colspan="5"></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="actions ac-2">
-                                                                                <div class="float-right">
-                                                                                <div class="menu-visible">
-                                                                                    <span class="circle"></span>
-                                                                                    <span class="circle"></span>
-                                                                                    <span class="circle"></span>
-                                                                                </div>
-                                                                                <div class="menu-invisible">
-                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                                                        <img src="img/editar.svg" class="i-editar" title="">
-                                                                                    </a>
-                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
-                                                                                        <img src="img/excluir.svg" class="i-editar" title="">
-                                                                                    </a>
-                                                                                </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>050448949840</td> 
-                                                                            <td>Lorem</td>
-                                                                            <td>Bradesco</td>
-                                                                            <td>Ativo</td>
-                                                                            <td>R$ 2.000,00</td>
-                                                                        </tr>
-                                                                        <tr class="separator">
-                                                                            <td colspan="5"></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="actions ac-2">
-                                                                                <div class="float-right">
-                                                                                <div class="menu-visible">
-                                                                                    <span class="circle"></span>
-                                                                                    <span class="circle"></span>
-                                                                                    <span class="circle"></span>
-                                                                                </div>
-                                                                                <div class="menu-invisible">
-                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                                                        <img src="img/editar.svg" class="i-editar" title="">
-                                                                                    </a>
-                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
-                                                                                        <img src="img/excluir.svg" class="i-editar" title="">
-                                                                                    </a>
-                                                                                </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>050448949840</td> 
-                                                                            <td>Lorem</td>
-                                                                            <td>Bradesco</td>
-                                                                            <td>Ativo</td>
-                                                                            <td>R$ 3.000,00</td>
-                                                                        </tr>
-                                                                        <tr class="separator">
-                                                                            <td colspan="5"></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="actions ac-2">
-                                                                                <div class="float-right">
-                                                                                <div class="menu-visible">
-                                                                                    <span class="circle"></span>
-                                                                                    <span class="circle"></span>
-                                                                                    <span class="circle"></span>
-                                                                                </div>
-                                                                                <div class="menu-invisible">
-                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Editar">
-                                                                                        <img src="img/editar.svg" class="i-editar" title="">
-                                                                                    </a>
-                                                                                    <a href="#" class="editar" data-toggle="tooltip" data-original-title="Excluir">
-                                                                                        <img src="img/excluir.svg" class="i-editar" title="">
-                                                                                    </a>
-                                                                                </div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>050448949840</td> 
-                                                                            <td>Lorem</td>
-                                                                            <td>Mediservice</td>
-                                                                            <td>Ativo</td>
-                                                                            <td>R$ 3.000,00</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12 mt-5">
-                                                    <label for="comentarios" class="comentarios"><small>*Informar as Redes e/ou Planos para negociações com valores diferenciados. Se não houver diferença de valor, preencher somente o VALOR E$ |.</small></label>
-                                                    <textarea class="form-control" id="medicamentos-restrito" rows="3" disabled></textarea>
-                                                </div>
-                                                <div class="space"></div>     
-                                            </div>                               
-                                        </div>
-                                    </div>
-                                    <!-- justificativa -->
-                                    <div role="tabpanel" class="tab-pane" id="tab-justificativa">
-                                        <div class="design-process-content bg-blank">
-                                            <div class="row d-flex mb-3">
-                                                <div class="col-12 col-md-6 col-lg-6 my-auto">
-                                                    <div class="title-page">                                        
-                                                        <h6>Justificativa</h6>
-                                                    </div>
-                                                </div>   
-                                                <div class="col-12 col-md-6 col-lg-6 my-auto">
-                                                    <div class="baixar-doc" title="" data-toggle="tooltip" data-original-title="Baixar Arquivos"></div>
-                                                    <div class="exportar-pdf" title="" data-toggle="tooltip" data-original-title="Relatório de Ficha"></div>
-                                                </div>
-                                                <div class="col-lg-12"><hr></div>
-                                            </div>    
-                                            <div class="row">
-                                                <div class="col-lg-12 mt-3">
-                                                    <label for="comentarios" class="comentarios">Caso necessário justifique a solicitação</label>
-                                                    <textarea class="form-control" id="medicamentos" rows="3">Testando Mais de um Prestador de 3 Cias</textarea>
-                                                </div>
-                                                <div class="space"></div>  
-                                                <div class="col-lg-12 mt-4">
-                                                    <h6 class="mb-3">Observações:</h6>
-                                                    <p><small><b>1 - Regime de Atendimento</b><br>No caso de negociação hospitalar deverá ser informado se a negociação é exclusiva para um determinado Regime de Atendimento.
-                                                        Como por exemplo negociação de agravo no SADT: Informar se a negociação é válida somente para paciente internado ou valerá também para o Pronto Socorro;</small></p>
-                                                    <p><small><b>2 - Procedimento Padronizado (Exceto REDE+)</b><br>Em negociação de Procedimento Padronizado informar o código TUSS e a composição do PP;</small></p>
-                                                    <p><small><b>3 - Diárias e Taxas</b><br>A tabela de D&T deverá ser enviada com a codificação nomenclatura TUSS e a coluna fator deverá estar preenchida;</small></p>
-                                                    <p><small><b>4 - Rol Não</b><br>Não pode ser emitido acordo com procedimento Rol não para Mediservice. Para a Bradesco os procedimentos Rol não terão cobertura somente
-                                                         para os procedimentos divulgados na tabela disponível no site do referenciado;</small></p>
-                                                    <p><small><b>5 - Percentual de Reajuste</b><br>O percentual negociado deve ser informado para cada acordo negociado. Exemplo: D&T: 4% | Procedimentos Padronizados: 5% etc.</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="buttons-tab">
-                                    <button type="button" name="button" class="btn btn-prev float-left prev">Anterior</button>
-                                    <button type="button" name="button" class="btn btn-next float-right next">Próximo</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div><!-- fim conteudo geral wrapper -->
-        
-        <!-- Modal -->
-            <!-- Modal Excluir -->
-            <div class="modal fade" id="modalExluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="modalExcluirTitle">Tem certeza que deseja excluir este item?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-salvar float-right" data-dismiss="modal">Confirmar</button>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <!-- Fim Modal Excluir -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#4338ca">
+    <meta name="description" content="Criação de uma ficha de aditivo em 4 passos.">
+    <title>Nova ficha | Orla Esteira</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
-            <!-- Modal Info Aditivo -->
-            <div class="modal fade bd-example-modal-lg" id="modalInfoAditivo" tabindex="-1" role="dialog" aria-labelledby="modalInfoAditivo" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="modalInfoAditivoTitle">Tipo de Atendimento x Tipo de Prestador</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>                   
-                                            <th>Classificação do Atendimento</th>
-                                            <th>Tipo de Atendimento</th>                                              
-                                            <th>Tipo do Código do Prestador</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Consultório</td>
-                                            <td>Consultório Isolado</td>
-                                            <td>PF</td>
-                                        </tr>
-                                        <tr class="separator">
-                                            <td colspan="5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Clínica ou Centro de Especialidade Médica</td>
-                                            <td>Atendimento Ambulatorial</td>
-                                            <td>T2 / T9 / T02 / T09</td>
-                                        </tr>
-                                        <tr class="separator">
-                                            <td colspan="5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Clínica ou Centro de Especialidade Médica</td>
-                                            <td>Exame Eletivo</td>
-                                            <td>T3 / T9 / T02 / T07</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <small>*** Utilizado apenas para os casos de Hospital de Retarguada e Psiquiatria (que não possuem CNES de Hospital).</small>
-                                    </div>
-                                </div>                                                             
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Fim Modal Excluir -->
-        <!-- Fim Modal -->
-        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-        <!-- jQuery -->
-        <script src="js/jquery-3.3.1.slim.min.js"></script>
-        <!-- Popper.JS -->
-        <script src="js/popper.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- script datepicker -->
-        <script src="js/bootstrap-datetimepicker.js"></script>
-        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
-        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
-        <script src="js/jquery.mask.min.js"></script>
-        <!-- script inputfile -->
-        <script src="js/jquery-3.1.0.min.js"></script>
-        <script src="js/jquery.filer.min.js"></script>
-        <!-- scripts -->
-        <script src="js/script.js"></script>
-        <!-- scripts steptabs -->
-        <script src="js/steptabs.js"></script>
-    </body>
+    <div class="app">
+      <aside class="rail"></aside>
+      <div class="main-col">
+        <header class="topbar"></header>
+        <main class="content" id="conteudo" tabindex="-1">
+          <div class="page-head">
+            <div class="page-head__text">
+              <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-plus"/></svg> Nova ficha</span>
+              <h1>Nova ficha de aditivo</h1>
+              <p>Quatro passos. Dá para voltar a qualquer passo já visitado sem perder o que foi preenchido.</p>
+            </div>
+          </div>
+
+          <nav aria-label="Passos da ficha">
+            <ol class="steps">
+              <li><button class="step-btn" type="button"><span class="step-btn__n">1</span><span class="step-btn__text"><strong>Prestador</strong>Quem e qual prioridade</span></button></li>
+              <li><button class="step-btn" type="button"><span class="step-btn__n">2</span><span class="step-btn__text"><strong>Negociação</strong>Proposta e justificativa</span></button></li>
+              <li><button class="step-btn" type="button"><span class="step-btn__n">3</span><span class="step-btn__text"><strong>Aditivos</strong>O que será emitido</span></button></li>
+              <li><button class="step-btn" type="button"><span class="step-btn__n">4</span><span class="step-btn__text"><strong>Revisão</strong>Anexo e confirmação</span></button></li>
+            </ol>
+          </nav>
+
+          <form class="card" id="ficha-form" novalidate>
+            <section id="passo-1" data-passo data-titulo="Prestador" aria-labelledby="p1-titulo">
+              <h2 id="p1-titulo">1. Prestador</h2>
+              <div data-summary-anchor></div>
+              <div class="form-grid">
+                <div class="field span-8">
+                  <label for="prestador">Prestador <span class="req" aria-hidden="true">*</span></label>
+                  <select class="select" id="prestador" name="prestador" required><option value="">Selecione</option></select>
+                </div>
+                <div class="field span-4">
+                  <label for="empresa">Empresa <span class="req" aria-hidden="true">*</span></label>
+                  <select class="select" id="empresa" name="empresa" required></select>
+                </div>
+              </div>
+              <dl class="facts card card--soft mt" id="prestador-fatos" hidden></dl>
+              <div class="form-grid mt">
+                <fieldset class="choice-group field span-6" id="g-tipo" data-required="true">
+                  <legend>Tipo de ficha <span class="req" aria-hidden="true">*</span></legend>
+                  <label class="choice choice--box" for="tipo-c"><input type="radio" id="tipo-c" name="tipo" value="Credenciamento"> Credenciamento</label>
+                  <label class="choice choice--box" for="tipo-m"><input type="radio" id="tipo-m" name="tipo" value="Manutenção"> Manutenção</label>
+                </fieldset>
+                <fieldset class="choice-group field span-6" id="g-prio" data-required="true" aria-describedby="prio-dica">
+                  <legend>Prioridade <span class="req" aria-hidden="true">*</span></legend>
+                  <label class="choice choice--box" for="prio-prima"><input type="radio" id="prio-prima" name="prioridade" value="Rede Prima"> Rede Prima</label>
+                  <label class="choice choice--box" for="prio-p"><input type="radio" id="prio-p" name="prioridade" value="Prioridade"> Prioridade</label>
+                  <label class="choice choice--box" for="prio-n"><input type="radio" id="prio-n" name="prioridade" value="Normal"> Normal</label>
+                  <p class="hint" id="prio-dica">A prioridade Rede Prima só vale para prestadores da Rede Prima.</p>
+                </fieldset>
+              </div>
+            </section>
+
+            <section id="passo-2" data-passo data-titulo="Negociação" aria-labelledby="p2-titulo" hidden>
+              <h2 id="p2-titulo">2. Negociação</h2>
+              <div data-summary-anchor></div>
+              <div class="form-grid">
+                <div class="field span-4">
+                  <label for="dataProposta">Data da proposta <span class="req" aria-hidden="true">*</span></label>
+                  <input class="input" type="date" id="dataProposta" name="dataProposta" required>
+                </div>
+                <div class="field span-4">
+                  <label for="alcada">Alçada <span class="req" aria-hidden="true">*</span></label>
+                  <select class="select" id="alcada" name="alcada" required>
+                    <option value="">Selecione</option>
+                    <option>Sucursal</option>
+                    <option>Diretoria</option>
+                    <option>Comitê executivo</option>
+                  </select>
+                </div>
+                <fieldset class="choice-group field span-4" id="g-exclusiva" data-required="true">
+                  <legend>Negociação exclusiva? <span class="req" aria-hidden="true">*</span></legend>
+                  <label class="choice choice--box" for="ex-s"><input type="radio" id="ex-s" name="exclusiva" value="Sim"> Sim</label>
+                  <label class="choice choice--box" for="ex-n"><input type="radio" id="ex-n" name="exclusiva" value="Não" checked> Não</label>
+                </fieldset>
+                <div class="field">
+                  <label for="justificativa">Justificativa <span class="req" aria-hidden="true">*</span></label>
+                  <p class="hint" id="justificativa-dica">Qual o ganho para a rede? Ex.: cobrir um vazio assistencial ou reduzir o custo de um procedimento.</p>
+                  <textarea class="textarea" id="justificativa" name="justificativa" maxlength="800" required aria-describedby="justificativa-dica"></textarea>
+                </div>
+              </div>
+            </section>
+
+            <section id="passo-3" data-passo data-titulo="Aditivos" aria-labelledby="p3-titulo" hidden>
+              <h2 id="p3-titulo">3. Aditivos</h2>
+              <div data-summary-anchor></div>
+              <div class="card card--soft" id="sub-aditivo">
+                <h3>Incluir aditivo</h3>
+                <div class="form-grid">
+                  <div class="field span-4">
+                    <label for="adTipo">Tipo <span class="req" aria-hidden="true">*</span></label>
+                    <select class="select" id="adTipo" name="adTipo" required></select>
+                  </div>
+                  <fieldset class="choice-group field span-4" id="g-forma" data-required="true">
+                    <legend>Forma <span class="req" aria-hidden="true">*</span></legend>
+                    <label class="choice choice--box" for="forma-n"><input type="radio" id="forma-n" name="adForma" value="Novo"> Novo</label>
+                    <label class="choice choice--box" for="forma-r"><input type="radio" id="forma-r" name="adForma" value="Reajuste"> Reajuste</label>
+                  </fieldset>
+                  <div class="field span-4">
+                    <label for="adEmpresa">Empresa <span class="req" aria-hidden="true">*</span></label>
+                    <select class="select" id="adEmpresa" name="adEmpresa" required></select>
+                  </div>
+                  <div class="field">
+                    <label for="adDescricao">Descrição <span class="opt">(opcional)</span></label>
+                    <input class="input" id="adDescricao" name="adDescricao" maxlength="160">
+                  </div>
+                </div>
+                <div class="btn-row btn-row--end mt-sm">
+                  <button class="btn btn--soft" type="button" id="incluir-aditivo"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-plus"/></svg> Incluir aditivo</button>
+                </div>
+              </div>
+              <h3 class="mt">Aditivos da ficha</h3>
+              <ul class="rows" id="aditivos-lista" aria-live="polite"></ul>
+            </section>
+
+            <section id="passo-4" data-passo data-titulo="Revisão" aria-labelledby="p4-titulo" hidden>
+              <h2 id="p4-titulo">4. Anexo e revisão</h2>
+              <div data-summary-anchor></div>
+              <div id="bloco-anexo">
+                <div class="card card--soft" id="sub-anexo">
+                  <h3>Anexo Rede Prima</h3>
+                  <p class="hint">Valor negociado por especialidade. Obrigatório para fichas da Rede Prima.</p>
+                  <div class="form-grid mt-sm">
+                    <div class="field span-6">
+                      <label for="anEspecialidade">Especialidade <span class="req" aria-hidden="true">*</span></label>
+                      <select class="select" id="anEspecialidade" name="anEspecialidade" required></select>
+                    </div>
+                    <div class="field span-6">
+                      <label for="anValor">Valor do pacote <span class="req" aria-hidden="true">*</span></label>
+                      <input class="input input--money" id="anValor" name="anValor" inputmode="decimal" data-mask="money" data-rules="money" required>
+                    </div>
+                  </div>
+                  <div class="btn-row btn-row--end mt-sm">
+                    <button class="btn btn--soft" type="button" id="incluir-anexo"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-plus"/></svg> Incluir valor</button>
+                  </div>
+                </div>
+                <ul class="rows mt" id="anexo-lista" aria-live="polite"></ul>
+              </div>
+              <h3 class="mt">Confira antes de criar</h3>
+              <dl class="facts" id="revisao"></dl>
+            </section>
+
+            <div class="form-actions">
+              <button class="btn" type="button" id="voltar"><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-arrow-left"/></svg> Voltar</button>
+              <button class="btn btn--primary" type="submit" id="continuar">Continuar</button>
+            </div>
+          </form>
+        </main>
+        <footer class="app-foot"></footer>
+      </div>
+    </div>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/nova-ficha.js"></script>
+  </body>
 </html>

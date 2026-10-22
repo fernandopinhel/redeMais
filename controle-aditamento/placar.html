@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0e6b57">
+    <meta name="description" content="Placar do trimestre: economia com aditivos contra a meta.">
+    <title>Placar | Orla Placar</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="app-header"></header>
+
+    <main class="content" id="conteudo" tabindex="-1">
+      <section class="scoreboard" id="placar-hero" aria-labelledby="pagina-titulo">
+        <h1 id="pagina-titulo">Economia com aditivos</h1>
+      </section>
+
+      <section aria-labelledby="tipos-titulo">
+        <h2 class="visually-hidden" id="tipos-titulo">Por tipo de aditivo</h2>
+        <ul class="lanes" id="placar-tipos"></ul>
+      </section>
+
+      <div class="grid-2">
+        <section class="card" aria-labelledby="podio-titulo">
+          <div class="card__head">
+            <div>
+              <h2 id="podio-titulo">Pódio das sucursais</h2>
+              <p>Ordem pelo percentual da meta já atingido.</p>
+            </div>
+          </div>
+          <ol class="podium" id="placar-podio"></ol>
+        </section>
+
+        <section class="card" aria-labelledby="paradas-titulo">
+          <div class="card__head">
+            <div>
+              <h2 id="paradas-titulo">Negociações paradas</h2>
+              <p>Sem movimento há mais de 30 dias, das mais antigas para as mais novas.</p>
+            </div>
+          </div>
+          <div id="placar-paradas"></div>
+        </section>
+      </div>
+
+      <section class="card" aria-labelledby="matriz-titulo">
+        <div class="card__head">
+          <div>
+            <h2 id="matriz-titulo">Placar por sucursal e tipo</h2>
+            <p>Economia realizada e percentual da meta em cada combinação.</p>
+          </div>
+        </div>
+        <div id="placar-matriz"></div>
+      </section>
+    </main>
+
+    <footer class="app-foot"></footer>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/placar.js"></script>
+  </body>
+</html>

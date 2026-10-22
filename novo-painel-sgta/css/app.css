@@ -1,0 +1,199 @@
+/*
+ * Orla Mesa: tema e layout. Os componentes vêm do Orla DS (../ds/ds.css).
+ * Identidade: terracota com azul-petróleo. Barra de abas no topo e uma mesa
+ * em duas colunas: a lista de negociações e a ficha aberta ao lado.
+ */
+:root {
+  --accent-900: #632715;
+  --accent-800: #86351a;
+  --accent-700: #a8431c;          /* branco sobre ele: 5.6:1 */
+  --accent-600: #b8501f;          /* texto sobre branco: 5.0:1 */
+  --accent-500: #d86a35;
+  --accent-200: #f3cdb8;
+  --accent-100: #fbe9df;
+  --accent-50: #fdf5f0;
+  --signal: #1f5f7a;              /* azul-petróleo: 6.9:1 sobre branco */
+  --signal-100: #e3f0f5;
+
+  --night: #1a0f0b;
+  --night-2: #221510;
+  --night-3: #2c1b14;
+  --night-muted: #d1bbb0;
+  --glow: #ffb38a;
+  --on-glow: #3a1608;
+}
+
+/* -------------------------------------------------------------- Topo */
+.app-top {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgb(255 255 255 / .9);
+  border-bottom: 1px solid var(--border);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+.app-top__bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: .55rem clamp(1rem, 3vw, 2rem) .25rem;
+}
+.app-top__end { display: flex; align-items: center; gap: .5rem; margin-left: auto; }
+.app-tabs { max-width: 1440px; margin-inline: auto; padding: 0 clamp(.5rem, 3vw, 1.5rem); }
+.app-tabs ul { display: flex; gap: .15rem; margin: 0; padding: 0; list-style: none; overflow-x: auto; scrollbar-width: thin; }
+.app-tabs a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  min-height: 46px;
+  padding: .5rem .85rem;
+  color: var(--text-muted);
+  font-size: var(--text-md);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.app-tabs a:hover { color: var(--text); }
+.app-tabs a[aria-current="page"] { color: var(--accent-800); }
+.app-tabs a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: .6rem; right: .6rem; bottom: 0;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--accent-600);
+}
+
+.content { max-width: 1440px; margin-inline: auto; padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem) 3rem; }
+
+@media (max-width: 640px) {
+  .app-top .brand__sub, .btn-glossario span { display: none; }
+}
+
+/* ---------------------------------------------------------------- Mesa */
+.desk {
+  display: grid;
+  grid-template-columns: minmax(300px, 380px) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+.desk__list {
+  position: sticky;
+  top: 128px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100dvh - 148px);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.desk__list .search { max-width: none; }
+.desk__filters { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin: .75rem 0; }
+.desk__filters .select { min-height: 38px; padding-block: .3rem; font-size: var(--text-sm); }
+.desk__count { margin: 0 0 .5rem; font-size: var(--text-sm); color: var(--text-muted); }
+.deals { flex: 1; display: grid; align-content: start; gap: .35rem; margin: 0 -.25rem; padding: .25rem; list-style: none; overflow-y: auto; }
+.deal {
+  display: grid;
+  gap: .2rem;
+  padding: .65rem .8rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--text);
+  text-decoration: none;
+}
+.deal:hover { background: var(--surface-2); }
+.deal[aria-current="true"] { background: var(--accent-50); border-color: var(--accent-200); box-shadow: inset 3px 0 0 var(--accent-600); }
+.deal__top { display: flex; justify-content: space-between; gap: .5rem; font-size: .8125rem; color: var(--text-muted); }
+.deal strong { font-weight: 500; line-height: 1.3; }
+.deal__sub { font-size: .8125rem; color: var(--text-muted); }
+.deal__tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .15rem; }
+
+.sheet { min-width: 0; }
+.sheet__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.sheet__head h1 { margin-bottom: .35rem; }
+
+/* Funil de economia */
+.funnel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin: 0; padding: 0; list-style: none; }
+.funnel li {
+  position: relative;
+  display: grid;
+  gap: .2rem;
+  padding: .9rem 1rem;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+.funnel li:nth-child(1) { background: var(--signal-100); border-color: #c5dde7; }
+.funnel li:nth-child(2) { background: var(--accent-50); border-color: var(--accent-200); }
+.funnel li:nth-child(3) { background: var(--success-100); border-color: #c7e7d3; }
+.funnel span { font-size: var(--text-sm); color: var(--text-muted); }
+.funnel strong { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.funnel small { color: var(--text-muted); }
+@media (max-width: 760px) { .funnel { grid-template-columns: minmax(0, 1fr); } }
+
+/* Passo a passo do cálculo */
+.calc { display: grid; gap: .5rem; margin: 0; padding: 0; list-style: none; counter-reset: passo; }
+.calc li {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  gap: .75rem;
+  align-items: center;
+  padding: .65rem .85rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  counter-increment: passo;
+}
+.calc li::before {
+  content: counter(passo);
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.calc__what { display: grid; }
+.calc__what small { color: var(--text-muted); }
+.calc__value { font-variant-numeric: tabular-nums; font-weight: 500; text-align: right; }
+.calc li.is-result { background: var(--accent-50); }
+.calc li.is-result .calc__value { color: var(--accent-900); font-size: 1.0625rem; }
+
+.blocked { display: flex; align-items: center; gap: .5rem; }
+
+@media (max-width: 1023.98px) {
+  .desk { grid-template-columns: minmax(0, 1fr); }
+  .desk__list { position: static; max-height: 420px; }
+}
+
+/* Matriz de acessos */
+.matrix th, .matrix td { text-align: center; }
+.matrix tbody th { text-align: left; }
+.matrix input { width: 20px; height: 20px; accent-color: var(--primary); }
+
+/* Glossário */
+.glossary { display: grid; gap: .9rem; margin: 0; }
+.glossary dt { font-weight: 600; }
+.glossary dd { margin: .15rem 0 0; color: var(--text-muted); }
+
+/* Login: ficha de exemplo */
+.login__art { display: grid; gap: .65rem; padding: 1.1rem; border: 1px solid var(--night-line); border-radius: var(--radius-lg); background: rgb(255 255 255 / .05); }
+.login__art-row { display: flex; justify-content: space-between; gap: 1rem; font-size: var(--text-sm); color: var(--night-muted); }
+.login__art-row strong { color: #fff; font-variant-numeric: tabular-nums; }
+.login__art-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; padding-top: .5rem; border-top: 1px solid var(--night-line); }
+.login__art-steps span { padding: .35rem .5rem; border-radius: 8px; background: rgb(255 255 255 / .07); font-size: .75rem; color: var(--night-text); text-align: center; }
+.login__art-steps span:last-child { background: rgb(127 224 168 / .18); color: #b9f2cf; }

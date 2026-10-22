@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0e0c24">
+    <meta name="description" content="Case de UX/UI: Orla Esteira, esteira de fichas de aditivo, da operadora fictícia Orla Saúde.">
+    <title>Entrar | Orla Esteira</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap">
+    <link rel="stylesheet" href="../ds/ds.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#login-form">Pular para o formulário de acesso</a>
+
+    <div class="login">
+      <section class="login__media" aria-labelledby="login-chamada">
+        <div class="login__top">
+          <span class="brand">
+            <img class="brand__mark" src="img/favicon.svg" alt="" width="36" height="36">
+            <span class="brand__text">
+              <span class="brand__name">Orla Esteira</span>
+              <span class="brand__sub">Orla Saúde</span>
+            </span>
+          </span>
+          <span class="case-tag">Case de UX/UI · 2020</span>
+        </div>
+
+        <h2 id="login-chamada">Cada ficha no lugar certo, dentro do prazo.</h2>
+        <p>Da distribuição à implantação, a esteira mostra onde está cada ficha de aditivo, com quem e quanto tempo falta para vencer o prazo da etapa.</p>
+
+        <ul class="login__highlights">
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-kanban"/></svg> Quadro por fase, com relógio de prazo</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-users"/></svg> Distribuição pela carga de cada pessoa</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-chart"/></svg> Tempo total da ficha, fase a fase</li>
+        </ul>
+
+        <div class="login__art" aria-hidden="true">
+          <div class="login__art-col"><span>Distribuição</span><i class="login__art-card"></i><i class="login__art-card login__art-card--b"></i></div>
+          <div class="login__art-col"><span>Emissão</span><i class="login__art-card login__art-card--b"></i><i class="login__art-card"></i><i class="login__art-card login__art-card--b"></i></div>
+          <div class="login__art-col"><span>Implantação</span><i class="login__art-card login__art-card--c"></i></div>
+        </div>
+      </section>
+
+      <main class="login__panel" id="conteudo">
+        <form class="login__form" id="login-form" novalidate>
+          <span class="eyebrow">Acesso restrito</span>
+          <h1>Que bom te ver por aqui</h1>
+          <p>Entre com sua matrícula e senha. O mesmo acesso vale para toda a suíte Orla.</p>
+
+          <div class="login__fields">
+            <div class="field">
+              <label for="login-matricula">Matrícula <span class="req" aria-hidden="true">*</span></label>
+              <p class="hint" id="login-matricula-dica">7 números, como 0472815.</p>
+              <input class="input" id="login-matricula" name="matricula" type="text" inputmode="numeric" autocomplete="username"
+                     maxlength="7" required data-rules="matricula" data-mask="digits" spellcheck="false"
+                     aria-describedby="login-matricula-dica">
+            </div>
+
+            <div class="field">
+              <label for="login-senha">Senha <span class="req" aria-hidden="true">*</span></label>
+              <div class="login__pass">
+                <input class="input" id="login-senha" name="senha" type="password" autocomplete="current-password"
+                       maxlength="40" required>
+                <button class="btn btn--ghost btn--icon btn--sm" type="button" id="login-ver-senha" aria-pressed="false" aria-label="Mostrar senha">
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-eye"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">
+            Entrar
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-arrow-right"/></svg>
+          </button>
+
+          <div class="login__demo">
+            <p><strong>Este é um case de portfólio.</strong> Não existe login de verdade e nada do que você digita sai do seu navegador. A Orla Saúde é uma marca fictícia.</p>
+            <button class="btn btn--ghost btn--sm" type="button" id="login-demo">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../ds/icons.svg#i-sparkle"/></svg>
+              Usar o acesso de demonstração
+            </button>
+            <p class="login__suite"><a href="../index.html">Conhecer a suíte Orla</a></p>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script src="../ds/ds.js"></script>
+    <script src="../shared/rede.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
