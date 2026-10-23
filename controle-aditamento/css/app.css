@@ -98,6 +98,11 @@
   padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem) 3rem;
 }
 
+/* Em telas médias, os ícones saem do menu para os itens respirarem. */
+@media (max-width: 1360px) and (min-width: 1181px) {
+  .app-nav a .icon { display: none; }
+  .app-nav a { padding-inline: .8rem; }
+}
 /* Abaixo de 1180 px os sete itens não cabem com folga: o menu vira gaveta. */
 @media (max-width: 1180px) {
   /* backdrop-filter criaria um bloco de contenção e prenderia a gaveta dentro do cabeçalho */
